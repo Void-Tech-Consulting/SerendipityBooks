@@ -1,5 +1,6 @@
 <?php 
   get_header(); 
+  wp_enqueue_style('events');
 ?>
 
 <h1>Events</h1>

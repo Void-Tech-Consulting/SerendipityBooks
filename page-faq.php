@@ -1,5 +1,6 @@
 <?php 
   get_header(); 
+  wp_enqueue_style('faq');
 ?>
 
 <h1>FAQ</h1>
