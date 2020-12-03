@@ -26,6 +26,17 @@ require get_template_directory() . '/inc/section_vars.php';
         </div>
       </div>
     </header>
+    <div class="carousel">
+      <div class="book-card">
+        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+      </div>
+      <div class="book-card">
+        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+      </div>
+      <div class="book-card">
+        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+      </div>
+    </div>
   </section>
   <section id="favorites">
     <header>
@@ -42,6 +53,17 @@ require get_template_directory() . '/inc/section_vars.php';
         </div>
       </div>
     </header>
+    <div class="carousel">
+      <div class="book-card">
+        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+      </div>
+      <div class="book-card">
+        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+      </div>
+      <div class="book-card">
+        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+      </div>
+    </div>
   </section>
   <section id="pick-up">
     <div id="pick-up-content">
