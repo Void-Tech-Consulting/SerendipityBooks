@@ -1,4 +1,76 @@
-/* home css styles */
-h1 {
-    color:red;
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+#pick-up {
+    max-width: initial;
+}
+
+section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section header .header-part {
+    display: flex;
+}
+
+.header-text {
+    font-family: 'Lora', serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 51.2px;
+    width: fit-content; 
+}
+
+.button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    background: #FFC5C1;
+    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
+    border-color: transparent;
+    border-radius: 15px;
+}
+
+#description-container {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#description-text {
+    width: 737px;
+    height: 40px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+}
+
+.bracket {
+    width: 56px;
+    height: 188px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 170px;
+    line-height: 204px;
+}
+
+#pick-up {
+    background-color: #E5E2DB;
 }
