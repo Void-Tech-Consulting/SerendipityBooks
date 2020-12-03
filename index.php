@@ -18,11 +18,11 @@ require get_template_directory() . '/inc/section_vars.php';
         <button class="button">SHOP ALL</button>
       </div>
       <div class="header-part">
-        <div>
-          button
+        <div class="carousel-button left">
+          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">
         </div>
-        <div>
-          button
+        <div class="carousel-button right">
+          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">          
         </div>
       </div>
     </header>
@@ -34,11 +34,11 @@ require get_template_directory() . '/inc/section_vars.php';
         <button class="button">SHOP ALL</button>
       </div>
       <div class="header-part">
-        <div>
-          button
+        <div class="carousel-button left">
+          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">
         </div>
-        <div>
-          button
+        <div class="carousel-button right">
+          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">
         </div>
       </div>
     </header>
@@ -54,7 +54,7 @@ require get_template_directory() . '/inc/section_vars.php';
         </button>
       </div>
       <div id="pick-up-part">
-        THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES
+        <img src="http://test.local/wp-content/uploads/2020/12/pick_up_bird.png" alt="Two birds on a branch">
       </div>
     </div>
   </section>
