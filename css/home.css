@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
 
 main {
@@ -11,10 +11,6 @@ section {
     width: 100%;
     box-sizing: border-box;
     max-width: 1200px;
-}
-
-#pick-up {
-    max-width: initial;
 }
 
 section header {
@@ -73,4 +69,24 @@ section header .header-part {
 
 #pick-up {
     background-color: #E5E2DB;
+    max-width: initial;
+    height: 518px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pick-up-content {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+}
+
+#pick-up-text {
+    width: 532px;
+    height: 135px;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 44.8px;
 }

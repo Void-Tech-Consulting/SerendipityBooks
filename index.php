@@ -11,7 +11,7 @@ require get_template_directory() . '/inc/section_vars.php';
     </span>
     <span class="bracket">]</span>
   </section>
-  <section id="bestsellers"> 
+  <section id="bestsellers">
     <header>
       <div class="header-part">
         <div class="header-text">Bestsellers</div>
@@ -44,7 +44,19 @@ require get_template_directory() . '/inc/section_vars.php';
     </header>
   </section>
   <section id="pick-up">
-    Want to purchase books while staying safe? Check out our contactless options.
+    <div id="pick-up-content">
+      <div id="pick-up-part">
+        <div id="pick-up-text">
+          Want to purchase books while staying safe? Check out our contactless options.
+        </div>
+        <button class="button">
+          PICK-UP
+        </button>
+      </div>
+      <div id="pick-up-part">
+        THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES THIS IS AN IMAGE I DON'T KNOW HOW TO LINK IMAGES
+      </div>
+    </div>
   </section>
   <section id="upcoming-events">
     <header>
