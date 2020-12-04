@@ -1,8 +1,9 @@
 <?php 
   get_header(); 
+  wp_enqueue_style('faq');
 ?>
 
-<h1>Add your message here</h1>
+<h1>FAQ</h1>
 
 <form class="message-form" method="post">
   <input id="message-title" type="text">
