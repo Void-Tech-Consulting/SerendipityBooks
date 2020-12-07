@@ -19,22 +19,22 @@ require get_template_directory() . '/inc/section_vars.php';
       </div>
       <div class="header-part">
         <div class="carousel-button left">
-          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">
+          <img alt="Left arrow" src=<?php echo get_template_directory_uri() . "/img/arrow.svg" ?>>
         </div>
         <div class="carousel-button right">
-          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">          
+          <img alt="Right arrow" src=<?php echo get_template_directory_uri() . "/img/arrow.svg" ?>>
         </div>
       </div>
     </header>
     <div class="carousel">
       <div class="book-card">
-        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
       </div>
       <div class="book-card">
-        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
       </div>
       <div class="book-card">
-        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
       </div>
     </div>
   </section>
@@ -46,22 +46,22 @@ require get_template_directory() . '/inc/section_vars.php';
       </div>
       <div class="header-part">
         <div class="carousel-button left">
-          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">
+          <img alt="Left arrow" src=<?php echo get_template_directory_uri() . "/img/arrow.svg" ?>>
         </div>
         <div class="carousel-button right">
-          <img src="http://test.local/wp-content/uploads/2020/12/arrow.png">
+          <img alt="Right arrow" src=<?php echo get_template_directory_uri() . "/img/arrow.svg" ?>>
         </div>
       </div>
     </header>
     <div class="carousel">
       <div class="book-card">
-        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
       </div>
       <div class="book-card">
-        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
       </div>
       <div class="book-card">
-        <img style="background-image: url('http://test.local/wp-content/uploads/2020/12/educated.jpg');">
+        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
       </div>
     </div>
   </section>
@@ -76,7 +76,7 @@ require get_template_directory() . '/inc/section_vars.php';
         </button>
       </div>
       <div id="pick-up-part">
-        <img src="http://test.local/wp-content/uploads/2020/12/pick_up_bird.png" alt="Two birds on a branch">
+        <img alt="Two birds on a branch" src=<?php echo get_template_directory_uri() . "/img/pick_up_birds.png"?>>
       </div>
     </div>
   </section>
