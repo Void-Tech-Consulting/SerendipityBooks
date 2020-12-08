@@ -1,7 +1,6 @@
 /* FAQ css styles */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
-/* @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
 
 body {
     margin: 0;
@@ -16,6 +15,7 @@ header {
     margin: 0;
     background-color: rgba(244, 106, 97, 0.75);
     text-align: center;
+    width: 1152px;
     height: 247px;
     margin: 93px 0 61px;
 }
@@ -24,6 +24,7 @@ h1 {
     display: inline-block;
     font-family: 'Lora', sans-serif;
     font-size: 70px;
+    color: rgba(0, 0, 0, 1);
     margin-top: 82px;
 }
 
@@ -45,7 +46,7 @@ h1 {
     display: contents;
     border: 3px solid #F46A61;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    width: 709px;
+    width: 705px;
     border-radius: 15px;
     background-color: #F8F8F8;
     margin-bottom: 42px;
@@ -65,6 +66,7 @@ h1 {
 .typeactive {
     border: none;
     box-shadow: none;
+    width: 100%;
     background-color: #F8F8F8;
 }
 
@@ -96,8 +98,12 @@ h1 {
     margin-right: 18px;
 }
 
+.fa-angle-up {
+    margin-right: 43px;
+}
+
 /* Image */
-#image2 {
+#image {
     display: inline;
     position: absolute;
     top: 491px;

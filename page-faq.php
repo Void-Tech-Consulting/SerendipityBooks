@@ -125,7 +125,7 @@
   </section>
   
   <!-- Section: Image 2 -->
-  <img id="image2" src="./image.png" alt="">
+  <img id="image" src=<?php echo get_template_directory_uri() . "/img/image.png" ?> alt="Birds">
 </body>
 
 <?php get_footer(); ?>
