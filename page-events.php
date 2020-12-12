@@ -7,20 +7,21 @@
 <h1>Events</h1>
 
 <div id = "eventHeaderSection">
-  <img src = "/wp-content/themes/SerendipityBooks/leftBracket.png" alt = "left bracket">
+
+  <img src = <?php echo get_template_directory_uri() . "/leftBracket.png" ?> alt = "left bracket">
   <p id = "eventTitle"> AFTERHOURS BOOK CLUB </p>
-  <img src = "/wp-content/themes/SerendipityBooks/rightBracket.png" alt = "right bracket">
+  <img src = <?php echo get_template_directory_uri() . "/rightBracket.png" ?> alt = "right bracket">
 </div>
 
 <div id = "outer">
   <div class = "containers" id = "poster">
-      <img id = "posterImage" src="/wp-content/themes/SerendipityBooks/afterhoursbookclub.png" alt="Poster of the event">
-      <!-- <img id = "pic_of_poster" src="/wp-content/themes/SerendipityBooks/writingseriesposter.png" alt="Poster of the event"> -->
+      <img id = "posterImage" src= <?php echo get_template_directory_uri() . "/afterhoursbookclub.png" ?> alt="Poster of the event">
+      <!-- <img id = "pic_of_poster" src= <?php echo get_template_directory_uri() . "writingseriesposter.png" ?> alt="Poster of the event"> -->
   </div>
   <div class = "containers" id = "details">
    <!-- Words Part -->
     <div class = "icon-heading-div">
-      <img class = "heading-icon" src="/wp-content/themes/SerendipityBooks/dateIcon.png" alt="Calendar icon next to date">
+      <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/dateIcon.png" ?> alt="Calendar icon next to date">
       <p class = "headings"> UPCOMING MEETING </p>
     </div>
       <p class = "body-text"> December 9, 6:30 - 8:00pm </p> <br>
@@ -28,14 +29,14 @@
           ‘Long Way Down‘ by Jason Reynolds (a two book selection) </p> <br>
 
     <div class = "icon-heading-div">
-      <img class = "heading-icon" src="/wp-content/themes/SerendipityBooks/locationIcon.png" alt="Location icon">
+      <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/locationIcon.png" ?> alt="Location icon">
       <p class = "headings"> LOCATION </p>
     </div>
       <p class = "body-text"> December meeting will be held over Zoom. Register for free below
           EventBrite </p> <br>
 
     <div class = "icon-heading-div">
-      <img class = "heading-icon" src="/wp-content/themes/SerendipityBooks/descIcon.png" alt="Description icon">
+      <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/descIcon.png" ?> alt="Description icon">
       <p class = "headings"> DESCRIPTION </p>
     </div>
       <p class = "body-text"> The book club is open to regular clock-work attendees or 
@@ -47,7 +48,7 @@
       <p class = "body-text">Its always fun! </p> <br>
 
     <div class = "icon-heading-div">
-      <img class = "heading-icon" src="/wp-content/themes/SerendipityBooks/relLinkIcon.png" alt="Relevant link icon">
+      <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/relLinkIcon.png" ?> alt="Relevant link icon">
       <p class = "headings"> RELEVANT LINK </p>
     </div>
       <p class = "body-text">Jason Reynolds in Conversation at the Prince George’s 
@@ -61,19 +62,19 @@
 
     <!-- Words For Creative Writing Series -->
     <!-- <div class = "icon-heading-div">
-      <img class = "heading-icon" src="/wp-content/themes/SerendipityBooks/dateIcon.png" alt="Calendar icon next to date">
+      <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/dateIcon.png" ?> alt="Calendar icon next to date">
       <p class = "headings"> DATE </p>
     </div>
       <p class = "body-text"> September 10 - December 10, 2020</p> <br>
 
     <div class = "icon-heading-div">
-      <img class = "heading-icon" src="/wp-content/themes/SerendipityBooks/locationIcon.png" alt="Location icon">
+      <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/locationIcon.png" ?> alt="Location icon">
       <p class = "headings"> LOCATION </p>
     </div>
       <p class = "body-text"> www.zoom.us/wassup </p> <br>
 
     <div class = "icon-heading-div">
-      <img class = "heading-icon" src="/wp-content/themes/SerendipityBooks/descIcon.png" alt="Description icon">
+      <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/descIcon.png" ?> alt="Description icon">
       <p class = "headings"> DESCRIPTION </p>
     </div>
       <p class = "body-text"> Creative Writing Virtual Series </p> <br>
