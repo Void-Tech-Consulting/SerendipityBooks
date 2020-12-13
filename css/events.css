@@ -1,4 +1,111 @@
 /* Events css styles */
-h1 {
-    color:green;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
+#outer {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    
+}
+
+#eventHeaderSection {
+    display: flex;
+    height: 247px;
+    top: 170px;
+    margin-bottom: 100px;
+    background-color: #F6B1AD;
+    align-items: center;
+    justify-content: center;
+}
+
+#eventTitle {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 61px;
+    text-align: center;
+}
+
+#posterImage {
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* .containers{
+    width: 40%;
+    margin: 0 auto;
+} */
+
+#poster{
+    margin: 0 auto;
+}
+
+#details{
+    width: 25%;
+    margin-right: 10%;
+    /* vertical-align: center; */
+}
+
+.headings{
+    /* What/How to font family? */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+}
+
+.body-text{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.heading-icon {
+    width: 5%;
+    height: 5%;
+    margin-right: 5px;
+}
+
+.icon-heading-div{
+    display: flex;
+    align-items: baseline;
+}
+
+#drop-down-books{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 75%;
+    box-shadow: 1px 3px 5px #bbbbbb;
+
+}
+
+/* details > summary {
+    padding: 2px 6px;
+    width: 15em;
+    background-color: #ddd;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+    list-style: none;
+  }
+  
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 3px 3px 4px black;
+  } */
