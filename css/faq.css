@@ -2,44 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 
-body {
-    margin: 0;
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(0, 0, 0, 1);
-    overflow-x: hidden;
-}
-
 /* Title of Page */
 header {
-    display: block;
-    margin: 0;
-    background-color: rgba(244, 106, 97, 0.75);
-    text-align: center;
-    width: 1152px;
+    display: flex;
+    background-color: rgba(246, 177, 173, 1);
+    align-items: center;
+    justify-content: center;
+    /* width: 1440px; */
     height: 247px;
-    margin: 93px 0 61px;
 }
 
 h1 {
     display: inline-block;
     font-family: 'Lora', sans-serif;
-    font-size: 70px;
     color: rgba(0, 0, 0, 1);
-    margin-top: 82px;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 40px;
 }
 
 .bracket {
     font-family: 'Lato', sans-serif;
     font-size: 170px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 /* Questions */
 #questions {
     display: inline-block;
-    margin-left: 67px;
+    margin-left: 153px;
+    margin-top: 83px;
     width: 706px;
     font-family: 'Lato', sans-serif;
+    font-size: 18px;
 }
 
 .quescontainer {
@@ -53,7 +49,7 @@ h1 {
 }
 
 .questype {
-    border: 2px solid rgba(0, 0, 0, 1);
+    border: 0.5px solid rgba(0, 0, 0, 1);
     box-shadow: 0 4px 2px -2px rgb(161, 161, 161);
     width: 709px;
     height: 48px;
@@ -72,7 +68,6 @@ h1 {
 
 .questitle {
     text-transform: uppercase;
-    font-size: 18px;
     margin-left: 27px;
 }
 
@@ -86,8 +81,13 @@ h1 {
 
 .quescontent {
     display: none;
+    font-weight: 400;
     margin-left: 14px;
     margin-bottom: 42px;
+}
+
+p {
+    padding: 10px;
 }
 
 .fa-angle-down, .fa-angle-up {
@@ -99,15 +99,15 @@ h1 {
 }
 
 .fa-angle-up {
-    margin-right: 43px;
+    margin-right: 35px;
 }
 
 /* Image */
 #image {
     display: inline;
     position: absolute;
-    top: 491px;
-    left: 831px;
+    margin-left: 161px;
+    margin-top: 177px;
     width: 282px;
     height: 228px;
 }
