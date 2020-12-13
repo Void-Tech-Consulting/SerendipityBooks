@@ -20,6 +20,9 @@
     <div class="quescontainer">
       <button type="button" class="questype">
         <span class="questitle">trade policy</span>
+        <?php if (get_theme_mod($faq_questype)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_questype) ?></span>
+        <?php } ?>
         <i class="fas fa-angle-down"></i>
       </button>
     
