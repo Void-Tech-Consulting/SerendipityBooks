@@ -1,6 +1,7 @@
 <?php 
   get_header(); 
   wp_enqueue_style('faq');
+  require get_template_directory() . '/inc/section_vars.php';
 ?>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
@@ -13,13 +14,19 @@
     <h1>Frequently Asked Questions</h1>
     <span class="bracket">]</span>
   </header>
-    
   <!-- Section: Questions -->
   <section id="questions">
     <!-- Trade Policy -->
     <div class="quescontainer">
       <button type="button" class="questype">
         <span class="questitle">trade policy</span>
+<<<<<<< Updated upstream
+=======
+        <?php echo get_theme_mod($faq_questype) ?>
+        <?php if (get_theme_mod($faq_questype)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_questype) ?></span>
+        <?php } ?>
+>>>>>>> Stashed changes
         <i class="fas fa-angle-down"></i>
       </button>
     

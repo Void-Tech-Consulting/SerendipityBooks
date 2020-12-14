@@ -11,7 +11,7 @@ body {
     display: flex;
     height: 75px;
     background: #EFEFEF;
-    margin: 5px;
+    padding: 5px;
     position: -webkit-sticky; /* Safari */
     position: sticky;
 }
