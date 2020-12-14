@@ -1,6 +1,7 @@
 <?php 
   get_header(); 
   wp_enqueue_style('events');
+  require get_template_directory() . '/inc/section_vars.php';
   // require get_template_directory() . 'page-events.php';
 ?>
 
@@ -12,6 +13,14 @@
   <p id = "eventTitle"> AFTERHOURS BOOK CLUB </p>
   <img src = <?php echo get_template_directory_uri() . "/rightBracket.png" ?> alt = "right bracket">
 </div>
+
+<?php if (get_theme_mod($events_poster_img)) { ?>
+  <img 
+    src="<?php echo get_theme_mod($events_poster_img) ?>" 
+    alt="event poster image"
+  >
+<?php } ?>
+
 
 <div id = "outer">
   <div class = "containers" id = "poster">
