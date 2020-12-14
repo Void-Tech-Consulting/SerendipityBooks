@@ -106,6 +106,27 @@
         <p>Many thanks for considering Serendipity Books–and congratulations on your 
         massive achievement,</p>
         <p>Michelle.</p>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text">
+          <label for="email">Email</label>
+          <input type="text">
+          <label for="authorsite">Author Website (if available)</label>
+          <input type="text">
+          <label for="booktitle">Book Title</label>
+          <input type="text">
+          <label for="genre">Genre</label>
+          <input type="text">
+          <label for="coverprice">Cover Price</label>
+          <input type="text">
+          <label for="availability">Is this book available on Ingram?</label>
+          <input type="text">
+          <label for="synopsis">Synopsis of Book</label>
+          <input type="text">
+
+          <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
     
