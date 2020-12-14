@@ -4,6 +4,7 @@
   $home_top_img = 'home_top_img';
   $home_top_desc = 'home_top_desc';
 
+  //Variables for Register Settings - Events
   $events_section = 'events_section';
   $event_title = 'event_title';
   $events_poster_img = 'events_poster_img';
