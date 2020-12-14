@@ -20,13 +20,10 @@
     <div class="quescontainer">
       <button type="button" class="questype">
         <span class="questitle">trade policy</span>
-<<<<<<< Updated upstream
-=======
         <?php echo get_theme_mod($faq_questype) ?>
         <?php if (get_theme_mod($faq_questype)) { ?>
           <span class="questitle"><?php echo get_theme_mod($faq_questype) ?></span>
         <?php } ?>
->>>>>>> Stashed changes
         <i class="fas fa-angle-down"></i>
       </button>
     

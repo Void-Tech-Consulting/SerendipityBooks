@@ -7,7 +7,7 @@ body {
     padding-bottom: 75px;    /* Footer height */
 }
 
-.top-header {
+#top-header {
     display: flex;
     height: 75px;
     background: #EFEFEF;
@@ -52,4 +52,35 @@ a:link {
 }
 .shop {
     color: #F46A61;
+}
+
+#search-icon{
+    margin: 0;
+}
+
+#search-bar-container {
+    display: none;
+    height: 75px;
+    background: #EFEFEF;
+    padding: 5px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+}
+
+.search-bar {
+    font-family: Lato;
+    font-style: normal;
+    background-repeat: no-repeat;
+    height: 45px; 
+    margin: 5px 175px 5px 175px;
+    width: 100%; /* Full-width */
+    padding: 5px 10px 5px 10px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+}
+
+#search {
+    width: 30px;
+}
+#cancel {
+    width: 30px;
 }
