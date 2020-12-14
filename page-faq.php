@@ -1,6 +1,7 @@
 <?php 
   get_header(); 
   wp_enqueue_style('faq');
+  require get_template_directory() . '/inc/section_vars.php';
 ?>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
@@ -19,13 +20,17 @@
     <!-- Trade Policy -->
     <div class="quescontainer">
       <button type="button" class="questype">
-        <span class="questitle">trade policy</span>
-        <?php if (get_theme_mod($faq_questype)) { ?>
-          <span class="questitle"><?php echo get_theme_mod($faq_questype) ?></span>
+        <!-- <span class="questitle">trade policy</span> -->
+        <?php if (get_theme_mod($faq_type1)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_type1) ?></span>
         <?php } ?>
         <i class="fas fa-angle-down"></i>
       </button>
-    
+  
+      <?php if (get_theme_mod($faq_content1)) { ?>
+          <div class="quescontent"><?php echo get_theme_mod($faq_content1) ?></div>
+      <?php } ?>
+
       <div class="quescontent">
         <p>We do take books in for trade but do not give cash. Instead:</p>
         <p>- for any books we take, we offer 20% of the new value of the book in store credit<br>
@@ -55,9 +60,17 @@
     <!-- Gift Cards -->
     <div class="quescontainer">
       <button type="button" class="questype">
-        <span class="questitle">gift cards</span>
+        <!-- <span class="questitle">gift cards</span> -->
+        <?php if (get_theme_mod($faq_type2)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_type2) ?></span>
+        <?php } ?>
         <i class="fas fa-angle-down"></i>
       </button>
+
+      <?php if (get_theme_mod($faq_content2)) { ?>
+          <div class="quescontent"><?php echo get_theme_mod($faq_content2) ?></div>
+      <?php } ?>
+
       <div class="quescontent">
         <p>Electronic gift cards for shopping at the brick and mortar are available here.</p>
   
@@ -70,9 +83,17 @@
     <!-- Local Authors -->
     <div class="quescontainer">
       <button type="button" class="questype">
-        <span class="questitle">local authors</span>
+        <!-- <span class="questitle">local authors</span> -->
+        <?php if (get_theme_mod($faq_type3)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_type3) ?></span>
+        <?php } ?>
         <i class="fas fa-angle-down"></i>
       </button>
+
+      <?php if (get_theme_mod($faq_content3)) { ?>
+          <div class="quescontent"><?php echo get_theme_mod($faq_content3) ?></div>
+      <?php } ?>
+
       <div class="quescontent">
         <p>Congratulations on pursuing the best activity ever. As a writer, rest assured that I 
         understand all the effort, joy and pain that went into your work.</p>
@@ -92,9 +113,17 @@
     <!-- Contactless Pickup -->
     <div class="quescontainer">
       <button type="button" class="questype">
-        <span class="questitle">contactless pickup</span>
+        <!-- <span class="questitle">contactless pickup</span> -->
+        <?php if (get_theme_mod($faq_type4)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_type4) ?></span>
+        <?php } ?>
         <i class="fas fa-angle-down"></i>
       </button>
+
+      <?php if (get_theme_mod($faq_content4)) { ?>
+          <div class="quescontent"><?php echo get_theme_mod($faq_content4) ?></div>
+      <?php } ?>
+
       <div class="quescontent">
         <p>Click here to schedule a pickup.</p>
       </div>
@@ -104,9 +133,17 @@
     <!-- Delivery Service -->
     <div class="quescontainer">
       <button type="button" class="questype">
-        <span class="questitle">delivery service</span>
+        <!-- <span class="questitle">delivery service</span> -->
+        <?php if (get_theme_mod($faq_type5)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_type5) ?></span>
+        <?php } ?>
         <i class="fas fa-angle-down"></i>
       </button>
+
+      <?php if (get_theme_mod($faq_content5)) { ?>
+          <div class="quescontent"><?php echo get_theme_mod($faq_content5) ?></div>
+      <?php } ?>
+
       <div class="quescontent">
         <p>For free deliveries visit here or call us at (734) 475-7148. If you need title 
         suggestions, Michelle can help. If you don’t see the book you want on our website, shop our 
@@ -118,9 +155,17 @@
     <!-- Private Appointments -->
     <div class="quescontainer">
       <button type="button" class="questype">
-        <span class="questitle">private appointments</span>
+        <!-- <span class="questitle">private appointments</span> -->
+        <?php if (get_theme_mod($faq_type6)) { ?>
+          <span class="questitle"><?php echo get_theme_mod($faq_type6) ?></span>
+        <?php } ?>
         <i class="fas fa-angle-down"></i>
       </button>
+
+      <?php if (get_theme_mod($faq_content6)) { ?>
+          <div class="quescontent"><?php echo get_theme_mod($faq_content6) ?></div>
+      <?php } ?>
+
       <div class="quescontent">
         <p>If you would like to schedule a private appointment click here.</p>
       </div>
