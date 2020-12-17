@@ -44,38 +44,6 @@ require get_template_directory() . '/inc/section_vars.php';
       ?>
     </div>
 
-    <script>
-      let carousel = document.querySelector("#bestsellers .carousel");
-
-      let books = document.querySelectorAll(".book-card");
-      let style = window.getComputedStyle(books[0]);
-      let offset = books[0].scrollWidth + parseInt(style.marginRight);
-
-      let splits = [0, 3, 6, 7];
-
-      let i = 0;
-
-      let left = document.querySelector("#bestsellers .header-part .left");
-      let right = document.querySelector("#bestsellers .header-part .right");
-
-      let options = {
-        inline: "start",
-        block: "nearest",
-        behavior: "smooth"
-      };
-
-      left.addEventListener('click', () => {
-        i = (i - 1) % splits.length;
-        if (i < 0) i = 0;
-        books[splits[i]].scrollIntoView(options);
-      })
-
-      right.addEventListener('click', () => {
-        i = (i + 1) % splits.length;
-        books[splits[i]].scrollIntoView(options);
-      })
-    </script>
-
   </section>
 
   <section id="favorites">
