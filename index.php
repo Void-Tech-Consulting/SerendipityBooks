@@ -37,9 +37,15 @@ require get_template_directory() . '/inc/section_vars.php';
       <?php
       for ($i = 0; $i < 10; $i++) {
         echo
-          "<div class='book-card'>
+        "<div class='book'>
+          <div class='book-card'>
             <img alt='Eduacted Book Cover' src=" . get_template_directory_uri() . "'/img/book_cover.jpeg'>
-          </div>";
+          </div>
+          <div class='book-desc'>
+            <div class='book-title'>Educated</div>
+            <div class='book-price'>$15.99</div>
+          </div>
+        </div>";
       }
       ?>
     </div>
@@ -68,9 +74,15 @@ require get_template_directory() . '/inc/section_vars.php';
       <?php
       for ($i = 0; $i < 10; $i++) {
         echo
-          "<div class='book-card'>
+        "<div class='book'>
+          <div class='book-card'>
             <img alt='Eduacted Book Cover' src=" . get_template_directory_uri() . "'/img/book_cover.jpeg'>
-          </div>";
+          </div>
+          <div class='book-desc'>
+            <div class='book-title'>Educated</div>
+            <div class='book-price'>$15.99</div>
+          </div>
+        </div>";
       }
       ?>
     </div>
