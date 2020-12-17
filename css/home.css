@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
 
+/* General CSS */
 main {
     display: flex;
     flex-direction: column;
@@ -37,7 +38,7 @@ section header .header-part > * {
     width: fit-content; 
 }
 
-.button {
+.flat-button {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 25px;
@@ -46,6 +47,37 @@ section header .header-part > * {
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-color: transparent;
     border-radius: 15px;
+}
+
+/* Descripton heading CSS */
+#description-container {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#description-text {
+    width: 700;
+    height: 40px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+}
+
+.bracket {
+    width: 56px;
+    height: 188px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 170px;
+    line-height: 204px;
+}
+
+/* Carousel CSS */
+.carousel {
+    display: flex;
 }
 
 .carousel-button {
@@ -71,35 +103,6 @@ section header .header-part > * {
     transform: rotate(-180deg);
 }
 
-#description-container {
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#description-text {
-    width: 737px;
-    height: 40px;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 42px;
-}
-
-.bracket {
-    width: 56px;
-    height: 188px;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 170px;
-    line-height: 204px;
-}
-
-.carousel {
-    display: flex;
-}
-
 .book-card {
     width: 290px;
     height: 403px;
@@ -120,6 +123,7 @@ section header .header-part > * {
     border-radius: 20px;
 }
 
+/* Pick-up section CSS */
 #pick-up {
     background-color: #E5E2DB;
     max-width: initial;
