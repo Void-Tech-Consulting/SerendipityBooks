@@ -83,18 +83,18 @@ require get_template_directory() . '/inc/section_vars.php';
   <section id="pick-up">
     <div id="pick-up-content">
 
-      <div class="pick-up-part">
+      <div class="pick-up-part" id="pick-up-left">
         <div id="pick-up-text">
           Want to purchase books while staying safe? Check out our contactless options.
         </div>
-        <!-- <div>  -->
+        <div id="pick-up-buttons"> 
           <button class="flat-button">
             PICK-UP
           </button>
           <button class="flat-button">
             DELIVERY
           </button>
-        <!-- <div> -->
+        </div>
       </div>
 
       <div class="pick-up-part">

@@ -27,7 +27,7 @@ section header .header-part {
 }
 
 section header .header-part > * {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .header-text {
@@ -41,7 +41,9 @@ section header .header-part > * {
 .flat-button {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     line-height: 30px;
     background: #FFC5C1;
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
@@ -133,11 +135,20 @@ section header .header-part > * {
     align-items: center;
 }
 
+.pick-up-part {
+    display: flex;
+    flex-direction: column;
+}
+
 #pick-up-content {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     max-width: 1200px;
+}
+
+#pick-up-buttons .flat-button {
+    margin-right: 20px;
 }
 
 #pick-up-text {
@@ -147,4 +158,5 @@ section header .header-part > * {
     font-weight: 500;
     font-size: 35px;
     line-height: 44.8px;
+    margin-bottom: 50px;
 }
