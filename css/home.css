@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* General CSS */
 main {
     display: flex;
@@ -80,6 +84,8 @@ section header .header-part > * {
 /* Carousel CSS */
 .carousel {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .carousel-button {
@@ -114,6 +120,7 @@ section header .header-part > * {
     justify-content: center;
     align-items: center;
     margin-right: 50px;
+    flex: 0 0 auto;
 }
 
 .book-card img {

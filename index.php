@@ -14,7 +14,7 @@ require get_template_directory() . '/inc/section_vars.php';
     <span class="bracket">]</span>
   </section>
 
-  
+
   <section id="bestsellers">
     <!-- Bestsellers header -->
     <header>
@@ -34,16 +34,47 @@ require get_template_directory() . '/inc/section_vars.php';
 
     <!-- Bestsellers carousel -->
     <div class="carousel">
-      <div class="book-card">
-        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
-      </div>
-      <div class="book-card">
-        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
-      </div>
-      <div class="book-card">
-        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
-      </div>
+      <?php
+      for ($i = 0; $i < 10; $i++) {
+        echo
+          "<div class='book-card'>
+            <img alt='Eduacted Book Cover' src=" . get_template_directory_uri() . "'/img/book_cover.jpeg'>
+          </div>";
+      }
+      ?>
     </div>
+
+    <script>
+      let carousel = document.querySelector("#bestsellers .carousel");
+
+      let books = document.querySelectorAll(".book-card");
+      let style = window.getComputedStyle(books[0]);
+      let offset = books[0].scrollWidth + parseInt(style.marginRight);
+
+      let splits = [0, 3, 6, 7];
+
+      let i = 0;
+
+      let left = document.querySelector("#bestsellers .header-part .left");
+      let right = document.querySelector("#bestsellers .header-part .right");
+
+      let options = {
+        inline: "start",
+        block: "nearest",
+        behavior: "smooth"
+      };
+
+      left.addEventListener('click', () => {
+        i = (i - 1) % splits.length;
+        if (i < 0) i = 0;
+        books[splits[i]].scrollIntoView(options);
+      })
+
+      right.addEventListener('click', () => {
+        i = (i + 1) % splits.length;
+        books[splits[i]].scrollIntoView(options);
+      })
+    </script>
 
   </section>
 
@@ -66,15 +97,14 @@ require get_template_directory() . '/inc/section_vars.php';
 
     <!-- Favorites carousel -->
     <div class="carousel">
-      <div class="book-card">
-        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
-      </div>
-      <div class="book-card">
-        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
-      </div>
-      <div class="book-card">
-        <img alt="Eduacted Book Cover" src=<?php echo get_template_directory_uri() . "/img/book_cover.jpeg" ?>>
-      </div>
+      <?php
+      for ($i = 0; $i < 10; $i++) {
+        echo
+          "<div class='book-card'>
+            <img alt='Eduacted Book Cover' src=" . get_template_directory_uri() . "'/img/book_cover.jpeg'>
+          </div>";
+      }
+      ?>
     </div>
 
   </section>
@@ -87,7 +117,7 @@ require get_template_directory() . '/inc/section_vars.php';
         <div id="pick-up-text">
           Want to purchase books while staying safe? Check out our contactless options.
         </div>
-        <div id="pick-up-buttons"> 
+        <div id="pick-up-buttons">
           <button class="flat-button">
             PICK-UP
           </button>
@@ -98,7 +128,7 @@ require get_template_directory() . '/inc/section_vars.php';
       </div>
 
       <div class="pick-up-part">
-        <img alt="Two birds on a branch" src=<?php echo get_template_directory_uri() . "/img/pick_up_birds.png"?>>
+        <img alt="Two birds on a branch" src=<?php echo get_template_directory_uri() . "/img/pick_up_birds.png" ?>>
       </div>
 
     </div>
