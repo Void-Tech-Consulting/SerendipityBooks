@@ -7,20 +7,13 @@ function faq_customizer($wp_customize) {
   ));
 
   // Trade Policy 
-  $wp_customize->add_setting($faq_type1, array(
-    'default' => 'trade policy',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_type1);
   $wp_customize->add_control($faq_type1, array(
     'label' => 'Question Type 1',
     'section' => $faq_section,
-    'type' => 'textarea'
   ));
 
-  $wp_customize->add_setting($faq_content1, array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_content1);
   $wp_customize->add_control($faq_content1, array(
     'label' => 'Question Content 1',
     'section' => $faq_section,
@@ -28,20 +21,13 @@ function faq_customizer($wp_customize) {
   ));
   
    // Gift Cards
-   $wp_customize->add_setting($faq_type2, array(
-    'default' => 'gift cards',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+   $wp_customize->add_setting($faq_type2);
   $wp_customize->add_control($faq_type2, array(
     'label' => 'Question Type 2',
     'section' => $faq_section,
-    'type' => 'textarea'
   ));
 
-  $wp_customize->add_setting($faq_content2, array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_content2);
   $wp_customize->add_control($faq_content2, array(
     'label' => 'Question Content 2',
     'section' => $faq_section,
@@ -49,20 +35,13 @@ function faq_customizer($wp_customize) {
   ));
 
    // Local Authors
-   $wp_customize->add_setting($faq_type3, array(
-    'default' => 'local authors',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+   $wp_customize->add_setting($faq_type3);
   $wp_customize->add_control($faq_type3, array(
     'label' => 'Question Type 3',
     'section' => $faq_section,
-    'type' => 'textarea'
   ));
 
-  $wp_customize->add_setting($faq_content3, array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_content3);
   $wp_customize->add_control($faq_content3, array(
     'label' => 'Question Content 3',
     'section' => $faq_section,
@@ -70,20 +49,13 @@ function faq_customizer($wp_customize) {
   ));
 
    // Contactless Pickup
-   $wp_customize->add_setting($faq_type4, array(
-    'default' => 'contactless pickup',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+   $wp_customize->add_setting($faq_type4);
   $wp_customize->add_control($faq_type4, array(
     'label' => 'Question Type 4',
     'section' => $faq_section,
-    'type' => 'textarea'
   ));
 
-  $wp_customize->add_setting($faq_content4, array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_content4);
   $wp_customize->add_control($faq_content4, array(
     'label' => 'Question Content 4',
     'section' => $faq_section,
@@ -91,20 +63,13 @@ function faq_customizer($wp_customize) {
   ));
 
  // Delivery Service
-  $wp_customize->add_setting($faq_type5, array(
-    'default' => 'delivery service',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_type5);
   $wp_customize->add_control($faq_type5, array(
     'label' => 'Question Type 5',
     'section' => $faq_section,
-    'type' => 'textarea'
   ));
 
-  $wp_customize->add_setting($faq_content5, array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_content5);
   $wp_customize->add_control($faq_content5, array(
     'label' => 'Question Content 5',
     'section' => $faq_section,
@@ -112,24 +77,28 @@ function faq_customizer($wp_customize) {
   ));
 
    // Private Appointments
-   $wp_customize->add_setting($faq_type6, array(
-    'default' => 'private appointments',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+   $wp_customize->add_setting($faq_type6);
   $wp_customize->add_control($faq_type6, array(
     'label' => 'Question Type 6',
     'section' => $faq_section,
-    'type' => 'textarea'
   ));
 
-  $wp_customize->add_setting($faq_content6, array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
+  $wp_customize->add_setting($faq_content6);
   $wp_customize->add_control($faq_content6, array(
     'label' => 'Question Content 6',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
+
+  $wp_customize->add_setting($faq_img);
+  $wp_customize->add_control( new WP_Customize_Image_Control( 
+      $wp_customize, 
+      $faq_img, 
+      array(
+          'label' => 'Image',
+          'section' => $faq_section
+      )
+  ));
+
 }
 add_action( 'customize_register', 'faq_customizer' );

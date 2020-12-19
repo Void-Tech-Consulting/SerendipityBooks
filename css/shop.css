@@ -1,0 +1,128 @@
+/* FAQ css styles */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+/* Title of Page */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 1440px; */
+  height: 247px;
+}
+
+h1 {
+  display: inline-block;
+  font-family: 'Lora', sans-serif;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.bracket {
+  font-family: 'Lato', sans-serif;
+  font-size: 170px;
+  font-weight: 200;
+}
+
+section {
+  width: auto;
+}
+
+#shop_layout {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Left Sidebar */
+#selection-sidebar {
+}
+
+.selection-title {
+  font-family: 'Lora', sans-serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.selection-container {
+  background-color: #E5E2DB;
+  border-radius: 30px;
+  width: 268px;
+  padding: 35px 30px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.selection-type {
+  display: block;
+}
+
+/* Right: Bookshop */
+#bookstore {
+  width: 50%;
+}
+
+#sort-bookstore {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  appearance: none;
+}
+
+#display-num {
+  width: 200px;
+  height: 60px;
+  
+  background-color: #E5E2DB;
+}
+
+#display-by {
+  width: 200px;
+  height: 60px;
+  background-color: #FFC5C1;
+}
+
+#display-bookstore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* width: 50%; */
+}
+
+.book-content {
+  width: 185px;
+}
+
+.book-cover {
+  width: 185px;
+  height: 259px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.book-cover img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-info {
+  margin-top: 18px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.book-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.book-price {
+  font-size: 10px;
+}

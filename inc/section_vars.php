@@ -17,4 +17,5 @@
   $faq_content5 = 'faq_content5';
   $faq_type6 = 'faq_type6';
   $faq_content6 = 'faq_content6';
+  $faq_img = 'faq_img';
 ?>
