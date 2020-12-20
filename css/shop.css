@@ -1,0 +1,138 @@
+#description-shop-container {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#description-header {
+    height: 40px;
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.bracket-shop {
+    width: 56px;
+    height: 200px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 170px;
+    line-height: 204px;
+}
+
+.shop-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex: 1;
+}
+
+.shop-category-header {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 51px;
+    margin: 10px;
+}
+
+.shop-search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.shop-filters-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.filter-box {
+    display: flex;
+    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 47.5px;
+    margin: 5px;
+    padding: 1 10 1 10;
+}
+.gray {
+    background: #E5E2DB;
+}
+
+.pink{
+    background: #FFC5C1;
+}
+
+.selected {
+    color: #F46A61;
+}
+
+.filter-text {
+    margin: 5px;
+    margin-right: 10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.filter-arrow {
+    margin: 5px;
+}
+
+.shop-category-container {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+}
+
+.categories {
+    background: #E5E2DB;
+    border-radius: 30px;
+}
+
+.category {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.search-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.book-container {
+    width: 200px;
+    margin: 50px;
+}
+
+.book-img {
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.book-title {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.book-price {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+}

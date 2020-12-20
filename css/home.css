@@ -10,7 +10,6 @@ main {
 section {
     width: 100%;
     box-sizing: border-box;
-    max-width: 1200px;
     margin: 25px 0;
 }
 
