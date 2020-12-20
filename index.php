@@ -1,6 +1,18 @@
 <?php
 get_header();
 require get_template_directory() . '/inc/section_vars.php';
+
+$book_map = array(
+  $home_book_title => 'Educated',
+  $home_book_price => '$15.99',
+  $home_book_img => get_template_directory_uri() . '/img/book_cover.jpeg'
+);
+
+foreach ($book_map as $k => $v) {
+  if (get_theme_mod($k)) {
+    $book_map[$k] = get_theme_mod($k);
+  }
+}
 ?>
 
 <main>
@@ -9,7 +21,11 @@ require get_template_directory() . '/inc/section_vars.php';
   <section id="description-container">
     <span class="bracket">[</span>
     <span id="description-text">
-      Michelle is the proud owner of Serendipity Books, a local, independent, curated community book shop.
+      <?php if (get_theme_mod($home_description)) {
+        echo get_theme_mod($home_description);
+      } else {
+        echo "Michelle is the proud owner of Serendipity Books, a local, independent, curated community book shop.";
+      } ?>
     </span>
     <span class="bracket">]</span>
   </section>
@@ -19,8 +35,15 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Bestsellers header -->
     <header>
       <div class="header-part">
-        <div class="header-text">Bestsellers</div>
-        <button class="flat-button">SHOP ALL</button>
+        <div class="header-text">
+          <?php if (get_theme_mod($home_bestsellers_title)) {
+            echo get_theme_mod($home_bestsellers_title);
+          } else {
+            echo "Bestsellers";
+          }
+          ?>
+        </div>
+        <a href="" class="flat-button">SHOP ALL</a>
       </div>
       <div class="header-part">
         <div class="carousel-button left">
@@ -36,16 +59,18 @@ require get_template_directory() . '/inc/section_vars.php';
     <div class="carousel">
       <?php
       for ($i = 0; $i < 10; $i++) {
-        echo
-        "<div class='book'>
-          <div class='book-card'>
-            <img alt='Eduacted Book Cover' src=" . get_template_directory_uri() . "'/img/book_cover.jpeg'>
-          </div>
-          <div class='book-desc'>
-            <div class='book-title'>Educated</div>
-            <div class='book-price'>$15.99</div>
-          </div>
-        </div>";
+        echo "
+          <div class='book'>
+            <div class='book-card'>
+              <img 
+                alt='$book_map[$home_book_title] Book Cover' 
+                src=$book_map[$home_book_img]>
+            </div>
+            <div class='book-desc'>
+              <div class='book-title'>$book_map[$home_book_title]</div>
+              <div class='book-price'>$book_map[$home_book_price]</div>
+            </div>
+          </div>";
       }
       ?>
     </div>
@@ -56,8 +81,15 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Favorites header -->
     <header>
       <div class="header-part">
-        <div class="header-text">Michelle's Favorites</div>
-        <button class="flat-button">SHOP ALL</button>
+        <div class="header-text">
+          <?php if (get_theme_mod($home_favorites_title)) {
+            echo get_theme_mod($home_favorites_title);
+          } else {
+            echo "Michelle's Favorites";
+          }
+          ?>
+        </div>
+        <a href="" class="flat-button">SHOP ALL</a>
       </div>
       <div class="header-part">
         <div class="carousel-button left">
@@ -73,16 +105,18 @@ require get_template_directory() . '/inc/section_vars.php';
     <div class="carousel">
       <?php
       for ($i = 0; $i < 10; $i++) {
-        echo
-        "<div class='book'>
-          <div class='book-card'>
-            <img alt='Eduacted Book Cover' src=" . get_template_directory_uri() . "'/img/book_cover.jpeg'>
-          </div>
-          <div class='book-desc'>
-            <div class='book-title'>Educated</div>
-            <div class='book-price'>$15.99</div>
-          </div>
-        </div>";
+        echo "
+          <div class='book'>
+            <div class='book-card'>
+              <img 
+                alt='$book_map[$home_book_title] Book Cover' 
+                src=$book_map[$home_book_img]>
+            </div>
+            <div class='book-desc'>
+              <div class='book-title'>$book_map[$home_book_title]</div>
+              <div class='book-price'>$book_map[$home_book_price]</div>
+            </div>
+          </div>";
       }
       ?>
     </div>
@@ -90,25 +124,35 @@ require get_template_directory() . '/inc/section_vars.php';
   </section>
 
   <!-- Pick up section -->
-  <section id="pick-up">
-    <div id="pick-up-content">
+  <section id="contactless">
+    <div id="contactless-content">
 
-      <div class="pick-up-part" id="pick-up-left">
-        <div id="pick-up-text">
-          Want to purchase books while staying safe? Check out our contactless options.
+      <div class="contactless-part" id="contactless-left">
+        <div id="contactless-text">
+          <?php if (get_theme_mod($home_contactless_description)) {
+            echo get_theme_mod($home_contactless_description);
+          } else {
+            echo "Want to purchase books while staying safe? Check out our contactless options.";
+          }
+          ?>
         </div>
-        <div id="pick-up-buttons">
-          <button class="flat-button">
+        <div id="contactless-buttons">
+          <a href="" class="flat-button">
             PICK-UP
-          </button>
-          <button class="flat-button">
+          </a>
+          <a href="" class="flat-button">
             DELIVERY
-          </button>
+          </a>
         </div>
       </div>
 
-      <div class="pick-up-part">
-        <img alt="Two birds on a branch" src=<?php echo get_template_directory_uri() . "/img/pick_up_birds.png" ?>>
+      <div class="contactless-part">
+        <img src=<?php if (get_theme_mod($home_contactless_img)) {
+                    echo get_theme_mod($home_contactless_img);
+                  } else {
+                    echo get_template_directory_uri() . "/img/pick_up_birds.png";
+                  }
+                  ?> alt="Two birds on a branch">
       </div>
 
     </div>
@@ -119,12 +163,19 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Upcoming events header -->
     <header>
       <div class="header-part">
-        <div class="header-text">Upcoming Events</div>
-        <button class="flat-button">VIEW ALL</button>
+        <div class="header-text">
+          <?php if (get_theme_mod($home_events_title)) {
+            echo get_theme_mod($home_events_title);
+          } else {
+            echo "Upcoming Events";
+          }
+          ?>
+        </div>
+        <a href="" class="flat-button">VIEW ALL</a>
       </div>
     </header>
 
-    <!-- Upcoming events content -->
+    <!-- Upcoming events images -->
     <div>
 
     </div>
