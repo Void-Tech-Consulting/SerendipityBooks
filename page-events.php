@@ -18,8 +18,11 @@
 <!-- Everything Else on the Page -->
 <div id = "outer">
 
+    
+
     <!-- Poster Div (Image) -->
     <div class = "containers" id = "poster">
+    <img id = "posterImage" src= <?php echo get_template_directory_uri() . "/events_imgs/afterhoursbookclub.png"?>  alt="Poster of the event">
         <!-- Adding Image -->
         <?php if(get_theme_mod($event_poster_img)) { ?>
             <img id = "posterImage" src= <?php echo get_theme_mod($event_poster_img) ?> alt="Poster of the event">
