@@ -30,6 +30,7 @@
     font-size: 48px;
     line-height: 61px;
     text-align: center;
+    padding: 0px 60px;
 }
 
 #posterImage {
@@ -80,13 +81,66 @@
     align-items: center;
 }
 
-#drop-down-books{
+/* #drop-down-books{
     border: 1px solid black;
     border-radius: 10px;
     width: 75%;
     box-shadow: 1px 3px 5px #bbbbbb;
 
-}
+} */
+
+/* Drop Down for Future and Past Books */
+
+.dropbtn {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 30px 0;
+    padding: 10px;
+    padding-left: 0;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    /* background-color: #2980B9; */
+  }
+  
+  .dropdown {
+    /* position: relative; */
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    border-radius: 5px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+  }
+  
+  .dropdown-content p {
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  
 
 /* details > summary {
     padding: 2px 6px;

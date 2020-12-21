@@ -18,15 +18,30 @@
 <!-- Everything Else on the Page -->
 <div id = "outer">
 
-    
-
     <!-- Poster Div (Image) -->
     <div class = "containers" id = "poster">
-    <img id = "posterImage" src= <?php echo get_template_directory_uri() . "/events_imgs/afterhoursbookclub.png"?>  alt="Poster of the event">
+        <img id = "posterImage" src= <?php echo get_template_directory_uri() . "/events_imgs/afterhoursbookclub.png"?>  alt="Poster of the event">
         <!-- Adding Image -->
         <?php if(get_theme_mod($event_poster_img)) { ?>
             <img id = "posterImage" src= <?php echo get_theme_mod($event_poster_img) ?> alt="Poster of the event">
         <?php } ?>
+        
+        <!-- Dropdown for After Hours Book Club -->
+        <div class="dropdown">
+            <div class = "icon-heading-div">
+                <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/booksIcon.png" ?> alt="Bookstack icon next to dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    FUTURE AND PAST BOOKS
+                    <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/downArrow.png" ?> alt="Down Arrow next to dropdown">
+                </button>
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+  	            <p> Words </p>
+            </div>
+        </div>
+
+            
+        
     </div>
 
     <!-- Words Div -->
