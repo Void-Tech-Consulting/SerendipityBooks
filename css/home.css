@@ -191,3 +191,25 @@ section header .header-part > * {
     line-height: 44.8px;
     margin-bottom: 50px;
 }
+
+.event-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#left-event {
+    margin-right: 75px;
+}
+
+#right-event {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event {
+    border: 2.5px solid black;
+    box-sizing: border-box;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+}
