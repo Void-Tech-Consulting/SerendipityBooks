@@ -29,16 +29,16 @@
       <!-- Trade Policy -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_type1)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_type1) ?></span>
+          <?php if (get_theme_mod($faq_tradepolicy)) { ?>
+            <span class="questitle"><?php echo get_theme_mod($faq_tradepolicy) ?></span>
           <?php } else { ?>
             <span class="questitle">trade policy</span>
           <?php } ?>
           <i class="fas fa-angle-down"></i>
         </button>
 
-        <?php if (get_theme_mod($faq_content1)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_content1) ?></div>
+        <?php if (get_theme_mod($faq_tradepolicy_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_tradepolicy_content) ?></div>
         <?php } ?>
 
         <div class="quescontent">
@@ -70,16 +70,16 @@
       <!-- Gift Cards -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_type2)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_type2) ?></span>
+          <?php if (get_theme_mod($faq_giftcards)) { ?>
+            <span class="questitle"><?php echo get_theme_mod($faq_giftcards) ?></span>
           <?php } else { ?>
             <span class="questitle">gift cards</span>
           <?php } ?>
           <i class="fas fa-angle-down"></i>
         </button>
 
-        <?php if (get_theme_mod($faq_content2)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_content2) ?></div>
+        <?php if (get_theme_mod($faq_giftcards_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_giftcards_content) ?></div>
         <?php } ?>
 
         <div class="quescontent">
@@ -95,16 +95,16 @@
       <!-- Local Authors -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_type3)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_type3) ?></span>
+          <?php if (get_theme_mod($faq_authors)) { ?>
+            <span class="questitle"><?php echo get_theme_mod($faq_authors) ?></span>
           <?php } else { ?>
             <span class="questitle">local authors</span>
           <?php } ?>
           <i class="fas fa-angle-down"></i>
         </button>
 
-        <?php if (get_theme_mod($faq_content3)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_content3) ?></div>
+        <?php if (get_theme_mod($faq_authors_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_authors_content) ?></div>
         <?php } ?>
 
         <div class="quescontent">
@@ -147,16 +147,16 @@
       <!-- Contactless Pickup -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_type4)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_type4) ?></span>
+          <?php if (get_theme_mod($faq_pickup)) { ?>
+            <span class="questitle"><?php echo get_theme_mod($faq_pickup) ?></span>
           <?php } else { ?>
             <span class="questitle">contactless pickup</span>
           <?php } ?>
           <i class="fas fa-angle-down"></i>
         </button>
 
-        <?php if (get_theme_mod($faq_content4)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_content4) ?></div>
+        <?php if (get_theme_mod($faq_pickup_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_pickup_content) ?></div>
         <?php } ?>
 
         <div class="quescontent">
@@ -168,16 +168,16 @@
       <!-- Delivery Service -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_type5)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_type5) ?></span>
+          <?php if (get_theme_mod($faq_delivery)) { ?>
+            <span class="questitle"><?php echo get_theme_mod($faq_delivery) ?></span>
           <?php } else { ?>
             <span class="questitle">delivery service</span>
           <?php } ?>
           <i class="fas fa-angle-down"></i>
         </button>
 
-        <?php if (get_theme_mod($faq_content5)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_content5) ?></div>
+        <?php if (get_theme_mod($faq_delivery_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_delivery_content) ?></div>
         <?php } ?>
 
         <div class="quescontent">
@@ -191,16 +191,16 @@
       <!-- Private Appointments -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_type6)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_type6) ?></span>
+          <?php if (get_theme_mod($faq_appoint)) { ?>
+            <span class="questitle"><?php echo get_theme_mod($faq_appoint) ?></span>
           <?php } else { ?>
             <span class="questitle">private appointments</span>
           <?php } ?>
           <i class="fas fa-angle-down"></i>
         </button>
 
-        <?php if (get_theme_mod($faq_content6)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_content6) ?></div>
+        <?php if (get_theme_mod($faq_appoint_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_appoint_content) ?></div>
         <?php } ?>
 
         <div class="quescontent">
@@ -212,10 +212,10 @@
     <!-- Section: Image 2 -->
     <section id="images">
       <?php if (get_theme_mod($faq_img)) { ?>
-      <img id="birdimage" src=<?php echo get_theme_mod($faq_img) ?>></div>
+        <img id="birdimage" src=<?php echo get_theme_mod($faq_img) ?>></div>
+      <?php } else { ?>
+        <img id="birdimage" src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
       <?php } ?>
-
-      <img id="birdimage" src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
     </section>
     
   </div>

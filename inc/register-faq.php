@@ -7,85 +7,85 @@ function faq_customizer($wp_customize) {
   ));
 
   // Trade Policy 
-  $wp_customize->add_setting($faq_type1);
-  $wp_customize->add_control($faq_type1, array(
-    'label' => 'Question Type 1',
+  $wp_customize->add_setting($faq_tradepolicy);
+  $wp_customize->add_control($faq_tradepolicy, array(
+    'label' => 'Trade Policy',
     'section' => $faq_section,
   ));
 
-  $wp_customize->add_setting($faq_content1);
-  $wp_customize->add_control($faq_content1, array(
-    'label' => 'Question Content 1',
+  $wp_customize->add_setting($faq_tradepolicy_content);
+  $wp_customize->add_control($faq_tradepolicy_content, array(
+    'label' => 'Trade Policy Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
   
    // Gift Cards
-   $wp_customize->add_setting($faq_type2);
-  $wp_customize->add_control($faq_type2, array(
-    'label' => 'Question Type 2',
+   $wp_customize->add_setting($faq_giftcards);
+  $wp_customize->add_control($faq_giftcards, array(
+    'label' => 'Gift Cards',
     'section' => $faq_section,
   ));
 
-  $wp_customize->add_setting($faq_content2);
-  $wp_customize->add_control($faq_content2, array(
-    'label' => 'Question Content 2',
+  $wp_customize->add_setting($faq_giftcards_content);
+  $wp_customize->add_control($faq_giftcards_content, array(
+    'label' => 'Gift Cards Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
 
    // Local Authors
-   $wp_customize->add_setting($faq_type3);
-  $wp_customize->add_control($faq_type3, array(
-    'label' => 'Question Type 3',
+   $wp_customize->add_setting($faq_authors);
+  $wp_customize->add_control($faq_authors, array(
+    'label' => 'Local Authors',
     'section' => $faq_section,
   ));
 
-  $wp_customize->add_setting($faq_content3);
-  $wp_customize->add_control($faq_content3, array(
-    'label' => 'Question Content 3',
+  $wp_customize->add_setting($faq_authors_content);
+  $wp_customize->add_control($faq_authors_content, array(
+    'label' => 'Local Authors Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
 
    // Contactless Pickup
-   $wp_customize->add_setting($faq_type4);
-  $wp_customize->add_control($faq_type4, array(
-    'label' => 'Question Type 4',
+   $wp_customize->add_setting($faq_pickup);
+  $wp_customize->add_control($faq_pickup, array(
+    'label' => 'Contactless Pickup',
     'section' => $faq_section,
   ));
 
-  $wp_customize->add_setting($faq_content4);
-  $wp_customize->add_control($faq_content4, array(
-    'label' => 'Question Content 4',
+  $wp_customize->add_setting($faq_pickup_content);
+  $wp_customize->add_control($faq_pickup_content, array(
+    'label' => 'Contactless Pickup',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
 
  // Delivery Service
-  $wp_customize->add_setting($faq_type5);
-  $wp_customize->add_control($faq_type5, array(
-    'label' => 'Question Type 5',
+  $wp_customize->add_setting($faq_delivery);
+  $wp_customize->add_control($faq_delivery, array(
+    'label' => 'Delivery Service',
     'section' => $faq_section,
   ));
 
-  $wp_customize->add_setting($faq_content5);
-  $wp_customize->add_control($faq_content5, array(
-    'label' => 'Question Content 5',
+  $wp_customize->add_setting($faq_delivery_content);
+  $wp_customize->add_control($faq_delivery_content, array(
+    'label' => 'Delivery Service Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
 
    // Private Appointments
-   $wp_customize->add_setting($faq_type6);
-  $wp_customize->add_control($faq_type6, array(
-    'label' => 'Question Type 6',
+   $wp_customize->add_setting($faq_appoint);
+  $wp_customize->add_control($faq_appoint, array(
+    'label' => 'Private Appointments',
     'section' => $faq_section,
   ));
 
-  $wp_customize->add_setting($faq_content6);
-  $wp_customize->add_control($faq_content6, array(
-    'label' => 'Question Content 6',
+  $wp_customize->add_setting($faq_appoint_content);
+  $wp_customize->add_control($faq_appoint_content, array(
+    'label' => 'Private Appointments Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
