@@ -34,9 +34,15 @@ function event_customizer($wp_customize) {
     ));
 
     //Upcoming Meeting
-    $wp_customize->add_setting($upcom_meet_desc);
-    $wp_customize->add_control($upcom_meet_desc, array(
-        'label' => 'Upcoming Meeting Info',
+    $wp_customize->add_setting($upcom_meet_desc1);
+    $wp_customize->add_control($upcom_meet_desc1, array(
+        'label' => 'Upcoming Meeting Info Pt. 1',
+        'section' => $events_section,
+        'type' => 'textarea'
+    ));
+    $wp_customize->add_setting($upcom_meet_desc2);
+    $wp_customize->add_control($upcom_meet_desc2, array(
+        'label' => 'Upcoming Meeting Info Pt. 2',
         'section' => $events_section,
         'type' => 'textarea'
     ));
@@ -48,11 +54,31 @@ function event_customizer($wp_customize) {
         'section' => $events_section,
         'type' => 'textarea'
     ));
+    
+    //EventBrite if on Zoom
+    $wp_customize->add_setting($eventbrite_link);
+    $wp_customize->add_control($eventbrite_link, array(
+        'label' => 'EventBrite Link if on Zoom',
+        'section' => $events_section,
+        // 'type' => 'textarea'
+    ));
 
     //Description
-    $wp_customize->add_setting($event_desc);
-    $wp_customize->add_control($event_desc, array(
-        'label' => 'Description',
+    $wp_customize->add_setting($event_desc1);
+    $wp_customize->add_control($event_desc1, array(
+        'label' => 'Description Pt. 1',
+        'section' => $events_section,
+        'type' => 'textarea'
+    ));
+    $wp_customize->add_setting($event_desc2);
+    $wp_customize->add_control($event_desc2, array(
+        'label' => 'Description Pt. 2',
+        'section' => $events_section,
+        'type' => 'textarea'
+    ));
+    $wp_customize->add_setting($event_desc3);
+    $wp_customize->add_control($event_desc3, array(
+        'label' => 'Description Pt. 3',
         'section' => $events_section,
         'type' => 'textarea'
     ));
@@ -60,9 +86,15 @@ function event_customizer($wp_customize) {
     //Relevant Link
     $wp_customize->add_setting($rel_link_desc);
     $wp_customize->add_control($rel_link_desc, array(
-        'label' => 'Relevant Link',
+        'label' => 'Relevant Link Description',
         'section' => $events_section,
         'type' => 'textarea'
+    ));
+    $wp_customize->add_setting($rel_link);
+    $wp_customize->add_control($rel_link, array(
+        'label' => 'Link',
+        'section' => $events_section,
+        // 'type' => 'textarea'
     ));
 
 }
