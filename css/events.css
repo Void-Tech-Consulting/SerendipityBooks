@@ -18,7 +18,7 @@
     height: 247px;
     top: 170px;
     margin-bottom: 100px;
-    background-color: #F6B1AD;
+    background-color: #CBD9C4;
     align-items: center;
     justify-content: center;
 }
@@ -43,6 +43,7 @@
 } */
 
 #poster{
+    width: 43%;
     margin: 0 auto;
 }
 
@@ -71,14 +72,22 @@
 }
 
 .heading-icon {
-    width: 23px;
-    height: 24px;
+    width: 6%;
+    height: 3%;
+    /* width: 23px;
+    height: 24px; */
     margin-right: 5px;
 }
 
 .icon-heading-div{
     display: flex;
     align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
 }
 
 /* #drop-down-books{
@@ -89,9 +98,139 @@
 
 } */
 
+/* Dropdown???*/
+.quescontainer {
+    display: contents;
+    /* border-bottom: 1px solid black; */
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
+    border: none;
+    width: 100%;
+    background-color: white;
+}
+
+/* Gets rid of blue highlight on click */
+:focus {
+    outline: none !important;
+}
+
+.questype {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    /* box-shadow: 0 4px 2px -2px rgb(161, 161, 161); */
+    width: 100%;
+    margin: 40px 0;
+    background-color: white;
+    text-align: left;
+}
+
+.typeactive {
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    /* background-color: white; */
+}
+
+.questitle {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.titleactive {
+    color: #748F67;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* margin-left: 14px; */
+    /* font-weight: bold; */
+    /* font-weight: 500; */
+    /* text-decoration-line: underline; */
+    /* border: none; */
+    /* border-bottom: 1px solid #F46A61; */
+}
+
+.drop-heading {
+    font-weight: 700;
+}
+
+.quescontent {
+    display: none;
+    text-align: left;
+    vertical-align: text-top;
+    padding: 10px 0;
+    /* margin-left: 14px; */
+    margin-bottom: 100px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    list-style-type: none;
+}
+
+.quescontent li {
+    padding: 3px 0;
+}
+
+.fa-angle-down, .fa-angle-up {
+    color: black;
+    /* font-weight: 200; */
+    font-size: 30px;
+    float: right;
+    margin-right: 20px;
+}
+
+.fa-angle-up {
+    margin-right: 20px;
+    color: #748F67;
+}
+
+/*Other Dropdown idea */
+/* .selectContainer ul{
+	width: 80%;
+  
+}
+
+.initialButton {
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+    padding-left: 0;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+}
+
+.selectContainer ul li
+  {
+    width:100%;
+    cursor:pointer;
+	list-style: none;
+  }
+  
+.selectContainer ul li:not(.initialButton){
+    display:none;
+    float:left;
+  }
+ li.initialButton{position:relative;}
+ li.initialButton:after{content:"\2193 ";position:absolute;right:0px;}
+ li.initialButtonDown:after{content:"\2191 ";position:absolute;right:0;} */
+
+
 /* Drop Down for Future and Past Books */
 
-.dropbtn {
+/* .dropbtn {
     border: none;
     border-bottom: 1px solid black;
     margin: 30px 0;
@@ -111,11 +250,9 @@
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    /* background-color: #2980B9; */
   }
   
   .dropdown {
-    /* position: relative; */
     display: inline-block;
     width: 100%;
   }
@@ -126,7 +263,6 @@
     width: 100%;
     overflow: auto;
     border-radius: 5px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
   }
   
@@ -139,7 +275,7 @@
   
   .dropdown a:hover {background-color: #ddd;}
   
-  .show {display: block;}
+  .show {display: block;} */
   
 
 /* details > summary {
