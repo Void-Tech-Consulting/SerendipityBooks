@@ -207,6 +207,36 @@
           <p>If you would like to schedule a private appointment click <a href="#" class="faqlinks">here.</a></p>
         </div>
       </div>
+
+      <!-- Shop Info -->
+      <div class="quescontainer">
+        <button type="button" class="questype">
+          <?php if (get_theme_mod($faq_appoint)) { ?>
+            <span class="questitle"><?php echo get_theme_mod($faq_appoint) ?></span>
+          <?php } else { ?>
+            <span class="questitle">shop info</span>
+          <?php } ?>
+          <i class="fas fa-angle-down"></i>
+        </button>
+
+        <?php if (get_theme_mod($faq_appoint_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_appoint_content) ?></div>
+        <?php } ?>
+
+        <div class="quescontent">
+          <p>Hours:<br>
+            Tues - Sat: 11 -5<br>
+            Sun: 12 - 4
+          </p>
+          <p>Address:<br>
+            113 W Middle St<br>
+            Chelseas, MI 48118
+          </p>
+          <p>Phone:<br>
+            (734) 475-7148
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Section: Image 2 -->

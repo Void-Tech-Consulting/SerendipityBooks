@@ -309,8 +309,8 @@
         <div class="page-bar"></div>
         <div class="page-bar-nums">1 2 3 4 5 6 ... 200</div>
         <div class="page-bar page-bar-right"></div>
-
       </div>
+
     </section>
   </div>
   
@@ -322,8 +322,9 @@
     </div>
     <img src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
   </section>
-  
+
 </body>
+
 </html>
 
 <?php get_footer(); ?>

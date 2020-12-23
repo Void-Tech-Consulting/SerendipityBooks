@@ -1,0 +1,68 @@
+/* FAQ css styles */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+hr {
+  border: 2px solid #000000;
+  margin: 25px 0;
+}
+
+p {
+  margin: 10px auto;
+}
+
+#shop-book-path {
+  font-family: 'Lora', sans-serif;
+  font-size: 30px;
+  margin-left: 118px;
+  margin-top: 59px;
+}
+
+#shop-book-flex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 127px;
+}
+
+#shop-bookcover {
+  width: 682px;
+  /* height: 1001px; */
+}
+
+#shop-bookdesc {
+  width: 479px;
+}
+
+.book-sectionheader {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.book-options {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.options-check {
+  display: inline-block;
+  width: 33px;
+  height: 31px;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.options-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.book-desc-content {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-bottom: 90px;
+}
