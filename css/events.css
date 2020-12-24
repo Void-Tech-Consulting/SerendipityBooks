@@ -9,7 +9,6 @@
 #outer {
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
     
 }
 
@@ -37,11 +36,6 @@
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.25));
 }
 
-/* .containers{
-    width: 40%;
-    margin: 0 auto;
-} */
-
 #poster{
     width: 43%;
     margin: 0 auto;
@@ -50,11 +44,9 @@
 #details{
     width: 25%;
     margin-right: 10%;
-    /* vertical-align: center; */
 }
 
 .headings{
-    /* What/How to font family? */
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
@@ -72,10 +64,8 @@
 }
 
 .heading-icon {
-    width: 6%;
-    height: 3%;
-    /* width: 23px;
-    height: 24px; */
+    width: 23px;
+    height: 22px;
     margin-right: 5px;
 }
 
@@ -90,32 +80,22 @@
     color: black;
 }
 
-/* #drop-down-books{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 75%;
-    box-shadow: 1px 3px 5px #bbbbbb;
 
-} */
-
-/* Dropdown???*/
+/* Dropdown*/
 .quescontainer {
     display: contents;
-    /* border-bottom: 1px solid black; */
-    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
     border: none;
     width: 100%;
     background-color: white;
 }
 
-/* Gets rid of blue highlight on click */
+/* Gets rid of blue highlight on click in chrome */
 :focus {
     outline: none !important;
 }
 
 .questype {
     border-bottom: 1px solid rgba(0, 0, 0, 1);
-    /* box-shadow: 0 4px 2px -2px rgb(161, 161, 161); */
     width: 100%;
     margin: 40px 0;
     background-color: white;
@@ -126,7 +106,6 @@
     border: none;
     box-shadow: none;
     width: 100%;
-    /* background-color: white; */
 }
 
 .questitle {
@@ -144,12 +123,6 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    /* margin-left: 14px; */
-    /* font-weight: bold; */
-    /* font-weight: 500; */
-    /* text-decoration-line: underline; */
-    /* border: none; */
-    /* border-bottom: 1px solid #F46A61; */
 }
 
 .drop-heading {
@@ -161,7 +134,6 @@
     text-align: left;
     vertical-align: text-top;
     padding: 10px 0;
-    /* margin-left: 14px; */
     margin-bottom: 100px;
     font-family: Lato;
     font-style: normal;
@@ -177,7 +149,6 @@
 
 .fa-angle-down, .fa-angle-up {
     color: black;
-    /* font-weight: 200; */
     font-size: 30px;
     float: right;
     margin-right: 20px;
@@ -187,115 +158,3 @@
     margin-right: 20px;
     color: #748F67;
 }
-
-/*Other Dropdown idea */
-/* .selectContainer ul{
-	width: 80%;
-  
-}
-
-.initialButton {
-    border-bottom: 1px solid black;
-    margin: 10px 0;
-    padding: 10px;
-    padding-left: 0;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
-    cursor: pointer;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-}
-
-.selectContainer ul li
-  {
-    width:100%;
-    cursor:pointer;
-	list-style: none;
-  }
-  
-.selectContainer ul li:not(.initialButton){
-    display:none;
-    float:left;
-  }
- li.initialButton{position:relative;}
- li.initialButton:after{content:"\2193 ";position:absolute;right:0px;}
- li.initialButtonDown:after{content:"\2191 ";position:absolute;right:0;} */
-
-
-/* Drop Down for Future and Past Books */
-
-/* .dropbtn {
-    border: none;
-    border-bottom: 1px solid black;
-    margin: 30px 0;
-    padding: 10px;
-    padding-left: 0;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
-    cursor: pointer;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-  }
-  
-  .dropdown {
-    display: inline-block;
-    width: 100%;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    overflow: auto;
-    border-radius: 5px;
-    z-index: 1;
-  }
-  
-  .dropdown-content p {
-    color: black;
-    padding: 12px 30px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;} */
-  
-
-/* details > summary {
-    padding: 2px 6px;
-    width: 15em;
-    background-color: #ddd;
-    border: none;
-    box-shadow: 3px 3px 4px black;
-    cursor: pointer;
-    list-style: none;
-  }
-  
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
-  
-  details > p {
-    border-radius: 0 0 10px 10px;
-    background-color: #ddd;
-    padding: 2px 6px;
-    margin: 0;
-    box-shadow: 3px 3px 4px black;
-  } */

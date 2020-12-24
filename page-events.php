@@ -31,20 +31,7 @@
             <img id = "posterImage" src= <?php echo get_theme_mod($event_poster_img) ?> alt="Poster of the event">
         <?php } ?>
 
-        <!-- Dropdown but icon next to title won't work????? -->
-        <!-- <div class="quescontainer">
-            <div class = "icon-heading-div">
-                <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/bookIcon.png" ?> alt="Bookstack icon next to dropdown">
-                <button type="button" class="questype">
-                    <span class="questitle">FUTURE AND PAST BOOKS</span>
-                    <i class="fas fa-angle-down"></i>
-                </button>
-            </div>
-            <div class="quescontent">
-                <li>Option 1 </li>
-                <li>Option 2 </li>
-            </div>
-        </div> -->
+        <!-- Dropdown -->
         <div id = "width-control">
         <div class="quescontainer">
             <button type="button" class="questype">
