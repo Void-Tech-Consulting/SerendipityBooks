@@ -30,6 +30,28 @@ foreach ($book_map as $k => $v) {
     <span class="bracket">]</span>
   </section>
 
+  <!-- Mobile header -->
+  <section> 
+    <header id="mobile-header">
+      <div class="header-part"> 
+        <div class="header-text"> 
+          Explore
+        </div>
+      </div>
+      <div class="header-part" id="mobile-tabs"> 
+        <div class="header-text"> 
+          Bestsellers
+        </div>
+        <div class="header-text"> 
+          Michelle's Favorites
+        </div>
+        <div class="header-text"> 
+          Events
+        </div>
+      </div>
+    </header> 
+  </section>
+
 
   <section id="bestsellers">
     <!-- Bestsellers header -->

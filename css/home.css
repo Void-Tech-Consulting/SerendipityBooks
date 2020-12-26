@@ -47,6 +47,22 @@ section header .header-part > * {
     width: fit-content;
 }
 
+/* Mobile header CSS */
+#mobile-header {
+    display: none;
+}
+
+#mobile-tabs {
+    justify-content: space-between;
+    margin-right: 0;
+}
+
+#mobile-tabs .header-text {
+    font-size: 2.5rem;
+    cursor: pointer;
+    
+}
+
 .flat-button {
     display: flex;
     flex-direction: column;
@@ -265,10 +281,25 @@ section header .header-part > * {
         background-color: transparent;
     }
 
-    .carousel-button, section header .flat-button {
+    section header:not(#mobile-header) {
         display: none;
     }
 
+    #mobile-header {
+        display: initial;
+    }
+
+    #favorites {
+        display: none;
+    }
+
+    #upcoming-events {
+        display: none;
+    }
+
+    #contactless {
+        order: 1;
+    }
 }
 
 @media screen and (max-width: 700px) {
