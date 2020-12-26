@@ -18,9 +18,13 @@
       <img src=<?php echo get_template_directory_uri() . "/img/bc_frida-atoz.png"?> alt="Frida A to Z Book Cover">
     </div>
     <div id="shop-bookdesc">
+
+      <!-- Title, Author, Price -->
       <div class="book-sectionheader">Bailey, Nadia - Frida A to Z: The life of an icon from Activism to Zapotec</div>
       <div class="book-sectionheader">$14.95</div>
-      <!-- Horizontal bar --> <hr>
+      <hr>
+
+      <!-- Options -->
       <div class="book-sectionheader">Options</div>
       <div class="book-options">
         <div class="options-check"></div>
@@ -30,19 +34,29 @@
         <div class="options-check"></div>
         <span class="options-text">Shipping</span>
       </div>
-      <!-- Horizontal bar --> <hr>
+      <hr>
 
+      <!-- Quantity -->
       <div class="book-sectionheader">Quantity</div>
+      <div class="book-quantity">
+        <div class="quantity-box">
+          <div class="quantity-operator">–</div>
+          <div class="quantity-num">1</div>
+          <div class="quantity-operator">+</div>
+        </div>
+        <button><img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">ADD TO CART</button>
+      </div>
+      <div class="quantity-left">1 left</div>
+      <hr>
 
-      <!-- Horizontal bar --> <hr>
-
+      <!-- Description -->
       <div class="book-sectionheader">Description</div>
       <div class="book-desc-content">
         <p>Date Published: 1/5/2021</p>
         <p>Condition: New</p>
         <p>Ages 14 And Up, Grades 9 And Up Young Adult Fiction / Romance / Romantic Comedy</p>
-        <p>Summary:<br>Jane the Virgin meets To All the Boys I’ve Loved Before in this charming debut romantic comedy filled with 
-          Black Girl Magic. Perfect for fans of Jenny Han, Mary H.K. Choi, and Nicola Yoon.
+        <p>Summary:<br>Jane the Virgin meets To All the Boys I’ve Loved Before in this charming debut romantic comedy 
+          filled with Black Girl Magic. Perfect for fans of Jenny Han, Mary H.K. Choi, and Nicola Yoon.
         </p>
         <p>Sixteen-year-old Tessa Johnson has never felt like the protagonist in her own life. She’s rarely seen herself 
           reflected in the pages of the romance novels she loves. The only place she’s a true leading lady is in her own 

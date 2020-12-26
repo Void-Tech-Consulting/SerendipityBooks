@@ -33,26 +33,12 @@
         <div class="selection-container"><?php echo get_theme_mod($shop_categories_content) ?></div>
       <?php } else { ?>
       <div class="selection-container">
-        <span class="selection-type">All</span>
-        <span class="selection-type">Kids</span>
-        <span class="selection-type">Mystery</span>
-        <span class="selection-type">Nonfiction</span>
-        <span class="selection-type">Fiction</span>
-        <span class="selection-type">Romance</span>
-        <span class="selection-type">History</span>
-        <span class="selection-type">Young Adult</span>
-        <span class="selection-type">Poetry</span>
-        <span class="selection-type">Journals</span>
-        <span class="selection-type">Christian Fiction</span>
-        <span class="selection-type">Fantasy</span>
-        <span class="selection-type">Memoir</span>
-        <span class="selection-type">Current Events</span>
-        <span class="selection-type">Travel</span>
-        <span class="selection-type">Nature</span>
-        <span class="selection-type">Cooking</span>
-        <span class="selection-type">Spiritual</span>
-        <span class="selection-type">Essays</span>
-        <span class="selection-type">Self-help</span>
+        <div>All</div>
+        <div>Nonfiction</div>
+        <div>Fiction</div>
+        <div>Childrens</div>
+        <div>Young Adult</div>
+        <div class="selection-active">Gifts</div>
       </div>
       <?php } ?>
 
@@ -67,9 +53,9 @@
         <div class="selection-container"><?php echo get_theme_mod($shop_condition_content) ?></div>
       <?php } else { ?>
       <div class="selection-container">
-        <span class="selection-type">All</span>
-        <span class="selection-type">New</span>
-        <span class="selection-type">Used</span>
+        <div>All</div>
+        <div class="selection-active">New</div>
+        <div>Used</div>
       </div>
       <?php } ?>
     </section>
@@ -306,9 +292,20 @@
       </div>
 
       <div id="page-bar">
-        <div class="page-bar"></div>
-        <div class="page-bar-nums">1 2 3 4 5 6 ... 200</div>
-        <div class="page-bar page-bar-right"></div>
+        <div class="page-bar-arrow page-bar-left">
+          <img src=<?php echo get_template_directory_uri() . "/img/arrow-point-to-right.svg" ?> alt="Right Arrow">
+        </div>
+        <div class="page-bar-nums">
+          <div class="page-bar-active">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+        <div class="page-bar-arrow page-bar-right">
+          <img src=<?php echo get_template_directory_uri() . "/img/arrow-point-to-right.svg" ?> alt="Right Arrow">
+        </div>
       </div>
 
     </section>
@@ -319,6 +316,7 @@
     <div class="shop-more-text">
       <p>Haven’t found what you’re looking for?</p>
       <p>Check out more books from Michelle below!</p>
+      <button>SHOP MORE</button>
     </div>
     <img src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
   </section>

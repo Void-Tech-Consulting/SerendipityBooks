@@ -61,6 +61,61 @@ p {
   margin-left: 20px;
 }
 
+.book-quantity {
+  display: flex;
+  justify-content: space-around;
+}
+
+.quantity-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 157px;
+  height: 67px;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.quantity-operator {
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 40px;
+}
+
+.quantity-num {
+  font-size: 20px;
+}
+
+.quantity-left {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.book-quantity button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  width: 280px;
+  height: 68px; 
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #CBD9C4;
+  box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.book-quantity button img {
+  width: 45px;
+  margin-right: 5px;
+}
+
 .book-desc-content {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
