@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
 
-html {
-    scroll-behavior: smooth;
+:root {
+    --light-accent-color: #CBD9C4;
 }
 
 /* General CSS */
+html {
+    scroll-behavior: smooth;
+    font-size: x-small;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -15,15 +20,15 @@ main {
 section {
     width: 100%;
     box-sizing: border-box;
-    max-width: 1200px;
-    margin: 25px 0;
+    max-width: 120rem;
+    margin: 2.5rem 0;
 }
 
 section header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 0;
+    margin: 2.5rem 0;
 }
 
 section header .header-part {
@@ -31,28 +36,33 @@ section header .header-part {
 }
 
 section header .header-part > * {
-    margin-right: 20px;
+    margin-right: 2rem;
 }
 
 .header-text {
     font-family: 'Lora', serif;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;
-    line-height: 51.2px;
-    width: fit-content; 
+    line-height: 5.12rem;
+    width: fit-content;
 }
 
 .flat-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    padding: 10px 20px;
-    background: #FFC5C1;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background: var(--light-accent-color);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-color: transparent;
     border-radius: 15px;
+    width: fit-content;
 }
 
 /* Descripton heading CSS */
@@ -65,26 +75,27 @@ section header .header-part > * {
 
 #description-text {
     width: 700;
-    height: 40px;
+    height: 4rem;
     font-style: italic;
     font-weight: 400;
-    font-size: 35px;
-    line-height: 42px;
+    font-size: 3.5rem;
+    line-height: 4.2rem;
 }
 
 .bracket {
-    width: 56px;
-    height: 188px;
+    width: 5.6rem;
+    height: 18.8rem;
     font-style: normal;
     font-weight: 100;
-    font-size: 170px;
-    line-height: 204px;
+    font-size: 17rem;
+    line-height: 20.4rem;
 }
 
 /* Carousel CSS */
 .carousel {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    gap: 5rem;
+    grid-auto-flow: column;
     overflow-x: hidden;
 }
 
@@ -93,7 +104,6 @@ section header .header-part > * {
     height: 50px;
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
-    color: #F46A61;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,7 +115,7 @@ section header .header-part > * {
 }
 
 .right {
-    background: #FFC5C1;
+    background: var(--light-accent-color);
 }
 
 .left img {
@@ -117,24 +127,23 @@ section header .header-part > * {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 50px;
 }
 
 .book-card {
-    width: 290px;
-    height: 403px;
+    width: 29rem;
+    height: 40.3rem;
     background-color: #E6E2DB;
     border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .book-card img {
-    width: 180px;
-    height: 253px;
+    width: 18rem;
+    height: 25.3rem;
     object-fit: cover;
     object-position: center;
     filter: drop-shadow(9px 14px 4px rgba(0, 0, 0, 0.25));
@@ -148,19 +157,19 @@ section header .header-part > * {
 
 .book-title {
     font-weight: 700;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .book-price {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 /* Contactless section CSS */
 #contactless {
     background-color: #E5E2DB;
     max-width: initial;
-    height: 518px;
+    height: 51.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,21 +184,25 @@ section header .header-part > * {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 1200px;
+    max-width: 120rem;
+}
+
+#contactless-buttons {
+    display: flex;
 }
 
 #contactless-buttons .flat-button {
-    margin-right: 20px;
+    margin-right: 2rem;
 }
 
 #contactless-text {
-    width: 532px;
-    height: 135px;
+    width: 53.2rem;
+    height: 13.5rem;
     font-family: 'Lora', serif;
     font-weight: 500;
-    font-size: 35px;
-    line-height: 44.8px;
-    margin-bottom: 50px;
+    font-size: 3.5rem;
+    line-height: 4.48rem;
+    margin-bottom: 5rem;
 }
 
 .event-container {
@@ -198,7 +211,7 @@ section header .header-part > * {
 }
 
 #left-event {
-    margin-right: 75px;
+    margin-right: 6.5rem;
 }
 
 #right-event {
@@ -212,4 +225,66 @@ section header .header-part > * {
     box-sizing: border-box;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 58.3%;
+    }
+
+    section, #contactless-content {
+        max-width: 80%;
+    }
+
+    .carousel {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: xx-small;
+    }
+
+    section, #contactless-content {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .carousel {
+        display: grid;
+        overflow-x: initial;
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .book-card {
+        width: 18rem;
+        height: 25.3rem;
+        background-color: transparent;
+    }
+
+    .carousel-button, section header .flat-button {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 30%;
+    }
 }

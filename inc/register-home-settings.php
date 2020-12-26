@@ -92,8 +92,6 @@ function home_customizer($wp_customize) {
             'section' => $home_section
         )
     ));
-
-    // Upcoming Events Image
 }
 
 add_action('customize_register', 'home_customizer');

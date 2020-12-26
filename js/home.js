@@ -1,9 +1,6 @@
 let init_carousel = (section) => {
     // works on Safari, but has no smooth scrolling
     // works on Chrome, Edge, Firefox with smooth scrolling
-    // probably will not work on Internet Explorer
-    // can switch to using Element.scroll() instead of
-    // Element.scrollIntoView() if there are browser compatibility issues
     let carousel = document.querySelector(`${section} .carousel`);
 
     let books = carousel.querySelectorAll(".book");

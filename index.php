@@ -43,7 +43,7 @@ foreach ($book_map as $k => $v) {
           }
           ?>
         </div>
-        <a href="" class="flat-button">SHOP ALL</a>
+        <a href="" class="flat-button"><span>SHOP ALL</span></a>
       </div>
       <div class="header-part">
         <div class="carousel-button left">
@@ -89,7 +89,7 @@ foreach ($book_map as $k => $v) {
           }
           ?>
         </div>
-        <a href="" class="flat-button">SHOP ALL</a>
+        <a href="" class="flat-button"><span>SHOP ALL</span></a>
       </div>
       <div class="header-part">
         <div class="carousel-button left">
@@ -123,7 +123,7 @@ foreach ($book_map as $k => $v) {
 
   </section>
 
-  <!-- Pick up section -->
+  <!-- Contactless section -->
   <section id="contactless">
     <div id="contactless-content">
 
@@ -138,10 +138,10 @@ foreach ($book_map as $k => $v) {
         </div>
         <div id="contactless-buttons">
           <a href="" class="flat-button">
-            PICK-UP
+            <span>PICK-UP</span>
           </a>
           <a href="" class="flat-button">
-            DELIVERY
+            <span>DELIVERY</span>
           </a>
         </div>
       </div>
@@ -171,7 +171,7 @@ foreach ($book_map as $k => $v) {
           }
           ?>
         </div>
-        <a href="" class="flat-button">VIEW ALL</a>
+        <a href="" class="flat-button"><span>VIEW ALL</span></a>
       </div>
     </header>
 
