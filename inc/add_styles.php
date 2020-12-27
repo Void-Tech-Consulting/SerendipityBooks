@@ -9,8 +9,11 @@ function add_custom_styles() {
     wp_enqueue_style('footer');
     wp_register_style("shop", get_template_directory_uri() . "/css/shop.css", '', '1.0.0');
     wp_enqueue_script("faq", get_template_directory_uri() . "/js/faq.js", '', '1.0.0');
+
+    wp_enqueue_script("home", get_template_directory_uri() . "/js/home.js", '', '1.0.0');
     wp_enqueue_script("header", get_template_directory_uri() . "/js/header.js", '', '1.0.0');
     wp_enqueue_script("faq", get_template_directory_uri() . "/js/faq.js", '', '1.0.0');
     wp_enqueue_script("shop", get_template_directory_uri() . "/js/shop.js", '', '1.0.0');
+
 }
 add_action('wp_enqueue_scripts', 'add_custom_styles');
