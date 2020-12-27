@@ -1,138 +1,249 @@
-#description-shop-container {
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+/* FAQ css styles */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+/* Title of Page */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 247px;
 }
 
-#description-header {
-    height: 40px;
-    font-family: Lora;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
+h1 {
+  display: inline-block;
+  font-family: 'Lora', sans-serif;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 40px;
 }
 
-.bracket-shop {
-    width: 56px;
-    height: 200px;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 170px;
-    line-height: 204px;
+.bracket {
+  font-family: 'Lato', sans-serif;
+  font-size: 170px;
+  font-weight: 200;
 }
 
-.shop-wrapper {
-    margin-left: 5%;
-    margin-right: 5%;
-    display: flex;
-    flex: 1;
+section {
+  width: auto;
+  margin: 0;
 }
 
-.shop-category-header {
-    font-family: Lora;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 51px;
-    margin: 10px;
+#shop_layout {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.shop-search-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex: 1;
-    flex-wrap: wrap;
+/* Left Sidebar */
+#selection-sidebar {
+  margin: 0;
 }
 
-.shop-filters-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
+.selection-title {
+  font-family: 'Lora', sans-serif;
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
-.filter-box {
-    display: flex;
-    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 47.5px;
-    margin: 5px;
-    padding: 1 10 1 10;
-}
-.gray {
-    background: #E5E2DB;
+.selection-container {
+  background-color: #E5E2DB;
+  border-radius: 30px;
+  width: 268px;
+  padding: 35px 30px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-.pink{
-    background: #FFC5C1;
+.selection-active {
+  color: #748F67;
 }
 
-.selected {
-    color: #F46A61;
+/* Right: Bookshop */
+#bookstore {
+  margin-top: 6px;
+  width: 55%;
 }
 
-.filter-text {
-    margin: 5px;
-    margin-right: 10px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
+#sort-bookstore {
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  justify-content: flex-end;
+  margin-bottom: 100px;
 }
 
-.filter-arrow {
-    margin: 5px;
+/* select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance:none;
+} */
+
+/* Display Dropdown */
+#display-num, #display-by {
+  display: inline-block;
+  width: 200px;
+  background-color: #E5E2DB;
+  box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 47.5px;
 }
 
-.shop-category-container {
-    display: flex;
-    width: 20%;
-    flex-direction: column;
+#display-by {
+  margin-left: 30px;
+  background-color: #CBD9C4;
 }
 
-.categories {
-    background: #E5E2DB;
-    border-radius: 30px;
+.display-default {
+  padding: 10px 29px;
 }
 
-.category {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 10px;
+.display-default img {
+  display: inline;
+  width: 15px;
+  float: right;
+  margin-top: 6px;
+  /* transform: rotate(180deg); */
 }
 
-.search-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.display-content {
+  display: none;
+  margin-left: 30px;
+  border-radius: 40px;
 }
 
-.book-container {
-    width: 200px;
-    margin: 50px;
+/* .display-default:hover .display-content {
+  display: inline;
+} */
+
+#display-bookstore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.book-img {
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
+.book-content {
+  width: 185px;
+  margin-bottom: 75px;
+  margin-right: 0;
+  margin-left: 20px;
+  /* flex-basis: 31%; */
+}
+
+.book-cover {
+  width: 185px;
+  height: 259px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  margin: auto;
+}
+
+.book-cover img {
+  object-fit: cover;
+}
+
+.book-info {
+  margin-top: 18px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .book-title {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .book-price {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    text-align: center;
+  font-size: 10px;
+}
+/* Page Bar */
+#page-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 90px;
+} 
+
+.page-bar-arrow {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  margin-right: 30px;
+}
+
+.page-bar-left img {
+  transform: rotate(-180deg);
+}
+
+.page-bar-left {
+  background-color: #E4DADA;
+}
+
+.page-bar-right {
+  background-color: #CBD9C4;
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.page-bar-nums {
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+}
+
+.page-bar-nums div {
+  display: inline;
+  margin: auto 15px;
+}
+
+.page-bar-active {
+  color: #5B764E;
+  font-size: 30px;
+}
+
+/* Shop More */
+#shop-more {
+  display: flex;
+  justify-content: center;
+  padding: 79px;
+  background-color: #E5E2DB;
+  max-width: initial;
+  height: 336px;
+  margin: 0;
+}
+
+.shop-more-text {
+  font-family: 'Lora', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.shop-more-text button {
+  font-family: 'Lato', sans-serif;
+  width: 225px;
+  height: 70px;
+  border: none;
+  font-size: 25px;
+  margin-top: 40px;
+  background-color: #CBD9C4;
+  box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;  
+}
+
+#shop-more img {
+  object-fit: cover;
+  width: 232px;
+  height: 176px;
+  opacity: 30%;
+}
+
+#shop-more-leftimg {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
