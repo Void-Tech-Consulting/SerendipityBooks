@@ -13,11 +13,11 @@
 
 <!-- Event Header w/ Title -->
 <div id = "eventHeaderSection">
-    <img src = <?php echo get_template_directory_uri() . "/events_imgs/leftBracket.png" ?> alt = "left bracket">
+    <img class = "bracket" src = <?php echo get_template_directory_uri() . "/events_imgs/leftBracket.png" ?> alt = "left bracket">
     <?php if(get_theme_mod($event_title)) { ?>
         <p id = "eventTitle"> <?php echo get_theme_mod($event_title) ?> </p>
     <?php } ?>
-    <img src = <?php echo get_template_directory_uri() . "/events_imgs/rightBracket.png" ?> alt = "right bracket">
+    <img class = "bracket" src = <?php echo get_template_directory_uri() . "/events_imgs/rightBracket.png" ?> alt = "right bracket">
 </div>
 
 <!-- Everything Else on the Page -->
@@ -33,12 +33,12 @@
 
         <!-- Dropdown -->
         <div id = "width-control">
-        <div class="quescontainer">
-            <button type="button" class="questype">
-                <span class="questitle">FUTURE AND PAST BOOKS</span>
+        <div class="dropdownBox">
+            <button type="button" class="dropButton">
+                <span class="dropTitle">FUTURE AND PAST BOOKS</span>
                 <i class="fas fa-angle-down"></i>
             </button>
-            <div class="quescontent">
+            <div class="dropdownContent">
                 <li class = "drop-heading">Future Dates and Reads: </li>
                 <li>January 13 – ‘Paying Guests‘ by Sarah Waters</li>
                 <li class = "drop-heading">Past Selections: </li>

@@ -6,10 +6,17 @@
     padding: 0;
     border: 0;
 }
+
+/* Gets rid of white space when resizing to mobile version */
+html,body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
 #outer {
     display: flex;
     justify-content: space-around;
-    
 }
 
 #eventHeaderSection {
@@ -20,6 +27,11 @@
     background-color: #CBD9C4;
     align-items: center;
     justify-content: center;
+}
+
+.bracket {
+    height: 120px;
+    width: 20px;
 }
 
 #eventTitle {
@@ -82,7 +94,7 @@
 
 
 /* Dropdown*/
-.quescontainer {
+.dropdownBox {
     display: contents;
     border: none;
     width: 100%;
@@ -94,7 +106,7 @@
     outline: none !important;
 }
 
-.questype {
+.dropButton {
     border-bottom: 1px solid rgba(0, 0, 0, 1);
     width: 100%;
     margin: 40px 0;
@@ -108,7 +120,7 @@
     width: 100%;
 }
 
-.questitle {
+.dropTitle {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
@@ -129,7 +141,7 @@
     font-weight: 700;
 }
 
-.quescontent {
+.dropdownContent {
     display: none;
     text-align: left;
     vertical-align: text-top;
@@ -143,7 +155,7 @@
     list-style-type: none;
 }
 
-.quescontent li {
+.dropdownContent li {
     padding: 3px 0;
 }
 
@@ -158,3 +170,28 @@
     margin-right: 20px;
     color: #748F67;
 }
+
+@media only screen and (max-width: 1100px) {
+    /* html {
+        font-size: 70%;
+    } */
+
+    #eventHeaderSection {
+        height: 120px;
+        top: 96px;
+        margin-bottom: 50px;
+    }
+
+    .bracket{
+        width: 10px;
+        height: 60px;
+    }
+    
+    #eventTitle{
+        font-size: 24px;
+        line-height: 30px;
+        padding: 0 4px;
+        width: 230px;
+    }
+
+  }

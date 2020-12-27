@@ -1,27 +1,28 @@
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-// function myFunction() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-//   }
-  
-  // Close the dropdown if the user clicks outside of it
-//   window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn')) {
-//       var dropdowns = document.getElementsByClassName("dropdown-content");
-//       var i;
-//       for (i = 0; i < dropdowns.length; i++) {
-//         var openDropdown = dropdowns[i];
-//         if (openDropdown.classList.contains('show')) {
-//           openDropdown.classList.remove('show');
-//         }
-//       }
-//     }
-//   }
+window.addEventListener('DOMContentLoaded', (event) => {
 
-// $(document).ready(function(){
-// 	$( ".dropdown").click(function() {
-//   	$(this).children('li:not(.initialButton)').slideToggle(200);
-// 		$(this).find("li.inititalButton").toggleClass("initialButtonDown");
-//   });
-
-// });
+    var quesbuttons = document.getElementsByClassName("dropButton");
+    for (var i = 0; i < quesbuttons.length; ++i) {
+      quesbuttons[i].addEventListener("click", function() {
+        var dropdownContent = this.nextElementSibling;
+        var children = this.children;
+        console.log(this);
+        this.classList.toggle("typeactive");
+        // this.style.border = "none";
+        children[0].classList.toggle("titleactive");
+    
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          children[1].className = "fas fa-angle-down";
+          this.parentElement.style.display = "contents";
+          this.style.marginBottom = "42px"
+        }
+        else {
+          dropdownContent.style.display = "block";
+          children[1].className = "fas fa-angle-up";
+          this.parentElement.style.display = "block";
+          this.style.marginBottom = "0"
+        }
+      });
+    }
+    
+    });
