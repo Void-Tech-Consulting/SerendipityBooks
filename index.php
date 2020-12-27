@@ -39,13 +39,13 @@ foreach ($book_map as $k => $v) {
         </div>
       </div>
       <div class="header-part" id="mobile-tabs"> 
-        <div class="header-text"> 
+        <div class="header-text active" id="bestsellers-tab"> 
           Bestsellers
         </div>
-        <div class="header-text"> 
+        <div class="header-text" id="favorites-tab"> 
           Michelle's Favorites
         </div>
-        <div class="header-text"> 
+        <div class="header-text" id="upcoming-events-tab"> 
           Events
         </div>
       </div>
