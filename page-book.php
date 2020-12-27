@@ -26,23 +26,23 @@
 
       <!-- Options -->
       <div class="book-sectionheader">Options</div>
-      <div class="book-options">
-        <div class="options-check"></div>
-        <span class="options-text">Store Pickup</span>
-      </div>
-      <div class="book-options">
-        <div class="options-check"></div>
-        <span class="options-text">Shipping</span>
-      </div>
+      <label class="book-options options-container"> <span class="options-text">Store Pickup</span>
+        <input type="radio" name="choice" value="Pickup"> 
+        <span class="options-check"></span>
+      </label>
+      <label class="book-options options-container"> <span class="options-text">Shipping</span>
+        <input type="radio" name="choice" value="Shipping">
+        <span class="options-check"></span>
+      </label>
       <hr>
 
       <!-- Quantity -->
       <div class="book-sectionheader">Quantity</div>
       <div class="book-quantity">
         <div class="quantity-box">
-          <div class="quantity-operator">–</div>
-          <div class="quantity-num">1</div>
-          <div class="quantity-operator">+</div>
+          <div id="minus" class="quantity-operator">–</div>
+          <div id="book-quantity" class="quantity-num">1</div>
+          <div id="plus" class="quantity-operator">+</div>
         </div>
         <button><img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">ADD TO CART</button>
       </div>
