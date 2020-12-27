@@ -6,11 +6,17 @@
     padding: 0;
     border: 0;
 }
+
+/* Gets rid of white space when resizing to mobile version */
+html,body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
 #outer {
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
-    
 }
 
 #eventHeaderSection {
@@ -18,9 +24,14 @@
     height: 247px;
     top: 170px;
     margin-bottom: 100px;
-    background-color: #F6B1AD;
+    background-color: #CBD9C4;
     align-items: center;
     justify-content: center;
+}
+
+.bracket {
+    height: 120px;
+    width: 20px;
 }
 
 #eventTitle {
@@ -30,29 +41,24 @@
     font-size: 48px;
     line-height: 61px;
     text-align: center;
+    padding: 0px 60px;
 }
 
 #posterImage {
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.25));
 }
 
-/* .containers{
-    width: 40%;
-    margin: 0 auto;
-} */
-
 #poster{
+    width: 43%;
     margin: 0 auto;
 }
 
 #details{
     width: 25%;
     margin-right: 10%;
-    /* vertical-align: center; */
 }
 
 .headings{
-    /* What/How to font family? */
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
@@ -70,42 +76,122 @@
 }
 
 .heading-icon {
-    width: 5%;
-    height: 5%;
+    width: 23px;
+    height: 22px;
     margin-right: 5px;
 }
 
 .icon-heading-div{
     display: flex;
-    align-items: baseline;
+    align-items: center;
 }
 
-#drop-down-books{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 75%;
-    box-shadow: 1px 3px 5px #bbbbbb;
-
+.link {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
 }
 
-/* details > summary {
-    padding: 2px 6px;
-    width: 15em;
-    background-color: #ddd;
+
+/* Dropdown*/
+.dropdownBox {
+    display: contents;
     border: none;
-    box-shadow: 3px 3px 4px black;
-    cursor: pointer;
-    list-style: none;
-  }
-  
-  details > summary::-webkit-details-marker {
+    width: 100%;
+    background-color: white;
+}
+
+/* Gets rid of blue highlight on click in chrome */
+:focus {
+    outline: none !important;
+}
+
+.dropButton {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    width: 100%;
+    margin: 40px 0;
+    background-color: white;
+    text-align: left;
+}
+
+.typeactive {
+    border: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.dropTitle {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.titleactive {
+    color: #748F67;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.drop-heading {
+    font-weight: 700;
+}
+
+.dropdownContent {
     display: none;
+    text-align: left;
+    vertical-align: text-top;
+    padding: 10px 0;
+    margin-bottom: 100px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    list-style-type: none;
+}
+
+.dropdownContent li {
+    padding: 3px 0;
+}
+
+.fa-angle-down, .fa-angle-up {
+    color: black;
+    font-size: 30px;
+    float: right;
+    margin-right: 20px;
+}
+
+.fa-angle-up {
+    margin-right: 20px;
+    color: #748F67;
+}
+
+@media only screen and (max-width: 1100px) {
+    /* html {
+        font-size: 70%;
+    } */
+
+    #eventHeaderSection {
+        height: 120px;
+        top: 96px;
+        margin-bottom: 50px;
+    }
+
+    .bracket{
+        width: 10px;
+        height: 60px;
+    }
+    
+    #eventTitle{
+        font-size: 24px;
+        line-height: 30px;
+        padding: 0 4px;
+        width: 230px;
+    }
+
   }
-  
-  details > p {
-    border-radius: 0 0 10px 10px;
-    background-color: #ddd;
-    padding: 2px 6px;
-    margin: 0;
-    box-shadow: 3px 3px 4px black;
-  } */
