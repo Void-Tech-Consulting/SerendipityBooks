@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     quesbuttons[i].addEventListener("click", function() {
       var quescontent = this.nextElementSibling;
       var children = this.children;
-      console.log(this);
       this.classList.toggle("typeactive");
       // this.style.border = "none";
       children[0].classList.toggle("titleactive");
