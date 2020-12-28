@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
 
+:root {
+    --light-accent-color: #CBD9C4;
+}
+
+/* General CSS */
+html {
+    scroll-behavior: smooth;
+    font-size: x-small;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -10,15 +20,16 @@ main {
 section {
     width: 100%;
     box-sizing: border-box;
-    max-width: 1200px;
-    margin: 25px 0;
+    max-width: 120rem;
+    margin: 2.5rem 0;
+
 }
 
 section header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 0;
+    margin: 2.5rem 0;
 }
 
 section header .header-part {
@@ -26,51 +37,52 @@ section header .header-part {
 }
 
 section header .header-part > * {
-    margin-right: 10px;
+    margin-right: 2rem;
 }
 
 .header-text {
     font-family: 'Lora', serif;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;
-    line-height: 51.2px;
-    width: fit-content; 
+    line-height: 5.12rem;
+    width: fit-content;
 }
 
-.button {
+/* Mobile header CSS */
+#mobile-header {
+    display: none;
+}
+
+#mobile-tabs {
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+#mobile-tabs .header-text {
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+.flat-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 30px;
-    background: #FFC5C1;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background: var(--light-accent-color);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-color: transparent;
     border-radius: 15px;
+    width: fit-content;
 }
 
-.carousel-button {
-    width: 50px;
-    height: 50px;
-    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    color: #F46A61;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left {
-    background: #E4DADA;
-}
-
-.right {
-    background: #FFC5C1;
-}
-
-.left img {
-    transform: rotate(-180deg);
-}
-
+/* Descripton heading CSS */
 #description-container {
     font-family: 'Lato', sans-serif;
     display: flex;
@@ -79,68 +91,251 @@ section header .header-part > * {
 }
 
 #description-text {
-    width: 737px;
-    height: 40px;
+    width: 700;
+    height: 4rem;
     font-style: italic;
     font-weight: 400;
-    font-size: 35px;
-    line-height: 42px;
+    font-size: 3.5rem;
+    line-height: 4.2rem;
 }
 
 .bracket {
-    width: 56px;
-    height: 188px;
+    width: 5.6rem;
+    height: 18.8rem;
     font-style: normal;
     font-weight: 100;
-    font-size: 170px;
-    line-height: 204px;
+    font-size: 17rem;
+    line-height: 20.4rem;
 }
 
+/* Carousel CSS */
 .carousel {
+    display: grid;
+    gap: 5rem;
+    grid-auto-flow: column;
+    overflow-x: hidden;
+}
+
+.carousel-button {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.left {
+    background: #E4DADA;
+}
+
+.right {
+    background: var(--light-accent-color);
+}
+
+.left img {
+    transform: rotate(-180deg);
+}
+
+/* Book CSS */
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .book-card {
-    width: 290px;
-    height: 403px;
+    width: 29rem;
+    height: 40.3rem;
     background-color: #E6E2DB;
     border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 50px;
+    flex: 0 0 auto;
+    margin-bottom: 2rem;
 }
 
 .book-card img {
-    width: 180px;
-    height: 253px;
+    width: 18rem;
+    height: 25.3rem;
     object-fit: cover;
     object-position: center;
     filter: drop-shadow(9px 14px 4px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
 }
 
-#pick-up {
+.book-desc {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.book-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.book-price {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+/* Contactless section CSS */
+#contactless {
     background-color: #E5E2DB;
     max-width: initial;
-    height: 518px;
+    height: 51.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#pick-up-content {
+.contactless-part {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactless-content {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 1200px;
+    max-width: 120rem;
 }
 
-#pick-up-text {
-    width: 532px;
-    height: 135px;
+#contactless-buttons {
+    display: flex;
+}
+
+#contactless-buttons .flat-button {
+    margin-right: 2rem;
+}
+
+#contactless-text {
+    width: 53.2rem;
+    height: 13.5rem;
     font-family: 'Lora', serif;
     font-weight: 500;
-    font-size: 35px;
-    line-height: 44.8px;
+    font-size: 3.5rem;
+    line-height: 4.48rem;
+    margin-bottom: 5rem;
+}
+
+.event-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#left-event {
+    margin-right: 6.5rem;
+}
+
+#right-event {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event {
+    border: 2.5px solid black;
+    box-sizing: border-box;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 58.3%;
+    }
+
+    section, #contactless-content {
+        max-width: 80%;
+    }
+
+    .carousel {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: xx-small;
+    }
+
+    section, #contactless-content {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .carousel {
+        display: grid;
+        overflow-x: initial;
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .book-card {
+        width: 18rem;
+        height: 25.3rem;
+        background-color: transparent;
+    }
+
+    /* Hide all headers except for the one for mobile */
+    section header:not(#mobile-header) {
+        display: none;
+    }
+
+    /* Show the mobile header */
+    #mobile-header {
+        display: initial;
+    }
+
+    /* Hide non-active sections */
+    #favorites, #upcoming-events {
+        display: none;
+    }
+
+    /* Move the contactless section below the events section */
+    #contactless {
+        order: 1;
+    }
+
+    /* CSS for showing active section underline */
+    #mobile-tabs > .header-text {
+        position: relative;
+    }
+
+    #mobile-tabs > .header-text.active:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 85%;
+        width: 6rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 24px;
+        background-color: #CBD9C4;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 30%;
+    }
 }

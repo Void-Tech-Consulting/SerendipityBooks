@@ -21,8 +21,7 @@
     <span class="bracket">[</span>
     <h1>Frequently Asked Questions</h1>
     <span class="bracket">]</span>
-  </header>
-    
+  </header>    
   <div id="faq_layout">
     <!-- Section: Questions -->
     <section id="questions">
