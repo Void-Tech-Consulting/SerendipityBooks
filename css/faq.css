@@ -22,13 +22,14 @@ h1 {
     text-transform: uppercase;
     font-size: 48px;
     font-weight: 700;
+    text-align: center;
 }
 
 .bracket {
     font-family: 'Lato', sans-serif;
     font-size: 170px;
     font-weight: 200;
-    line-height: 155px;
+    line-height: 100%;
 }
 
 #faq_layout {
@@ -48,7 +49,7 @@ h1 {
 /* Questions */
 #questions {
     display: inline-block;
-    width: 706px;
+    width: 705px;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
 }
@@ -56,8 +57,7 @@ h1 {
 .quescontainer {
     display: contents;
     border: 3px solid #748F67;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    /* width: 705px; */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     background-color: #F8F8F8;
     margin-bottom: 42px;
@@ -66,13 +66,17 @@ h1 {
 .questype {
     outline: none;
     border: 0.5px solid rgba(0, 0, 0, 1);
-    box-shadow: 0 4px 2px -2px rgb(161, 161, 161);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
     height: 48px;
     border-radius: 15px;
     margin-bottom: 42px;
     background-color: rgba(239, 239, 239, 1);
     text-align: left;
+}
+
+.questype:active {
+    color: #748F67;
 }
 
 .typeactive {
@@ -97,8 +101,7 @@ h1 {
 .quescontent {
     display: none;
     font-weight: 400;
-    margin-left: 14px;
-    margin-bottom: 42px;
+    margin: auto 14px 40px;
 }
 
 p {
@@ -107,14 +110,12 @@ p {
 
 .fa-angle-down, .fa-angle-up {
     color: #748F67;
-    /* font-weight: 400;
-    font-size: 18px; */
     float: right;
-    margin-right: 18px;
+    margin-right: 20px;
 }
 
 .fa-angle-up {
-    margin-right: 35px;
+    margin-right: 30px;
 }
 
 
@@ -146,11 +147,53 @@ input[type=submit] {
 /* Image */
 #images {
     display: inline;
+    width: 282px;
 }
 
-#birdimage {
-    width: 282px;
-    height: 228px;
+@media only screen and (max-width: 1050px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    .bracket {
+        font-size: 140px;
+    }
+
+    #questions {
+        width: 520px;
+    }
+
+    #images {
+        width: 220px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    #questions {
+        width: 380px;
+    }
+
+    #images {
+        width: 170px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        width: 320px;
+    }
+
+    #questions {
+        width: 315px;
+    }
+
+    #images {
+        width: 120px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -160,12 +203,10 @@ input[type=submit] {
 
     .bracket {
         font-size: 96px;
-        width: auto;
     }
 
     h1 {
         font-size: 24px;
-        text-align: center;
         width: 250px;
     }
 
@@ -177,8 +218,8 @@ input[type=submit] {
         width: 305px;
     }
 
-    .questitle {
-        margin: 0;
+    .quescontainer, .questype{
+        border-radius: 10px;
     }
 
     .quescontent {
@@ -193,7 +234,12 @@ input[type=submit] {
         font-size: 12px;
     }
 
+    .fa-angle-down, .fa-angle-up {
+        margin-right: 10px;
+    }
+
     #images {
         display: none;
+        width: 400px;
     }
 }
