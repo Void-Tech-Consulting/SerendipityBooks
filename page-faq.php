@@ -241,9 +241,9 @@
     <!-- Section: Image 2 -->
     <section id="images">
       <?php if (get_theme_mod($faq_img)) { ?>
-        <img id="birdimage" src=<?php echo get_theme_mod($faq_img) ?>></div>
+        <img src=<?php echo get_theme_mod($faq_img) ?>></div>
       <?php } else { ?>
-        <img id="birdimage" src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
+        <img src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
       <?php } ?>
     </section>
     
