@@ -32,7 +32,7 @@
       <?php if (get_theme_mod($shop_categories_content)) { ?>
         <div class="selection-container"><?php echo get_theme_mod($shop_categories_content) ?></div>
       <?php } else { ?>
-      <div class="selection-container">
+      <div class="selection-container" id="select-categories">
         <div>All</div>
         <div>Nonfiction</div>
         <div>Fiction</div>
@@ -52,7 +52,7 @@
       <?php if (get_theme_mod($shop_condition_content)) { ?>
         <div class="selection-container"><?php echo get_theme_mod($shop_condition_content) ?></div>
       <?php } else { ?>
-      <div class="selection-container">
+      <div class="selection-container" id="select-conditions">
         <div>All</div>
         <div class="selection-active">New</div>
         <div>Used</div>
@@ -302,6 +302,8 @@
           <div>4</div>
           <div>5</div>
           <div>6</div>
+          <div>...</div>
+          <div>200</div>
         </div>
         <div class="page-bar-arrow page-bar-right">
           <img src=<?php echo get_template_directory_uri() . "/img/arrow-point-to-right.svg" ?> alt="Right Arrow">
