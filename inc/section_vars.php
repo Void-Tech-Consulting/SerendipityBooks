@@ -53,7 +53,7 @@
   $footer_instagram_link = 'footer_instagram_link';
   $footer_twitter_link = 'footer_twitter_link';
   $footer_facebook_link = 'footer_facebook_link';
-
+  // FAQ Vars
   $faq_section = 'faq_section';
 
   $faq_questype = 'faq_questype';
@@ -72,7 +72,7 @@
   $faq_appoint = 'faq_appoint';
   $faq_appoint_content = 'faq_appoint_content';
   $faq_img = 'faq_img';
-
+  // Shop Vars
   $shop_section = 'shop_section';
   $shop_categories = 'shop_categories';
   $shop_categories_content = 'shop_categories_content';
@@ -84,6 +84,14 @@
   $shop_bi2 = 'shop_bi2';
   $shop_bc3 = 'shop_bc3';
   $shop_bi3 = 'shop_bi3';
+
+  // Book Vars
+  $book_section = 'book_section';
+  $option_header = 'option_header';
+  $shipping_label = 'shipping_label';
+  $pickup_label = 'pickup_label';
+  $book_quantity_label = 'book_quantity_label';
+  $add_to_cart_label = 'add_to_cart_label';
 
 ?>
 
