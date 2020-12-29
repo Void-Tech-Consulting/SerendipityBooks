@@ -40,17 +40,23 @@
             </button>
             <div class="dropdownContent">
                 <li class = "drop-heading">Future Dates and Reads: </li>
-                <li>January 13 – ‘Paying Guests‘ by Sarah Waters</li>
+                <li><span class = "bookName">Paying Guests </span><span class = "bookAuthor">
+                    by Sarah Waters </span><br><span class = "bookDate">January 13, 2021</span></li>
                 <li class = "drop-heading">Past Selections: </li>
-                <li>‘Heat and Light‘ by Jennifer Haigh (November, 2020)</li>
-                <li>‘Margaret the First‘ by Danielle Dutton (October, 2020)</li>
-                <li>‘Braiding Sweetgrass‘ by Robin Wall Kimmerer (September, 2020 – in-person outdoor meetup)</li>
-                <li>‘Bowlaway‘ by Elizabeth McCracken (August, 2020 – in-person outdoor meetup)</li>
-                <li>‘Turn of the Key’, by Ruth Ware (July, 2020 – in-person outdoor meetup)</li>
-                <li>Gingerbread, by Helen Oyeyemi (June, 2020 – virtual meeting)</li>
-                <li>Small Great Things, by Jodi Picoult (May, 2020 – virtual meeting)</li>
-                <li>Fever, 1793, by Laurie Halse Anderson (April, 2020 – virtual meeting)</li>
-                <li>OptThe World According to Fannie Davis: My Mother’s Life in the Detroit Numbers, by Brigett Davis (March 2020)ion</li>
+                <li><span class = "bookName">Heat and Light </span><span class = "bookAuthor">
+                    by Jennifer Haigh </span><br><span class = "bookDate">November 2020</span></li>
+                <li><span class = "bookName">Margaret the First </span><span class = "bookAuthor">
+                    by Danielle Dutton </span><br><span class = "bookDate">October 2020</span></li>
+                <li><span class = "bookName">Braiding Sweetgrass </span><span class = "bookAuthor">
+                    by Robin Wall Kimmerer </span><br><span class = "bookDate">September 2020 – in-person outdoor meetup</span></li>
+                <li><span class = "bookName">Bowlaway </span><span class = "bookAuthor">
+                    by Elizabeth McCracken </span><br><span class = "bookDate">August 2020 – in-person outdoor meetup</span></li>
+                <li><span class = "bookName">Turn of the Key </span><span class = "bookAuthor">
+                    by Ruth Ware </span><br><span class = "bookDate">July 2020 – in-person outdoor meetup</span></li>
+                <li><span class = "bookName">Gingerbread </span><span class = "bookAuthor">
+                    by Helen Oyeyemi </span><br><span class = "bookDate">June 2020 – virtual meeting</span></li>
+                <li><span class = "bookName">Small Great Things </span><span class = "bookAuthor">
+                    by Jodi Picoult </span><br><span class = "bookDate">May 2020 – virtual meeting</span></li>
             </div>
         </div>
         </div>
