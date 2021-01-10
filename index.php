@@ -78,7 +78,7 @@ foreach ($book_map as $k => $v) {
     </header>
 
     <!-- Bestsellers carousel -->
-    <!-- <div class="carousel">
+    <div class="carousel">
       <?php
       for ($i = 0; $i < 10; $i++) {
         echo "
@@ -95,7 +95,7 @@ foreach ($book_map as $k => $v) {
           </div>";
       }
       ?>
-    </div> -->
+    </div>
 
   </section>
 
@@ -124,7 +124,7 @@ foreach ($book_map as $k => $v) {
     </header>
 
     <!-- Favorites carousel -->
-    <!-- <div class="carousel">
+    <div class="carousel">
       <?php
       for ($i = 0; $i < 10; $i++) {
         echo "
@@ -141,7 +141,7 @@ foreach ($book_map as $k => $v) {
           </div>";
       }
       ?>
-    </div> -->
+    </div>
 
   </section>
 
