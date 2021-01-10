@@ -3,8 +3,11 @@ let init_carousel = (section) => {
 
     let books = carousel.querySelectorAll(".book");
 
-    let splits = [0, 3, 6, 7];
-
+    let splits = Array();
+    for (let i = 0; i < books.length; i += 3) {
+        splits.push(i);
+    }
+    
     let i = 0;
 
     let left = document.querySelector(`${section} .header-part .left`);

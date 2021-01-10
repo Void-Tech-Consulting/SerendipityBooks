@@ -129,17 +129,32 @@ foreach ($book_map as $k => $v) {
     <!-- Favorites carousel -->
     <div class="carousel">
       <?php
-      $pid = wc_get_product_id_by_sku('18188');
-      $product = wc_get_product($pid);
 
-      $name = $product->get_name();
-      $price = $product->get_price();
-      $ean = $product->get_attribute('ean');
+      $fav_query = new WP_Query(array(
+        'post_type' => 'favorites',
+        'posts_per_page' => 10
+      ));
 
-      $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+      if ($fav_query->have_posts()) {
+        while ($fav_query->have_posts()) {
+          $fav_query->the_post();
 
-      for ($i = 0; $i < 10; $i++) {
-        echo "
+          $sku = get_the_title();
+          $pid = wc_get_product_id_by_sku($sku);
+
+          $product = wc_get_product($pid);
+
+          $name = $product->get_name();
+          $price = $product->get_price();
+
+          if (!strpos($price, '.')) {
+            $price .= ".00";
+          }
+
+          $ean = $product->get_attribute('ean');
+          $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+
+          echo "
             <div class='book'>
               <div class='book-card'>
                 <img 
@@ -148,9 +163,10 @@ foreach ($book_map as $k => $v) {
               </div>
               <div class='book-desc'>
                 <div class='book-title'>$name</div>
-                <div class='book-price'>$$price.00</div>
+                <div class='book-price'>$$price</div>
               </div>
             </div>";
+        }
       }
       ?>
     </div>
