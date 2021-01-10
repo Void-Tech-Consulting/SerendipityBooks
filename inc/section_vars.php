@@ -1,11 +1,4 @@
 <?php
-  // Home Vars
-  $home_section = 'home_section';
-
-  $home_top_vid = 'top_vid';
-  $home_top_img = 'home_top_img';
-  $home_top_desc = 'home_top_desc';
-
   //Variables for Register Settings - Events
   $events_section = 'events_section';
   $event_title = 'event_title';
@@ -21,6 +14,7 @@
   $rel_link_desc = 'relevant_link_description';
   $rel_link = 'rel_link';
 
+  // Home Vars
   $home_description = 'home_description';
   $home_bestsellers_title = 'home_bestsellers_title';
   $home_favorites_title = 'home_favorites_title';
@@ -30,10 +24,6 @@
   $home_book_title = 'home_book_title';
   $home_book_price = 'home_book_price';
   $home_book_img = 'home_book_img';
-  
-  // $home_top_vid = 'top_vid';
-  // $home_top_img = 'home_top_img';
-  // $home_top_desc = 'home_top_desc';
 
   // Header Vars
   $header_section = 'header_section';
