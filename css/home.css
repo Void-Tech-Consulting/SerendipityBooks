@@ -27,7 +27,8 @@ main {
 }
 
 section {
-    width: calc(80% + 50px);
+    width: 100%;
+    max-width: calc(80% + 50px);
     box-sizing: border-box;
     margin: 2rem 0;
 }
@@ -206,7 +207,8 @@ section header .header-part > * {
 #contactless {
     background-color: #E5E2DB;
     max-width: initial;
-    height: 51.8rem;
+    height: max-content;
+    padding: 5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +225,8 @@ section header .header-part > * {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 110rem;
+    width: 100%;
+    max-width: calc(80% + 50px);
 }
 
 #contactless-buttons {
@@ -231,16 +234,24 @@ section header .header-part > * {
 }
 
 #contactless-buttons .flat-button {
-    margin-right: 2rem;
+    margin-right: max(2rem, 2vw);
+    white-space: nowrap;
 }
 
 #contactless-text {
-    width: 53.2rem;
-    height: 13.5rem;
+    width: max(17.5rem, 40vw);
     font-family: 'Lora', serif;
     font-weight: 500;
-    font-size: 3.5rem;
-    margin-bottom: 5rem;
+    font-size: clamp(1.6rem, 2.5vw, 4rem);
+    margin-bottom: max(2rem, 2vw);
+}
+
+#contactless-left {
+    flex: 1 1 50%;
+}
+
+#contactless-right {
+    flex: 2 2 50%;
 }
 
 .event-container {
@@ -249,7 +260,7 @@ section header .header-part > * {
 }
 
 #left-event {
-    margin-right: 6.5rem;
+    margin-right: min(6.5rem, 5vw);
 }
 
 #right-event {
@@ -308,6 +319,15 @@ section header .header-part > * {
     /* Move the contactless section below the events section */
     #contactless {
         order: 1;
+    }
+
+    #contactless-text {
+        font-size: clamp(1.25rem, 2.5vw, 4rem);
+    }
+
+    .flat-button {
+        padding: 0.5rem 1rem;
+        font-size: clamp(1rem, 1.5vw, 2.25rem);
     }
 
     /* CSS for showing active section underline */

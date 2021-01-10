@@ -146,7 +146,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
   <!-- Contactless section -->
-  <!-- <section id="contactless">
+  <section id="contactless">
     <div id="contactless-content">
 
       <div class="contactless-part" id="contactless-left">
@@ -168,17 +168,18 @@ foreach ($book_map as $k => $v) {
         </div>
       </div>
 
-      <div class="contactless-part">
+      <div class="contactless-part" id="contactless-right">
         <img src=<?php if (get_theme_mod($home_contactless_img)) {
                     echo get_theme_mod($home_contactless_img);
                   } else {
                     echo get_template_directory_uri() . "/img/pick_up_birds.png";
                   }
-                  ?> alt="Two birds on a branch">
+                  ?> width="100%" height="auto"
+                  alt="Two birds on a branch">
       </div>
 
     </div>
-  </section> -->
+  </section>
 
   <section id="upcoming-events">
 
@@ -201,17 +202,17 @@ foreach ($book_map as $k => $v) {
     <div class="event-container">
       <div id="left-event">
         <img 
-          class="event" width="523px" height="auto"
+          class="event" width="100%" height="auto"
           src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster"
         >
       </div>
       <div id="right-event">
         <img 
-          class="event" width="351px" height="auto"
+          class="event" width="75%" height="auto"
           src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster"
         >
         <img 
-          class="event" width="351px" height="auto"
+          class="event" width="75%" height="auto"
           src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster"
         >
       </div>
