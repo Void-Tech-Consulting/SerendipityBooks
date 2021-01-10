@@ -18,7 +18,7 @@ foreach ($book_map as $k => $v) {
 <main>
 
   <!-- Description section -->
-  <!-- <section id="description-container">
+  <section id="description-container">
     <img class="bracket" style="transform: rotate(180deg);"src=<?php echo get_template_directory_uri() . "/img/bracket.svg"?>>
     <span id="description-text">
       <?php if (get_theme_mod($home_description)) {
@@ -28,7 +28,7 @@ foreach ($book_map as $k => $v) {
       } ?>
     </span>
     <img class="bracket" src=<?php echo get_template_directory_uri() . "/img/bracket.svg"?>>
-  </section> -->
+  </section>
 
   <!-- Mobile header -->
   <section id="mobile-section"> 

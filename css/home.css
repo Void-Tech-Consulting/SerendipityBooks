@@ -104,19 +104,20 @@ section header .header-part > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* max-width: 54.75%; */
 }
 
 #description-text {
-    /* max-width: 70rem; */
+    width: clamp(22rem, 62vw, 70rem);
+    text-align: center;
     font-style: italic;
     font-weight: 400;
     margin: 0 2.5rem;
-    font-size: 3.5rem;
+    min-height: 0vw;
+    font-size: clamp(1.13rem, 3vw, 3.4rem);
 }
 
 .bracket {
-    width: 2rem;
+    width: clamp(1rem, 2vw, 2.5rem);
     height: auto;
 }
 
@@ -242,6 +243,7 @@ section header .header-part > * {
     width: max(17.5rem, 40vw);
     font-family: 'Lora', serif;
     font-weight: 500;
+    min-height: 0vw;
     font-size: clamp(1.6rem, 2.5vw, 4rem);
     margin-bottom: max(2rem, 2vw);
 }
@@ -322,11 +324,13 @@ section header .header-part > * {
     }
 
     #contactless-text {
+        min-height: 0vw;
         font-size: clamp(1.25rem, 2.5vw, 4rem);
     }
 
     .flat-button {
         padding: 0.5rem 1rem;
+        min-height: 0vw;
         font-size: clamp(1rem, 1.5vw, 2.25rem);
     }
 
