@@ -27,7 +27,7 @@ main {
 }
 
 section {
-    width: min(1100px, 80% + 50px);
+    width: calc(80% + 50px);
     box-sizing: border-box;
     margin: 2rem 0;
 }
@@ -54,8 +54,6 @@ section header .header-part > * {
 
 .header-text {
     font-family: 'Lora', serif;
-    /* font-size: 4rem; */
-    /* font-size: 3vw; */
     min-height: 0vw;
     font-size: clamp(2rem, 3vw, 4rem);
     font-weight: 700;
@@ -72,15 +70,13 @@ section header .header-part > * {
     color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    /* font-size: 2.25rem; */
-    /* font-size: 1.5vw; */
     min-height: 0vw;
     font-size: clamp(1.3rem, 1.5vw, 2.25rem);
     padding: 1rem 2rem;
     background: var(--light-accent-color);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-color: transparent;
-    border-radius: 20px;
+    border-radius: max(20px, 5vw);
     width: fit-content;
 }
 
@@ -135,7 +131,7 @@ section header .header-part > * {
     width: clamp(3.5rem, 3.5vw, 5rem);
     height: clamp(3.5rem, 3.5vw, 5rem);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
+    border-radius: max(50px, 5vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +168,7 @@ section header .header-part > * {
     height: max(var(--book-height), var(--min-book-height));
     padding: calc(var(--book-height) * 0.3) calc(var(--book-width) * 0.3);
     background-color: #E6E2DB;
-    border-radius: 40px;
+    border-radius: max(40px, 2vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,7 +182,7 @@ section header .header-part > * {
     object-fit: cover;
     object-position: center;
     filter: drop-shadow(9px 14px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+    border-radius: max(20px, 2vw);
 }
 
 .book-desc {
@@ -269,6 +265,18 @@ section header .header-part > * {
     border-radius: 30px;
 }
 
+@media screen and (min-width: 2000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 4000px) {
+    html {
+        font-size: 24px;
+    }
+}
+
 @media screen and (max-width: 488px) {
     .carousel {
         overflow-x: initial;
@@ -311,13 +319,27 @@ section header .header-part > * {
         content: "";
         position: absolute;
         z-index: -1;
-        top: 85%;
-        width: 6rem;
+        top: 100%;
+        width: 4rem;
+        padding-bottom: 0.5rem;
         left: 0;
         right: 0;
         bottom: 0;
         margin: auto;
         border-radius: 24px;
-        background-color: #CBD9C4;
+        background-color: #748F67;
+    }
+
+    .event-container {
+        flex-direction: column;
+    }
+
+    .event-container img {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #left-event {
+        margin-right: 0;
     }
 }

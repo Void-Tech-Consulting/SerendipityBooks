@@ -198,24 +198,24 @@ foreach ($book_map as $k => $v) {
     </header>
 
     <!-- Upcoming events images -->
-    <!-- <div class="event-container">
+    <div class="event-container">
       <div id="left-event">
         <img 
-          class="event" width="523px" height="698px"
+          class="event" width="523px" height="auto"
           src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster"
         >
       </div>
       <div id="right-event">
         <img 
-          class="event" width="351px" height="294px"
+          class="event" width="351px" height="auto"
           src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster"
         >
         <img 
-          class="event" width="351px" height="351px"
+          class="event" width="351px" height="auto"
           src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster"
         >
       </div>
-    </div> -->
+    </div>
 
   </section>
 </main>
