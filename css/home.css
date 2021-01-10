@@ -278,6 +278,7 @@ section header .header-part > * {
     border-radius: 30px;
 }
 
+/* Media queries */
 @media screen and (min-width: 2000px) {
     html {
         font-size: 16px;
@@ -313,9 +314,13 @@ section header .header-part > * {
         display: initial;
     }
 
-    /* Hide non-active sections */
-    #favorites, #upcoming-events {
+    /* Utility classes */
+    .mobile-hidden {
         display: none;
+    }
+
+    .mobile-visible {
+        display: block;
     }
 
     /* Move the contactless section below the events section */

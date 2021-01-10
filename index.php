@@ -53,7 +53,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
 
-  <section id="bestsellers">
+  <section id="bestsellers" class="mobile-visible">
     <!-- Bestsellers header -->
     <header>
       <div class="header-part">
@@ -99,7 +99,7 @@ foreach ($book_map as $k => $v) {
 
   </section>
 
-  <section id="favorites">
+  <section id="favorites" class="mobile-hidden">
     <!-- Favorites header -->
     <header>
       <div class="header-part">
@@ -181,7 +181,7 @@ foreach ($book_map as $k => $v) {
     </div>
   </section>
 
-  <section id="upcoming-events">
+  <section id="upcoming-events" class="mobile-hidden">
 
     <!-- Upcoming events header -->
     <header>
