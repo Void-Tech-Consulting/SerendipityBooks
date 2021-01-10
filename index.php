@@ -19,37 +19,38 @@ foreach ($book_map as $k => $v) {
 
   <!-- Description section -->
   <section id="description-container">
-    <img class="bracket" style="transform: rotate(180deg);"src=<?php echo get_template_directory_uri() . "/img/bracket.svg"?>>
+    <img class="bracket" style="transform: rotate(180deg);" src=<?php echo get_template_directory_uri() . "/img/bracket.svg" ?>>
     <span id="description-text">
+      <span id="edit-description"></span>
       <?php if (get_theme_mod($home_description)) {
         echo get_theme_mod($home_description);
       } else {
         echo "Michelle is the proud owner of Serendipity Books, a local, independent, curated community book shop.";
       } ?>
     </span>
-    <img class="bracket" src=<?php echo get_template_directory_uri() . "/img/bracket.svg"?>>
+    <img class="bracket" src=<?php echo get_template_directory_uri() . "/img/bracket.svg" ?>>
   </section>
 
   <!-- Mobile header -->
-  <section id="mobile-section"> 
+  <section id="mobile-section">
     <header id="mobile-header">
-      <div class="header-part"> 
-        <div class="header-text"> 
+      <div class="header-part">
+        <div class="header-text">
           Explore
         </div>
       </div>
-      <div class="header-part" id="mobile-tabs"> 
-        <div class="header-text active" id="bestsellers-tab"> 
+      <div class="header-part" id="mobile-tabs">
+        <div class="header-text active" id="bestsellers-tab">
           Bestsellers
         </div>
-        <div class="header-text" id="favorites-tab"> 
+        <div class="header-text" id="favorites-tab">
           Michelle's Favorites
         </div>
-        <div class="header-text" id="upcoming-events-tab"> 
+        <div class="header-text" id="upcoming-events-tab">
           Events
         </div>
       </div>
-    </header> 
+    </header>
   </section>
 
 
@@ -58,6 +59,7 @@ foreach ($book_map as $k => $v) {
     <header>
       <div class="header-part">
         <div class="header-text">
+          <span id="edit-bestsellers"></span>
           <?php if (get_theme_mod($home_bestsellers_title)) {
             echo get_theme_mod($home_bestsellers_title);
           } else {
@@ -104,6 +106,7 @@ foreach ($book_map as $k => $v) {
     <header>
       <div class="header-part">
         <div class="header-text">
+          <span id="edit-favorites"></span>
           <?php if (get_theme_mod($home_favorites_title)) {
             echo get_theme_mod($home_favorites_title);
           } else {
@@ -126,19 +129,28 @@ foreach ($book_map as $k => $v) {
     <!-- Favorites carousel -->
     <div class="carousel">
       <?php
+      $pid = wc_get_product_id_by_sku('18188');
+      $product = wc_get_product($pid);
+
+      $name = $product->get_name();
+      $price = $product->get_price();
+      $ean = $product->get_attribute('ean');
+
+      $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+
       for ($i = 0; $i < 10; $i++) {
         echo "
-          <div class='book'>
-            <div class='book-card'>
-              <img 
-                alt='$book_map[$home_book_title] Book Cover' 
-                src=$book_map[$home_book_img]>
-            </div>
-            <div class='book-desc'>
-              <div class='book-title'>$book_map[$home_book_title]</div>
-              <div class='book-price'>$book_map[$home_book_price]</div>
-            </div>
-          </div>";
+            <div class='book'>
+              <div class='book-card'>
+                <img 
+                  alt='$name Book Cover' 
+                  src=$imgsrc>
+              </div>
+              <div class='book-desc'>
+                <div class='book-title'>$name</div>
+                <div class='book-price'>$$price.00</div>
+              </div>
+            </div>";
       }
       ?>
     </div>
@@ -151,6 +163,7 @@ foreach ($book_map as $k => $v) {
 
       <div class="contactless-part" id="contactless-left">
         <div id="contactless-text">
+          <span id="edit-contactless-text"></span>
           <?php if (get_theme_mod($home_contactless_description)) {
             echo get_theme_mod($home_contactless_description);
           } else {
@@ -169,13 +182,13 @@ foreach ($book_map as $k => $v) {
       </div>
 
       <div class="contactless-part" id="contactless-right">
+        <span id="edit-contactless-image"></span>
         <img src=<?php if (get_theme_mod($home_contactless_img)) {
                     echo get_theme_mod($home_contactless_img);
                   } else {
                     echo get_template_directory_uri() . "/img/pick_up_birds.png";
                   }
-                  ?> width="100%" height="auto"
-                  alt="Two birds on a branch">
+                  ?> width="100%" height="auto" alt="Two birds on a branch">
       </div>
 
     </div>
@@ -187,6 +200,7 @@ foreach ($book_map as $k => $v) {
     <header>
       <div class="header-part">
         <div class="header-text">
+          <span id="edit-upcoming-events"></span>
           <?php if (get_theme_mod($home_events_title)) {
             echo get_theme_mod($home_events_title);
           } else {
@@ -201,20 +215,11 @@ foreach ($book_map as $k => $v) {
     <!-- Upcoming events images -->
     <div class="event-container">
       <div id="left-event">
-        <img 
-          class="event" width="100%" height="auto"
-          src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster"
-        >
+        <img class="event" width="100%" height="auto" src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster">
       </div>
       <div id="right-event">
-        <img 
-          class="event" width="75%" height="auto"
-          src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster"
-        >
-        <img 
-          class="event" width="75%" height="auto"
-          src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster"
-        >
+        <img class="event" width="75%" height="auto" src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster">
+        <img class="event" width="75%" height="auto" src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster">
       </div>
     </div>
 

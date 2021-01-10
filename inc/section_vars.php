@@ -15,6 +15,7 @@
   $rel_link = 'rel_link';
 
   // Home Vars
+  $home_section = 'home_section';
   $home_description = 'home_description';
   $home_bestsellers_title = 'home_bestsellers_title';
   $home_favorites_title = 'home_favorites_title';
