@@ -24,15 +24,19 @@ function faq_customizer($wp_customize) {
     'type' => 'textarea'
   ));
 
-  $wp_customize->selective_refresh->add_partial($faq_tradepolicy_content, array(
-    'selector' => 'span#edit-tradepolicy-content'
-  ));
+  // $wp_customize->selective_refresh->add_partial($faq_tradepolicy_content, array(
+  //   'selector' => 'span#edit-tradepolicy-content'
+  // ));
   
    // Gift Cards
-   $wp_customize->add_setting($faq_giftcards);
+  $wp_customize->add_setting($faq_giftcards);
   $wp_customize->add_control($faq_giftcards, array(
     'label' => 'Gift Cards',
     'section' => $faq_section,
+  ));
+
+  $wp_customize->selective_refresh->add_partial($faq_giftcards, array(
+    'selector' => 'span#edit-giftcards'
   ));
 
   $wp_customize->add_setting($faq_giftcards_content);
@@ -41,12 +45,17 @@ function faq_customizer($wp_customize) {
     'section' => $faq_section,
     'type' => 'textarea'
   ));
+  
 
    // Local Authors
    $wp_customize->add_setting($faq_authors);
   $wp_customize->add_control($faq_authors, array(
     'label' => 'Local Authors',
     'section' => $faq_section,
+  ));
+
+  $wp_customize->selective_refresh->add_partial($faq_authors, array(
+    'selector' => 'span#edit-authors'
   ));
 
   $wp_customize->add_setting($faq_authors_content);
@@ -63,6 +72,10 @@ function faq_customizer($wp_customize) {
     'section' => $faq_section,
   ));
 
+  $wp_customize->selective_refresh->add_partial($faq_pickup, array(
+    'selector' => 'span#edit-pickup'
+  ));
+
   $wp_customize->add_setting($faq_pickup_content);
   $wp_customize->add_control($faq_pickup_content, array(
     'label' => 'Contactless Pickup',
@@ -75,6 +88,10 @@ function faq_customizer($wp_customize) {
   $wp_customize->add_control($faq_delivery, array(
     'label' => 'Delivery Service',
     'section' => $faq_section,
+  ));
+
+  $wp_customize->selective_refresh->add_partial($faq_delivery, array(
+    'selector' => 'span#edit-delivery'
   ));
 
   $wp_customize->add_setting($faq_delivery_content);
@@ -91,6 +108,10 @@ function faq_customizer($wp_customize) {
     'section' => $faq_section,
   ));
 
+  $wp_customize->selective_refresh->add_partial($faq_appoint, array(
+    'selector' => 'span#edit-appoint'
+  ));
+
   $wp_customize->add_setting($faq_appoint_content);
   $wp_customize->add_control($faq_appoint_content, array(
     'label' => 'Private Appointments Content',
@@ -98,6 +119,25 @@ function faq_customizer($wp_customize) {
     'type' => 'textarea'
   ));
 
+  // Shop Info
+  $wp_customize->add_setting($faq_info);
+  $wp_customize->add_control($faq_info, array(
+    'label' => 'Shop Info',
+    'section' => $faq_section,
+  ));
+
+  $wp_customize->selective_refresh->add_partial($faq_info, array(
+    'selector' => 'span#edit-info'
+  ));
+
+  $wp_customize->add_setting($faq_info_content);
+  $wp_customize->add_control($faq_info_content, array(
+    'label' => 'Shop Info Content',
+    'section' => $faq_section,
+    'type' => 'textarea'
+  ));
+
+  // Image
   $wp_customize->add_setting($faq_img);
   $wp_customize->add_control( new WP_Customize_Image_Control( 
       $wp_customize, 
@@ -108,5 +148,8 @@ function faq_customizer($wp_customize) {
       )
   ));
 
+  $wp_customize->selective_refresh->add_partial($faq_img, array(
+    'selector' => 'span#edit-img'
+  ));
 }
 add_action( 'customize_register', 'faq_customizer' );

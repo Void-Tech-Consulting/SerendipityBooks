@@ -70,8 +70,10 @@
   $faq_delivery_content = 'faq_delivery_content';
   $faq_appoint = 'faq_appoint';
   $faq_appoint_content = 'faq_appoint_content';
+  $faq_info = 'faq_info';
+  $faq_info_content = 'faq_info_content';
   $faq_img = 'faq_img';
-  
+
   // Shop Vars
   $shop_section = 'shop_section';
   $shop_categories = 'shop_categories';
