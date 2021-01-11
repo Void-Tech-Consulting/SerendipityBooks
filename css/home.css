@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
 
+/* General CSS */
 :root {
     --light-accent-color: #CBD9C4;
+    --book-width: calc(18vw * 0.7);
+    --book-height: calc(25.3vw * 0.7);
 }
 
-/* General CSS */
 html {
     scroll-behavior: smooth;
-    font-size: x-small;
+    font-size: 10px;
+    --min-book-width: calc(18rem * 0.5);
+    --min-book-height: calc(25.3rem * 0.5);
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 main {
@@ -19,10 +28,13 @@ main {
 
 section {
     width: 100%;
+    max-width: calc(80% + 50px);
     box-sizing: border-box;
-    max-width: 120rem;
-    margin: 2.5rem 0;
+    margin: 2rem 0;
+}
 
+#mobile-section {
+    margin: 0;
 }
 
 section header {
@@ -34,6 +46,7 @@ section header {
 
 section header .header-part {
     display: flex;
+    align-items: center;
 }
 
 section header .header-part > * {
@@ -42,26 +55,11 @@ section header .header-part > * {
 
 .header-text {
     font-family: 'Lora', serif;
-    font-size: 4rem;
+    min-height: 0vw;
+    font-size: clamp(2rem, 3vw, 4rem);
     font-weight: 700;
-    line-height: 5.12rem;
     width: fit-content;
-}
-
-/* Mobile header CSS */
-#mobile-header {
-    display: none;
-}
-
-#mobile-tabs {
-    margin-top: 2rem;
-    justify-content: space-between;
-}
-
-#mobile-tabs .header-text {
-    font-size: 2.5rem;
-    cursor: pointer;
-    margin-right: 0;
+    white-space: nowrap;
 }
 
 .flat-button {
@@ -73,13 +71,31 @@ section header .header-part > * {
     color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 2rem;
+    min-height: 0vw;
+    font-size: clamp(1.3rem, 1.5vw, 2.25rem);
     padding: 1rem 2rem;
     background: var(--light-accent-color);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-color: transparent;
-    border-radius: 15px;
+    border-radius: max(20px, 5vw);
     width: fit-content;
+}
+
+/* Mobile header CSS */
+#mobile-header {
+    display: none;
+}
+
+#mobile-tabs {
+    margin-top: 1.5rem;
+    justify-content: space-between;
+}
+
+#mobile-tabs .header-text {
+    min-height: 0vw;
+    font-size: clamp(1.6rem, 2vw, 2.5rem);
+    cursor: pointer;
+    margin-right: 0;
 }
 
 /* Descripton heading CSS */
@@ -91,40 +107,42 @@ section header .header-part > * {
 }
 
 #description-text {
-    width: 700;
-    height: 4rem;
+    width: clamp(22rem, 62vw, 70rem);
+    text-align: center;
     font-style: italic;
     font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 4.2rem;
+    margin: 0 2.5rem;
+    min-height: 0vw;
+    font-size: clamp(1.13rem, 3vw, 3.4rem);
 }
 
 .bracket {
-    width: 5.6rem;
-    height: 18.8rem;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 17rem;
-    line-height: 20.4rem;
+    width: clamp(1rem, 2vw, 2.5rem);
+    height: auto;
 }
 
 /* Carousel CSS */
 .carousel {
     display: grid;
-    gap: 5rem;
+    gap: max(5vw, 3rem);
     grid-auto-flow: column;
     overflow-x: hidden;
 }
 
 .carousel-button {
-    width: 50px;
-    height: 50px;
+    width: clamp(3.5rem, 3.5vw, 5rem);
+    height: clamp(3.5rem, 3.5vw, 5rem);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
+    border-radius: max(50px, 5vw);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.carousel-button img {
+    width: clamp(1rem, 1.1vw, 1.2rem);
+    height: auto;
 }
 
 .left {
@@ -147,10 +165,12 @@ section header .header-part > * {
 }
 
 .book-card {
-    width: 29rem;
-    height: 40.3rem;
+    box-sizing: content-box;
+    width: max(var(--book-width), var(--min-book-width));
+    height: max(var(--book-height), var(--min-book-height));
+    padding: calc(var(--book-height) * 0.3) calc(var(--book-width) * 0.3);
     background-color: #E6E2DB;
-    border-radius: 40px;
+    border-radius: max(40px, 2vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,12 +179,12 @@ section header .header-part > * {
 }
 
 .book-card img {
-    width: 18rem;
-    height: 25.3rem;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     filter: drop-shadow(9px 14px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+    border-radius: max(20px, 2vw);
 }
 
 .book-desc {
@@ -174,19 +194,22 @@ section header .header-part > * {
 
 .book-title {
     font-weight: 700;
-    font-size: 2.5rem;
+    min-height: 0vw;
+    font-size: clamp(1.4rem, 1.6vw, 2.5rem);
 }
 
 .book-price {
     font-weight: 500;
-    font-size: 2rem;
+    min-height: 0vw;
+    font-size: clamp(1.2rem, 1.4vw, 2rem);
 }
 
 /* Contactless section CSS */
 #contactless {
     background-color: #E5E2DB;
     max-width: initial;
-    height: 51.8rem;
+    height: max-content;
+    padding: 5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,13 +218,16 @@ section header .header-part > * {
 .contactless-part {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 #contactless-content {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 120rem;
+    width: 100%;
+    max-width: calc(80% + 50px);
 }
 
 #contactless-buttons {
@@ -209,17 +235,25 @@ section header .header-part > * {
 }
 
 #contactless-buttons .flat-button {
-    margin-right: 2rem;
+    margin-right: max(2rem, 2vw);
+    white-space: nowrap;
 }
 
 #contactless-text {
-    width: 53.2rem;
-    height: 13.5rem;
+    width: max(17.5rem, 40vw);
     font-family: 'Lora', serif;
     font-weight: 500;
-    font-size: 3.5rem;
-    line-height: 4.48rem;
-    margin-bottom: 5rem;
+    min-height: 0vw;
+    font-size: clamp(1.6rem, 2.5vw, 4rem);
+    margin-bottom: max(2rem, 2vw);
+}
+
+#contactless-left {
+    flex: 1 1 50%;
+}
+
+#contactless-right {
+    flex: 2 2 50%;
 }
 
 .event-container {
@@ -228,7 +262,7 @@ section header .header-part > * {
 }
 
 #left-event {
-    margin-right: 6.5rem;
+    margin-right: min(6.5rem, 5vw);
 }
 
 #right-event {
@@ -244,41 +278,29 @@ section header .header-part > * {
     border-radius: 30px;
 }
 
-@media screen and (max-width: 1200px) {
+/* Media queries */
+@media screen and (min-width: 2000px) {
     html {
-        font-size: 58.3%;
-    }
-
-    section, #contactless-content {
-        max-width: 80%;
-    }
-
-    .carousel {
-        gap: 3rem;
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 4000px) {
     html {
-        font-size: xx-small;
-    }
-
-    section, #contactless-content {
-        max-width: 90%;
+        font-size: 24px;
     }
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 488px) {
     .carousel {
-        display: grid;
         overflow-x: initial;
         grid-auto-flow: unset;
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: clamp(1rem, 5.5vw, 8rem);
+        grid-template-columns: repeat(auto-fit, minmax(var(--min-book-width), 1fr));
     }
 
     .book-card {
-        width: 18rem;
-        height: 25.3rem;
+        padding: 0;
         background-color: transparent;
     }
 
@@ -292,14 +314,29 @@ section header .header-part > * {
         display: initial;
     }
 
-    /* Hide non-active sections */
-    #favorites, #upcoming-events {
+    /* Utility classes */
+    .mobile-hidden {
         display: none;
+    }
+
+    .mobile-visible {
+        display: block;
     }
 
     /* Move the contactless section below the events section */
     #contactless {
         order: 1;
+    }
+
+    #contactless-text {
+        min-height: 0vw;
+        font-size: clamp(1.25rem, 2.5vw, 4rem);
+    }
+
+    .flat-button {
+        padding: 0.5rem 1rem;
+        min-height: 0vw;
+        font-size: clamp(1rem, 1.5vw, 2.25rem);
     }
 
     /* CSS for showing active section underline */
@@ -311,31 +348,27 @@ section header .header-part > * {
         content: "";
         position: absolute;
         z-index: -1;
-        top: 85%;
-        width: 6rem;
+        top: 100%;
+        width: 4rem;
+        padding-bottom: 0.5rem;
         left: 0;
         right: 0;
         bottom: 0;
         margin: auto;
         border-radius: 24px;
-        background-color: #CBD9C4;
+        background-color: #748F67;
     }
-}
 
-@media screen and (max-width: 700px) {
-    html {
-        font-size: 50%;
+    .event-container {
+        flex-direction: column;
     }
-}
 
-@media screen and (max-width: 535px) {
-    html {
-        font-size: 40%;
+    .event-container img {
+        width: 100%;
+        margin-bottom: 2rem;
     }
-}
 
-@media screen and (max-width: 430px) {
-    html {
-        font-size: 30%;
+    #left-event {
+        margin-right: 0;
     }
 }

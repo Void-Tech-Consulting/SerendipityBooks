@@ -3,8 +3,11 @@ let init_carousel = (section) => {
 
     let books = carousel.querySelectorAll(".book");
 
-    let splits = [0, 3, 6, 7];
-
+    let splits = Array();
+    for (let i = 0; i < books.length; i += 3) {
+        splits.push(i);
+    }
+    
     let i = 0;
 
     let left = document.querySelector(`${section} .header-part .left`);
@@ -30,10 +33,10 @@ let init_carousel = (section) => {
 }
 
 let init_tabs = () => {
-    let tabs = [
+    const tabs = [
         'bestsellers-tab', 'favorites-tab', 'upcoming-events-tab'
     ];
-
+    
     let active_tab = tabs[0];
 
     tabs.forEach(tab => {
@@ -48,12 +51,14 @@ let init_tabs = () => {
                 // Hide the currently active section
                 let section = active_tab.substring(0, active_tab.length - 4);
                 let visible_part = document.querySelector(`#${section}`);
-                visible_part.style.display = 'none';
+                visible_part.classList.remove('mobile-visible');
+                visible_part.classList.add('mobile-hidden');
 
                 // Show new active section
                 let new_section = tab.substring(0, tab.length - 4);
                 let hidden_part = document.querySelector(`#${new_section}`);
-                hidden_part.style.display = 'block';
+                hidden_part.classList.add('mobile-visible');
+                hidden_part.classList.remove('mobile-hidden');
 
                 // Add active property to new active section
                 el.classList.add('active');
