@@ -44,12 +44,11 @@
   $footer_instagram_link = 'footer_instagram_link';
   $footer_twitter_link = 'footer_twitter_link';
   $footer_facebook_link = 'footer_facebook_link';
+
   // FAQ Vars
   $faq_section = 'faq_section';
-
   $faq_questype = 'faq_questype';
   $faq_quescontent = 'faq_quescontent';
-
   $faq_tradepolicy = 'faq_tradepolicy';
   $faq_tradepolicy_content = 'faq_tradepolicy_content';
   $faq_giftcards = 'faq_giftcards';
@@ -62,7 +61,10 @@
   $faq_delivery_content = 'faq_delivery_content';
   $faq_appoint = 'faq_appoint';
   $faq_appoint_content = 'faq_appoint_content';
+  $faq_info = 'faq_info';
+  $faq_info_content = 'faq_info_content';
   $faq_img = 'faq_img';
+
   // Shop Vars
   $shop_section = 'shop_section';
   $shop_categories = 'shop_categories';
