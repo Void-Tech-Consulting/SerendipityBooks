@@ -22,12 +22,14 @@
     <h1>Frequently Asked Questions</h1>
     <span class="bracket">]</span>
   </header>    
+
   <div id="faq_layout">
     <!-- Section: Questions -->
     <section id="questions">
       <!-- Trade Policy -->
       <div class="quescontainer">
         <button type="button" class="questype">
+          <span id="edit-tradepolicy"></span>
           <?php if (get_theme_mod($faq_tradepolicy)) { ?>
             <span class="questitle"><?php echo get_theme_mod($faq_tradepolicy) ?></span>
           <?php } else { ?>
@@ -36,6 +38,7 @@
           <i class="fas fa-angle-down"></i>
         </button>
 
+        <span id="edit-tradepolicy-content"></span>
         <?php if (get_theme_mod($faq_tradepolicy_content)) { ?>
             <div class="quescontent"><?php echo get_theme_mod($faq_tradepolicy_content) ?></div>
         <?php } ?>

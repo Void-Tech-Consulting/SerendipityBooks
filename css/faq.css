@@ -94,7 +94,7 @@ h1 {
 .titleactive {
     color: #748F67;
     margin-left: 14px;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-decoration-line: underline;
 }
 
@@ -124,6 +124,7 @@ form {
     margin: 0;
     margin-left: 13.7px;
     margin-top: 35px;
+    font-family: 'Lato', sans-serif;
 }
 
 input[type=text] {
@@ -138,10 +139,18 @@ input[type=text] {
 
 input[type=submit] {
     border: none;
+    text-transform: uppercase;
     width: 102px;
     height: 44px;
     border-radius: 15px;
     background-color: #CBD9C4;;
+}
+
+input[type=submit]:active {
+    border: 3px solid #000000;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
 }
 
 /* Image */
@@ -236,6 +245,10 @@ input[type=submit] {
 
     .fa-angle-down, .fa-angle-up {
         margin-right: 10px;
+    }
+
+    .fa-angle-up {
+        margin-right: 15px;
     }
 
     #images {
