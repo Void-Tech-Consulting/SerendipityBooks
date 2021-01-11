@@ -14,6 +14,12 @@ function header_customizer($wp_customize) {
           'section' => $header_section
       )
   ));
+
+  $wp_customize->selective_refresh->add_partial($header_icon_img, array(
+    'selector' => 'span#copy-write', // You can also select a css class
+    'render_callback' => 'check_copy_right_text',
+    ));
+
   // Logo
   $wp_customize->add_setting($header_logo_img);
   $wp_customize->add_control( new WP_Customize_Image_Control( 

@@ -10,22 +10,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serendipity Books</title>
 </head>
-<body>
 <!-- Search bar -->
 <div id="search-bar-container">
-  <input type="text" class="search-bar" onkeyup="myFunction()" placeholder="Search books, authors, genres, and more">
-  <div class="link">
-      <img id="search" src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
-  </div>
-  <div class="link">
-    <img id="cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
+  <div class="searching-container">
+    <div class="searching-icon">
+        <img id="search" src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
+    </div>
+    <input type="text" class="search-bar" onkeyup="myFunction()" placeholder="Search books, authors, genres, and more">
+    <div class="search-cancel">
+      <img id="cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
+    </div>
   </div>
 </div>
 
 <div id="top-header">
   <!-- Top Icons/Logo link to home page -->
   <a href="<?php echo get_site_url(); ?>">
-    <div class="images">
+    <div id="images">
       <img src=<?php if (get_theme_mod($header_icon_img)) {
         echo get_theme_mod($header_icon_img);
       }  else { echo get_template_directory_uri() . "/photos/logo_birds.png"; }?> height="40px" alt="Birds">
@@ -54,15 +55,22 @@
         <?php }?>
       </div>
     </a>
-    <a href="<?php echo get_page_link( get_page_by_title('Events')->ID ); ?>">
-      <div class="link">
-        <?php if (get_theme_mod($header_events_title)) { 
-          echo get_theme_mod($header_events_title);
-          } else {?>
-          EVENTS
-        <?php }?>
+    <div class="event-dropdown">
+      <a href="<?php echo get_page_link( get_page_by_title('Events')->ID ); ?>">
+        <div class="link">
+          <?php if (get_theme_mod($header_events_title)) { 
+            echo get_theme_mod($header_events_title);
+            } else {?>
+            EVENTS
+          <?php }?>
+        </div>
+      </a>
+      <div class="event-dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
       </div>
-    </a>
+    </div>
     <a href="<?php echo get_page_link( get_page_by_title('Shop')->ID ); ?>">
       <div class="link shop">
         <?php if (get_theme_mod($header_shop_title)) { 
@@ -85,5 +93,28 @@
       </div>
     </a>
   </div>
+  <div class="mobile-header">
+    <div id="mobile-search-bar-container">
+      <div class="searching-container">
+        <div class="searching-icon">
+            <img id="search" src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
+        </div>
+        <input type="text" class="search-bar" onkeyup="myFunction()" placeholder="Search books, authors, genres, and more">
+        <div class="search-cancel">
+          <img id="mobile-cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
+        </div>
+      </div>
+    </div>
+        <!-- Search icon -->
+    <div id="mobile-search-icon" class="link">
+      <img src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Mobile Search">
+    </div>
+    <div id="mobile-icon">
+        <img src=<?php if (get_theme_mod($header_checkout_img)) {
+          echo get_theme_mod($header_checkout_img);
+        }  else { echo get_template_directory_uri() . "/photos/mobile-icon.png"; }?> height="40px" alt="Icon">
+    </div>
+  </div>
 </div>
+<body>
 
