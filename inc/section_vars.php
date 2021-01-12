@@ -22,9 +22,6 @@
   $home_contactless_description = 'home_contactless_description';
   $home_contactless_img = 'home_contactless_img';
   $home_events_title = 'home_events_title';
-  $home_book_title = 'home_book_title';
-  $home_book_price = 'home_book_price';
-  $home_book_img = 'home_book_img';
 
   // Header Vars
   $header_section = 'header_section';

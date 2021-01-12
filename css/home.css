@@ -81,6 +81,10 @@ html {
     width: fit-content;
 }
 
+.flat-button:hover {
+    border: 3px solid black;
+}
+
 /* Mobile header CSS */
 #mobile-header {
     display: none;
