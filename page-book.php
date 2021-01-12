@@ -15,7 +15,12 @@
   <div id="shop-book-path">All > Happily Ever Afters</div>
   <div id="shop-book-flex">
     <div id="shop-bookcover">
-      <img src=<?php echo get_template_directory_uri() . "/img/bc_frida-atoz.png"?> alt="Frida A to Z Book Cover">
+    
+      <img src=<?php 
+      $key = "ISBN";
+      $value = "9781564026668";
+      $size = "L";
+      echo "http://covers.openlibrary.org/b/$key/$value-$size.jpg"?> alt="Frida A to Z Book Cover">
     </div>
     <div id="shop-bookdesc">
 
