@@ -15,10 +15,10 @@ foreach ($book_map as $k => $v) {
 }
 ?>
 
-<main>
+<main id="home-main">
 
   <!-- Description section -->
-  <section id="description-container">
+  <section class="home-section" id="description-container">
     <img class="bracket" style="transform: rotate(180deg);" src=<?php echo get_template_directory_uri() . "/img/bracket.svg" ?>>
     <span id="description-text">
       <span id="edit-description"></span>
@@ -32,7 +32,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
   <!-- Mobile header -->
-  <section id="mobile-section">
+  <section class="home-section" id="mobile-section">
     <header id="mobile-header">
       <div class="header-part">
         <div class="header-text">
@@ -54,7 +54,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
 
-  <section id="bestsellers" class="mobile-visible">
+  <section class="home-section mobile-visible" id="bestsellers">
     <!-- Bestsellers header -->
     <header>
       <div class="header-part">
@@ -101,7 +101,7 @@ foreach ($book_map as $k => $v) {
 
   </section>
 
-  <section id="favorites" class="mobile-hidden">
+  <section class="home-section mobile-hidden" id="favorites">
     <!-- Favorites header -->
     <header>
       <div class="header-part">
@@ -174,7 +174,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
   <!-- Contactless section -->
-  <section id="contactless">
+  <section class="home-section" id="contactless">
     <div id="contactless-content">
 
       <div class="contactless-part" id="contactless-left">
@@ -204,13 +204,13 @@ foreach ($book_map as $k => $v) {
                   } else {
                     echo get_template_directory_uri() . "/img/pick_up_birds.png";
                   }
-                  ?> width="100%" height="auto" alt="Two birds on a branch">
+                  ?> width="90%" height="auto" alt="Two birds on a branch">
       </div>
 
     </div>
   </section>
 
-  <section id="upcoming-events" class="mobile-hidden">
+  <section class="home-section mobile-hidden" id="upcoming-events">
 
     <!-- Upcoming events header -->
     <header>
@@ -231,11 +231,11 @@ foreach ($book_map as $k => $v) {
     <!-- Upcoming events images -->
     <div class="event-container">
       <div id="left-event">
-        <img class="event" width="100%" height="auto" src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster">
+        <img class="event" width="90%" height="auto" src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster">
       </div>
       <div id="right-event">
-        <img class="event" width="75%" height="auto" src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster">
-        <img class="event" width="75%" height="auto" src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster">
+        <img class="event" width="65%" height="auto" src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster">
+        <img class="event" width="65%" height="auto" src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster">
       </div>
     </div>
 
