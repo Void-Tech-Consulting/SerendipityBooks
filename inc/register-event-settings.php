@@ -14,6 +14,10 @@ function event_customizer($wp_customize) {
         'type' => 'textarea'
     ));
 
+    $wp_customize->selective_refresh->add_partial($event_title, array(
+        'selector' => '#eventTitleSpan',
+    ));
+
     //Event Poster
     $wp_customize->add_setting($events_poster_img);
     $wp_customize->add_control( new WP_Customize_Image_Control( 
@@ -25,12 +29,20 @@ function event_customizer($wp_customize) {
         )
     ));
 
+    // $wp_customize->selective_refresh->add_partial('events_poster_img', array(
+    //     'selector' => '#posterImage',
+    // ));
+
     //Date
     $wp_customize->add_setting($date_desc);
     $wp_customize->add_control($date_desc, array(
         'label' => 'Date',
         'section' => $events_section,
         'type' => 'textarea'
+    ));
+
+    $wp_customize->selective_refresh->add_partial('date_desc', array(
+        'selector' => '#details',
     ));
 
     //Upcoming Meeting
