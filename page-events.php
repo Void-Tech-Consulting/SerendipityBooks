@@ -16,6 +16,8 @@
     <img class = "bracket" src = <?php echo get_template_directory_uri() . "/events_imgs/leftBracket.png" ?> alt = "left bracket">
     <?php if(get_theme_mod($event_title)) { ?>
         <p id = "eventTitle"> <?php echo get_theme_mod($event_title) ?> </p>
+    <?php } else { ?>
+        <p id = "eventTitle"> EVENT TITLE </p>
     <?php } ?>
     <img class = "bracket" src = <?php echo get_template_directory_uri() . "/events_imgs/rightBracket.png" ?> alt = "right bracket">
 </div>
@@ -25,10 +27,11 @@
 
     <!-- Poster Div (Image) -->
     <div class = "containers" id = "poster">
-        <img id = "posterImage" src= <?php echo get_template_directory_uri() . "/events_imgs/afterhoursbookclub.png"?>  alt="Poster of the event">
         <!-- Adding Image -->
-        <?php if(get_theme_mod($event_poster_img)) { ?>
-            <img id = "posterImage" src= <?php echo get_theme_mod($event_poster_img) ?> alt="Poster of the event">
+        <?php if(get_theme_mod($events_poster_img)) { ?>
+            <img id = "posterImage" src= <?php echo get_theme_mod($events_poster_img); ?> alt="Poster of the event">
+        <?php } else { ?>
+            <img id = "posterImage" src= <?php echo get_template_directory_uri() . "/events_imgs/afterhoursbookclub.png"?>  alt="Poster of the event">
         <?php } ?>
 
         <!-- Dropdown -->
@@ -68,6 +71,7 @@
     <div class = "containers" id = "details">
 
         <!-- Date Section -->
+        <span id = "dateSection">
         <?php if(get_theme_mod($date_desc)) { ?>
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/dateIcon.png" ?> alt="Calendar icon next to date">
@@ -75,6 +79,7 @@
             </div>
             <p class = "body-text"> <?php echo get_theme_mod($date_desc) ?> </p> <br>
         <?php } ?>
+        </span>
 
         <!-- Upcoming Meeting Section -->
         <?php if(get_theme_mod($upcom_meet_desc1)) { ?>
@@ -97,7 +102,7 @@
             <!-- With EventBrite Link -->
             <?php if(get_theme_mod($eventbrite_link)) { ?>
                 <p class = "body-text">Register for free here. 
-                    <a class = "link" href = <?php echo get_theme_mod($eventbrite_link) ?> > EventBrite</a> 
+                    <a class = "linkEvent" href = <?php echo get_theme_mod($eventbrite_link) ?> > EventBrite</a> 
                 </p> <br>
             <?php } ?>
             <!-- Other Location Description -->
@@ -127,8 +132,8 @@
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/relLinkIcon.png" ?> alt="Relevant link icon">
                 <p class = "headings"> RELEVANT LINK </p>
             </div>
-            <p class = "body-text" ><?php echo get_theme_mod($rel_link_desc) ?> </p> 
-            <a class = "body-text link" href = <?php echo get_theme_mod($rel_link) ?> ><?php echo get_theme_mod($rel_link) ?> </p> <br>
+            <p class = "body-text" ><?php echo get_theme_mod($rel_link_desc) ?>
+            <a class = "linkEvent" href = <?php echo get_theme_mod($rel_link) ?>><?php echo get_theme_mod($rel_link) ?> </p> <br>
 
         <?php } ?>
 
