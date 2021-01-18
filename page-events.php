@@ -15,11 +15,13 @@
 <!-- Event Header w/ Title -->
 <div id = "eventHeaderSection">
     <img class = "bracket" src = <?php echo get_template_directory_uri() . "/events_imgs/leftBracket.png" ?> alt = "left bracket">
-    <?php if(get_theme_mod($event_title)) { ?>
-        <p id = "eventTitle"> <?php echo get_theme_mod($event_title) ?> </p>
-    <?php } else { ?>
-        <p id = "eventTitle"> EVENT TITLE </p>
-    <?php } ?>
+    <span id = "eventTitleEdit">
+        <?php if(get_theme_mod($event_title)) { ?>
+            <p id = "eventTitle"> <?php echo get_theme_mod($event_title) ?> </p> 
+        <?php } else { ?>
+            <p id = "eventTitle"> EVENT TITLE </p>
+        <?php } ?>
+    </span>
     <img class = "bracket" src = <?php echo get_template_directory_uri() . "/events_imgs/rightBracket.png" ?> alt = "right bracket">
 </div>
 
@@ -72,71 +74,125 @@
     <div class = "containers" id = "details">
 
         <!-- Date Section -->
-        <span id = "dateSection">
-        <?php if(get_theme_mod($date_desc)) { ?>
+        <span id = "dateSectionEdit">
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/dateIcon.png" ?> alt="Calendar icon next to date">
                 <p class = "headings"> DATE </p>
             </div>
-            <p class = "body-text"> <?php echo get_theme_mod($date_desc) ?> </p> <br>
-        <?php } ?>
+            <div class = "body-text">
+                <?php if(get_theme_mod($date_desc)) {
+                    echo get_theme_mod($date_desc);
+                } else {
+                    echo 'September 10 - December 10, 2020';
+                }
+                ?>
+            <br> <br>
+            </div>
         </span>
 
         <!-- Upcoming Meeting Section -->
-        <?php if(get_theme_mod($upcom_meet_desc1)) { ?>
+        <span id = 'upcomMeetEdit'>
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/dateIcon.png" ?> alt="Calendar icon next to date">
                 <p class = "headings"> UPCOMING MEETING </p>
             </div>
-            <p class = "body-text"> <?php echo get_theme_mod($upcom_meet_desc1) ?> </p> <br>
-            <?php if(get_theme_mod($upcom_meet_desc2)) { ?>
-                <p class = "body-text"> <?php echo get_theme_mod($upcom_meet_desc2) ?> </p> <br>
-            <?php } ?>
-        <?php } ?>
+            <div class = "body-text">
+                <!-- Upcoming Meeting Description Part 1 -->
+                <?php if(get_theme_mod($upcom_meet_desc1)) {
+                    echo get_theme_mod($upcom_meet_desc1);
+                } else {
+                    echo 'December 9, 6:30 - 8:00pm';
+                } ?>
+                <br> <br>
+                <!-- Upcoming Meeting Description Part 2 -->
+                <?php if(get_theme_mod($upcom_meet_desc2)){
+                    echo get_theme_mod($upcom_meet_desc2);
+                } else {
+                    echo '‘All American Boys‘ by Jason Reynolds and Brendan Kiely and ‘Long Way Down‘ by Jason Reynolds (a two book selection)';
+                }
+                ?>
+            <br> <br>
+            </div>
+        </span>
 
         <!-- Location Section -->
-        <?php if(get_theme_mod($location_desc) || get_theme_mod($eventbrite_link)) { ?>
+        <span id = "locationEdit">
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/locationIcon.png" ?> alt="Location icon">
                 <p class = "headings"> LOCATION </p>
             </div>
-            <!-- With EventBrite Link -->
-            <?php if(get_theme_mod($eventbrite_link)) { ?>
-                <p class = "body-text">Register for free here. 
-                    <a class = "linkEvent" href = <?php echo get_theme_mod($eventbrite_link) ?> > EventBrite</a> 
-                </p> <br>
-            <?php } ?>
-            <!-- Other Location Description -->
-            <p class = "body-text"> <?php echo get_theme_mod($location_desc) ?> </p> <br>
-            
-        <?php } ?>
-        
+            <div class = "body-text">
+                <!-- With EventBrite Link -->
+                <?php if(get_theme_mod($eventbrite_link)) { ?>
+                    <p class = "body-text">Register for free here. 
+                        <a class = "linkEvent" href = <?php echo get_theme_mod($eventbrite_link) ?> > EventBrite</a> 
+                    </p> <br>
+                <?php } ?>
+                <!-- Other Location Description -->
+                <?php if(get_theme_mod($location_desc)) {
+                    echo get_theme_mod($location_desc);
+                } else {
+                    echo 'December meeting will be held over Zoom.';
+                } ?>
+                <br> <br>
+            </div>
+        </span>
 
         <!-- Description Section -->
-        <?php if(get_theme_mod($event_desc1)) { ?>
+        <span id = 'descSectionEdit'>
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/descIcon.png" ?> alt="Description icon">
                 <p class = "headings"> DESCRIPTION </p>
             </div>
-            <p class = "body-text" ><?php echo get_theme_mod($event_desc1) ?> </p> <br>
-            <?php if(get_theme_mod($event_desc2)) { ?>
-                <p class = "body-text"> <?php echo get_theme_mod($event_desc2) ?> </p> <br>
-            <?php } ?>
-            <?php if(get_theme_mod($event_desc3)) { ?>
-                <p class = "body-text"> <?php echo get_theme_mod($event_desc3) ?> </p> <br>
-            <?php } ?>
-        <?php } ?>
-
+            <div class = "body-text">
+                <!-- Description Part 1 -->
+                <?php if(get_theme_mod($event_desc1)) {
+                    echo get_theme_mod($event_desc1);
+                } else {
+                    echo 'The book club is open to regular clock-work attendees or occasional drop-ins alike. No sign-up is needed, no purchases 
+                    are necessary, just stop by ready to discuss the latest read.';
+                } ?>
+                <br> <br>
+                <!-- Description Part 2 -->
+                <?php if(get_theme_mod($event_desc2)){
+                    echo get_theme_mod($event_desc2);
+                } else {
+                    echo 'The selections vary in genre and length. They are often tie-in reads with the Washtenaw Reads winning selection, the 
+                    Midwest Literary Walk, and even high school favorites.';
+                }
+                ?>
+                <br> <br>
+                <!-- Description Part 3 -->
+                <?php if(get_theme_mod($event_desc3)){
+                    echo get_theme_mod($event_desc3);
+                } else {
+                    echo 'Its always fun!';
+                }
+                ?>
+            <br> <br>
+            </div>
+        </span>
+        
         <!-- Relevant Link Section -->
-        <?php if(get_theme_mod($rel_link_desc)) { ?>
+        <span id = "relLinkEdit">
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/relLinkIcon.png" ?> alt="Relevant link icon">
                 <p class = "headings"> RELEVANT LINK </p>
             </div>
-            <p class = "body-text" ><?php echo get_theme_mod($rel_link_desc) ?>
-            <a class = "linkEvent" href = <?php echo get_theme_mod($rel_link) ?>><?php echo get_theme_mod($rel_link) ?> </p> <br>
-
-        <?php } ?>
+            <div class = "body-text">
+                <?php if(get_theme_mod($rel_link_desc)) {
+                    echo get_theme_mod($rel_link_desc);
+                } else {
+                    echo 'Jason Reynolds in Conversation at the Prince George’s Country Library: Broadcast Link: ';
+                }
+                ?>
+                <?php if(get_theme_mod($rel_link)) { ?>
+                    <p> <a class = "linkEvent" href = <?php echo get_theme_mod($rel_link) ?>><?php echo get_theme_mod($rel_link) ?> </p> <br>
+                <?php } else { ?>
+                    <p> <a class = "linkEvent" href = "https://www.youtube.com/watch?v=wzfKP4ZXmSk"> https://www.youtube.com/watch?v=wzfKP4ZXmSk </p> <br>
+                <?php } ?>
+            </div>
+        </span>
 
     </div>
 </div>
