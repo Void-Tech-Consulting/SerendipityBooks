@@ -21,13 +21,8 @@ function faq_customizer($wp_customize) {
   $wp_customize->add_control($faq_tradepolicy_content, array(
     'label' => 'Trade Policy Content',
     'section' => $faq_section,
-    'type' => 'textarea',
-    'transport' => 'postMessage'
+    'type' => 'textarea'
   ));
-
-  // $wp_customize->selective_refresh->add_partial($faq_tradepolicy_content, array(
-  //   'selector' => 'span#edit-tradepolicy-content'
-  // ));
   
    // Gift Cards
   $wp_customize->add_setting($faq_giftcards);

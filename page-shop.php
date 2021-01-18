@@ -13,10 +13,10 @@
 </head>
 <body>
   <!-- Title of Page -->
-  <header>
-    <span class="bracket">[</span>
-    <h1>Michelle's Shop</h1>
-    <span class="bracket">]</span>
+  <header id="shop-header">
+    <span class="brackets">[</span>
+    <h1 id="shop-h1">Michelle's Shop</h1>
+    <span class="brackets">]</span>
   </header>
 
   <div id="shop_layout">
@@ -64,21 +64,41 @@
     <section id="bookstore">
       <!-- Display Type -->
       <div id="sort-bookstore">
-        <div id="display-num">
-          <div class="display-default">Show 30<img src=<?php echo get_template_directory_uri() . "/img/black_down_arrow.png" ?> alt=""></div>
-          <div class="display-content">
-            <div>Show 30</div>
-            <div>Show 60</div>
-            <div>Show 90</div>
-          </div>
+        <div class="display-content" id="phone-categories">
+          <select>
+            <option value="0">Category</option>
+            <option value="1">All</option>
+            <option value="2">Nonfiction</option>
+            <option value="3">Fiction</option>
+            <option value="4">Childrens</option>
+            <option value="5">Young Adult</option>
+            <option value="6">Gifts</option>
+          </select>
         </div>
-        <div id="display-by">
-          <div class="display-default">Popularity<img src=<?php echo get_template_directory_uri() . "/img/black_down_arrow.png" ?> alt=""></div>
-          <div class="display-content">
-            <a href="">Popularity</a>
-            <a href="">Featured</a>
-            <a href="">Newest Arrivals</a>
-          </div>
+
+        <div class="display-content" id="phone-condition">
+          <select>
+            <option value="0">Condition</option>
+            <option value="1">All</option>
+            <option value="2">New</option>
+            <option value="3">Used</option>
+          </select>
+        </div>
+
+        <div class="display-content" id="display-num">
+          <select>
+            <option value="0">Show 30</option>
+            <option value="1">Show 60</option>
+            <option value="2">Show 90</option>
+          </select>
+        </div>
+
+        <div class="display-content" id="display-by">
+          <select>
+            <option value="0">Popularity</option>
+            <option value="1">Featured</option>
+            <option value="2">Newest Arrivals</option>
+          </select>
         </div>
       </div>
 

@@ -3,27 +3,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 
 /* Title of Page */
-header {
+#shop-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 247px;
+  height: clamp(110px, 8vw, 145px);
+  margin-bottom: 25px;
 }
 
-h1 {
+#shop-h1 {
   display: inline-block;
   font-family: 'Lora', sans-serif;
   color: rgba(0, 0, 0, 1);
   text-transform: uppercase;
-  font-size: 48px;
+  font-size: clamp(24px, 3vw, 48px);
   font-weight: 700;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
-.bracket {
+.brackets {
   font-family: 'Lato', sans-serif;
-  font-size: 170px;
+  font-size: clamp(80px, 9.1vw, 170px);
   font-weight: 200;
+  line-height: 100%;
+  margin: 0 10px;
 }
 
 section {
@@ -33,7 +36,7 @@ section {
 
 #shop_layout {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 /* Left Sidebar */
@@ -43,20 +46,25 @@ section {
 
 .selection-title {
   font-family: 'Lora', sans-serif;
-  font-size: 40px;
+  font-size: clamp(20px, 2.5vw, 35px);
   margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .selection-container {
   background-color: #E5E2DB;
   border-radius: 30px;
-  width: 268px;
+  width: clamp(120px, 15vw, 230px);
   padding: 35px 30px;
 
   font-family: 'Lato', sans-serif;
-  font-size: 30px;
-  margin-top: 30px;
+  font-size: clamp(15px, 2vw, 28px);
+  margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.selection-container div {
+  cursor: pointer;
 }
 
 .selection-active {
@@ -65,25 +73,30 @@ section {
 
 /* Right: Bookshop */
 #bookstore {
-  margin-top: 6px;
   width: 55%;
+  padding-left: 100px;
+  margin: 6px 60px auto 10px;
 }
 
 #sort-bookstore {
   display: flex;
   font-family: 'Lato', sans-serif;
-  font-size: 22px;
+  font-size: clamp(9px, 1.8vw, 22px);
   justify-content: flex-end;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 /* Display Dropdown */
-#display-num, #display-by {
+#phone-categories, #phone-condition, #display-num, #display-by {
   display: inline-block;
-  width: 200px;
+  width: clamp(68px, 15vw, 200px);
   background-color: #E5E2DB;
   box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 47.5px;
+}
+
+#phone-categories, #phone-condition {
+  display: none;
 }
 
 #display-by {
@@ -91,45 +104,74 @@ section {
   background-color: #CBD9C4;
 }
 
-.display-default {
-  padding: 10px 29px;
-}
-
-.display-default img {
-  display: inline;
-  width: 15px;
-  float: right;
-  margin-top: 6px;
-  /* transform: rotate(180deg); */
-}
-
+/*the container must be positioned relative:*/
 .display-content {
-  display: none;
-  margin-left: 30px;
-  border-radius: 40px;
+  position: relative;
 }
 
-/* .display-default:hover .display-content {
-  display: inline;
-} */
+.display-content select {
+  display: none; 
+}
+
+/* style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: clamp(10.2px, 2vw, 20px);
+  right: clamp(8px, 2vw, 20px);
+  border: clamp(3px, 0.5vw, 6px) solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent ;
+  top: clamp(4.3px, 2vw, 15px);
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+/* style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 #display-bookstore {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-left: 80px;
 }
 
 .book-content {
-  width: 185px;
-  margin-bottom: 75px;
+  width: clamp(80px, 20vw, 160px);
+  margin-bottom: 12px;
   margin-right: 0;
-  margin-left: 20px;
+  /* margin-left: 40px; */
   /* flex-basis: 31%; */
 }
 
 .book-cover {
-  width: 185px;
-  height: 259px;
+  width: 100%;
+  height: clamp(150px, 20vw, 200px);
   border-radius: 10px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -141,7 +183,7 @@ section {
 }
 
 .book-info {
-  margin-top: 18px;
+  margin-top: 3px;
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
@@ -206,27 +248,27 @@ section {
 #shop-more {
   display: flex;
   justify-content: center;
-  padding: 79px;
+  padding: clamp(10px, 8vw, 79px);
   background-color: #E5E2DB;
   max-width: initial;
-  height: 336px;
+  height: clamp(100px, 25vw, 336px);
   margin: 0;
 }
 
 .shop-more-text {
   font-family: 'Lora', sans-serif;
-  font-size: 32px;
+  font-size: clamp(12px, 2vw, 32px);
   text-align: center;
   margin: 0 30px;
 }
 
 .shop-more-text button {
   font-family: 'Lato', sans-serif;
-  width: 225px;
-  height: 70px;
+  width: clamp(66px, 15vw, 225px);
+  height: clamp(24px, 4vw, 70px);
   border: none;
-  font-size: 25px;
-  margin-top: 40px;
+  font-size: clamp(8px, 1.8vw, 25px);
+  margin-top: clamp(8px, 2.1vw, 40px);
   background-color: #CBD9C4;
   box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;  
@@ -242,124 +284,77 @@ section {
 #shop-more-leftimg {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
-
-@media only screen and (max-width: 480px) {
-  header {
-    height: 184px;
-  }
-
-  .bracket {
-    font-size: 96px;
-  }
-
-  h1 {
-    font-size: 24px;
-    width: 250px;
-  }
   
-  .selection-title {
-    font-size: 16px;
+
+@media only screen and (max-width: 700px) {
+
+  #shop-header {
+    margin-bottom: 10px;
   }
 
-  .selection-container {
-    border-radius: 20px;
-    width: 80px;
-    padding: 15px 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+  #selection-sidebar {
+    display: none;
+  }
 
-    font-size: 12px;
+  #bookstore {
+    width: 80%;
+    margin: 0;
+    padding: 0;
   }
 
   #sort-bookstore {
-    margin-bottom: 30px;
+    justify-content: space-between;
   }
 
-  #display-num, #display-by {
-    width: 100px;
+  .display-content, #phone-categories, #phone-condition, #display-num, #display-by {
+    background-color: #E5E2DB;
+    margin: 0 6px;
   }
-  
-  #display-by {
-    margin-left: 10px;
+
+  .select-selected {
+    width: 68px;
+    height: 25px;
   }
-  
-  .display-default {
-    font-size: 12px;
+
+  #phone-categories, #phone-condition {
+    display: inline-block;
+  }
+
+  .select-items div,.select-selected {
     padding: 5px 10px;
   }
-  
-  .display-default img {
-    width: 10px;
-    margin-top: 2px;
+
+  #display-bookstore {
+    padding: 0;
   }
-  
-  .display-content {
-    display: none;
-    margin-left: 30px;
-    border-radius: 40px;
-  }
-  
+
   .book-content {
     width: 80px;
-    margin-bottom: 10px;
-    margin-right: 0;
-    margin-left: 20px;
-    /* flex-basis: 31%; */
+    margin: 10px;
   }
-  
+
   .book-cover {
-    width: 80px;
-    height: 110px;
-    border-radius: 10px;
+    height: 112px;
   }
-  
-  .book-info {
-    margin-top: 15px;
-  }
-  
+
   .book-title {
-    font-size: 12px;
-  }
-  
-  .book-price {
     font-size: 10px;
   }
 
-  /* Page Bar */
+  .book-price {
+    font-size: 8px;
+  }
+
   #page-bar {
-    margin-bottom: 50px;
-  } 
-  
-  .page-bar-arrow {
-    display: flex;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    margin-right: 30px;
+    display: none; /* ? */
   }
-  
-  .page-bar-right {
-    background-color: #CBD9C4;
-    margin-right: 0;
-    margin-left: 30px;
+
+  #shop-more {
+    padding: 15px;
   }
-  
-  .page-bar-nums {
-    font-family: 'Lato', sans-serif;
-    font-size: 26px;
+
+  #shop-more img {
+    display: none;
   }
-  
-  .page-bar-nums div {
-    display: inline;
-    margin: auto 15px;
-  }
-  
-  .page-bar-active {
-    color: #5B764E;
-    font-size: 30px;
-  }
-  
 
 }
