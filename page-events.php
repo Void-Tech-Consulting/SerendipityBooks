@@ -91,7 +91,7 @@
         </span>
 
         <!-- Upcoming Meeting Section -->
-        <span id = 'upcomMeetEdit'>
+        <span id = "upcomMeetEdit">
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/dateIcon.png" ?> alt="Calendar icon next to date">
                 <p class = "headings"> UPCOMING MEETING </p>
@@ -139,7 +139,7 @@
         </span>
 
         <!-- Description Section -->
-        <span id = 'descSectionEdit'>
+        <span id = "descSectionEdit">
             <div class = "icon-heading-div">
                 <img class = "heading-icon" src= <?php echo get_template_directory_uri() . "/events_imgs/descIcon.png" ?> alt="Description icon">
                 <p class = "headings"> DESCRIPTION </p>

@@ -15,7 +15,7 @@ function event_customizer($wp_customize) {
     ));
 
     $wp_customize->selective_refresh->add_partial($event_title, array(
-        'selector' => '#eventTitleSpan',
+        'selector' => '#eventTitleEdit'
     ));
 
     //Event Poster
@@ -29,9 +29,9 @@ function event_customizer($wp_customize) {
         )
     ));
 
-    // $wp_customize->selective_refresh->add_partial('events_poster_img', array(
-    //     'selector' => '#posterImage',
-    // ));
+    $wp_customize->selective_refresh->add_partial($events_poster_img, array(
+        'selector' => '#poster',
+    ));
 
     //Date
     $wp_customize->add_setting($date_desc);
@@ -41,8 +41,8 @@ function event_customizer($wp_customize) {
         'type' => 'textarea'
     ));
 
-    $wp_customize->selective_refresh->add_partial('date_desc', array(
-        'selector' => '#details',
+    $wp_customize->selective_refresh->add_partial($date_desc, array(
+        'selector' => '#dateSectionEdit',
     ));
 
     //Upcoming Meeting
@@ -59,6 +59,10 @@ function event_customizer($wp_customize) {
         'type' => 'textarea'
     ));
 
+    $wp_customize->selective_refresh->add_partial($upcom_meet_desc1, array(
+        'selector' => '#upcomMeetEdit',
+    ));
+
     //Location
     $wp_customize->add_setting($location_desc);
     $wp_customize->add_control($location_desc, array(
@@ -73,6 +77,10 @@ function event_customizer($wp_customize) {
         'label' => 'EventBrite Link if on Zoom',
         'section' => $events_section,
         // 'type' => 'textarea'
+    ));
+
+    $wp_customize->selective_refresh->add_partial($location_desc, array(
+        'selector' => '#locationEdit',
     ));
 
     //Description
@@ -95,6 +103,10 @@ function event_customizer($wp_customize) {
         'type' => 'textarea'
     ));
 
+    $wp_customize->selective_refresh->add_partial($event_desc1, array(
+        'selector' => '#descSectionEdit',
+    ));
+
     //Relevant Link
     $wp_customize->add_setting($rel_link_desc);
     $wp_customize->add_control($rel_link_desc, array(
@@ -106,7 +118,10 @@ function event_customizer($wp_customize) {
     $wp_customize->add_control($rel_link, array(
         'label' => 'Link',
         'section' => $events_section,
-        // 'type' => 'textarea'
+    ));
+
+    $wp_customize->selective_refresh->add_partial($rel_link_desc, array(
+        'selector' => '#relLinkEdit',
     ));
 
 }
