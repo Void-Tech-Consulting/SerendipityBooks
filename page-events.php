@@ -11,6 +11,7 @@
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 
+<div id = "fontDefault">
 <!-- Event Header w/ Title -->
 <div id = "eventHeaderSection">
     <img class = "bracket" src = <?php echo get_template_directory_uri() . "/events_imgs/leftBracket.png" ?> alt = "left bracket">
@@ -139,6 +140,7 @@
 
     </div>
 </div>
+</div> <!-- Font Default Div -->
 
 <!-- <form class="message-form" method="post">
   <input id="message-title" type="text">
