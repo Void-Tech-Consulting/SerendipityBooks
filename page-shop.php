@@ -13,16 +13,17 @@
 </head>
 <body>
   <!-- Title of Page -->
-  <header>
-    <span class="bracket">[</span>
-    <h1>Michelle's Shop</h1>
-    <span class="bracket">]</span>
+  <header id="shop-header">
+    <span class="brackets">[</span>
+    <h1 id="shop-h1">Michelle's Shop</h1>
+    <span class="brackets">]</span>
   </header>
 
   <div id="shop_layout">
       <!-- Left: Sidebar -->
     <section id="selection-sidebar">
       <!-- Categories -->
+      <span id="edit-categories"></span>
       <?php if (get_theme_mod($shop_categories)) { ?>
         <span class="selection-title"><?php echo get_theme_mod($shop_categories) ?></span>
       <?php } else { ?>
@@ -43,6 +44,7 @@
       <?php } ?>
 
       <!-- Conditions -->
+      <span id="edit-condition"></span>
       <?php if (get_theme_mod($shop_condition)) { ?>
         <span class="selection-title"><?php echo get_theme_mod($shop_condition) ?></span>
       <?php } else { ?>
@@ -64,37 +66,67 @@
     <section id="bookstore">
       <!-- Display Type -->
       <div id="sort-bookstore">
-        <div id="display-num">
-          <div class="display-default">Show 30<img src=<?php echo get_template_directory_uri() . "/img/black_down_arrow.png" ?> alt=""></div>
-          <div class="display-content">
-            <div>Show 30</div>
-            <div>Show 60</div>
-            <div>Show 90</div>
-          </div>
+        <div class="display-content" id="phone-categories">
+          <select>
+            <option value="0">Category</option>
+            <option value="1">All</option>
+            <option value="2">Nonfiction</option>
+            <option value="3">Fiction</option>
+            <option value="4">Childrens</option>
+            <option value="5">Young Adult</option>
+            <option value="6">Gifts</option>
+          </select>
         </div>
-        <div id="display-by">
-          <div class="display-default">Popularity<img src=<?php echo get_template_directory_uri() . "/img/black_down_arrow.png" ?> alt=""></div>
-          <div class="display-content">
-            <a href="">Popularity</a>
-            <a href="">Featured</a>
-            <a href="">Newest Arrivals</a>
-          </div>
+
+        <div class="display-content" id="phone-condition">
+          <select>
+            <option value="0">Condition</option>
+            <option value="1">All</option>
+            <option value="2">New</option>
+            <option value="3">Used</option>
+          </select>
+        </div>
+
+        <span id="edit-display"></span>
+        <div class="display-content" id="display-num">
+        <?php if (get_theme_mod($shop_display)) { ?>
+          <select>
+            <option value="0"><?php echo get_theme_mod($shop_display) ?></option>
+            <option value="1"><?php echo get_theme_mod($shop_display) ?></option>
+            <option value="2"><?php echo get_theme_mod($shop_display) ?></option>
+          </select>
+        <?php } else { ?>
+          <select>
+            <option value="0">Show 30</option>
+            <option value="1">Show 60</option>
+            <option value="2">Show 90</option>
+          </select>
+        <?php } ?>
+        </div>
+
+        <div class="display-content" id="display-by">
+          <select>
+            <option value="0">Popularity</option>
+            <option value="1">Featured</option>
+            <option value="2">Newest Arrivals</option>
+          </select>
         </div>
       </div>
 
       <div id="display-bookstore">
         <div class="book-content">
           <div class="book-cover">
-            <?php if (get_theme_mod($shop_bc1)) { ?>
-              <img src=<?php echo get_theme_mod($shop_bc1)?>>
+            <?php if (get_theme_mod($shop_bc)) { ?>
+              <img src=<?php echo get_theme_mod($shop_bc)?>>
             <?php } else { ?>
               <img src=<?php echo get_template_directory_uri() . "/img/bc_educated.png" ?> alt="Educated Book Cover">
             <?php } ?>
           </div>
 
-          <?php if (get_theme_mod($shop_bi1)) { ?>
-            <div class="book-info"><?php echo get_theme_mod($shop_bi1) ?></div>
+          <?php if (get_theme_mod($shop_bi)) { ?>
+            <div class="book-info"><?php echo get_theme_mod($shop_bi) ?></div>
           <?php } else { ?>
+          <span id="edit-bi"></span>
           <div class="book-info">
             <span class="book-title">Educated</span>
             <span class="book-price">$15.99</span>
@@ -104,40 +136,22 @@
 
         <div class="book-content">
           <div class="book-cover">
-            <?php if (get_theme_mod($shop_bc2)) { ?>
-              <img src=<?php echo get_theme_mod($shop_bc2)?>>
-            <?php } else { ?>
-              <img src=<?php echo get_template_directory_uri() . "/img/bc_withthefire.png" ?> alt="With the Fire on High Book Cover">
-            <?php } ?>
+            <img src=<?php echo get_template_directory_uri() . "/img/bc_withthefire.png" ?> alt="With the Fire on High Book Cover">
           </div>
-
-          <?php if (get_theme_mod($shop_bi2)) { ?>
-            <div class="book-info"><?php echo get_theme_mod($shop_bi2) ?></div>
-          <?php } else { ?>
-          <div class="book-info">
+            <div class="book-info">
             <span class="book-title">With the Fire on High</span>
             <span class="book-price">$12.99</span>
           </div>
-          <?php } ?>
         </div>
 
         <div class="book-content">
           <div class="book-cover">
-          <?php if (get_theme_mod($shop_bc3)) { ?>
-              <img src=<?php echo get_theme_mod($shop_bc3)?>>
-            <?php } else { ?>
             <img src=<?php echo get_template_directory_uri() . "/img/bc_littlewomen.png" ?> alt="Little Women Book Cover">
-          <?php } ?>
           </div>
-
-          <?php if (get_theme_mod($shop_bi3)) { ?>
-            <div class="book-info"><?php echo get_theme_mod($shop_bi3) ?></div>
-          <?php } else { ?>
-          <div class="book-info">
+            <div class="book-info">
             <div class="book-title">Little Women</div>
             <div class="book-price">$13.99</div>
           </div>
-          <?php } ?>
         </div>
 
         <div class="book-content">
@@ -314,13 +328,25 @@
   </div>
   
   <section id="shop-more">
-    <img id="shop-more-leftimg" src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
+    <span id="edit-moreimg"></span>
+    <?php if (get_theme_mod($shop_moreimg)) { ?>
+      <img id="shop-more-leftimg" src=<?php echo get_theme_mod($shop_moreimg)?> alt="">
+    <?php } else { ?>
+      <img id="shop-more-leftimg" src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
+    <?php } ?>
+    
+    <span id="edit-shopmoretext"></span>
     <div class="shop-more-text">
       <p>Haven’t found what you’re looking for?</p>
       <p>Check out more books from Michelle below!</p>
       <button>SHOP MORE</button>
     </div>
-    <img src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
+    <span id="edit-moreimg"></span>
+    <?php if (get_theme_mod($shop_moreimg)) { ?>
+      <img id="shop-more-leftimg" src=<?php echo get_theme_mod($shop_moreimg)?> alt="">
+    <?php } else { ?>
+      <img id="shop-more-leftimg" src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
+    <?php } ?>
   </section>
 
 </body>

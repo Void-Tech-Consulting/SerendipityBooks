@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 
 /* Title of Page */
-header {
+#faq-header {
     display: flex;
     background-color: #CBD9C4;;
     align-items: center;
@@ -11,25 +11,27 @@ header {
     height: 247px;
 }
 
-section {
+.faq-sec {
     width: auto;
 }
 
-h1 {
+#faq-h1 {
     display: inline-block;
     font-family: 'Lora', sans-serif;
     color: rgba(0, 0, 0, 1);
     text-transform: uppercase;
-    font-size: 48px;
+    font-size: clamp(24px, 3.2vw, 48px);
     font-weight: 700;
     text-align: center;
+    margin-top: 10px;
 }
 
-.bracket {
+.brackets {
     font-family: 'Lato', sans-serif;
-    font-size: 170px;
+    font-size: clamp(96px, 10vw, 170px);
     font-weight: 200;
     line-height: 100%;
+    
 }
 
 #faq_layout {
@@ -94,7 +96,7 @@ h1 {
 .titleactive {
     color: #748F67;
     margin-left: 14px;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-decoration-line: underline;
 }
 
@@ -104,7 +106,7 @@ h1 {
     margin: auto 14px 40px;
 }
 
-p {
+.quescontent p {
     padding: 10px;
 }
 
@@ -120,28 +122,37 @@ p {
 
 
 /* Local Authors Form */
-form {
+.quescontent form {
     margin: 0;
     margin-left: 13.7px;
     margin-top: 35px;
+    font-family: 'Lato', sans-serif;
 }
 
-input[type=text] {
+.quescontent form input[type=text] {
     border: none;
     display: block;
-    width: 638.74px;
+    width: 95%;
     height: 44px;
     background-color: #DAE9D2;;
     border-radius: 15px;
     margin-bottom: 20px;
 }
 
-input[type=submit] {
+.quescontent form input[type=submit] {
     border: none;
+    text-transform: uppercase;
     width: 102px;
     height: 44px;
     border-radius: 15px;
     background-color: #CBD9C4;;
+}
+
+.quescontent form input[type=submit]:active {
+    border: 3px solid #000000;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
 }
 
 /* Image */
@@ -151,11 +162,11 @@ input[type=submit] {
 }
 
 @media only screen and (max-width: 1050px) {
-    h1 {
+    #faq-h1 {
         font-size: 35px;
     }
 
-    .bracket {
+    .brackets {
         font-size: 140px;
     }
 
@@ -169,7 +180,7 @@ input[type=submit] {
 }
 
 @media only screen and (max-width: 800px) {
-    h1 {
+    #faq-h1 {
         font-size: 30px;
     }
 
@@ -183,7 +194,7 @@ input[type=submit] {
 }
 
 @media only screen and (max-width: 600px) {
-    h1 {
+    #faq-h1 {
         width: 320px;
     }
 
@@ -197,15 +208,15 @@ input[type=submit] {
 }
 
 @media only screen and (max-width: 480px) {
-    header {
+    #faq-header {
         height: 184px;
     }
 
-    .bracket {
+    .brackets {
         font-size: 96px;
     }
 
-    h1 {
+    #faq-h1 {
         font-size: 24px;
         width: 250px;
     }
@@ -236,6 +247,10 @@ input[type=submit] {
 
     .fa-angle-down, .fa-angle-up {
         margin-right: 10px;
+    }
+
+    .fa-angle-up {
+        margin-right: 15px;
     }
 
     #images {

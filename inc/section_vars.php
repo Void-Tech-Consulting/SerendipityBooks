@@ -1,11 +1,4 @@
 <?php
-  // Home Vars
-  $home_section = 'home_section';
-
-  $home_top_vid = 'top_vid';
-  $home_top_img = 'home_top_img';
-  $home_top_desc = 'home_top_desc';
-
   //Variables for Register Settings - Events
   $events_section = 'events_section';
   $event_title = 'event_title';
@@ -21,19 +14,14 @@
   $rel_link_desc = 'relevant_link_description';
   $rel_link = 'rel_link';
 
+  // Home Vars
+  $home_section = 'home_section';
   $home_description = 'home_description';
   $home_bestsellers_title = 'home_bestsellers_title';
   $home_favorites_title = 'home_favorites_title';
   $home_contactless_description = 'home_contactless_description';
   $home_contactless_img = 'home_contactless_img';
   $home_events_title = 'home_events_title';
-  $home_book_title = 'home_book_title';
-  $home_book_price = 'home_book_price';
-  $home_book_img = 'home_book_img';
-  
-  // $home_top_vid = 'top_vid';
-  // $home_top_img = 'home_top_img';
-  // $home_top_desc = 'home_top_desc';
 
   // Header Vars
   $header_section = 'header_section';
@@ -53,12 +41,11 @@
   $footer_instagram_link = 'footer_instagram_link';
   $footer_twitter_link = 'footer_twitter_link';
   $footer_facebook_link = 'footer_facebook_link';
+
   // FAQ Vars
   $faq_section = 'faq_section';
-
   $faq_questype = 'faq_questype';
   $faq_quescontent = 'faq_quescontent';
-
   $faq_tradepolicy = 'faq_tradepolicy';
   $faq_tradepolicy_content = 'faq_tradepolicy_content';
   $faq_giftcards = 'faq_giftcards';
@@ -71,19 +58,23 @@
   $faq_delivery_content = 'faq_delivery_content';
   $faq_appoint = 'faq_appoint';
   $faq_appoint_content = 'faq_appoint_content';
+  $faq_info = 'faq_info';
+  $faq_info_content = 'faq_info_content';
   $faq_img = 'faq_img';
+
   // Shop Vars
   $shop_section = 'shop_section';
   $shop_categories = 'shop_categories';
   $shop_categories_content = 'shop_categories_content';
   $shop_condition = 'shop_condition';
   $shop_condition_content = 'shop_condition_content';
-  $shop_bc1 = 'shop_bc1';
-  $shop_bi1 = 'shop_bi1';
-  $shop_bc2 = 'shop_bc2';
-  $shop_bi2 = 'shop_bi2';
-  $shop_bc3 = 'shop_bc3';
-  $shop_bi3 = 'shop_bi3';
+  $shop_bc = 'shop_bc';
+  $shop_bi = 'shop_bi';
+  $shop_moretext = 'shop_moretext';
+  $shop_moreimg = 'shop_moreimg';
+  $shop_display = 'shop_display';
+  
+
 
   // Book Vars
   $book_section = 'book_section';

@@ -17,29 +17,32 @@
 </head>
 <body>
   <!-- Title of Page -->
-  <header>
-    <span class="bracket">[</span>
-    <h1>Frequently Asked Questions</h1>
-    <span class="bracket">]</span>
+  <header id="faq-header">
+    <span class="brackets">[</span>
+    <h1 id="faq-h1">Frequently Asked Questions</h1>
+    <span class="brackets">]</span>
   </header>    
+
   <div id="faq_layout">
     <!-- Section: Questions -->
-    <section id="questions">
+    <section class="faq-sec" id="questions">
       <!-- Trade Policy -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_tradepolicy)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_tradepolicy) ?></span>
-          <?php } else { ?>
-            <span class="questitle">trade policy</span>
-          <?php } ?>
+          <span id="edit-tradepolicy">
+            <?php if (get_theme_mod($faq_tradepolicy)) { ?>
+              <span class="questitle"><?php echo get_theme_mod($faq_tradepolicy) ?></span>
+            <?php } else { ?>
+              <span class="questitle">trade policy</span>
+            <?php } ?>
+          </span>
           <i class="fas fa-angle-down"></i>
         </button>
 
+        
         <?php if (get_theme_mod($faq_tradepolicy_content)) { ?>
             <div class="quescontent"><?php echo get_theme_mod($faq_tradepolicy_content) ?></div>
         <?php } ?>
-
         <div class="quescontent">
           <p>We do take books in for trade but do not give cash. Instead:</p>
           <p>- for any books we take, we offer 20% of the new value of the book in store credit<br>
@@ -69,13 +72,16 @@
       <!-- Gift Cards -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_giftcards)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_giftcards) ?></span>
-          <?php } else { ?>
-            <span class="questitle">gift cards</span>
-          <?php } ?>
+          <span id="edit-giftcards">
+            <?php if (get_theme_mod($faq_giftcards)) { ?>
+              <span class="questitle"><?php echo get_theme_mod($faq_giftcards) ?></span>
+            <?php } else { ?>
+              <span class="questitle">gift cards</span>
+            <?php } ?>
+          </span>
           <i class="fas fa-angle-down"></i>
         </button>
+      
 
         <?php if (get_theme_mod($faq_giftcards_content)) { ?>
             <div class="quescontent"><?php echo get_theme_mod($faq_giftcards_content) ?></div>
@@ -94,11 +100,13 @@
       <!-- Local Authors -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_authors)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_authors) ?></span>
-          <?php } else { ?>
-            <span class="questitle">local authors</span>
-          <?php } ?>
+          <span id="edit-authors">
+            <?php if (get_theme_mod($faq_authors)) { ?>
+              <span class="questitle"><?php echo get_theme_mod($faq_authors) ?></span>
+            <?php } else { ?>
+              <span class="questitle">local authors</span>
+            <?php } ?>
+          </span>
           <i class="fas fa-angle-down"></i>
         </button>
 
@@ -146,11 +154,13 @@
       <!-- Contactless Pickup -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_pickup)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_pickup) ?></span>
-          <?php } else { ?>
-            <span class="questitle">contactless pickup</span>
-          <?php } ?>
+          <span id="edit-pickup">
+            <?php if (get_theme_mod($faq_pickup)) { ?>
+              <span class="questitle"><?php echo get_theme_mod($faq_pickup) ?></span>
+            <?php } else { ?>
+              <span class="questitle">contactless pickup</span>
+            <?php } ?>
+          </span>
           <i class="fas fa-angle-down"></i>
         </button>
 
@@ -167,12 +177,14 @@
       <!-- Delivery Service -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_delivery)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_delivery) ?></span>
-          <?php } else { ?>
-            <span class="questitle">delivery service</span>
-          <?php } ?>
-          <i class="fas fa-angle-down"></i>
+          <span id="edit-delivery">
+            <?php if (get_theme_mod($faq_delivery)) { ?>
+              <span class="questitle"><?php echo get_theme_mod($faq_delivery) ?></span>
+            <?php } else { ?>
+              <span class="questitle">delivery service</span>
+            <?php } ?>
+            <i class="fas fa-angle-down"></i>
+          </span>
         </button>
 
         <?php if (get_theme_mod($faq_delivery_content)) { ?>
@@ -190,12 +202,15 @@
       <!-- Private Appointments -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_appoint)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_appoint) ?></span>
-          <?php } else { ?>
-            <span class="questitle">private appointments</span>
-          <?php } ?>
+          <span id="edit-appoint">
+            <?php if (get_theme_mod($faq_appoint)) { ?>
+              <span class="questitle"><?php echo get_theme_mod($faq_appoint) ?></span>
+            <?php } else { ?>
+              <span class="questitle">private appointments</span>
+            <?php } ?>
+          </span>
           <i class="fas fa-angle-down"></i>
+          
         </button>
 
         <?php if (get_theme_mod($faq_appoint_content)) { ?>
@@ -210,16 +225,18 @@
       <!-- Shop Info -->
       <div class="quescontainer">
         <button type="button" class="questype">
-          <?php if (get_theme_mod($faq_appoint)) { ?>
-            <span class="questitle"><?php echo get_theme_mod($faq_appoint) ?></span>
-          <?php } else { ?>
-            <span class="questitle">shop info</span>
-          <?php } ?>
+          <span id="edit-info">
+            <?php if (get_theme_mod($faq_info)) { ?>
+              <span class="questitle"><?php echo get_theme_mod($faq_info) ?></span>
+            <?php } else { ?>
+              <span class="questitle">shop info</span>
+            <?php } ?>
+          </span>
           <i class="fas fa-angle-down"></i>
         </button>
 
-        <?php if (get_theme_mod($faq_appoint_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_appoint_content) ?></div>
+        <?php if (get_theme_mod($faq_info_content)) { ?>
+            <div class="quescontent"><?php echo get_theme_mod($faq_info_content) ?></div>
         <?php } ?>
 
         <div class="quescontent">
@@ -239,12 +256,14 @@
     </section>
 
     <!-- Section: Image 2 -->
-    <section id="images">
-      <?php if (get_theme_mod($faq_img)) { ?>
-        <img src=<?php echo get_theme_mod($faq_img) ?>></div>
-      <?php } else { ?>
-        <img src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
-      <?php } ?>
+    <section class="faq-sec" id="images">
+      <span id="edit-img">
+        <?php if (get_theme_mod($faq_img)) { ?>
+          <img src=<?php echo get_theme_mod($faq_img) ?>></div>
+        <?php } else { ?>
+          <img src=<?php echo get_template_directory_uri() . "/img/birds.png" ?> alt="Birds">
+        <?php } ?>
+      </span>
     </section>
     
   </div>

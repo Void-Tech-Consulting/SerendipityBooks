@@ -1,67 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
 
+/* General CSS */
 :root {
     --light-accent-color: #CBD9C4;
+    --book-width: calc(18vw * 0.55);
+    --book-height: calc(25vw * 0.55);
 }
 
-/* General CSS */
 html {
     scroll-behavior: smooth;
-    font-size: x-small;
+    font-size: 10px;
+    --min-book-width: calc(18rem * 0.49);
+    --min-book-height: calc(25rem * 0.49);
+    --max-book-width: calc(18rem * 0.85);
+    --max-book-height: calc(25rem * 0.85);
 }
 
-main {
+#home-main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-section {
+.home-section {
     width: 100%;
     box-sizing: border-box;
-    max-width: 120rem;
-    margin: 2.5rem 0;
-
+    margin: max(0.75rem, 0.75vw) 0;
 }
 
-section header {
+.home-section, #contactless-content {
+    max-width: calc(60% + 50px);
+}
+
+#mobile-section {
+    margin: 0;
+}
+
+.home-section header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2.5rem 0;
+    margin: max(1rem, 1vw) 0;
 }
 
-section header .header-part {
+.home-section header .header-part {
     display: flex;
+    align-items: center;
 }
 
-section header .header-part > * {
-    margin-right: 2rem;
+.home-section header .header-part > * {
+    margin-right: max(1.4rem, 1.1vw);
 }
 
 .header-text {
     font-family: 'Lora', serif;
-    font-size: 4rem;
+    min-height: 0vw;
+    font-size: clamp(1.5rem, 2.3vw, 3.4rem);
     font-weight: 700;
-    line-height: 5.12rem;
     width: fit-content;
-}
-
-/* Mobile header CSS */
-#mobile-header {
-    display: none;
-}
-
-#mobile-tabs {
-    margin-top: 2rem;
-    justify-content: space-between;
-}
-
-#mobile-tabs .header-text {
-    font-size: 2.5rem;
-    cursor: pointer;
-    margin-right: 0;
+    white-space: nowrap;
 }
 
 .flat-button {
@@ -73,13 +71,35 @@ section header .header-part > * {
     color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 2rem;
-    padding: 1rem 2rem;
+    min-height: 0vw;
+    font-size: clamp(1.1rem, 1.2vw, 2rem);
+    padding: min(0.75vw, 0.75rem) min(1.75vw, 1.75rem);
     background: var(--light-accent-color);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-color: transparent;
-    border-radius: 15px;
+    border-radius: max(20px, 5vw);
     width: fit-content;
+}
+
+.flat-button:hover {
+    border: 3px solid black;
+}
+
+/* Mobile header CSS */
+#mobile-header {
+    display: none;
+}
+
+#mobile-tabs {
+    margin: 0.5rem 0;
+    justify-content: space-between;
+}
+
+#mobile-tabs .header-text {
+    min-height: 0vw;
+    font-size: clamp(1.25rem, 1.75vw, 2.25rem);
+    cursor: pointer;
+    margin-right: 0;
 }
 
 /* Descripton heading CSS */
@@ -88,43 +108,46 @@ section header .header-part > * {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: max(1.5rem, 1.4vw) 0;
 }
 
 #description-text {
-    width: 700;
-    height: 4rem;
+    width: clamp(30rem, 57.5vw, 75rem);
+    text-align: center;
     font-style: italic;
     font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 4.2rem;
+    margin: 0 clamp(0.6rem, 1vw, 5rem);
+    min-height: 0vw;
+    font-size: clamp(1.25rem, 2.6vw, 3.5rem);
 }
 
 .bracket {
-    width: 5.6rem;
-    height: 18.8rem;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 17rem;
-    line-height: 20.4rem;
+    width: clamp(0.75rem, 1.75vw, 2.75rem);
+    height: auto;
 }
 
 /* Carousel CSS */
 .carousel {
     display: grid;
-    gap: 5rem;
+    gap: max(4.75vw, 2.75rem);
     grid-auto-flow: column;
     overflow-x: hidden;
 }
 
 .carousel-button {
-    width: 50px;
-    height: 50px;
+    width: clamp(3.1rem, 3.1vw, 4.5rem);
+    height: clamp(3.1rem, 3.1vw, 4.5rem);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
+    border-radius: max(50px, 5vw);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.carousel-button img {
+    width: clamp(1rem, 1.1vw, 1.2rem);
+    height: auto;
 }
 
 .left {
@@ -147,46 +170,60 @@ section header .header-part > * {
 }
 
 .book-card {
-    width: 29rem;
-    height: 40.3rem;
+    box-sizing: content-box;
+    width: clamp(var(--min-book-width), var(--book-width), var(--max-book-width));
+    height: clamp(var(--min-book-height), var(--book-height), var(--max-book-height));
+    padding: calc(var(--book-height) * 0.25) calc(var(--book-width) * 0.25);
     background-color: #E6E2DB;
-    border-radius: 40px;
+    border-radius: max(30px, 1vw);
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: max(0.75rem, 0.75vw);
 }
 
 .book-card img {
-    width: 18rem;
-    height: 25.3rem;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     filter: drop-shadow(9px 14px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+    border-radius: max(20px, 2vw);
 }
 
 .book-desc {
     font-family: 'Lato', sans-serif;
     text-align: center;
+    width: clamp(
+        calc(var(--min-book-width) * 1.3), 
+        calc(var(--book-width) * 1.3), 
+        calc(var(--max-book-width) * 1.3)
+        );
 }
 
 .book-title {
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-weight: 700;
-    font-size: 2.5rem;
+    min-height: 0vw;
+    font-size: clamp(1.1rem, 1.3vw, 2.5rem);
 }
 
 .book-price {
     font-weight: 500;
-    font-size: 2rem;
+    min-height: 0vw;
+    font-size: clamp(1rem, 1.2vw, 2.4rem);
 }
 
 /* Contactless section CSS */
 #contactless {
     background-color: #E5E2DB;
     max-width: initial;
-    height: 51.8rem;
+    height: max-content;
+    padding: 5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,13 +232,15 @@ section header .header-part > * {
 .contactless-part {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 #contactless-content {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 120rem;
+    width: 100%;
 }
 
 #contactless-buttons {
@@ -209,17 +248,25 @@ section header .header-part > * {
 }
 
 #contactless-buttons .flat-button {
-    margin-right: 2rem;
+    margin-right: max(2rem, 2vw);
+    white-space: nowrap;
 }
 
 #contactless-text {
-    width: 53.2rem;
-    height: 13.5rem;
+    width: max(17.5rem, 35vw);
     font-family: 'Lora', serif;
     font-weight: 500;
-    font-size: 3.5rem;
-    line-height: 4.48rem;
-    margin-bottom: 5rem;
+    min-height: 0vw;
+    font-size: clamp(1.3rem, 2.2vw, 3.55rem);
+    margin-bottom: max(2rem, 2vw);
+}
+
+#contactless-left {
+    flex: 1 1 50%;
+}
+
+#contactless-right {
+    flex: 2 2 50%;
 }
 
 .event-container {
@@ -228,7 +275,7 @@ section header .header-part > * {
 }
 
 #left-event {
-    margin-right: 6.5rem;
+    margin-right: min(6.5rem, 5vw);
 }
 
 #right-event {
@@ -244,46 +291,67 @@ section header .header-part > * {
     border-radius: 30px;
 }
 
-@media screen and (max-width: 1200px) {
+/* Media queries */
+@media screen and (min-width: 2000px) {
     html {
-        font-size: 58.3%;
+        font-size: 16px;
     }
 
-    section, #contactless-content {
-        max-width: 80%;
-    }
-
-    .carousel {
-        gap: 3rem;
+    .home-section, #contactless-content {
+        max-width: calc(55% + 50px);
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 2500px) {
     html {
-        font-size: xx-small;
+        font-size: 20px;
     }
 
-    section, #contactless-content {
-        max-width: 90%;
+    .home-section, #contactless-content {
+        max-width: calc(50% + 50px);
     }
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (min-width: 3000px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-section, #contactless-content {
+        max-width: calc(70% + 50px);
+    }
+
+    .book-desc {
+        width: clamp(
+            var(--min-book-width), 
+            var(--book-width), 
+            var(--max-book-width)
+        );
+    }
+}
+
+@media screen and (max-width: 488px) {
+
+    .home-section, #contactless-content {
+        max-width: calc(80% + 50px);
+    }
+
     .carousel {
-        display: grid;
         overflow-x: initial;
         grid-auto-flow: unset;
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: clamp(2rem, 6vw, 8rem);
+        grid-template-columns: repeat(auto-fit, minmax(var(--min-book-width), 1fr));
     }
 
     .book-card {
-        width: 18rem;
-        height: 25.3rem;
+        padding: 0;
         background-color: transparent;
     }
 
     /* Hide all headers except for the one for mobile */
-    section header:not(#mobile-header) {
+    .home-section header:not(#mobile-header) {
         display: none;
     }
 
@@ -292,14 +360,29 @@ section header .header-part > * {
         display: initial;
     }
 
-    /* Hide non-active sections */
-    #favorites, #upcoming-events {
+    /* Utility classes */
+    .mobile-hidden {
         display: none;
+    }
+
+    .mobile-visible {
+        display: block;
     }
 
     /* Move the contactless section below the events section */
     #contactless {
         order: 1;
+    }
+
+    #contactless-text {
+        min-height: 0vw;
+        font-size: clamp(1.25rem, 2.5vw, 4rem);
+    }
+
+    .flat-button {
+        padding: 0.5rem 1rem;
+        min-height: 0vw;
+        font-size: clamp(1rem, 1.5vw, 2.25rem);
     }
 
     /* CSS for showing active section underline */
@@ -311,31 +394,27 @@ section header .header-part > * {
         content: "";
         position: absolute;
         z-index: -1;
-        top: 85%;
-        width: 6rem;
+        top: 100%;
+        width: 4rem;
+        padding-bottom: 0.5rem;
         left: 0;
         right: 0;
         bottom: 0;
         margin: auto;
         border-radius: 24px;
-        background-color: #CBD9C4;
+        background-color: #748F67;
     }
-}
 
-@media screen and (max-width: 700px) {
-    html {
-        font-size: 50%;
+    .event-container {
+        flex-direction: column;
     }
-}
 
-@media screen and (max-width: 535px) {
-    html {
-        font-size: 40%;
+    .event-container img {
+        width: 100%;
+        margin-bottom: 2rem;
     }
-}
 
-@media screen and (max-width: 430px) {
-    html {
-        font-size: 30%;
+    #left-event {
+        margin-right: 0;
     }
 }
