@@ -7,7 +7,9 @@ function faq_customizer($wp_customize) {
   ));
 
   // Trade Policy 
-  $wp_customize->add_setting($faq_tradepolicy);
+  $wp_customize->add_setting($faq_tradepolicy, array(
+    'transport' => 'postMessage',
+  ));
   $wp_customize->add_control($faq_tradepolicy, array(
     'label' => 'Trade Policy',
     'section' => $faq_section,
@@ -23,13 +25,11 @@ function faq_customizer($wp_customize) {
     'section' => $faq_section,
     'type' => 'textarea'
   ));
-
-  // $wp_customize->selective_refresh->add_partial($faq_tradepolicy_content, array(
-  //   'selector' => 'span#edit-tradepolicy-content'
-  // ));
   
    // Gift Cards
-  $wp_customize->add_setting($faq_giftcards);
+  $wp_customize->add_setting($faq_giftcards, array(
+    'transport' => 'postMessage',
+  ));
   $wp_customize->add_control($faq_giftcards, array(
     'label' => 'Gift Cards',
     'section' => $faq_section,
@@ -48,7 +48,9 @@ function faq_customizer($wp_customize) {
   
 
    // Local Authors
-   $wp_customize->add_setting($faq_authors);
+   $wp_customize->add_setting($faq_authors, array(
+    'transport' => 'postMessage',
+  ));
   $wp_customize->add_control($faq_authors, array(
     'label' => 'Local Authors',
     'section' => $faq_section,
@@ -66,7 +68,9 @@ function faq_customizer($wp_customize) {
   ));
 
    // Contactless Pickup
-   $wp_customize->add_setting($faq_pickup);
+   $wp_customize->add_setting($faq_pickup, array(
+    'transport' => 'postMessage',
+  ));
   $wp_customize->add_control($faq_pickup, array(
     'label' => 'Contactless Pickup',
     'section' => $faq_section,
@@ -84,7 +88,9 @@ function faq_customizer($wp_customize) {
   ));
 
  // Delivery Service
-  $wp_customize->add_setting($faq_delivery);
+  $wp_customize->add_setting($faq_delivery, array(
+    'transport' => 'postMessage',
+  ));
   $wp_customize->add_control($faq_delivery, array(
     'label' => 'Delivery Service',
     'section' => $faq_section,
@@ -102,7 +108,9 @@ function faq_customizer($wp_customize) {
   ));
 
    // Private Appointments
-   $wp_customize->add_setting($faq_appoint);
+   $wp_customize->add_setting($faq_appoint, array(
+    'transport' => 'postMessage',
+  ));
   $wp_customize->add_control($faq_appoint, array(
     'label' => 'Private Appointments',
     'section' => $faq_section,
@@ -120,7 +128,9 @@ function faq_customizer($wp_customize) {
   ));
 
   // Shop Info
-  $wp_customize->add_setting($faq_info);
+  $wp_customize->add_setting($faq_info, array(
+    'transport' => 'postMessage',
+  ));
   $wp_customize->add_control($faq_info, array(
     'label' => 'Shop Info',
     'section' => $faq_section,

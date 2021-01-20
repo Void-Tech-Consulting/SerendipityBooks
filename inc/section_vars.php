@@ -68,12 +68,13 @@
   $shop_categories_content = 'shop_categories_content';
   $shop_condition = 'shop_condition';
   $shop_condition_content = 'shop_condition_content';
-  $shop_bc1 = 'shop_bc1';
-  $shop_bi1 = 'shop_bi1';
-  $shop_bc2 = 'shop_bc2';
-  $shop_bi2 = 'shop_bi2';
-  $shop_bc3 = 'shop_bc3';
-  $shop_bi3 = 'shop_bi3';
+  $shop_bc = 'shop_bc';
+  $shop_bi = 'shop_bi';
+  $shop_moretext = 'shop_moretext';
+  $shop_moreimg = 'shop_moreimg';
+  $shop_display = 'shop_display';
+  
+
 
   // Book Vars
   $book_section = 'book_section';
