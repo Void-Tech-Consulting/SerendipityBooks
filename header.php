@@ -35,8 +35,10 @@
       }  else { echo get_template_directory_uri() . "/photos/logo.png"; }?> height="40px" alt="logo">
     </div>
   </a>
+  <span id="header-icon-select"></span>
   <!-- Links to the different pages of the site -->
   <div class="links">
+  <span id="header-title-select"></span>
     <a href="<?php echo get_site_url(); ?>">
       <div class="link">
         <?php if (get_theme_mod($header_home_title)) { 
@@ -93,7 +95,7 @@
       </div>
     </a>
   </div>
-  <div class="mobile-header">
+  <div id="mobile-header">
     <div id="mobile-search-bar-container">
       <div class="searching-container">
         <div class="searching-icon">
@@ -114,6 +116,68 @@
           echo get_theme_mod($header_checkout_img);
         }  else { echo get_template_directory_uri() . "/photos/mobile-icon.png"; }?> height="40px" alt="Icon">
     </div>
+    <div id="mobile-menu-cancel">
+        <img src=<?php if (get_theme_mod($header_checkout_img)) {
+          echo get_theme_mod($header_checkout_img);
+        }  else { echo get_template_directory_uri() . "/photos/mobile-cancel.png"; }?> height="40px" alt="Icon">
+    </div>
+  </div>
+  <div id="menu-popover" class="menu-links">
+      <a href="<?php echo get_site_url(); ?>">
+        <div class="menu-link">
+          <?php if (get_theme_mod($header_home_title)) { 
+            echo get_theme_mod($header_home_title);
+            } else {?>
+            HOME
+          <?php }?>
+        </div>
+      </a>
+      <a href="<?php echo get_page_link( get_page_by_title('FAQ page')->ID ); ?>">
+        <div class="menu-link">
+          <?php if (get_theme_mod($header_faq_title)) { 
+            echo get_theme_mod($header_faq_title);
+            } else {?>
+            FAQ
+          <?php }?>
+        </div>
+      </a>
+      <div class="event-dropdown">
+        <a href="<?php echo get_page_link( get_page_by_title('Events')->ID ); ?>">
+          <div class="menu-link">
+            <?php if (get_theme_mod($header_events_title)) { 
+              echo get_theme_mod($header_events_title);
+              } else {?>
+              EVENTS
+            <?php }?>
+          </div>
+        </a>
+        <div class="event-dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a href="<?php echo get_page_link( get_page_by_title('Shop')->ID ); ?>">
+        <div class="menu-link">
+           <div class="shop">
+            <?php if (get_theme_mod($header_shop_title)) { 
+              echo get_theme_mod($header_shop_title);
+              } else {?>
+              SHOP
+            <?php }?>
+           </div>
+        </div>
+      </a>
+
+      <a href="<?php echo get_page_link( get_page_by_title('Cart')->ID ); ?>">
+      <div class="menu-link">
+          <?php if (get_theme_mod($header_shop_title)) { 
+            echo get_theme_mod($header_shop_title);
+            } else {?>
+            CHECKOUT NOW
+          <?php }?>
+        </div>
+      </a>
   </div>
 </div>
 <body>

@@ -13,6 +13,10 @@ function footer_customizer($wp_customize) {
       'default' => 'Tues – Sat: 11 – 5 Sunday: 12 – 4'
   ));
 
+  $wp_customize->selective_refresh->add_partial($footer_hours, array(
+    'selector' => 'span#footer-info-select', 
+    ));
+
   // Address
   $wp_customize->add_setting($footer_address);
   $wp_customize->add_control($footer_address, array(
@@ -35,6 +39,10 @@ function footer_customizer($wp_customize) {
       'label' => 'Facebook Link',
       'section' => $footer_section
   ));
+
+  $wp_customize->selective_refresh->add_partial($footer_facebook_link, array(
+    'selector' => 'span#footer-social-select', 
+    ));
 
     // Twitter Link
     $wp_customize->add_setting($footer_twitter_link);
