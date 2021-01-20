@@ -26,7 +26,7 @@
 }
 
 .info {
-    width: 175px;
+    width: 200px;
     margin: auto;
     display: flex;
     padding-left: 15px;
@@ -58,4 +58,37 @@
     display: flex;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.hidden-mobile {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .top-footer{
+        flex-direction: column;
+        height: 225px;
+    }
+    .information{
+        flex-direction: column;
+    }
+    .info{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+    .divider {
+        transform: rotate(-180deg);
+        width: 150px;
+    }
+    .hidden-mobile {
+        display: flex;
+    }
+    .socials {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .body {
+        padding-bottom: 225px;
+    }
 }

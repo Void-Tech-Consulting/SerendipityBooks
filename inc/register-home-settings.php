@@ -89,35 +89,6 @@ function home_customizer($wp_customize) {
     $wp_customize->selective_refresh->add_partial($home_events_title, array(
         'selector' => 'span#edit-upcoming-events'
     ));
-
-    // Book Title
-    $wp_customize->add_setting($home_book_title, array(
-        'default' => 'Educated'
-    ));
-    $wp_customize->add_control($home_book_title, array(
-        'label' => 'Book Title',
-        'section' => $home_section,
-    ));
-
-    // Book Price
-    $wp_customize->add_setting($home_book_price, array(
-        'default' => '$15.99'
-    ));
-    $wp_customize->add_control($home_book_price, array(
-        'label' => 'Book Price',
-        'section' => $home_section,
-    ));
-
-    // Book Image 
-    $wp_customize->add_setting($home_book_img);
-    $wp_customize->add_control(new WP_Customize_Image_Control(
-        $wp_customize,
-        $home_book_img,
-        array(
-            'label' => 'Book Image',
-            'section' => $home_section
-        )
-    ));
 }
 
 add_action('customize_register', 'home_customizer');
