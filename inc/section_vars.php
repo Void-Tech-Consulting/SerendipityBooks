@@ -1,4 +1,5 @@
 <?php
+  global $woocommerce;
   //Variables for Register Settings - Events
   $events_section = 'events_section';
   $event_title = 'event_title';

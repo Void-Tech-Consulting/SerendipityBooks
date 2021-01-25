@@ -19,13 +19,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('mobile-icon').addEventListener("click", showMenuPopover)
 
     function showMobileSearchBar() {
-        document.getElementById('images').style.display = 'none';
+        document.getElementById('top-images').style.display = 'none';
         document.getElementById('mobile-search-bar-container').style.display = 'flex';
         document.getElementById('mobile-header').style.paddingRight = '0px';
     }
     function hideMobileSearchBar() {
         document.getElementById('mobile-search-bar-container').style.display = 'none';
-        document.getElementById('images').style.display = 'flex';
+        document.getElementById('top-images').style.display = 'flex';
         document.getElementById('mobile-header').style.paddingRight = '10px';
     }
 });
