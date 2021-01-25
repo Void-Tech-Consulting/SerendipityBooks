@@ -3,10 +3,16 @@ let init_carousel = (section) => {
 
     let books = carousel.querySelectorAll(".book");
 
-    let splits = Array();
-    for (let i = 0; i < books.length; i += 3) {
-        splits.push(i);
-    }
+    let splits = [0, 3, 6, 7];
+    // console.log(splits);
+    // let splits = Array();
+    // for (let i = 0; i < books.length - 1; i += 3) {
+    //     splits.push(i);
+    // }
+
+    // splits.push(splits[splits.length - 1] + 1);
+
+    // console.log(splits);
     
     let i = 0;
 
