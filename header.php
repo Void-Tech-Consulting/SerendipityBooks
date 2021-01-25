@@ -81,7 +81,9 @@
       </div>
     </a>
     <!-- Search icon -->
+    <?php get_sidebar('header'); ?>
     <div id="search-icon" class="link">
+  
       <img src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
     </div>
 

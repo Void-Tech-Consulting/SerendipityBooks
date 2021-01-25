@@ -21,7 +21,7 @@
 
   <div id="shop_layout">
       <!-- Left: Sidebar -->
-    <section id="selection-sidebar">
+    <section class="shop-sec" id="selection-sidebar">
       <!-- Categories -->
       <span id="edit-categories"></span>
       <?php if (get_theme_mod($shop_categories)) { ?>
@@ -63,7 +63,7 @@
     </section>
 
     <!-- Right: Bookshop -->
-    <section id="bookstore">
+    <section class="shop-sec" id="bookstore">
       <!-- Display Type -->
       <div id="sort-bookstore">
         <div class="display-content" id="phone-categories">
@@ -327,7 +327,7 @@
     </section>
   </div>
   
-  <section id="shop-more">
+  <section class="shop-sec" id="shop-more">
     <span id="edit-moreimg"></span>
     <?php if (get_theme_mod($shop_moreimg)) { ?>
       <img id="shop-more-leftimg" src=<?php echo get_theme_mod($shop_moreimg)?> alt="">
