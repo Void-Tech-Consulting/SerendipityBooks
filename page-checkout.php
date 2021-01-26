@@ -2,11 +2,8 @@
   get_header(); 
 ?>
 
-<h1>Checkout</h1>
-
-<form class="message-form" method="post">
-  <input id="message-title" type="text">
-  <button  type="submit">Save!</button>
-</form>
+<div class="woocommerce-checout-wrapper">
+<?php echo do_shortcode("[woocommerce_checkout]"); ?>
+</div>
 
 <?php get_footer(); ?>

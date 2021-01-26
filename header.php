@@ -26,7 +26,7 @@
 <div id="top-header">
   <!-- Top Icons/Logo link to home page -->
   <a href="<?php echo get_site_url(); ?>">
-    <div id="images">
+    <div id="top-images">
       <img src=<?php if (get_theme_mod($header_icon_img)) {
         echo get_theme_mod($header_icon_img);
       }  else { echo get_template_directory_uri() . "/photos/logo_birds.png"; }?> height="40px" alt="Birds">
@@ -89,7 +89,7 @@
       <img src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
     </div>
 
-    <a href="<?php echo get_page_link( get_page_by_title('Cart')->ID ); ?>">
+    <a href="<?php echo $woocommerce->cart->get_cart_url();?>">
       <div class="link">
         <img src=<?php if (get_theme_mod($header_checkout_img)) {
           echo get_theme_mod($header_checkout_img);
@@ -171,7 +171,7 @@
         </div>
       </a>
 
-      <a href="<?php echo get_page_link( get_page_by_title('Cart')->ID ); ?>">
+      <a href="<?php echo $woocommerce->cart->get_cart_url();?>">
       <div class="menu-link">
           <?php if (get_theme_mod($header_shop_title)) { 
             echo get_theme_mod($header_shop_title);
