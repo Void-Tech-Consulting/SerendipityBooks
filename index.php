@@ -27,7 +27,8 @@ function display_book($product) {
 ?>
 
 <main id="home-main">
-
+<?php echo do_shortcode("[add_to_cart_url id='76']"); ?>
+<a class="ui large primary button" href=<?php echo do_shortcode("[add_to_cart_url id='76']"); ?> >Add to cart</a>
   <!-- Description section -->
   <section class="home-section" id="description-container">
     <img class="bracket" style="transform: rotate(180deg);" src=<?php echo get_template_directory_uri() . "/img/bracket.svg" ?>>

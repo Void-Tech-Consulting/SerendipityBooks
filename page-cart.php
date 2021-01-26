@@ -1,12 +1,11 @@
-<?php 
-  get_header(); 
+<?php
+
+use function Automattic\Jetpack\Extensions\Amazon\register_block;
+
+get_header(); 
 ?>
-
-<h1>Cart</h1>
-
-<form class="message-form" method="post">
-  <input id="message-title" type="text">
-  <button  type="submit">Save!</button>
-</form>
+<div class="woocommerce-cart-wrapper">
+  <?php echo do_shortcode("[woocommerce_cart]"); ?>
+</div>
 
 <?php get_footer(); ?>
