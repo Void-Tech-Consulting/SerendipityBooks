@@ -15,13 +15,3 @@
   
   require get_template_directory() . '/inc/register-favorite-type.php';
 
-  // Add widgets in appearance sidebar
-  function serendipity_widgets_init() {
-
-    register_sidebar( array(
-        'name'          => 'Header',
-        'id'            => 'header',
-        'description'   =>  'Search here',
-      ));
-  }
-  add_action( 'widgets_init', 'serendipity_widgets_init');
