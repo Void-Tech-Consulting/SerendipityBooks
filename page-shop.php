@@ -67,45 +67,53 @@
       <!-- Display Type -->
       <div id="sort-bookstore">
         <div class="display-content" id="phone-categories">
-          <select>
-            <option value="0">Category</option>
-            <option value="1">All</option>
-            <option value="2">Nonfiction</option>
-            <option value="3">Fiction</option>
-            <option value="4">Childrens</option>
+          <select id="change-categories">
+            <option value="all">Category</option>
+            <option value="all">All</option>
+            <option value="all">Nonfiction</option>
+            <option value="mystery">Fiction</option>
+            <option value="kids">Childrens</option>
             <option value="5">Young Adult</option>
             <option value="6">Gifts</option>
           </select>
         </div>
-
+        <select id="test-change-categories">
+            <option value="all">Category</option>
+            <option value="all">All</option>
+            <option value="all">Nonfiction</option>
+            <option value="mystery">Fiction</option>
+            <option value="kids">Childrens</option>
+            <option value="5">Young Adult</option>
+            <option value="6">Gifts</option>
+          </select>
         <div class="display-content" id="phone-condition">
-          <select>
+          <select id="change-condition">
             <option value="0">Condition</option>
             <option value="1">All</option>
-            <option value="2">New</option>
-            <option value="3">Used</option>
+            <option value="new">New</option>
+            <option value="used">Used</option>
           </select>
         </div>
 
         <span id="edit-display"></span>
         <div class="display-content" id="display-num">
         <?php if (get_theme_mod($shop_display)) { ?>
-          <select>
+          <select id="change-post-num">
             <option value="0"><?php echo get_theme_mod($shop_display) ?></option>
             <option value="1"><?php echo get_theme_mod($shop_display) ?></option>
             <option value="2"><?php echo get_theme_mod($shop_display) ?></option>
           </select>
         <?php } else { ?>
-          <select>
-            <option value="0">Show 30</option>
-            <option value="1">Show 60</option>
-            <option value="2">Show 90</option>
+          <select id="change-post-num">
+            <option value="30">Show 30</option>
+            <option value="60">Show 60</option>
+            <option value="90">Show 90</option>
           </select>
         <?php } ?>
         </div>
 
         <div class="display-content" id="display-by">
-          <select>
+          <select id="change-order">
             <option value="0">Popularity</option>
             <option value="1">Featured</option>
             <option value="2">Newest Arrivals</option>
@@ -113,196 +121,8 @@
         </div>
       </div>
 
-      <div id="display-bookstore">
-        <div class="book-content">
-          <div class="book-cover">
-            <?php if (get_theme_mod($shop_bc)) { ?>
-              <img src=<?php echo get_theme_mod($shop_bc)?>>
-            <?php } else { ?>
-              <img src=<?php echo get_template_directory_uri() . "/img/bc_educated.png" ?> alt="Educated Book Cover">
-            <?php } ?>
-          </div>
-
-          <?php if (get_theme_mod($shop_bi)) { ?>
-            <div class="book-info"><?php echo get_theme_mod($shop_bi) ?></div>
-          <?php } else { ?>
-          <span id="edit-bi"></span>
-          <div class="book-info">
-            <span class="book-title">Educated</span>
-            <span class="book-price">$15.99</span>
-          </div>
-          <?php } ?>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_withthefire.png" ?> alt="With the Fire on High Book Cover">
-          </div>
-            <div class="book-info">
-            <span class="book-title">With the Fire on High</span>
-            <span class="book-price">$12.99</span>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_littlewomen.png" ?> alt="Little Women Book Cover">
-          </div>
-            <div class="book-info">
-            <div class="book-title">Little Women</div>
-            <div class="book-price">$13.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_miraclecreek.png" ?> alt="Miracle Creek Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Miracle Creek</div>
-            <div class="book-price">$15.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_becoming.png" ?> alt="Becoming Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Becoming</div>
-            <div class="book-price">$12.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_atalefor.png" ?> alt="A Tale for the Time Being Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">A Tale for the Time Being</div>
-            <div class="book-price">$13.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_a1000.png" ?> alt="A Thousand Splendid Suns Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">A Thousand Splendid Suns</div>
-            <div class="book-price">$15.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_lesmiserables.png" ?> alt="Les Miserables Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Les Misérables</div>
-            <div class="book-price">$12.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_catchandkill.png" ?> alt="Catch and Kill Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Catch and Kill</div>
-            <div class="book-price">$13.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_redwhite.png" ?> alt="Red, White, & Royal Blue Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Red, White, & Royal Blue</div>
-            <div class="book-price">$15.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_andthenthere.png" ?> alt="And Then There Were None Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">And Then There Were None</div>
-            <div class="book-price">$12.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_eleanor&park.png" ?> alt="Eleanor & Park Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Eleanor & Park</div>
-            <div class="book-price">$13.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_whenbreath.png" ?> alt="When Breath Becomes Air Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">When Breath Becomes Air</div>
-            <div class="book-price">$15.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_thebelljar.png" ?> alt="The Bell Jar Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">The Bell Jar</div>
-            <div class="book-price">$12.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_untamed.png" ?> alt="Untamed Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Untamed</div>
-            <div class="book-price">$13.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_thewindupbird.png" ?> alt="The Wind-Up Bird Chronicle Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">The Wind-Up Bird Chronicle</div>
-            <div class="book-price">$15.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_thecolorpurple.png" ?> alt="The Color Purple Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">The Color Purple</div>
-            <div class="book-price">$12.99</div>
-          </div>
-        </div>
-
-        <div class="book-content">
-          <div class="book-cover">
-            <img src=<?php echo get_template_directory_uri() . "/img/bc_nakedecon.png" ?> alt="Naked Economics Book Cover">
-          </div>
-          <div class="book-info">
-            <div class="book-title">Naked Economics</div>
-            <div class="book-price">$13.99</div>
-          </div>
-        </div>
+      <div id="display-bookstore"> 
+     
       </div>
 
       <div id="page-bar">

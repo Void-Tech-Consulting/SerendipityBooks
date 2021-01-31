@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-
   /* Change active category on click */
   var categories = document.getElementById("select-categories").children;
   for (let i = 0; i < categories.length; ++i) {
