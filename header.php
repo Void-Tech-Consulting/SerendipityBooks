@@ -13,10 +13,11 @@
 <!-- Search bar -->
 <div id="search-bar-container">
   <div class="searching-container">
+
     <div class="searching-icon">
         <img id="search" src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
     </div>
-    <input type="text" class="search-bar" onkeyup="myFunction()" placeholder="Search books, authors, genres, and more">
+    <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
     <div class="search-cancel">
       <img id="cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
     </div>
@@ -83,7 +84,6 @@
       </div>
     </a>
     <!-- Search icon -->
-    <?php get_sidebar('header'); ?>
     <div id="search-icon" class="link">
   
       <img src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
@@ -103,7 +103,7 @@
         <div class="searching-icon">
             <img id="search" src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
         </div>
-        <input type="text" class="search-bar" onkeyup="myFunction()" placeholder="Search books, authors, genres, and more">
+        <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
         <div class="search-cancel">
           <img id="mobile-cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
         </div>
