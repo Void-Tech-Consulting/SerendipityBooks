@@ -77,3 +77,6 @@ function header_customizer($wp_customize) {
     ));
 }
 add_action( 'customize_register', 'header_customizer' );
+
+
+  

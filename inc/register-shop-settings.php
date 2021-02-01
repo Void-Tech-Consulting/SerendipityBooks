@@ -113,3 +113,21 @@ function shop_customizer($wp_customize) {
 
 }
 add_action( 'customize_register', 'shop_customizer' );
+
+
+
+function script_enqueuer() {
+   
+   // Register the JS file with a unique handle, file location, and an array of dependencies
+   wp_register_script( "shop_script",  get_template_directory_uri() .'/js/shop_script.js', array('jquery') );
+   
+   // localize the script to your domain name, so that you can reference the url to shop_functions.php file easily
+   wp_localize_script( 'shop_script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ));        
+   
+   // enqueue jQuery library and the script you registered above
+   wp_enqueue_script( 'jquery' );
+   wp_enqueue_script( 'shop_script' );
+}
+
+// Fires after WordPress has finished loading, but before any headers are sent.
+add_action( 'init', 'script_enqueuer' );
