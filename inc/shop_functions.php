@@ -4,33 +4,32 @@ add_action("wp_ajax_shop_by_category", "shop_by_category");
 
 function shop_by_category() {
     $cat_name = $_REQUEST["cat_name"];
-    if ($cat_name == 'all') {
-      $cat_name = 'kids';
-    }
     $posts_per_page = $_REQUEST["posts_per_page"];
+    $paged = $_REQUEST["paged"];
     $args = array(
         'post_type' => 'product',
         'product_cat' => $cat_name,
         'meta_key' => 'total_sales',
         'orderby' => 'meta_value_num',
         'posts_per_page' => $posts_per_page,
-        'paged' => 1
+        'paged' => $paged
       );
       $shop_query = new WP_Query($args);
-      $html = '';
+      $html['html'] = '';
+      $html['pages'] = $shop_query->max_num_pages;
       
       if ($shop_query->have_posts()) {
         while ($shop_query->have_posts()) {
-            $html['type'] = 'success';
           $shop_query->the_post();
     
           $id = get_the_ID();
           $product = wc_get_product($id);
             
-          $html .= display_product($product);
+          $html['html'] .= display_product($product);
         }
       }
-      echo $html;
+      $result = json_encode($html);
+      echo $result;
       // don't forget to end your scripts with a die() function - very important
       die();
 }

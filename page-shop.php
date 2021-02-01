@@ -3,7 +3,11 @@
   wp_enqueue_style('shop');
   require get_template_directory() . '/inc/section_vars.php';
 ?>
-
+<script type="text/javascript">
+  function changeFunc($i) {
+      alert($i);
+    }
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,45 +70,19 @@
     <section id="bookstore">
       <!-- Display Type -->
       <div id="sort-bookstore">
-        <div class="display-content" id="phone-categories">
-          <select id="change-categories">
-            <option value="all">Category</option>
-            <option value="all">All</option>
-            <option value="all">Nonfiction</option>
-            <option value="mystery">Fiction</option>
-            <option value="kids">Childrens</option>
-            <option value="5">Young Adult</option>
-            <option value="6">Gifts</option>
-          </select>
-        </div>
-        <select id="test-change-categories">
-            <option value="all">Category</option>
-            <option value="all">All</option>
-            <option value="all">Nonfiction</option>
-            <option value="mystery">Fiction</option>
-            <option value="kids">Childrens</option>
-            <option value="5">Young Adult</option>
-            <option value="6">Gifts</option>
-          </select>
-        <div class="display-content" id="phone-condition">
-          <select id="change-condition">
-            <option value="0">Condition</option>
-            <option value="1">All</option>
-            <option value="new">New</option>
-            <option value="used">Used</option>
-          </select>
-        </div>
 
         <span id="edit-display"></span>
         <div class="display-content" id="display-num">
         <?php if (get_theme_mod($shop_display)) { ?>
           <select id="change-post-num">
             <option value="0"><?php echo get_theme_mod($shop_display) ?></option>
+            <option value="0"><?php echo get_theme_mod($shop_display) ?></option>
             <option value="1"><?php echo get_theme_mod($shop_display) ?></option>
             <option value="2"><?php echo get_theme_mod($shop_display) ?></option>
           </select>
         <?php } else { ?>
-          <select id="change-post-num">
+          <select id="change-post-num" onchange="change_num_posts(value)">
+            <option value="30">Show 30</option>
             <option value="30">Show 30</option>
             <option value="60">Show 60</option>
             <option value="90">Show 90</option>
@@ -115,21 +93,20 @@
         <div class="display-content" id="display-by">
           <select id="change-order">
             <option value="0">Popularity</option>
+            <option value="0">Popularity</option>
             <option value="1">Featured</option>
             <option value="2">Newest Arrivals</option>
           </select>
         </div>
       </div>
 
-      <div id="display-bookstore"> 
-     
-      </div>
+      <div id="display-bookstore"> </div>
 
       <div id="page-bar">
         <div class="page-bar-arrow page-bar-left">
           <img src=<?php echo get_template_directory_uri() . "/img/arrow-point-to-right.svg" ?> alt="Right Arrow">
         </div>
-        <div class="page-bar-nums">
+        <div class="page-bar-nums" id="page_bar_holder">
           <div class="page-bar-active">1</div>
           <div>2</div>
           <div>3</div>

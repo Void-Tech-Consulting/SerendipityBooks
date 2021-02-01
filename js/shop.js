@@ -22,7 +22,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     name.classList.add("selection-active");
   }
 
-
   /* Custom select from w3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_custom_select */
   var x, i, j, l, ll, selElmnt, a, b, c;
   /*look for any elements with the class "custom-select":*/
