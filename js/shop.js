@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-
   /* Change active category on click */
   var categories = document.getElementById("select-categories").children;
   for (let i = 0; i < categories.length; ++i) {
@@ -22,7 +21,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     active[num].classList.remove("selection-active");
     name.classList.add("selection-active");
   }
-
 
   /* Custom select from w3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_custom_select */
   var x, i, j, l, ll, selElmnt, a, b, c;
