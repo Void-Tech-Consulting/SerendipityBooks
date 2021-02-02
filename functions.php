@@ -10,18 +10,12 @@
   require get_template_directory() . '/inc/register-shop-settings.php';
 
   require get_template_directory() . '/inc/register-event-settings.php';
+  require get_template_directory() . '/inc/shop_functions.php';
 
   require get_template_directory() . '/inc/add_styles.php';
   
   require get_template_directory() . '/inc/register-favorite-type.php';
 
-  // Add widgets in appearance sidebar
-  function serendipity_widgets_init() {
+  require get_template_directory() . '/inc/customizer.php';
+  require get_template_directory() . '/inc/template_functions.php';
 
-    register_sidebar( array(
-        'name'          => 'Header',
-        'id'            => 'header',
-        'description'   =>  'Search here',
-      ));
-  }
-  add_action( 'widgets_init', 'serendipity_widgets_init');
