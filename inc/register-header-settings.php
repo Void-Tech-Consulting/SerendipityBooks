@@ -10,14 +10,13 @@ function header_customizer($wp_customize) {
       $wp_customize, 
       $header_icon_img, 
       array(
-          'label' => 'Icon Imgage',
+          'label' => 'Icon Image',
           'section' => $header_section
       )
   ));
 
   $wp_customize->selective_refresh->add_partial($header_icon_img, array(
-    'selector' => 'span#copy-write', // You can also select a css class
-    'render_callback' => 'check_copy_right_text',
+    'selector' => 'span#header-icon-select', 
     ));
 
   // Logo
@@ -38,6 +37,9 @@ function header_customizer($wp_customize) {
       'section' => $header_section,
       'default' => 'HOME'
   ));
+  $wp_customize->selective_refresh->add_partial($header_home_title, array(
+    'selector' => 'span#header-title-select', 
+    ));
 
   // FAQ title
   $wp_customize->add_setting($header_faq_title);
@@ -75,3 +77,6 @@ function header_customizer($wp_customize) {
     ));
 }
 add_action( 'customize_register', 'header_customizer' );
+
+
+  

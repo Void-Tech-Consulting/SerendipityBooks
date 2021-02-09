@@ -4,59 +4,59 @@
 /* General CSS */
 :root {
     --light-accent-color: #CBD9C4;
-    --book-width: calc(18vw * 0.7);
-    --book-height: calc(25.3vw * 0.7);
+    --book-width: calc(18vw * 0.55);
+    --book-height: calc(25vw * 0.55);
 }
 
 html {
     scroll-behavior: smooth;
     font-size: 10px;
-    --min-book-width: calc(18rem * 0.5);
-    --min-book-height: calc(25.3rem * 0.5);
+    --min-book-width: calc(18rem * 0.49);
+    --min-book-height: calc(25rem * 0.49);
+    --max-book-width: calc(18rem * 0.85);
+    --max-book-height: calc(25rem * 0.85);
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-main {
+#home-main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-section {
+.home-section {
     width: 100%;
-    max-width: calc(80% + 50px);
     box-sizing: border-box;
-    margin: 2rem 0;
+    margin: max(0.75rem, 0.75vw) 0;
+}
+
+.home-section, #contactless-content {
+    max-width: calc(60% + 50px);
 }
 
 #mobile-section {
     margin: 0;
 }
 
-section header {
+.home-section header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2.5rem 0;
+    margin: max(1rem, 1vw) 0;
 }
 
-section header .header-part {
+.home-section header .header-part {
     display: flex;
     align-items: center;
 }
 
-section header .header-part > * {
-    margin-right: 2rem;
+.home-section header .header-part > * {
+    margin-right: max(1.4rem, 1.1vw);
 }
 
 .header-text {
     font-family: 'Lora', serif;
     min-height: 0vw;
-    font-size: clamp(2rem, 3vw, 4rem);
+    font-size: clamp(1.5rem, 2.3vw, 3.4rem);
     font-weight: 700;
     width: fit-content;
     white-space: nowrap;
@@ -72,13 +72,17 @@ section header .header-part > * {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     min-height: 0vw;
-    font-size: clamp(1.3rem, 1.5vw, 2.25rem);
-    padding: 1rem 2rem;
+    font-size: clamp(1.1rem, 1.2vw, 2rem);
+    padding: min(0.75vw, 0.75rem) min(1.75vw, 1.75rem);
     background: var(--light-accent-color);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-color: transparent;
     border-radius: max(20px, 5vw);
     width: fit-content;
+}
+
+.flat-button:hover {
+    border: 3px solid black;
 }
 
 /* Mobile header CSS */
@@ -87,13 +91,13 @@ section header .header-part > * {
 }
 
 #mobile-tabs {
-    margin-top: 1.5rem;
+    margin: 0.5rem 0;
     justify-content: space-between;
 }
 
 #mobile-tabs .header-text {
     min-height: 0vw;
-    font-size: clamp(1.6rem, 2vw, 2.5rem);
+    font-size: clamp(1.25rem, 1.75vw, 2.25rem);
     cursor: pointer;
     margin-right: 0;
 }
@@ -104,34 +108,35 @@ section header .header-part > * {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: max(1.5rem, 1.4vw) 0;
 }
 
 #description-text {
-    width: clamp(22rem, 62vw, 70rem);
+    width: clamp(30rem, 57.5vw, 75rem);
     text-align: center;
     font-style: italic;
     font-weight: 400;
-    margin: 0 2.5rem;
+    margin: 0 clamp(0.6rem, 1vw, 5rem);
     min-height: 0vw;
-    font-size: clamp(1.13rem, 3vw, 3.4rem);
+    font-size: clamp(1.25rem, 2.6vw, 3.5rem);
 }
 
 .bracket {
-    width: clamp(1rem, 2vw, 2.5rem);
+    width: clamp(0.75rem, 1.75vw, 2.75rem);
     height: auto;
 }
 
 /* Carousel CSS */
 .carousel {
     display: grid;
-    gap: max(5vw, 3rem);
+    gap: max(4.75vw, 2.75rem);
     grid-auto-flow: column;
     overflow-x: hidden;
 }
 
 .carousel-button {
-    width: clamp(3.5rem, 3.5vw, 5rem);
-    height: clamp(3.5rem, 3.5vw, 5rem);
+    width: clamp(3.1rem, 3.1vw, 4.5rem);
+    height: clamp(3.1rem, 3.1vw, 4.5rem);
     box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: max(50px, 5vw);
     display: flex;
@@ -166,16 +171,16 @@ section header .header-part > * {
 
 .book-card {
     box-sizing: content-box;
-    width: max(var(--book-width), var(--min-book-width));
-    height: max(var(--book-height), var(--min-book-height));
-    padding: calc(var(--book-height) * 0.3) calc(var(--book-width) * 0.3);
+    width: clamp(var(--min-book-width), var(--book-width), var(--max-book-width));
+    height: clamp(var(--min-book-height), var(--book-height), var(--max-book-height));
+    padding: calc(var(--book-height) * 0.25) calc(var(--book-width) * 0.25);
     background-color: #E6E2DB;
-    border-radius: max(40px, 2vw);
+    border-radius: max(30px, 1vw);
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: max(0.75rem, 0.75vw);
 }
 
 .book-card img {
@@ -190,18 +195,27 @@ section header .header-part > * {
 .book-desc {
     font-family: 'Lato', sans-serif;
     text-align: center;
+    width: clamp(
+        calc(var(--min-book-width) * 1.3), 
+        calc(var(--book-width) * 1.3), 
+        calc(var(--max-book-width) * 1.3)
+        );
 }
 
 .book-title {
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-weight: 700;
     min-height: 0vw;
-    font-size: clamp(1.4rem, 1.6vw, 2.5rem);
+    font-size: clamp(1.1rem, 1.3vw, 2.5rem);
 }
 
 .book-price {
     font-weight: 500;
     min-height: 0vw;
-    font-size: clamp(1.2rem, 1.4vw, 2rem);
+    font-size: clamp(1rem, 1.2vw, 2.4rem);
 }
 
 /* Contactless section CSS */
@@ -227,7 +241,6 @@ section header .header-part > * {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    max-width: calc(80% + 50px);
 }
 
 #contactless-buttons {
@@ -240,11 +253,11 @@ section header .header-part > * {
 }
 
 #contactless-text {
-    width: max(17.5rem, 40vw);
+    width: max(17.5rem, 35vw);
     font-family: 'Lora', serif;
     font-weight: 500;
     min-height: 0vw;
-    font-size: clamp(1.6rem, 2.5vw, 4rem);
+    font-size: clamp(1.3rem, 2.2vw, 3.55rem);
     margin-bottom: max(2rem, 2vw);
 }
 
@@ -283,19 +296,52 @@ section header .header-part > * {
     html {
         font-size: 16px;
     }
+
+    .home-section, #contactless-content {
+        max-width: calc(55% + 50px);
+    }
 }
 
-@media screen and (min-width: 4000px) {
+@media screen and (min-width: 2500px) {
+    html {
+        font-size: 20px;
+    }
+
+    .home-section, #contactless-content {
+        max-width: calc(50% + 50px);
+    }
+}
+
+@media screen and (min-width: 3000px) {
     html {
         font-size: 24px;
     }
 }
 
+@media screen and (max-width: 600px) {
+    .home-section, #contactless-content {
+        max-width: calc(70% + 50px);
+    }
+
+    .book-desc {
+        width: clamp(
+            var(--min-book-width), 
+            var(--book-width), 
+            var(--max-book-width)
+        );
+    }
+}
+
 @media screen and (max-width: 488px) {
+
+    .home-section, #contactless-content {
+        max-width: calc(80% + 50px);
+    }
+
     .carousel {
         overflow-x: initial;
         grid-auto-flow: unset;
-        gap: clamp(1rem, 5.5vw, 8rem);
+        gap: clamp(2rem, 6vw, 8rem);
         grid-template-columns: repeat(auto-fit, minmax(var(--min-book-width), 1fr));
     }
 
@@ -305,7 +351,7 @@ section header .header-part > * {
     }
 
     /* Hide all headers except for the one for mobile */
-    section header:not(#mobile-header) {
+    .home-section header:not(#mobile-header) {
         display: none;
     }
 

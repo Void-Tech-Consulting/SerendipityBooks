@@ -17,15 +17,15 @@
 </head>
 <body>
   <!-- Title of Page -->
-  <header>
-    <span class="bracket">[</span>
-    <h1>Frequently Asked Questions</h1>
-    <span class="bracket">]</span>
+  <header id="faq-header">
+    <span class="brackets">[</span>
+    <h1 id="faq-h1">Frequently Asked Questions</h1>
+    <span class="brackets">]</span>
   </header>    
 
   <div id="faq_layout">
     <!-- Section: Questions -->
-    <section id="questions">
+    <section class="faq-sec" id="questions">
       <!-- Trade Policy -->
       <div class="quescontainer">
         <button type="button" class="questype">
@@ -256,7 +256,7 @@
     </section>
 
     <!-- Section: Image 2 -->
-    <section id="images">
+    <section class="faq-sec" id="images">
       <span id="edit-img">
         <?php if (get_theme_mod($faq_img)) { ?>
           <img src=<?php echo get_theme_mod($faq_img) ?>></div>

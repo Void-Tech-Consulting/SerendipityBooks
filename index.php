@@ -2,23 +2,37 @@
 get_header();
 require get_template_directory() . '/inc/section_vars.php';
 
-$book_map = array(
-  $home_book_title => 'Educated',
-  $home_book_price => '$15.99',
-  $home_book_img => get_template_directory_uri() . '/img/book_cover.jpeg'
-);
+function display_book($product) {
+  $name = $product->get_name();
+  $price = (float) $product->get_price();
+  $ean = $product->get_attribute('ean');
 
-foreach ($book_map as $k => $v) {
-  if (get_theme_mod($k)) {
-    $book_map[$k] = get_theme_mod($k);
-  }
+  $price = number_format($price, 2);
+
+  $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+
+  echo "
+    <div class='book'>
+      <div class='book-card'>
+        <img 
+          alt='$name Book Cover' 
+          src=$imgsrc>
+      </div>
+      <div class='book-desc'>
+        <div class='book-title'>$name</div>
+        <div class='book-price'>$$price</div>
+      </div>
+    </div>";
 }
 ?>
 
-<main>
+<main id="home-main">
+<?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
 
+<?php echo do_shortcode("[add_to_cart_url id='76']"); ?>
+<a class="ui large primary button" href=<?php echo do_shortcode("[add_to_cart_url id='76']"); ?> >Add to cart</a>
   <!-- Description section -->
-  <section id="description-container">
+  <section class="home-section" id="description-container">
     <img class="bracket" style="transform: rotate(180deg);" src=<?php echo get_template_directory_uri() . "/img/bracket.svg" ?>>
     <span id="description-text">
       <span id="edit-description"></span>
@@ -32,7 +46,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
   <!-- Mobile header -->
-  <section id="mobile-section">
+  <section class="home-section" id="mobile-section">
     <header id="mobile-header">
       <div class="header-part">
         <div class="header-text">
@@ -54,7 +68,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
 
-  <section id="bestsellers" class="mobile-visible">
+  <section class="home-section mobile-visible" id="bestsellers">
     <!-- Bestsellers header -->
     <header>
       <div class="header-part">
@@ -82,26 +96,30 @@ foreach ($book_map as $k => $v) {
     <!-- Bestsellers carousel -->
     <div class="carousel">
       <?php
-      for ($i = 0; $i < 10; $i++) {
-        echo "
-          <div class='book'>
-            <div class='book-card'>
-              <img 
-                alt='$book_map[$home_book_title] Book Cover' 
-                src=$book_map[$home_book_img]>
-            </div>
-            <div class='book-desc'>
-              <div class='book-title'>$book_map[$home_book_title]</div>
-              <div class='book-price'>$book_map[$home_book_price]</div>
-            </div>
-          </div>";
+
+      $best_query = new WP_Query(array(
+        'post_type' => 'product',
+        'meta_key' => 'total_sales',
+        'orderby' => 'meta_value_num',
+        'posts_per_page' => 10
+      ));
+
+      if ($best_query->have_posts()) {
+        while ($best_query->have_posts()) {
+          $best_query->the_post();
+
+          $id = get_the_ID();
+          $product = wc_get_product($id);
+
+          display_book($product);
+        }
       }
       ?>
     </div>
 
   </section>
 
-  <section id="favorites" class="mobile-hidden">
+  <section class="home-section mobile-hidden" id="favorites">
     <!-- Favorites header -->
     <header>
       <div class="header-part">
@@ -144,28 +162,7 @@ foreach ($book_map as $k => $v) {
 
           $product = wc_get_product($pid);
 
-          $name = $product->get_name();
-          $price = $product->get_price();
-
-          if (!strpos($price, '.')) {
-            $price .= ".00";
-          }
-
-          $ean = $product->get_attribute('ean');
-          $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
-
-          echo "
-            <div class='book'>
-              <div class='book-card'>
-                <img 
-                  alt='$name Book Cover' 
-                  src=$imgsrc>
-              </div>
-              <div class='book-desc'>
-                <div class='book-title'>$name</div>
-                <div class='book-price'>$$price</div>
-              </div>
-            </div>";
+          display_book($product);
         }
       }
       ?>
@@ -174,7 +171,7 @@ foreach ($book_map as $k => $v) {
   </section>
 
   <!-- Contactless section -->
-  <section id="contactless">
+  <section class="home-section" id="contactless">
     <div id="contactless-content">
 
       <div class="contactless-part" id="contactless-left">
@@ -204,13 +201,13 @@ foreach ($book_map as $k => $v) {
                   } else {
                     echo get_template_directory_uri() . "/img/pick_up_birds.png";
                   }
-                  ?> width="100%" height="auto" alt="Two birds on a branch">
+                  ?> width="90%" height="auto" alt="Two birds on a branch">
       </div>
 
     </div>
   </section>
 
-  <section id="upcoming-events" class="mobile-hidden">
+  <section class="home-section mobile-hidden" id="upcoming-events">
 
     <!-- Upcoming events header -->
     <header>
@@ -231,11 +228,11 @@ foreach ($book_map as $k => $v) {
     <!-- Upcoming events images -->
     <div class="event-container">
       <div id="left-event">
-        <img class="event" width="100%" height="auto" src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster">
+        <img class="event" width="90%" height="auto" src=<?php echo get_template_directory_uri() . "/img/creative_writing.png" ?> alt="Creative writing poster">
       </div>
       <div id="right-event">
-        <img class="event" width="75%" height="auto" src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster">
-        <img class="event" width="75%" height="auto" src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster">
+        <img class="event" width="65%" height="auto" src=<?php echo get_template_directory_uri() . "/img/afterhours.png" ?> alt="AfterHours poster">
+        <img class="event" width="65%" height="auto" src=<?php echo get_template_directory_uri() . "/img/staysafe.png" ?> alt="Stay safe poster">
       </div>
     </div>
 

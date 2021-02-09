@@ -1,4 +1,5 @@
 <?php
+  global $woocommerce;
   //Variables for Register Settings - Events
   $events_section = 'events_section';
   $event_title = 'event_title';
@@ -22,9 +23,6 @@
   $home_contactless_description = 'home_contactless_description';
   $home_contactless_img = 'home_contactless_img';
   $home_events_title = 'home_events_title';
-  $home_book_title = 'home_book_title';
-  $home_book_price = 'home_book_price';
-  $home_book_img = 'home_book_img';
 
   // Header Vars
   $header_section = 'header_section';
@@ -71,12 +69,13 @@
   $shop_categories_content = 'shop_categories_content';
   $shop_condition = 'shop_condition';
   $shop_condition_content = 'shop_condition_content';
-  $shop_bc1 = 'shop_bc1';
-  $shop_bi1 = 'shop_bi1';
-  $shop_bc2 = 'shop_bc2';
-  $shop_bi2 = 'shop_bi2';
-  $shop_bc3 = 'shop_bc3';
-  $shop_bi3 = 'shop_bi3';
+  $shop_bc = 'shop_bc';
+  $shop_bi = 'shop_bi';
+  $shop_moretext = 'shop_moretext';
+  $shop_moreimg = 'shop_moreimg';
+  $shop_display = 'shop_display';
+  
+
 
   // Book Vars
   $book_section = 'book_section';
@@ -85,6 +84,11 @@
   $pickup_label = 'pickup_label';
   $book_quantity_label = 'book_quantity_label';
   $add_to_cart_label = 'add_to_cart_label';
+
+  // Example
+
+  $example_repeater = 'example_repeater';
+  $example_section = 'example_section';
 
 ?>
 

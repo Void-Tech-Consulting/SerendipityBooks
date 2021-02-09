@@ -30,10 +30,13 @@
                     734-475-7148
                 <?php }?>
             </div>
+            <div class="divider link hidden-mobile"></div>
         </div>
+        <span id="footer-info-select"></span>
 
         
         <div class="socials">
+        <span id="footer-social-select"></span>
             <div>
             <!-- Facebook link -->
                 <a class="social-link" href="
