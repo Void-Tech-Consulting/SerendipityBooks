@@ -1,2 +1,2 @@
 <?php
-echo "No results foound";
+echo "No results found";

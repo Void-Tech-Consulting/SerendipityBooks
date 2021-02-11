@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,300&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+#search-container {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: max-content;
+    padding: 5rem 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-content {
+    max-width: calc(60% + 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.search-part {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.highlight {
+    color: #748F67;
+}
+
+#search-text-main {
+    font-weight: 600;
+    width: max(17.5rem, 35vw);
+    min-height: 0vw;
+    font-size: clamp(2rem, 2.3vw, 3.3rem);
+    margin-bottom: max(2rem, 2vw);
+    z-index: 1;
+}
+
+#search-text-sub {
+    width: max(14rem, 27vw);
+    font-size: clamp(1.25rem, 1.5vw, 2rem);
+}
+
+#search-left {
+    flex: 1 1 50%;
+}
+
+#search-right {
+    flex: 2 2 50%;
+}
+
+#search-right img {
+    margin-left: clamp(3rem, 7vw, 10rem);
+}
+
+/* Media queries */
+@media screen and (min-width: 2000px) {
+    html {
+        font-size: 16px;
+    }
+
+    #search-content {
+        max-width: calc(55% + 50px);
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    html {
+        font-size: 20px;
+    }
+
+    #search-content {
+        max-width: calc(50% + 50px);
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #search-content {
+        max-width: calc(70% + 50px);
+    }
+}
+
+@media screen and (max-width: 488px) {
+
+    #search-content {
+        max-width: calc(80% + 50px);
+    }
+}
