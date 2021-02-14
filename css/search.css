@@ -9,7 +9,7 @@ html {
 #search-results-container {
     box-sizing: border-box;
     min-height: 0vw;
-    padding: 2.5rem clamp(5rem, 7vw, 10rem);
+    padding: 1rem clamp(5rem, 7vw, 10rem);
 }
 
 #search-query {
@@ -67,6 +67,16 @@ html {
 
 .highlight {
     color: #748F67;
+}
+
+@media screen and (max-width: 600px) {
+    #search-results-container {
+        padding: 1rem clamp(1rem, 3vw, 8rem);
+    }
+
+    #search-results {
+        gap: clamp(1rem, 5vw, 8rem);
+    }
 }
 
 @media screen and (min-width: 2000px) {

@@ -86,7 +86,7 @@ html {
 }
 
 /* Mobile header CSS */
-#mobile-header {
+#mobile-explore-header {
     display: none;
 }
 
@@ -351,12 +351,12 @@ html {
     }
 
     /* Hide all headers except for the one for mobile */
-    .home-section header:not(#mobile-header) {
+    .home-section header:not(#mobile-explore-header) {
         display: none;
     }
 
     /* Show the mobile header */
-    #mobile-header {
+    #mobile-explore-header {
         display: initial;
     }
 

@@ -27,9 +27,9 @@ function display_book($product) {
 
 if (have_posts()) :
     $query = get_search_query();
-    echo '<section id="search-results-container">';
-    echo "<div id='search-query'>Search Results For : “{$query}”</div>";
-    echo '<section id="search-results">';
+    echo "<section id='search-results-container'>
+    <div id='search-query'>Search Results For : “{$query}”</div>
+    <section id='search-results'>";
     while (have_posts()) {
         the_post();
 

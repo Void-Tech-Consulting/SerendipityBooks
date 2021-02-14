@@ -46,7 +46,7 @@ function display_book($product) {
 
   <!-- Mobile header -->
   <section class="home-section" id="mobile-section">
-    <header id="mobile-header">
+    <header id="mobile-explore-header">
       <div class="header-part">
         <div class="header-text">
           Explore
