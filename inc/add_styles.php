@@ -8,6 +8,7 @@ function add_custom_styles() {
     wp_register_style("footer", get_template_directory_uri() . "/css/footer.css", '', '1.0.0');
     wp_enqueue_style('footer');
     wp_register_style("shop", get_template_directory_uri() . "/css/shop.css", '', '1.0.0');
+    wp_register_style("cart", get_template_directory_uri() . "/css/cart.css", '', '1.0.0');
   
     wp_enqueue_script("faq", get_template_directory_uri() . "/js/faq.js", '', '1.0.0');
     wp_enqueue_script("events", get_template_directory_uri() . "/js/events.js", '', '1.0.0');
