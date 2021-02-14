@@ -289,3 +289,7 @@ a:link {
 .woocommerce-form-coupon-toggle {
     margin: 2em;
 }
+
+.woocommerce button.button.alt {
+    background-color: #748F67;
+}
