@@ -124,6 +124,7 @@ p {
 .book-quantity {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .quantity-box {
@@ -156,25 +157,53 @@ p {
   margin-top: 15px;
 }
 
-.book-quantity button {
+/* do not display price */
+.woocommerce-Price-amount {
+  display: none;
+}
+
+.add_to_cart_inline {
+  border: none !important;
+}
+
+.addtocart {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  border: none;
+.addtocart img {
+  width: 45px;
+  margin-right: 5px;
+}
+
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+  font-family: 'Lato', sans-serif;
   width: 280px;
   height: 68px; 
-  font-family: 'Lato', sans-serif;
   font-size: 25px;
   font-weight: bold;
+  border: 3px solid #CBD9C4;
   background-color: #CBD9C4;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+
+  width: 280px;
+  height: 68px;
   box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
 
-.book-quantity button img {
-  width: 45px;
-  margin-right: 5px;
+.woocommerce a.button:hover {
+  background-color: #CBD9C4;
+  color: #000000;
+}
+
+.woocommerce a.button:active {
+  border: 3px solid #000000;
+  color: #000000;
+  font-weight: 700;
 }
 
 .book-desc-content {

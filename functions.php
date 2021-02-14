@@ -19,3 +19,8 @@
   require get_template_directory() . '/inc/customizer.php';
   require get_template_directory() . '/inc/template_functions.php';
 
+  // add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
+  // function woocommerce_custom_product_add_to_cart_text() {
+  //   return __( '', 'woocommerce' );
+  // } 
+  
