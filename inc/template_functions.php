@@ -136,7 +136,7 @@ if ( ! function_exists( 'get_example_data' ) ) {
 	 */
 	function get_example_data($section) {
 		return template_data($section, array(
-						'question' => '',
+			'question' => '',
             'answer' => '',
             'link' => ''
 		));
