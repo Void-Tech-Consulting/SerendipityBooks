@@ -44,6 +44,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
       c = document.createElement("DIV");
       c.innerHTML = selElmnt.options[j].innerHTML;
       c.addEventListener("click", function(e) {
+
+        /* Check whether order_by or amount of posts is clicked and call the correct function accordingly
+        */
+       window.changeOrderOrAmount(e);
           /*when an item is clicked, update the original select box,
           and the selected item:*/
           var y, i, k, s, h, sl, yl;
