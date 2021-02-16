@@ -27,7 +27,6 @@ function display_book($product) {
 ?>
 
 <main id="home-main">
-<?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
 
 <?php echo do_shortcode("[add_to_cart_url id='76']"); ?>
 <a class="ui large primary button" href=<?php echo do_shortcode("[add_to_cart_url id='76']"); ?> >Add to cart</a>
@@ -47,7 +46,7 @@ function display_book($product) {
 
   <!-- Mobile header -->
   <section class="home-section" id="mobile-section">
-    <header id="mobile-header">
+    <header id="mobile-explore-header">
       <div class="header-part">
         <div class="header-text">
           Explore
