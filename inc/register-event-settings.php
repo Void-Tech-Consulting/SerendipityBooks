@@ -170,6 +170,10 @@ function example_repeatable_customizer($wp_customize) {
                         'title' => esc_html__('Link'),
                         'type'  =>'url',
                     ),
+                    'some_image'  => array(
+                        'title' => esc_html__('some_image'),
+                        'type'  =>'media',
+                    ),
                 ),
             )
         )

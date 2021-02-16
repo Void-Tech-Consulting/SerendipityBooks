@@ -21,6 +21,11 @@
         <section class="example">
         <?php
           foreach ( $data as $k => $f ) {  
+            $media = '';
+            if ($f['some_image']) {
+              // get_media_url function is in template_functions.php
+              $media = '<img src="'.esc_url( get_media_url( $f['some_image'] ) ).'">';
+            }
             // Make sure to use a semicolon; when using php on multiple lines
             $questionId = 'question'.$k;
             $answerContent = "<div id=\"".$questionId."\" class=\"answer-text\">";

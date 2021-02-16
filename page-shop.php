@@ -38,12 +38,12 @@
         <div class="selection-container"><?php echo get_theme_mod($shop_categories_content) ?></div>
       <?php } else { ?>
       <div class="selection-container" id="select-categories">
-        <div>All</div>
+        <div class="selection-active" >All</div>
         <div>Nonfiction</div>
         <div>Fiction</div>
         <div>Childrens</div>
         <div>Young Adult</div>
-        <div class="selection-active">Gifts</div>
+        <div>Gifts</div>
       </div>
       <?php } ?>
 
@@ -59,8 +59,8 @@
         <div class="selection-container"><?php echo get_theme_mod($shop_condition_content) ?></div>
       <?php } else { ?>
       <div class="selection-container" id="select-conditions">
-        <div>All</div>
-        <div class="selection-active">New</div>
+        <div class="selection-active">All</div>
+        <div>New</div>
         <div>Used</div>
       </div>
       <?php } ?>
@@ -75,13 +75,13 @@
         <div class="display-content" id="display-num">
         <?php if (get_theme_mod($shop_display)) { ?>
           <select id="change-post-num">
-            <option value="0"><?php echo get_theme_mod($shop_display) ?></option>
-            <option value="0"><?php echo get_theme_mod($shop_display) ?></option>
-            <option value="1"><?php echo get_theme_mod($shop_display) ?></option>
-            <option value="2"><?php echo get_theme_mod($shop_display) ?></option>
+            <option value="<?php echo get_theme_mod($shop_display) ?>"><?php echo get_theme_mod($shop_display) ?></option>
+            <option value="<?php echo get_theme_mod($shop_display) ?>"><?php echo get_theme_mod($shop_display) ?></option>
+            <option value="<?php echo get_theme_mod($shop_display) ?>"><?php echo get_theme_mod($shop_display) ?></option>
+            <option value="<?php echo get_theme_mod($shop_display) ?>"><?php echo get_theme_mod($shop_display) ?></option>
           </select>
         <?php } else { ?>
-          <select id="change-post-num" onchange="change_num_posts(value)">
+          <select id="change-post-num" id="display-num">
             <option value="30">Show 30</option>
             <option value="30">Show 30</option>
             <option value="60">Show 60</option>
@@ -103,20 +103,11 @@
       <div id="display-bookstore"> </div>
 
       <div id="page-bar">
-        <div class="page-bar-arrow page-bar-left">
+        <div class="page-bar-arrow page-bar-left" id="page-bar-left-arrow">
           <img src=<?php echo get_template_directory_uri() . "/img/arrow-point-to-right.svg" ?> alt="Right Arrow">
         </div>
-        <div class="page-bar-nums" id="page_bar_holder">
-          <div class="page-bar-active">1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>...</div>
-          <div>200</div>
-        </div>
-        <div class="page-bar-arrow page-bar-right">
+        <div class="page-bar-nums" id="page_bar_holder"> </div>
+        <div class="page-bar-arrow page-bar-right" id="page-bar-right-arrow">
           <img src=<?php echo get_template_directory_uri() . "/img/arrow-point-to-right.svg" ?> alt="Right Arrow">
         </div>
       </div>

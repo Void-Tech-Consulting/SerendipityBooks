@@ -6,11 +6,20 @@ function shop_by_category() {
     $cat_name = $_REQUEST["cat_name"];
     $posts_per_page = $_REQUEST["posts_per_page"];
     $paged = $_REQUEST["paged"];
+    $condition = $_REQUEST["condition"];
+    $order_by = $_REQUEST["order_by"];
     $args = array(
         'post_type' => 'product',
         'product_cat' => $cat_name,
         'meta_key' => 'total_sales',
-        'orderby' => 'meta_value_num',
+        'orderby' => $order_by,
+        'order'   => 'DESC',
+        'suppress_filters' => true,
+        'meta_query'     => array( array(
+          'key' => 'condition',
+          'value' => $condition,
+          'compare' => 'IN',
+      ) ),
         'posts_per_page' => $posts_per_page,
         'paged' => $paged
       );
