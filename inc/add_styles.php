@@ -22,5 +22,7 @@ function add_custom_styles() {
     wp_enqueue_script("faq", get_template_directory_uri() . "/js/faq.js", '', '1.0.0');
     wp_enqueue_script("shop", get_template_directory_uri() . "/js/shop.js", '', '1.0.0');
     wp_enqueue_script("book", get_template_directory_uri() . "/js/book.js", '', '1.0.0');
+    
+    wp_enqueue_script( 'bodycommerce-add-to-cart-ajax', get_stylesheet_directory() . '/js/add-to-cart-ajax.js', array('jquery'), '', true );
 }
 add_action('wp_enqueue_scripts', 'add_custom_styles');

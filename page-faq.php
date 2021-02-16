@@ -183,8 +183,8 @@
             <?php } else { ?>
               <span class="questitle">delivery service</span>
             <?php } ?>
-            <i class="fas fa-angle-down"></i>
           </span>
+          <i class="fas fa-angle-down"></i>
         </button>
 
         <?php if (get_theme_mod($faq_delivery_content)) { ?>

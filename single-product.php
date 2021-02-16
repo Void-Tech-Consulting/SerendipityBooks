@@ -12,24 +12,25 @@
   <title>Shop Book Page</title>
 </head>
 <body>
-  <div id="shop-book-path">All > Happily Ever Afters</div>
+<?php echo do_shortcode('[product_page id="31"]'); ?>
+  <div id="shop-book-path"><?php echo $product->get_categories();?></div>
   <div id="shop-book-flex">
     <div id="shop-bookcover">
 
-    <?php the_post(); echo get_the_ID();?>
-
-    
       <img src=<?php 
       $key = "ISBN";
       $value = "9781564026668";
       $size = "L";
-      echo "http://covers.openlibrary.org/b/$key/$value-$size.jpg"?> alt="Frida A to Z Book Cover">
+      $ean = $product->get_attribute('ean');
+      echo "http://covers.openlibrary.org/b/isbn/$ean-L.jpg" ?> alt=""; ?>
     </div>
+    
     <div id="shop-bookdesc">
-
       <!-- Title, Author, Price -->
-      <div class="book-sectionheader">Bailey, Nadia - Frida A to Z: The life of an icon from Activism to Zapotec</div>
-      <div class="book-sectionheader">$14.95</div>
+      <div class="book-sectionheader">
+      <?php echo $product->get_name();?>
+      </div>
+      <div class="book-sectionheader"><?php echo $product->get_price();?></div>
       <hr>
 
       <!-- Options -->
@@ -81,22 +82,20 @@
           <div id="book-quantity" class="quantity-num">1</div>
           <div id="plus" class="quantity-operator">+</div>
         </div>
-        <button><img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">
-          <?php if (get_theme_mod($add_to_cart_label)) {
-                  echo get_theme_mod($add_to_cart_label);
-                } else {
-                  echo "ADD TO CART";
-                }
-          ?>
-        </button>
+        <div class="addtocart">
+          <img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">
+          <?php echo do_shortcode('[add_to_cart id="'.$post->ID.'"]'); ?>
+        </div>
       </div>
-      <div class="quantity-left">1 left</div>
+        
+      <div class="quantity-left"><?php echo $product->get_stock_quantity();?></div>
       <hr>
 
       <!-- Description -->
       <div class="book-sectionheader">Description</div>
       <div class="book-desc-content">
-        <p>Date Published: 1/5/2021</p>
+      <?php echo $product->get_description();?>
+        <!-- <p>Date Published: 1/5/2021</p>
         <p>Condition: New</p>
         <p>Ages 14 And Up, Grades 9 And Up Young Adult Fiction / Romance / Romantic Comedy</p>
         <p>Summary:<br>Jane the Virgin meets To All the Boys I’ve Loved Before in this charming debut romantic comedy 
@@ -116,7 +115,7 @@
         <p>But as Tessa checks each item off Caroline’s list, she gets further and further away from finding her words, 
           and herself, again. She’s well on her way to having her own real-life love story, yet she can’t help but wonder…
           Is it the one she wants, after all?
-        </p>
+        </p> -->
       </div>
     </div>
   </div>
