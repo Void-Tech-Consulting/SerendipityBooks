@@ -83,8 +83,11 @@
           <div id="plus" class="quantity-operator">+</div>
         </div>
         <div class="addtocart">
-          <img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">
-          <?php echo do_shortcode('[add_to_cart id="'.$post->ID.'"]'); ?>
+          <a href=<?php echo do_shortcode("[add_to_cart_url id='".$post->ID."']");?>>
+          <img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">add to cart
+        </a>
+          
+          
         </div>
       </div>
         
