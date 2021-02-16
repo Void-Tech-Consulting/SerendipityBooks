@@ -1,0 +1,40 @@
+.woocommerce{
+    display: flex;
+    justify-content: space-around;
+    font-family: Lato, 'sans-serif';
+}
+
+.woocommerce-cart-wrapper .woocommerce .woocommerce-cart-form {
+    width: 140%;
+    margin: auto;
+    margin-left: 4%;
+}
+
+.woocommerce-cart-wrapper .woocommerce .woocommerce-cart-form .actions .button{
+    background-color: #748F67;
+    color: #EFEFEF;
+}
+
+.product-name a {
+    text-decoration: none;
+    color: black;
+}
+
+.woocommerce .cart-collaterals .cart_totals {
+    width: 80%;
+    margin-right: 10%;
+}
+
+.woocommerce .cart-collaterals .checkout-button.button.alt.wc-forward {
+    background-color: #748F67;
+}
+
+.coupon #coupon_code {
+    width: 250px;
+    height: 35px;
+}
+
+#order_review_heading {
+    margin-top: 2%;
+}
+
