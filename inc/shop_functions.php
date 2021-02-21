@@ -47,20 +47,22 @@ function display_product($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
     $ean = $product->get_attribute('ean');
-  
+    $url = get_post_permalink($product->id);
     $price = number_format($price, 2);
   
     $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
   
     return "
-    <div class='book-content'>
-      <div class='book-cover'>
-          <img src=$imgsrc alt='Book Cover'>
+    <a href='$url'>
+      <div class='book-content'>
+        <div class='book-cover'>
+            <img src=$imgsrc alt='Book Cover'>
+        </div>
+        <span id='edit-bi'></span>
+        <div  class='book-info'>
+          <span class='book-title'>$name</span>
+          <span class='book-price'>$price</span>
+        </div>
       </div>
-      <span id='edit-bi'></span>
-      <div class='book-info'>
-        <span class='book-title'>$name</span>
-        <span class='book-price'>$price</span>
-      </div>
-    </div>";
+    </a>";
   }

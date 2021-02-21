@@ -42,7 +42,7 @@ if (have_posts()) :
     </section>';
 else :
 ?>
-    <section id="search-container">
+    <!-- <section id="search-container">
         <div id="search-content">
             <div id="search-text-main">
                 “<?php echo get_search_query() ?>” was not found in our store.
@@ -54,8 +54,8 @@ else :
                 <br>We'd love to work with you and help us find each other on <span class="highlight">the same page.</span>
             </div>
         </div>
-    </section>
-    <!-- <section id="search-container">
+    </section> -->
+    <section id="search-container">
         <div id="search-content">
 
             <div class="search-part" id="search-left">
@@ -72,7 +72,7 @@ else :
             </div>
 
         </div>
-    </section> -->
+    </section>
 
 <?php
 endif;
