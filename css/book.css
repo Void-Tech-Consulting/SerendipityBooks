@@ -7,24 +7,29 @@ hr {
   margin: 25px 0;
 }
 
-p {
-  margin: 10px auto;
-}
-
-#shop-book-path {
+#shop-book-path a {
   font-family: 'Lora', sans-serif;
   font-size: 30px;
-  margin-left: 118px;
-  margin-top: 59px;
+  margin-left: 110px;
+  margin-top: 50px;
+  text-decoration: none;
+  color: #000000;
 }
 
 #shop-book-flex {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 100px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 #shop-bookcover {
+  width: 380px;
+  height: auto;
+}
+
+#shop-bookcover img {
+  width: 100%;
 }
 
 #shop-bookdesc {
@@ -205,4 +210,28 @@ input[type=number]::-webkit-inner-spin-button {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   margin-bottom: 90px;
+}
+
+.option-mobile-show {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .book-options, .option-mobile, .option-mobile {
+    display: none;
+  }
+
+  .option-mobile-show {
+    display: block;
+  }
+  #shop-bookdesc > div.book-quantity > form > button {
+    width: 188.46px;
+    height: 65px;
+  }
+
+  #shop-bookdesc > div.book-quantity > form > div {
+    width: 103px;
+    height: 55px;
+  }
+  
 }

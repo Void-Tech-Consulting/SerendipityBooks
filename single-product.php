@@ -27,14 +27,14 @@
     
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
-      <div class="book-sectionheader">
+      <div class="book-sectionheader option-mobile">
       <?php echo $product->get_name();?>
       </div>
-      <div class="book-sectionheader"><?php echo $product->get_price();?></div>
+      <div class="book-sectionheader option-mobile"><?php echo $product->get_price();?></div>
       <hr>
 
       <!-- Options -->
-      <div class="book-sectionheader"><?php if (get_theme_mod($option_header)) {
+      <div class="book-sectionheader option-mobile"><?php if (get_theme_mod($option_header)) {
             echo get_theme_mod($option_header);
           } else {
             echo "Options";
@@ -65,7 +65,7 @@
         <input type="radio" name="choice" value="Shipping">
         <span class="options-check"></span>
       </label>
-      <hr>
+      <hr class="option-mobile">
 
       <!-- Quantity -->
       <div class="book-sectionheader">
@@ -93,8 +93,13 @@
         </form>
       </div>
 
-      <div class="quantity-left"><?php echo $product->get_stock_quantity();?></div>
+      <div class="quantity-left"><?php echo $product->get_stock_quantity();?> left</div>
       <hr>
+
+      <div class="book-sectionheader option-mobile-show">
+        <?php echo $product->get_name();?>
+      </div>
+      <hr class="option-mobile-show">
 
       <!-- Description -->
       <div class="book-sectionheader">Description</div>
