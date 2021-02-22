@@ -3,10 +3,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("minus").addEventListener("click", decrementQuantity);
 
     function incrementQuantity() {
-        document.getElementById('book-quantity').value++;
-        
+        var max = document.getElementById('book-quantity').max;
+        if (document.getElementById('book-quantity').value < max) {
+            document.getElementById('book-quantity').value++;
+        }
     }
     function decrementQuantity() {
-        document.getElementById('book-quantity').value++;
+        if (document.getElementById('book-quantity').value > 1) {
+            document.getElementById('book-quantity').value--;
+        }
     }
 });
+

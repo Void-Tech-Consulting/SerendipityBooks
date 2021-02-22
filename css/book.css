@@ -125,20 +125,6 @@ p {
   align-items: center;
 }
 
-.quantity-box {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 157px;
-  height: 67px;
-  background-color: #FFFFFF;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-
-  border-top: 2px solid rgba(0, 0, 0, 0.25);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-}
-
 .quantity-operator {
   color: rgba(0, 0, 0, 0.25);
   font-size: 40px;
@@ -155,24 +141,30 @@ p {
   margin-top: 15px;
 }
 
-.quantity-box input {
-  width: 60%;
-  font-size: 20px;
-  fill: none;
-  background: transparent;    
+.quantity input[type="number"] {
+  text-align: center;
   border: none;
 }
 
-
-.quantity-box input[type="number"] {
-  text-align: center;
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
-/* input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-} */
+#shop-bookdesc > div.book-quantity > form > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 157px;
+  height: 67px;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 
-#shop-bookdesc > div.book-quantity > form > div.addtocart > a {
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+#shop-bookdesc > div.book-quantity > form > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,16 +186,16 @@ p {
   border-radius: 15px;
 }
 
-#shop-bookdesc > div.book-quantity > form > div.addtocart > a img {
+#shop-bookdesc > div.book-quantity > form > button img {
   width: 45px;
 }
 
-#shop-bookdesc > div.book-quantity > form > div.addtocart > a:hover {
+#shop-bookdesc > div.book-quantity > form > button:hover {
   background-color: #CBD9C4;
   color: #000000;
 }
 
-#shop-bookdesc > div.book-quantity > form > div.addtocart > a:active {
+#shop-bookdesc > div.book-quantity > form > button:active {
   border: 3px solid #000000;
   color: #000000;
   font-weight: 700;

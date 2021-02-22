@@ -77,23 +77,22 @@
         ?>
       </div>
       <div class="book-quantity">
-      <form class="cart" method="post" enctype="multipart/form-data">
-        <div class="quantity-box">
-          <div id="minus" class="quantity-operator">–</div>
-          <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Quantity" id="book-quantity" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric">
-          <div id="plus" class="quantity-operator">+</div>
-        </div>
+        <form class="cart" method="post" enctype="multipart/form-data">
+          <div class="quantity">
+            <div id="minus" class="quantity-operator">–</div>
+            <input type="number" step="1" min="1" max="<?php echo $product->get_stock_quantity();?>" name="quantity" id="book-quantity" value="1" title="Quantity" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric" readonly>
+            <div id="plus" class="quantity-operator">+</div>
+          </div>
 
-        <input type="hidden" name="add-to-cart" value="<?php echo get_the_ID(); ?>">
-        <div class="addtocart">
-          <a href=<?php echo do_shortcode("[add_to_cart_url id='".$post->ID."']");?>>
-            <img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart"><i class="fa fa-cart-plus" aria-hidden="true"></i>add to cart
-          </a>
-        </div>
+          <input type="hidden" name="add-to-cart" value="<?php echo get_the_ID(); ?>">
+
+          <button type="submit" class="single_add_to_cart_button button alt">
+            <img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>Add to cart
+          </button>
         </form>
       </div>
 
-      
       <div class="quantity-left"><?php echo $product->get_stock_quantity();?></div>
       <hr>
 
@@ -127,6 +126,11 @@
   </div>
   
 </body>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </html>
 
 <?php get_footer(); ?>
