@@ -24,12 +24,12 @@ function display_book($product) {
       </div>
     </div>";
 }
+
+$favorites  = get_example_data($favorite_repeater);
 ?>
 
 <main id="home-main">
 
-<?php echo do_shortcode("[add_to_cart_url id='76']"); ?>
-<a class="ui large primary button" href=<?php echo do_shortcode("[add_to_cart_url id='76']"); ?> >Add to cart</a>
   <!-- Description section -->
   <section class="home-section" id="description-container">
     <img class="bracket" style="transform: rotate(180deg);" src=<?php echo get_template_directory_uri() . "/img/bracket.svg" ?>>
@@ -54,13 +54,30 @@ function display_book($product) {
       </div>
       <div class="header-part" id="mobile-tabs">
         <div class="header-text active" id="bestsellers-tab">
-          Bestsellers
+          <?php if (get_theme_mod($home_bestsellers_title)) {
+            echo get_theme_mod($home_bestsellers_title);
+          } else {
+            echo "Bestsellers";
+          }
+          ?>
         </div>
+        <?php if (!empty($favorites)) { ?>
         <div class="header-text" id="favorites-tab">
-          Michelle's Favorites
+          <?php if (get_theme_mod($home_favorites_title)) {
+            echo get_theme_mod($home_favorites_title);
+          } else {
+            echo "Michelle's Favorites";
+          }
+          ?>
         </div>
+        <?php } ?>
         <div class="header-text" id="upcoming-events-tab">
-          Events
+          <?php if (get_theme_mod($home_events_title)) {
+            echo get_theme_mod($home_events_title);
+          } else {
+            echo "Upcoming Events";
+          }
+          ?>
         </div>
       </div>
     </header>
@@ -118,6 +135,7 @@ function display_book($product) {
 
   </section>
 
+  <?php if (!empty($favorites)) { ?>
   <section class="home-section mobile-hidden" id="favorites">
     <!-- Favorites header -->
     <header>
@@ -146,28 +164,19 @@ function display_book($product) {
     <!-- Favorites carousel -->
     <div class="carousel">
       <?php
+      $length = min(count($favorites), 10);
+      for ($i = 0; $i < $length; $i++) {
+        $sku = $favorites[$i]['favorite'];
+        $id = wc_get_product_id_by_sku($sku);
+        $product = wc_get_product($id);
 
-      $fav_query = new WP_Query(array(
-        'post_type' => 'favorites',
-        'posts_per_page' => 10
-      ));
-
-      if ($fav_query->have_posts()) {
-        while ($fav_query->have_posts()) {
-          $fav_query->the_post();
-
-          $sku = get_the_title();
-          $pid = wc_get_product_id_by_sku($sku);
-
-          $product = wc_get_product($pid);
-
-          display_book($product);
-        }
+        display_book($product);
       }
       ?>
     </div>
 
   </section>
+  <?php } ?>
 
   <!-- Contactless section -->
   <section class="home-section" id="contactless">
