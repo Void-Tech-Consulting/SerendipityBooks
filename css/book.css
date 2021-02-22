@@ -119,7 +119,7 @@ p {
   transform: rotate(45deg);
 }
 
-.book-quantity {
+.book-quantity form {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -155,16 +155,24 @@ p {
   margin-top: 15px;
 }
 
-/* do not display price */
-.woocommerce-Price-amount {
-  display: none;
+.quantity-box input {
+  width: 60%;
+  font-size: 20px;
+  fill: none;
+  background: transparent;    
+  border: none;
 }
 
-.add_to_cart_inline {
-  border: none !important;
+
+.quantity-box input[type="number"] {
+  text-align: center;
 }
 
-.addtocart {
+/* input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+} */
+
+#shop-bookdesc > div.book-quantity > form > div.addtocart > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,59 +194,16 @@ p {
   border-radius: 15px;
 }
 
-.addtocart img {
+#shop-bookdesc > div.book-quantity > form > div.addtocart > a img {
   width: 45px;
 }
 
-#shop-bookdesc > div.book-quantity > div.addtocart > form > button {
-  cursor: pointer;
-  display: block;
-  font-family: 'Lato', sans-serif;
-  width: 280px;
-  height: 68px; 
-  font-size: 25px;
-  font-weight: bold;
-  border: 3px solid #CBD9C4;
-  background-color: #CBD9C4;
-  text-transform: uppercase;
-  color: #000000;
-  text-align: center;
-
-  width: 280px;
-  height: 68px;
-  box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-
-.woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
-  font-family: 'Lato', sans-serif;
-  width: 280px;
-  height: 68px; 
-  font-size: 25px;
-  font-weight: bold;
-  border: 3px solid #CBD9C4;
-  background-color: #CBD9C4;
-  text-transform: uppercase;
-  color: #000000;
-  text-align: center;
-
-  width: 280px;
-  height: 68px;
-  box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-
-.woocommerce a.button:hover {
+#shop-bookdesc > div.book-quantity > form > div.addtocart > a:hover {
   background-color: #CBD9C4;
   color: #000000;
 }
 
-#shop-bookdesc > div.book-quantity > div.addtocart > form > button:active {
-  border: 3px solid #000000;
-  color: #000000;
-  font-weight: 700;
-}
-.woocommerce a.button:active {
+#shop-bookdesc > div.book-quantity > form > div.addtocart > a:active {
   border: 3px solid #000000;
   color: #000000;
   font-weight: 700;
