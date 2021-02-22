@@ -88,6 +88,10 @@ a:link {
     background-color: #FFFFFF;
 }
 
+.aws-container .aws-search-form {
+    height: auto;
+}
+
 .aws-container .aws-search-field {
     border: none;
     font-size: 16px;
