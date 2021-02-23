@@ -46,36 +46,6 @@ function home_customizer($wp_customize) {
         'selector' => 'span#edit-favorites'
     ));
 
-    // Contactless Section Description
-    $wp_customize->add_setting($home_contactless_description, array(
-        'default' => 'Want to purchase books while staying safe? Check out our contactless options.',
-        'transport' => 'postMessage'
-    ));
-    $wp_customize->add_control($home_contactless_description, array(
-        'label' => 'Contactless Section Description',
-        'section' => $home_section,
-        'type' => 'textarea'
-    ));
-    $wp_customize->selective_refresh->add_partial($home_contactless_description, array(
-        'selector' => 'span#edit-contactless-text'
-    ));
-
-    // Contactless Section Image
-    $wp_customize->add_setting($home_contactless_img, array(
-        'transport' => 'postMessage'
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control(
-        $wp_customize,
-        $home_contactless_img,
-        array(
-            'label' => 'Contactless Section Image',
-            'section' => $home_section
-        )
-    ));
-    $wp_customize->selective_refresh->add_partial($home_contactless_img, array(
-        'selector' => 'span#edit-contactless-image'
-    ));
-
     // Upcoming Events Section Title
     $wp_customize->add_setting($home_events_title, array(
         'default' => "Upcoming Events",

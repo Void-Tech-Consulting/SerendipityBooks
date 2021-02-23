@@ -178,43 +178,6 @@ $favorites  = get_example_data($favorite_repeater);
   </section>
   <?php } ?>
 
-  <!-- Contactless section -->
-  <section class="home-section" id="contactless">
-    <div id="contactless-content">
-
-      <div class="contactless-part" id="contactless-left">
-        <div id="contactless-text">
-          <span id="edit-contactless-text"></span>
-          <?php if (get_theme_mod($home_contactless_description)) {
-            echo get_theme_mod($home_contactless_description);
-          } else {
-            echo "Want to purchase books while staying safe? Check out our contactless options.";
-          }
-          ?>
-        </div>
-        <div id="contactless-buttons">
-          <a href="" class="flat-button">
-            <span>PICK-UP</span>
-          </a>
-          <a href="" class="flat-button">
-            <span>DELIVERY</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="contactless-part" id="contactless-right">
-        <span id="edit-contactless-image"></span>
-        <img src=<?php if (get_theme_mod($home_contactless_img)) {
-                    echo get_theme_mod($home_contactless_img);
-                  } else {
-                    echo get_template_directory_uri() . "/img/pick_up_birds.png";
-                  }
-                  ?> width="90%" height="auto" alt="Two birds on a branch">
-      </div>
-
-    </div>
-  </section>
-
   <section class="home-section mobile-hidden" id="upcoming-events">
 
     <!-- Upcoming events header -->
