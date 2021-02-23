@@ -6,17 +6,18 @@ let init_carousel = (section) => {
     }
 
     let books = carousel.querySelectorAll(".book");
+    let num_books = books.length;
 
-    let splits = [0, 3, 6, 7];
-    // console.log(splits);
-    // let splits = Array();
-    // for (let i = 0; i < books.length - 1; i += 3) {
-    //     splits.push(i);
-    // }
-
-    // splits.push(splits[splits.length - 1] + 1);
-
-    // console.log(splits);
+    let splits;
+    if (num_books < 4) {
+        splits = [0];
+    } else if (num_books < 7) {
+        splits = [0, 3];
+    } else if (num_books < 10) {
+        splits = [0, 3, 6];
+    } else {
+        splits = [0, 3, 6, 7];
+    }
     
     let i = 0;
 
