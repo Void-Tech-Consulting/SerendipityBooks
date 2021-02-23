@@ -73,8 +73,6 @@
   $shop_moreimg = 'shop_moreimg';
   $shop_display = 'shop_display';
   
-
-
   // Book Vars
   $book_section = 'book_section';
   $option_header = 'option_header';
@@ -87,5 +85,8 @@
   $favorite_repeater = 'favorite_repeater';
   $favorite_section = 'favorite_section';
 
+  // Bestsellers
+  $bestseller_repeater = 'bestseller_repeater';
+  $bestseller_section = 'bestseller_section';
 ?>
 
