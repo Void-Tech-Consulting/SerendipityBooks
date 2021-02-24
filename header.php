@@ -13,10 +13,6 @@
 <!-- Search bar -->
 <div id="search-bar-container">
   <div class="searching-container">
-
-    <div class="searching-icon">
-        <img id="search" src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
-    </div>
     <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
     <div class="search-cancel">
       <img id="cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
@@ -104,9 +100,6 @@
   <div id="mobile-header">
     <div id="mobile-search-bar-container">
       <div class="searching-container">
-        <div class="searching-icon">
-            <img id="search" src=<?php echo get_template_directory_uri() . "/photos/Vector.png" ?> height="20px" alt="Search">
-        </div>
         <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
         <?php echo do_shortcode("[add_to_cart_url id='76']"); ?>
         <div class="search-cancel">
