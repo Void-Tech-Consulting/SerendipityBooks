@@ -6,12 +6,13 @@ function display_book(& $product) {
   $name = $product->get_name();
   $price = (float) $product->get_price();
   $ean = $product->get_attribute('ean');
-
+  $url = get_post_permalink($product->id);
   $price = number_format($price, 2);
 
   $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
 
   echo "
+  <a href='$url'>
     <div class='book'>
       <div class='book-card'>
         <img 
@@ -22,7 +23,8 @@ function display_book(& $product) {
         <div class='book-title'>$name</div>
         <div class='book-price'>$$price</div>
       </div>
-    </div>";
+    </div>
+  </a>";
 }
 
 function carousel_loop(& $books, $key) {

@@ -88,5 +88,9 @@
   // Bestsellers
   $bestseller_repeater = 'bestseller_repeater';
   $bestseller_section = 'bestseller_section';
+  
+  $event_repeater = 'event_repeater';
+  $events_section2 = 'events_section2';
+
 ?>
 
