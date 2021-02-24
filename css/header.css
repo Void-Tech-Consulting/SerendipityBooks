@@ -243,6 +243,15 @@ a:link {
     }
 }
 
+/* To get font for event links in header */
+#fontDefault {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
 
 /* Cart and Checkout Pages */
 

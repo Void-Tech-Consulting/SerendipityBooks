@@ -90,5 +90,8 @@
   $example_repeater = 'example_repeater';
   $example_section = 'example_section';
 
+  $event_repeater = 'event_repeater';
+  $events_section2 = 'events_section2';
+
 ?>
 
