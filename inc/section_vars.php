@@ -85,10 +85,9 @@
   $book_quantity_label = 'book_quantity_label';
   $add_to_cart_label = 'add_to_cart_label';
 
-  // Example
-
-  $example_repeater = 'example_repeater';
-  $example_section = 'example_section';
+  // Favorites
+  $favorite_repeater = 'favorite_repeater';
+  $favorite_section = 'favorite_section';
 
   $event_repeater = 'event_repeater';
   $events_section2 = 'events_section2';

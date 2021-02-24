@@ -1,6 +1,10 @@
 let init_carousel = (section) => {
     let carousel = document.querySelector(`${section} .carousel`);
 
+    if (carousel === null) {
+        return; 
+    }
+
     let books = carousel.querySelectorAll(".book");
 
     let splits = [0, 3, 6, 7];
@@ -47,6 +51,9 @@ let init_tabs = () => {
 
     tabs.forEach(tab => {
         let el = document.getElementById(tab);
+        if (el === null) {
+            return; 
+        }
         el.addEventListener('click', () => {
             if (tab != active_tab) {
 
