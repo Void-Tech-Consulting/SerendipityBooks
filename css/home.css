@@ -130,7 +130,9 @@ html {
 .carousel {
     display: grid;
     gap: max(4.75vw, 2.75rem);
-    grid-auto-flow: column;
+    grid-auto-flow: column dense;
+    justify-items: start;
+    justify-content: start;
     overflow-x: hidden;
 }
 
@@ -200,6 +202,8 @@ html {
         calc(var(--book-width) * 1.3), 
         calc(var(--max-book-width) * 1.3)
         );
+        color: #000;
+        font-size: clamp(15px, 2vw, 28px);
 }
 
 .book-title {
