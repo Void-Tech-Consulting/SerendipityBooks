@@ -17,7 +17,7 @@ require get_template_directory() . '/inc/section_vars.php';
     $data  = get_example_data($event_repeater);
     if (!empty($data)) {
     ?>
-        <section class="example">
+        <section class="examgple">
             <div id="fontDefault">
                 <!-- Event Header w/ Title -->
                 <?php if ($data[$_GET['id']]['event_title']) { ?>

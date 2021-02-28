@@ -54,6 +54,8 @@
   $faq_info = 'faq_info';
   $faq_info_content = 'faq_info_content';
   $faq_img = 'faq_img';
+  $faq_repeater = 'faq_repeater';
+  $faq_rsection = 'faq_rsection';
 
   // Shop Vars
   $shop_section = 'shop_section';

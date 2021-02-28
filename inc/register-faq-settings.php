@@ -82,3 +82,48 @@ function faq_customizer($wp_customize) {
   ));
 }
 add_action( 'customize_register', 'faq_customizer' );
+
+/* FAQ Repeater */
+function faq_repeater_customizer($wp_customize) {
+  require 'section_vars.php';  
+  require_once 'controller.php';  
+  
+  $wp_customize->add_section($faq_rsection, array(
+    'title' => 'FAQ Repeaters',
+  ));
+  
+  $wp_customize->add_setting(
+    $faq_repeater,
+    array(
+        'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+        'transport' => 'refresh',
+    ) );
+
+  $wp_customize->add_control(
+    
+      new Onepress_Customize_Repeatable_Control(
+          $wp_customize,
+          $faq_repeater,
+          array(
+              'label' 		=> esc_html__('FAQ Repeater'),
+              'description'   => '',
+              'section'       => $faq_rsection,
+              'live_title_id' => 'faq_questype',
+              'title_format'  => esc_html__('[live_title]'), // [live_title]
+              'max_item'      => 10, // Maximum item can add
+              'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),
+              'fields'    => array(
+                  'faq_questype'  => array(
+                      'title' => esc_html__('Question Type'),
+                      'type'  =>'text',
+                  ),
+                  'faq_quescontent'  => array(
+                      'title' => esc_html__('Answer'),
+                      'type'  =>'editor',
+                  )
+              ),
+          )
+      )
+  );
+}
+add_action( 'customize_register', 'faq_repeater_customizer' );

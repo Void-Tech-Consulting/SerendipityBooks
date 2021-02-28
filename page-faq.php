@@ -2,6 +2,7 @@
   get_header(); 
   wp_enqueue_style('faq');
   require get_template_directory() . '/inc/section_vars.php';
+  $faq = get_example_data($faq_repeater);
 ?>
 
 <!DOCTYPE html>
@@ -135,6 +136,29 @@
           </p>
         </div>
       </div>
+
+      
+        <?php if (!empty($faq)) { ?>
+          <div class="quescontainer">
+            <button type="button" class="questype">
+                <?php if ($faq[0]['faq_questype']) { ?>
+                  <span class="questitle">
+                    <?php echo $faq[0]['faq_questype'] ?>
+                  </span>
+                <?php } ?>
+              <i class="fas fa-angle-down"></i>
+            </button>
+
+            <?php if ($faq[1]['quescontent']) { ?>
+              <div class="quescontent"> 
+                <?php echo $faq[1]['quescontent'] ?> 
+              <?php } else { ?>
+                <div class="quescontent"></div>
+              <?php } ?>
+          </div>
+      <?php } ?>
+
+
     </section>
 
     <!-- Section: Image 2 -->
