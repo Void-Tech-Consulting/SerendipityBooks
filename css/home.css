@@ -130,7 +130,9 @@ html {
 .carousel {
     display: grid;
     gap: max(4.75vw, 2.75rem);
-    grid-auto-flow: column;
+    grid-auto-flow: column dense;
+    justify-items: start;
+    justify-content: start;
     overflow-x: hidden;
 }
 

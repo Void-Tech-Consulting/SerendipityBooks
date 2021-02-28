@@ -27,14 +27,14 @@
     
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
-      <div class="book-sectionheader">
+      <div class="book-sectionheader option-mobile">
       <?php echo $product->get_name();?>
       </div>
-      <div class="book-sectionheader"><?php echo $product->get_price();?></div>
+      <div class="book-sectionheader option-mobile"><?php echo $product->get_price();?></div>
       <hr>
 
       <!-- Options -->
-      <div class="book-sectionheader"><?php if (get_theme_mod($option_header)) {
+      <div class="book-sectionheader option-mobile"><?php if (get_theme_mod($option_header)) {
             echo get_theme_mod($option_header);
           } else {
             echo "Options";
@@ -65,7 +65,7 @@
         <input type="radio" name="choice" value="Shipping">
         <span class="options-check"></span>
       </label>
-      <hr>
+      <hr class="option-mobile">
 
       <!-- Quantity -->
       <div class="book-sectionheader">
@@ -77,19 +77,29 @@
         ?>
       </div>
       <div class="book-quantity">
-        <div class="quantity-box">
-          <div id="minus" class="quantity-operator">–</div>
-          <div id="book-quantity" class="quantity-num">1</div>
-          <div id="plus" class="quantity-operator">+</div>
-        </div>
-        <div class="addtocart">
-          <img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">
-          <?php echo do_shortcode('[add_to_cart id="'.$post->ID.'"]'); ?>
-        </div>
+        <form class="cart" method="post" enctype="multipart/form-data">
+          <div class="quantity">
+            <div id="minus" class="quantity-operator">–</div>
+            <input type="number" step="1" min="1" max="<?php echo $product->get_stock_quantity();?>" name="quantity" id="book-quantity" value="1" title="Quantity" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric" readonly>
+            <div id="plus" class="quantity-operator">+</div>
+          </div>
+
+          <input type="hidden" name="add-to-cart" value="<?php echo get_the_ID(); ?>">
+
+          <button type="submit" class="single_add_to_cart_button button alt">
+            <img src=<?php echo get_template_directory_uri() . "/img/shopping_cart.png"?> alt="Shopping Cart">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>Add to cart
+          </button>
+        </form>
       </div>
-        
-      <div class="quantity-left"><?php echo $product->get_stock_quantity();?></div>
+
+      <div class="quantity-left"><?php echo $product->get_stock_quantity();?> left</div>
       <hr>
+
+      <div class="book-sectionheader option-mobile-show">
+        <?php echo $product->get_name();?>
+      </div>
+      <hr class="option-mobile-show">
 
       <!-- Description -->
       <div class="book-sectionheader">Description</div>
@@ -121,6 +131,11 @@
   </div>
   
 </body>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </html>
 
 <?php get_footer(); ?>

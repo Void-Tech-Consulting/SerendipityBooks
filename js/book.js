@@ -3,17 +3,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("minus").addEventListener("click", decrementQuantity);
 
     function incrementQuantity() {
-        var quantity = document.getElementById('book-quantity');
-        var number = quantity.innerHTML;
-        number++;
-        quantity.innerHTML = number;
+        var max = document.getElementById('book-quantity').max;
+        if (document.getElementById('book-quantity').value < max) {
+            document.getElementById('book-quantity').value++;
+        }
     }
     function decrementQuantity() {
-        var quantity = document.getElementById('book-quantity');
-        var number = quantity.innerHTML;
-        number--;
-        if (number >= 0) {
-            quantity.innerHTML = number;
+        if (document.getElementById('book-quantity').value > 1) {
+            document.getElementById('book-quantity').value--;
         }
     }
 });

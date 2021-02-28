@@ -88,6 +88,10 @@ a:link {
     background-color: #FFFFFF;
 }
 
+.aws-container .aws-search-form {
+    height: auto;
+}
+
 .aws-container .aws-search-field {
     border: none;
     font-size: 16px;
@@ -241,6 +245,15 @@ a:link {
     #mobile-header {
         display: none;
     }
+}
+
+/* To get font for event links in header */
+#fontDefault {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 
