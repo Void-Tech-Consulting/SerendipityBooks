@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("minus").addEventListener("click", decrementQuantity);
 
     function incrementQuantity() {
-        var max = document.getElementById('book-quantity').max;
+        var max = parseInt(document.getElementById('book-quantity').max);
+        console.log(document.getElementById('book-quantity').value < max);
         if (document.getElementById('book-quantity').value < max) {
             document.getElementById('book-quantity').value++;
         }

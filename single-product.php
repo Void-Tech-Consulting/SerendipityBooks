@@ -34,7 +34,7 @@
       <hr>
 
       <!-- Options -->
-      <div class="book-sectionheader option-mobile"><?php if (get_theme_mod($option_header)) {
+      <!-- <div class="book-sectionheader option-mobile"><?php if (get_theme_mod($option_header)) {
             echo get_theme_mod($option_header);
           } else {
             echo "Options";
@@ -65,7 +65,7 @@
         <input type="radio" name="choice" value="Shipping">
         <span class="options-check"></span>
       </label>
-      <hr class="option-mobile">
+      <hr class="option-mobile"> -->
 
       <!-- Quantity -->
       <div class="book-sectionheader">
@@ -80,7 +80,7 @@
         <form class="cart" method="post" enctype="multipart/form-data">
           <div class="quantity">
             <div id="minus" class="quantity-operator">–</div>
-            <input type="number" step="1" min="1" max="<?php echo $product->get_stock_quantity();?>" name="quantity" id="book-quantity" value="1" title="Quantity" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric" readonly>
+            <input type="number" step="1" min="1" max="<?php echo $product->get_stock_quantity();?>" name="quantity" id="book-quantity" value="1" title="Quantity" class="input-text qty text" size="4" inputmode="numeric" readonly>
             <div id="plus" class="quantity-operator">+</div>
           </div>
 

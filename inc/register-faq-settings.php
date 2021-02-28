@@ -25,27 +25,6 @@ function faq_customizer($wp_customize) {
     'section' => $faq_section,
     'type' => 'textarea'
   ));
-  
-   // Gift Cards
-  $wp_customize->add_setting($faq_giftcards, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_giftcards, array(
-    'label' => 'Gift Cards',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_giftcards, array(
-    'selector' => 'span#edit-giftcards'
-  ));
-
-  $wp_customize->add_setting($faq_giftcards_content);
-  $wp_customize->add_control($faq_giftcards_content, array(
-    'label' => 'Gift Cards Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-  
 
    // Local Authors
    $wp_customize->add_setting($faq_authors, array(
@@ -63,66 +42,6 @@ function faq_customizer($wp_customize) {
   $wp_customize->add_setting($faq_authors_content);
   $wp_customize->add_control($faq_authors_content, array(
     'label' => 'Local Authors Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
-   // Contactless Pickup
-   $wp_customize->add_setting($faq_pickup, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_pickup, array(
-    'label' => 'Contactless Pickup',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_pickup, array(
-    'selector' => 'span#edit-pickup'
-  ));
-
-  $wp_customize->add_setting($faq_pickup_content);
-  $wp_customize->add_control($faq_pickup_content, array(
-    'label' => 'Contactless Pickup',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
- // Delivery Service
-  $wp_customize->add_setting($faq_delivery, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_delivery, array(
-    'label' => 'Delivery Service',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_delivery, array(
-    'selector' => 'span#edit-delivery'
-  ));
-
-  $wp_customize->add_setting($faq_delivery_content);
-  $wp_customize->add_control($faq_delivery_content, array(
-    'label' => 'Delivery Service Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
-   // Private Appointments
-   $wp_customize->add_setting($faq_appoint, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_appoint, array(
-    'label' => 'Private Appointments',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_appoint, array(
-    'selector' => 'span#edit-appoint'
-  ));
-
-  $wp_customize->add_setting($faq_appoint_content);
-  $wp_customize->add_control($faq_appoint_content, array(
-    'label' => 'Private Appointments Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));

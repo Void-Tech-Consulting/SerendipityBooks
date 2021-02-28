@@ -68,35 +68,6 @@
         </div>
       </div>
 
-
-      <!-- Gift Cards -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-giftcards">
-            <?php if (get_theme_mod($faq_giftcards)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_giftcards) ?></span>
-            <?php } else { ?>
-              <span class="questitle">gift cards</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-      
-
-        <?php if (get_theme_mod($faq_giftcards_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_giftcards_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>Electronic gift cards for shopping at the brick and mortar are available 
-          <a href="#" class="faqlinks">here.</a></p>
-
-          <p>Please note: our gift cards only work for items purchased through Serendipity Books brick and mortar. 
-          They do not play nicely with our affiliate.</p>
-        </div>
-      </div>
-
-
       <!-- Local Authors -->
       <div class="quescontainer">
         <button type="button" class="questype">
@@ -127,98 +98,9 @@
           massive achievement,</p>
           <p>Michelle.</p>
 
-          <form>
-            <label for="name">Name</label>
-            <input type="text">
-            <label for="email">Email</label>
-            <input type="text">
-            <label for="authorsite">Author Website (if available)</label>
-            <input type="text">
-            <label for="booktitle">Book Title</label>
-            <input type="text">
-            <label for="genre">Genre</label>
-            <input type="text">
-            <label for="coverprice">Cover Price</label>
-            <input type="text">
-            <label for="availability">Is this book available on Ingram?</label>
-            <input type="text">
-            <label for="synopsis">Synopsis of Book</label>
-            <input type="text">
-
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-      </div>
-
-
-      <!-- Contactless Pickup -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-pickup">
-            <?php if (get_theme_mod($faq_pickup)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_pickup) ?></span>
-            <?php } else { ?>
-              <span class="questitle">contactless pickup</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        <?php if (get_theme_mod($faq_pickup_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_pickup_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>Click <a href="#" class="faqlinks">here</a> to schedule a pickup.</p>
-        </div>
-      </div>
-
-
-      <!-- Delivery Service -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-delivery">
-            <?php if (get_theme_mod($faq_delivery)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_delivery) ?></span>
-            <?php } else { ?>
-              <span class="questitle">delivery service</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        <?php if (get_theme_mod($faq_delivery_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_delivery_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>For free deliveries visit <a href="#" class="faqlinks">here</a> or call us at (734) 475-7148. If you need title 
-          suggestions, Michelle can help. If you don’t see the book you want on our website, shop our 
-          extended inventory <a href="#" class="faqlinks">here.</a></p>
-        </div>
-      </div>
-
-
-      <!-- Private Appointments -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-appoint">
-            <?php if (get_theme_mod($faq_appoint)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_appoint) ?></span>
-            <?php } else { ?>
-              <span class="questitle">private appointments</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-          
-        </button>
-
-        <?php if (get_theme_mod($faq_appoint_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_appoint_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>If you would like to schedule a private appointment click <a href="#" class="faqlinks">here.</a></p>
+          <div class="authorsform"> 
+            <?php echo do_shortcode ( '[wpforms id="8812"]' ) ?>
+          </div>
         </div>
       </div>
 
