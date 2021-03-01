@@ -100,7 +100,6 @@ function faq_repeater_customizer($wp_customize) {
     ) );
 
   $wp_customize->add_control(
-    
       new Onepress_Customize_Repeatable_Control(
           $wp_customize,
           $faq_repeater,

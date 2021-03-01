@@ -138,25 +138,28 @@
       </div>
 
       
-        <?php if (!empty($faq)) { ?>
-          <div class="quescontainer">
-            <button type="button" class="questype">
-                <?php if ($faq[0]['faq_questype']) { ?>
-                  <span class="questitle">
-                    <?php echo $faq[0]['faq_questype'] ?>
-                  </span>
-                <?php } ?>
-              <i class="fas fa-angle-down"></i>
-            </button>
+        <?php if (!empty($faq)) { 
+           $size = sizeof($faq);
+           for($i = 0; $i < $size; $i++) { ?>
+            <div>
+              <div class="quescontainer">
+                <button type="button" class="questype">
+                    <?php if ($faq[$i]['faq_questype']) { ?>
+                      <span class="questitle">
+                        <?php echo $faq[$i]['faq_questype'] ?>
+                      </span>
+                    <?php } ?>
+                  <i class="fas fa-angle-down"></i>
+                </button>
 
-            <?php if ($faq[0]['faq_quescontent']) { ?>
-              <div class="quescontent"> 
-                <?php echo $faq[0]['faq_quescontent'] ?> 
-              <?php } ?>
-          </div>
+                <?php if ($faq[$i]['faq_quescontent']) { ?>
+                  <div class="quescontent"> 
+                    <?php echo $faq[$i]['faq_quescontent'] ?> 
+                  <?php } ?>
+              </div>
+            </div>
+          <?php } ?>
       <?php } ?>
-
-
     </section>
 
     <!-- Section: Image 2 -->
