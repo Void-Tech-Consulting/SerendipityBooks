@@ -2,7 +2,7 @@
 get_header();
 require get_template_directory() . '/inc/section_vars.php';
 
-function display_book(& $product) {
+function display_book(&$product) {
   $name = $product->get_name();
   $price = (float) $product->get_price();
   $ean = $product->get_attribute('ean');
@@ -27,7 +27,7 @@ function display_book(& $product) {
   </a>";
 }
 
-function carousel_loop(& $books, $key) {
+function carousel_loop(&$books, $key) {
   $len = min(count($books), 10);
   for ($i = 0; $i < $len; $i++) {
     $sku = $books[$i][$key];
@@ -79,105 +79,107 @@ function display_theme_var($var, $default) {
       </div>
       <div class="header-part" id="mobile-tabs">
         <?php if (!empty($bestsellers)) { ?>
-        <div class="header-text active" id="bestsellers-tab">
-          <?php display_theme_var($home_bestsellers_title, "Bestsellers");?>
-        </div>
+          <div class="header-text active" id="bestsellers-tab">
+            <?php display_theme_var($home_bestsellers_title, "Bestsellers"); ?>
+          </div>
         <?php } ?>
         <?php if (!empty($favorites)) { ?>
-        <div class="header-text" id="favorites-tab">
-          <?php display_theme_var($home_favorites_title, "Michelle's Favorites");?>
-        </div>
+          <div class="header-text" id="favorites-tab">
+            <?php display_theme_var($home_favorites_title, "Michelle's Favorites"); ?>
+          </div>
         <?php } ?>
         <?php if (!empty($events)) { ?>
-        <div class="header-text" id="upcoming-events-tab">
-          <?php display_theme_var($home_events_title, "Upcoming Events");?>
-        </div>
+          <div class="header-text" id="upcoming-events-tab">
+            <?php display_theme_var($home_events_title, "Upcoming Events"); ?>
+          </div>
         <?php } ?>
       </div>
     </header>
   </section>
 
   <?php if (!empty($bestsellers)) { ?>
-  <section class="home-section mobile-visible" id="bestsellers">
-    <!-- Bestsellers header -->
-    <header>
-      <div class="header-part">
-        <div class="header-text">
-          <span id="edit-bestsellers"></span>
-          <?php display_theme_var($home_bestsellers_title, "Bestsellers");?>
+    <section class="home-section mobile-visible" id="bestsellers">
+      <!-- Bestsellers header -->
+      <header>
+        <div class="header-part">
+          <div class="header-text">
+            <span id="edit-bestsellers"></span>
+            <?php display_theme_var($home_bestsellers_title, "Bestsellers"); ?>
+          </div>
+          <a href="" class="flat-button"><span>SHOP ALL</span></a>
         </div>
-        <a href="" class="flat-button"><span>SHOP ALL</span></a>
-      </div>
-      <div class="header-part">
-        <div class="carousel-button left">
-          <img alt="Left arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
+        <div class="header-part">
+          <div class="carousel-button left">
+            <img alt="Left arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
+          </div>
+          <div class="carousel-button right">
+            <img alt="Right arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
+          </div>
         </div>
-        <div class="carousel-button right">
-          <img alt="Right arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- Bestsellers carousel -->
-    <div class="carousel">
-      <?php carousel_loop($bestsellers, 'bestseller');?>
-    </div>
+      <!-- Bestsellers carousel -->
+      <div class="carousel">
+        <?php carousel_loop($bestsellers, 'bestseller'); ?>
+      </div>
 
-  </section>
+    </section>
   <?php } ?>
 
   <?php if (!empty($favorites)) { ?>
-  <section class="home-section mobile-hidden" id="favorites">
-    <!-- Favorites header -->
-    <header>
-      <div class="header-part">
-        <div class="header-text">
-          <span id="edit-favorites"></span>
-          <?php display_theme_var($home_favorites_title, "Michelle's Favorites");?>
+    <section class="home-section mobile-hidden" id="favorites">
+      <!-- Favorites header -->
+      <header>
+        <div class="header-part">
+          <div class="header-text">
+            <span id="edit-favorites"></span>
+            <?php display_theme_var($home_favorites_title, "Michelle's Favorites"); ?>
+          </div>
+          <a href="" class="flat-button"><span>SHOP ALL</span></a>
         </div>
-        <a href="" class="flat-button"><span>SHOP ALL</span></a>
-      </div>
-      <div class="header-part">
-        <div class="carousel-button left">
-          <img alt="Left arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
+        <div class="header-part">
+          <div class="carousel-button left">
+            <img alt="Left arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
+          </div>
+          <div class="carousel-button right">
+            <img alt="Right arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
+          </div>
         </div>
-        <div class="carousel-button right">
-          <img alt="Right arrow" src=<?php echo "$base_uri/img/arrow.svg" ?>>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- Favorites carousel -->
-    <div class="carousel">
-      <?php carousel_loop($favorites, 'favorite'); ?>
-    </div>
+      <!-- Favorites carousel -->
+      <div class="carousel">
+        <?php carousel_loop($favorites, 'favorite'); ?>
+      </div>
 
-  </section>
+    </section>
   <?php } ?>
 
   <?php if (!empty($events)) { ?>
-  <section class="home-section mobile-hidden" id="upcoming-events">
-    <!-- Upcoming events header -->
-    <header>
-      <div class="header-part">
-        <div class="header-text">
-          <span id="edit-upcoming-events"></span>
-          <?php display_theme_var($home_events_title, "Upcoming Events");?>
+    <section class="home-section mobile-hidden" id="upcoming-events">
+      <!-- Upcoming events header -->
+      <header>
+        <div class="header-part">
+          <div class="header-text">
+            <span id="edit-upcoming-events"></span>
+            <?php display_theme_var($home_events_title, "Upcoming Events"); ?>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <div class="event-container">
-      <?php 
+      <div class="event-container">
+        <?php
         $num_events = count($events);
         for ($i = 0; $i < $num_events; $i++) {
-          echo "<a href=" . get_site_url() . "/events?id=$i>";
-          echo "<img class='event' src=" . esc_url(get_media_url($events[$i]['poster_image'])) . ">";
-          echo "</a>";
-        }
-      ?>
-    </div>
-  </section>
+        ?>
+          <div class="event-wrapper">
+            <a class="event-link" href=<?php echo get_site_url() . "/events?id=$i" ?>>
+              <img class="event" src=<?php echo esc_url(get_media_url($events[$i]['poster_image'])) ?>>
+            </a>
+          </div>
+        <?php } ?>
+      </div>
+    </section>
   <?php } ?>
 </main>
 <?php get_footer(); ?>

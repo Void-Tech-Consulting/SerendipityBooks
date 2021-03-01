@@ -222,24 +222,20 @@ html {
     font-size: clamp(1rem, 1.2vw, 2.4rem);
 }
 
+/* Event styling */
 .event-container {
-    display: grid;
-    gap: 1rem;
+    column-count: 2;
+    column-gap: 2rem;
 }
 
-.event-container a {
-    width: fit-content;
-    height: fit-content;
+.event-wrapper {
+    padding-bottom: 2rem;
+    break-inside: avoid;
 }
 
-#left-event {
-    margin-right: min(6.5rem, 5vw);
-}
-
-#right-event {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.event-link {
+    width: min-content;
+    height: min-content;
 }
 
 .event {
@@ -354,16 +350,6 @@ html {
     }
 
     .event-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .event-container img {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    #left-event {
-        margin-right: 0;
+        columns: 1;
     }
 }
