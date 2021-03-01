@@ -149,11 +149,9 @@
               <i class="fas fa-angle-down"></i>
             </button>
 
-            <?php if ($faq[1]['quescontent']) { ?>
+            <?php if ($faq[0]['faq_quescontent']) { ?>
               <div class="quescontent"> 
-                <?php echo $faq[1]['quescontent'] ?> 
-              <?php } else { ?>
-                <div class="quescontent"></div>
+                <?php echo $faq[0]['faq_quescontent'] ?> 
               <?php } ?>
           </div>
       <?php } ?>
