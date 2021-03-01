@@ -223,8 +223,13 @@ html {
 }
 
 .event-container {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    gap: 1rem;
+}
+
+.event-container a {
+    width: fit-content;
+    height: fit-content;
 }
 
 #left-event {
@@ -349,6 +354,7 @@ html {
     }
 
     .event-container {
+        display: flex;
         flex-direction: column;
     }
 

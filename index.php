@@ -41,6 +41,7 @@ function carousel_loop(& $books, $key) {
 
 $favorites  = get_example_data($favorite_repeater);
 $bestsellers  = get_example_data($bestseller_repeater);
+$events = get_example_data($event_repeater);
 $base_uri = get_template_directory_uri();
 
 function display_theme_var($var, $default) {
@@ -87,9 +88,11 @@ function display_theme_var($var, $default) {
           <?php display_theme_var($home_favorites_title, "Michelle's Favorites");?>
         </div>
         <?php } ?>
+        <?php if (!empty($events)) { ?>
         <div class="header-text" id="upcoming-events-tab">
           <?php display_theme_var($home_events_title, "Upcoming Events");?>
         </div>
+        <?php } ?>
       </div>
     </header>
   </section>
@@ -152,8 +155,8 @@ function display_theme_var($var, $default) {
   </section>
   <?php } ?>
 
+  <?php if (!empty($events)) { ?>
   <section class="home-section mobile-hidden" id="upcoming-events">
-
     <!-- Upcoming events header -->
     <header>
       <div class="header-part">
@@ -164,17 +167,17 @@ function display_theme_var($var, $default) {
       </div>
     </header>
 
-    <!-- Upcoming events images -->
     <div class="event-container">
-      <div id="left-event">
-        <img class="event" width="90%" height="auto" src=<?php echo "$base_uri/img/creative_writing.png" ?> alt="Creative writing poster">
-      </div>
-      <div id="right-event">
-        <img class="event" width="65%" height="auto" src=<?php echo "$base_uri/img/afterhours.png" ?> alt="AfterHours poster">
-        <img class="event" width="65%" height="auto" src=<?php echo "$base_uri/img/staysafe.png" ?> alt="Stay safe poster">
-      </div>
+      <?php 
+        $num_events = count($events);
+        for ($i = 0; $i < $num_events; $i++) {
+          echo "<a href=" . get_site_url() . "/events?id=$i>";
+          echo "<img class='event' src=" . esc_url(get_media_url($events[$i]['poster_image'])) . ">";
+          echo "</a>";
+        }
+      ?>
     </div>
-
   </section>
+  <?php } ?>
 </main>
 <?php get_footer(); ?>
