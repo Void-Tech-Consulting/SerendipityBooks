@@ -42,19 +42,6 @@ if (have_posts()) :
     </section>';
 else :
 ?>
-    <!-- <section id="search-container">
-        <div id="search-content">
-            <div id="search-text-main">
-                “<?php echo get_search_query() ?>” was not found in our store.
-                <br>Check the extended inventory <span class="highlight">here.</span>
-            </div>
-            <img width="75%" height="auto" alt="Search not found 404 error" src=<?php echo get_template_directory_uri() . "/img/not_found_alt.png" ?>>
-            <div id="search-text-sub">
-                If you still haven't found what you wanted, please contact us at enteremail@gmail.com.
-                <br>We'd love to work with you and help us find each other on <span class="highlight">the same page.</span>
-            </div>
-        </div>
-    </section> -->
     <section id="search-container">
         <div id="search-content">
 
