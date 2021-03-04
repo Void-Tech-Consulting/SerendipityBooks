@@ -76,7 +76,6 @@ function home_customizer($wp_customize) {
         'selector' => 'span#edit-contactless-image'
     ));
 
-
     // Upcoming Events Section Title
     $wp_customize->add_setting($home_events_title, array(
         'default' => "Upcoming Events",
