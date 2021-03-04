@@ -138,6 +138,10 @@
                     change_order_by(e.srcElement.innerHTML);
                } else if (e.srcElement.parentElement.parentElement.id == 'display-num') {
                     change_display_num(e.srcElement.innerHTML);
+               } else if (e.srcElement.parentElement.parentElement.id == 'select-categories') {
+                    change_category(e.srcElement.innerHTML);
+               } else if (e.srcElement.parentElement.parentElement.id == 'select-conditions') {
+                    change_condition(e.srcElement.innerHTML);
                }
            }
 
