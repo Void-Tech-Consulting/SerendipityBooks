@@ -1,5 +1,4 @@
 <?php
-  require get_template_directory() . '/inc/enqueue-scripts.php';
   require get_template_directory() . '/inc/register-home-settings.php';
   require get_template_directory() . '/inc/register-bestseller-setting.php';
   require get_template_directory() . '/inc/register-favorite-setting.php';

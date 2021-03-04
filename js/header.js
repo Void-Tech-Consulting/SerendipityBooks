@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("mobile-search-icon").addEventListener("click", showMobileSearchBar);
     document.getElementById("mobile-cancel").addEventListener("click", hideMobileSearchBar);
-    document.getElementById('mobile-icon').addEventListener("click", showMenuPopover)
+    // document.getElementById('mobile-icon').addEventListener("click", showMenuPopover)
 
     function showMobileSearchBar() {
         document.getElementById('top-images').style.display = 'none';

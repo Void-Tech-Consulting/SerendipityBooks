@@ -1,7 +1,7 @@
 <?php
 function bestseller_repeatable_customizer($wp_customize) {
-    require 'section_vars.php';  
-    require_once 'controller.php';  
+    require 'section_vars.php';
+    require_once 'controller.php';
     
     $wp_customize->add_section($bestseller_section, array(
       'title' => 'Bestselling Books',
