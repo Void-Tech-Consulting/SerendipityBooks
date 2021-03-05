@@ -35,7 +35,7 @@
       <?php } ?>
 
       <?php if (get_theme_mod($shop_categories_content)) { ?>
-        <div class="selection-container"><?php echo get_theme_mod($shop_categories_content) ?></div>
+        <div class="selection-container" id="select-categories"><?php echo get_theme_mod($shop_categories_content) ?></div>
       <?php } else { ?>
       <div class="selection-container" id="select-categories">
         <div class="selection-active" >All</div>
@@ -56,7 +56,7 @@
       <?php } ?>
       
       <?php if (get_theme_mod($shop_condition_content)) { ?>
-        <div class="selection-container"><?php echo get_theme_mod($shop_condition_content) ?></div>
+        <div class="selection-container" id="select-conditions"><?php echo get_theme_mod($shop_condition_content) ?></div>
       <?php } else { ?>
       <div class="selection-container" id="select-conditions">
         <div class="selection-active">All</div>
@@ -71,10 +71,35 @@
       <!-- Display Type -->
       <div id="sort-bookstore">
 
+        <div id="phone-categories">
+           <div class="display-content" id="select-categories">
+             <select>
+               <option value="1">All</option>
+               <option value="1">All</option>
+               <option value="1">Nonfiction</option>
+               <option value="1">Fiction</option>
+               <option value="1">Childrens</option>
+               <option value="1">Young Adult</option>
+               <option value="1">Gifts</option>
+             </select>
+           </div>
+         </div>
+
+         <div id ="phone-condition">
+           <div class="display-content" id="select-conditions">
+             <select>
+               <option value="1">All</option>
+               <option value="1">All</option>
+               <option value="1">New</option>
+               <option value="1">Used</option>
+             </select>
+           </div>
+         </div>
+
         <span id="edit-display"></span>
         <div class="display-content" id="display-num">
         <?php if (get_theme_mod($shop_display)) { ?>
-          <select id="change-post-num">
+          <select id="change-post-num" id="display-num">
             <option value="<?php echo get_theme_mod($shop_display) ?>"><?php echo get_theme_mod($shop_display) ?></option>
             <option value="<?php echo get_theme_mod($shop_display) ?>"><?php echo get_theme_mod($shop_display) ?></option>
             <option value="<?php echo get_theme_mod($shop_display) ?>"><?php echo get_theme_mod($shop_display) ?></option>

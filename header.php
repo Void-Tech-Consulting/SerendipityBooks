@@ -101,7 +101,6 @@
     <div id="mobile-search-bar-container">
       <div class="searching-container">
         <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
-        <?php echo do_shortcode("[add_to_cart_url id='76']"); ?>
         <div class="search-cancel">
           <img id="mobile-cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
         </div>
