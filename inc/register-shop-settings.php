@@ -130,4 +130,4 @@ function script_enqueuer() {
 }
 
 // Fires after WordPress has finished loading, but before any headers are sent.
-add_action( 'init', 'script_enqueuer' );
+add_action( 'wp_enqueue_scripts', 'script_enqueuer' );
