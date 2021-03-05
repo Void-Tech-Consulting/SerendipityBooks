@@ -99,6 +99,31 @@
         
       
 
+        <div id="phone-categories">
+           <div class="display-content" id="select-categories">
+             <select>
+               <option value="1">All</option>
+               <option value="1">All</option>
+               <option value="1">Nonfiction</option>
+               <option value="1">Fiction</option>
+               <option value="1">Childrens</option>
+               <option value="1">Young Adult</option>
+               <option value="1">Gifts</option>
+             </select>
+           </div>
+         </div>
+
+         <div id ="phone-condition">
+           <div class="display-content" id="select-conditions">
+             <select>
+               <option value="1">All</option>
+               <option value="1">All</option>
+               <option value="1">New</option>
+               <option value="1">Used</option>
+             </select>
+           </div>
+         </div>
+
         <span id="edit-display"></span>
         <div class="display-content" id="display-num">
         <?php if (get_theme_mod($shop_display)) { ?>
