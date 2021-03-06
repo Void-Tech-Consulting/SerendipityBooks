@@ -28,6 +28,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('top-images').style.display = 'flex';
         document.getElementById('mobile-header').style.paddingRight = '10px';
     }
+
+    function showMenuPopover() {
+        document.getElementById('mobile-icon').style.display = 'none';
+        document.getElementById('mobile-menu-cancel').style.display = 'block';
+        document.getElementById('menu-popover').style.display = 'flex';
+    }
 });
 
 // Menu popover mobile
