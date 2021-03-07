@@ -45,7 +45,13 @@
       <div class="book-sectionheader option-mobile">
       <?php echo $product->get_name();?>
       </div>
-      <div class="book-sectionheader option-mobile"><?php echo $product->get_price();?></div>
+      <div class="book-sectionheader option-mobile">
+        <?php 
+          $price = $product->get_price();
+          $price = number_format($price, 2);
+          echo '$' . $price;
+        ?>
+      </div>
       <hr>
 
       <!-- Options -->

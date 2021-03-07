@@ -15,6 +15,8 @@ function display_book(&$product) {
   $url = get_post_permalink($product->id);
   $price = number_format($price, 2);
 
+  // echo wc_display_product_attributes( $product );
+
   $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
 
   echo "
