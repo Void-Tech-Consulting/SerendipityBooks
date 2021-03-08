@@ -47,6 +47,42 @@ require get_template_directory() . '/inc/section_vars.php';
                         <?php } ?>
                     </div>
 
+                    <!-- Dropdown -->
+                    <?php if ($data[$_GET['id']]['dropdown_past_books']) { ?>
+                    <div id="width-control">
+                        <div class="dropdownBox">
+                            <button type="button" class="dropButton">
+                                <span class="dropTitle">FUTURE AND PAST BOOKS</span>
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                            <!-- Print each book separated by new line -->
+                            <div class="dropdownContent">
+                                <!-- Future Reads -->
+                                <li class="drop-heading">Future Dates and Reads: </li>
+                                <?php $futureBooks  = $data[$_GET['id']]['dropdown_future_books'];
+                                $listF = explode ("\n", $futureBooks);
+                                $listFSize = sizeof($listF);
+                                for($i = 0; $i < $listFSize; ++$i) { 
+                                    $bookFInfo = explode(",", $listF[$i]); ?>
+                                    <li><span class="bookName"> <?php echo $bookFInfo[0] ?> </span><span class="bookAuthor">
+                                        by  <?php echo $bookFInfo[1] ?>  </span><br><span class="bookDate"> <?php echo $bookFInfo[2] ?> </span></li>
+                                <?php } ?>
+                                
+                                <!-- Past Reads -->
+                                <li class="drop-heading">Past Selections: </li>
+                                <?php $pastBooks  = $data[$_GET['id']]['dropdown_past_books'];
+                                $listP = explode ("\n", $pastBooks);
+                                $listPSize = sizeof($listP);
+                                for($i = 0; $i < $listPSize; ++$i) { 
+                                    $bookPInfo = explode(",", $listP[$i]); ?>
+                                    <li><span class="bookName"> <?php echo $bookPInfo[0] ?> </span><span class="bookAuthor">
+                                        by  <?php echo $bookPInfo[1] ?>  </span><br><span class="bookDate"> <?php echo $bookPInfo[2] ?> </span></li>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+
                     <!-- Words Div -->
                     <div class="containers" id="details">
 
@@ -95,7 +131,7 @@ require get_template_directory() . '/inc/section_vars.php';
                                     <?php } ?>
                                     <!-- Other Location Description -->
                                     <?php if ($data[$_GET['id']]['location']) {
-                                        echo ($data[$_GET['id']]['location']);
+                                        echo nl2br($data[$_GET['id']]['location']);
                                     } ?>
                                     <br> <br>
                                 </div>
@@ -111,7 +147,7 @@ require get_template_directory() . '/inc/section_vars.php';
                                 </div>
                                 <div class="body-text">
                                     <!-- Description -->
-                                    <?php echo ($data[$_GET['id']]['event_desc']); ?>
+                                    <?php echo nl2br($data[$_GET['id']]['event_desc']); ?>
                                     <br> <br>
                                 </div>
                             </span>
@@ -126,7 +162,7 @@ require get_template_directory() . '/inc/section_vars.php';
                                 </div>
                                 <div class="body-text">
                                     <?php if ($data[$_GET['id']]['rel_link_desc']) {
-                                        echo ($data[$_GET['id']]['rel_link_desc']);
+                                        echo nl2br($data[$_GET['id']]['rel_link_desc']);
                                     } ?>
                                     <?php if ($data[$_GET['id']]['rel_link']) { ?>
                                         <p> <a class="linkEvent" href=<?php echo ($data[$_GET['id']]['rel_link']) ?>><?php echo ($data[$_GET['id']]['rel_link']) ?> </p> <br>
