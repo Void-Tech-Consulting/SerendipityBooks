@@ -101,7 +101,6 @@
     <div id="mobile-search-bar-container">
       <div class="searching-container">
         <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
-        <?php echo do_shortcode("[add_to_cart_url id='76']"); ?>
         <div class="search-cancel">
           <img id="mobile-cancel" src=<?php echo get_template_directory_uri() . "/photos/XButton.png" ?> height="20px" alt="Cancel">
         </div>
@@ -152,9 +151,13 @@
           </div>
         </a>
         <div class="event-dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+        <?php $data  = get_example_data($event_repeater);
+            if (!empty($data)) {
+            $size = sizeof($data);
+            for($i = 0; $i < $size; $i++) { ?>
+                <a id = "fontDefault" href = <?php echo get_site_url() . "/events?id=$i" ?> > <?php echo $data[$i]['event_title'] ?> </a>
+            <?php }
+            } ?>
         </div>
       </div>
       <a href="<?php echo get_page_link( get_page_by_title('Shop')->ID ); ?>">
