@@ -2,6 +2,19 @@
   get_header(); 
   wp_enqueue_style('faq');
   require get_template_directory() . '/inc/section_vars.php';
+
+  function show_faq($type, $content) {
+    echo "
+    <div>
+      <div class='quescontainer'>
+        <button type='button' class='questype'>
+          <span class='questitle'>$type</span>
+          <i class='fas fa-angle-down'></i>
+        </button>
+      <div class='quescontent'>$content</div>
+    </div>
+    ";
+  }
   $faq = get_example_data($faq_repeater);
 ?>
 
@@ -34,7 +47,8 @@
             <?php if (get_theme_mod($faq_tradepolicy)) { ?>
               <span class="questitle"><?php echo get_theme_mod($faq_tradepolicy) ?></span>
             <?php } else { ?>
-              <span class="questitle">trade policy</span>
+              <span class="questitle"> trade policy
+              </span>
             <?php } ?>
           </span>
           <i class="fas fa-angle-down"></i>
@@ -136,30 +150,19 @@
           </p>
         </div>
       </div>
-
       
-        <?php if (!empty($faq)) { 
+      <?php 
+        if (!empty($faq)) { 
            $size = sizeof($faq);
-           for($i = 0; $i < $size; $i++) { ?>
-            <div>
-              <div class="quescontainer">
-                <button type="button" class="questype">
-                    <?php if ($faq[$i]['faq_questype']) { ?>
-                      <span class="questitle">
-                        <?php echo $faq[$i]['faq_questype'] ?>
-                      </span>
-                    <?php } ?>
-                  <i class="fas fa-angle-down"></i>
-                </button>
-
-                <?php if ($faq[$i]['faq_quescontent']) { ?>
-                  <div class="quescontent"> 
-                    <?php echo $faq[$i]['faq_quescontent'] ?> 
-                  <?php } ?>
-              </div>
-            </div>
-          <?php } ?>
-      <?php } ?>
+           for($i = 0; $i < $size; $i++) {
+              $type = $faq[$i]['faq_questype'];
+              $content = $faq[$i]['faq_quescontent'];
+              show_faq($type, $content);
+            }  
+        }
+        ?>
+      
+  
     </section>
 
     <!-- Section: Image 2 -->
