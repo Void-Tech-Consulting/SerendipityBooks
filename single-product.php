@@ -2,6 +2,7 @@
   get_header(); 
   wp_enqueue_style('book');
   require get_template_directory() . '/inc/section_vars.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -14,17 +15,26 @@
 <body>
 <?php echo do_shortcode('[product_page id="31"]'); ?>
   <div id="shop-book-path"><?php echo $product->get_categories();?></div>
+  <?php $ean = $product->get_attribute('ean');
+
+  echo "
+  <section id='bookcover' data-isbn=$ean>
+  <header>
+    <h3 id='booktitle'>Title</h3>
+    <h4 id='bookauthor'>Author</h4>
+  </header>
+
+  <img src='' alt='' id='thumbnail' /> "
+  ?>
+</section>
   <div id="shop-book-flex">
     <div id="shop-bookcover">
-
       <img src=<?php 
-      $key = "ISBN";
-      $value = "9781564026668";
-      $size = "L";
       $ean = $product->get_attribute('ean');
-      echo "http://covers.openlibrary.org/b/isbn/$ean-L.jpg" ?> alt=""; ?>
+      $url1 = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+      echo $url1 ?> alt="">
+     
     </div>
-    
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
       <div class="book-sectionheader option-mobile">

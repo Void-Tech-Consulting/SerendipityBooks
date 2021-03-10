@@ -113,6 +113,7 @@ function faq_repeater_customizer($wp_customize) {
               'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),
               'fields'    => array(
                   'faq_questype'  => array(
+                      'default' => 'Trade Policy',
                       'title' => esc_html__('Question Type'),
                       'type'  =>'text',
                   ),
