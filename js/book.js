@@ -27,8 +27,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function handleResponse( response ) {
       $.each( response.items, function( i, item ) {
-        var title    = item.volumeInfo.title,
-            author   = item.volumeInfo.authors[0],      
+        var author   = item.volumeInfo.authors[0],      
             descrip  = item.volumeInfo.description;  
             thumb    = item.volumeInfo.imageLinks.thumbnail;
             
@@ -40,7 +39,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             break;
           }
         }
-        $('#booktitle').text( title );
         $('#bookauthorlast').text( author.substring(name, alen) + ', ');
         $('#bookauthorfirst').text( author.substring(0, name) + ' - ');
         $('#descrip').text(descrip);

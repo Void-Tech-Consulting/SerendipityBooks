@@ -19,6 +19,7 @@
 </section>
   <div id="shop-book-flex">
     <div id="shop-bookcover">
+    
       <?php 
         $ean = $product->get_attribute('ean');
         echo 
@@ -34,14 +35,13 @@
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
       <div class="book-sectionheader option-mobile">
-      <!-- <?php echo $product->get_name();?> -->
       <?php 
         $ean = $product->get_attribute('ean');
         echo 
           "<span id='bookauthorlast'></span>
-          <span id='bookauthorfirst'></span>
-          <span id='booktitle'></span>"
+          <span id='bookauthorfirst'></span>"
       ?>
+      <?php echo $product->get_name(); ?>
       </div>
       <div class="book-sectionheader option-mobile"><?php echo $product->get_price();?></div>
       <hr>
