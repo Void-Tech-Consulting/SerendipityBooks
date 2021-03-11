@@ -8,7 +8,9 @@
     <div>
       <div class='quescontainer'>
         <button type='button' class='questype'>
+        <span class='edit-faq'>
           <span class='questitle'>$type</span>
+        </span>
           <i class='fas fa-angle-down'></i>
         </button>
       <div class='quescontent'>$content</div>
@@ -40,49 +42,16 @@
   <div id="faq_layout">
     <!-- Section: Questions -->
     <section class="faq-sec" id="questions">
-      <!-- Trade Policy -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-tradepolicy">
-            <?php if (get_theme_mod($faq_tradepolicy)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_tradepolicy) ?></span>
-            <?php } else { ?>
-              <span class="questitle"> trade policy
-              </span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        
-        <?php if (get_theme_mod($faq_tradepolicy_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_tradepolicy_content) ?></div>
-        <?php } ?>
-        <div class="quescontent">
-          <p>We do take books in for trade but do not give cash. Instead:</p>
-          <p>- for any books we take, we offer 20% of the new value of the book in store credit<br>
-            - store credit can be used for up to 50% of a purchase<br>
-            - store credit can accumulate on your account and will not expire<br>
-            - we do not guarantee a return on any books previously purchased
-          </p>
-
-          <p>The kind of books we look for are:</p>
-
-          <p>- book club choices and recent award winners in paperback<br>
-            - classics in paperback or hardback<br>
-            - popular children’s books in great condition (think Wimpy Kids, Harry Potter, Magic Tree House)<br>
-            - unusual and eclectic vintage treasures<br>
-            - popular current reads (think Grisham, Patterson, Lee Child, Nora Roberts)
-          </p>
-
-          <p>No appointment is necessary; books can be dropped off at any time. We’ll call you with the total to be 
-          credited to your account. Unwanted books will be donated or you can pick them up.</p>
-
-          <p>Store credit can be applied towards used books already in the store. It cannot be applied against special 
-          orders, new books or other items (such as journals, soaps, pins etc).</p>
-        </div>
-      </div>
-
+      <?php 
+        if (!empty($faq)) { 
+           $size = sizeof($faq);
+           for($i = 0; $i < $size; $i++) {
+              $type = $faq[$i]['faq_questype'];
+              $content = $faq[$i]['faq_quescontent'];
+              show_faq($type, $content);
+            }  
+        }
+        ?>
       <!-- Local Authors -->
       <div class="quescontainer">
         <button type="button" class="questype">
@@ -118,51 +87,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Shop Info -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-info">
-            <?php if (get_theme_mod($faq_info)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_info) ?></span>
-            <?php } else { ?>
-              <span class="questitle">shop info</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        <?php if (get_theme_mod($faq_info_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_info_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>Hours:<br>
-            Tues - Sat: 11 -5<br>
-            Sun: 12 - 4
-          </p>
-          <p>Address:<br>
-            113 W Middle St<br>
-            Chelseas, MI 48118
-          </p>
-          <p>Phone:<br>
-            (734) 475-7148
-          </p>
-        </div>
-      </div>
-      
-      <?php 
-        if (!empty($faq)) { 
-           $size = sizeof($faq);
-           for($i = 0; $i < $size; $i++) {
-              $type = $faq[$i]['faq_questype'];
-              $content = $faq[$i]['faq_quescontent'];
-              show_faq($type, $content);
-            }  
-        }
-        ?>
-      
-  
     </section>
 
     <!-- Section: Image 2 -->

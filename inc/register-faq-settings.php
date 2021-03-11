@@ -16,7 +16,7 @@ function faq_customizer($wp_customize) {
   ));
 
   $wp_customize->selective_refresh->add_partial($faq_tradepolicy, array(
-    'selector' => 'span#edit-tradepolicy'
+    'selector' => '.edit-faq'
   ));
 
   $wp_customize->add_setting($faq_tradepolicy_content);
@@ -113,7 +113,6 @@ function faq_repeater_customizer($wp_customize) {
               'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),
               'fields'    => array(
                   'faq_questype'  => array(
-                      'default' => 'Trade Policy',
                       'title' => esc_html__('Question Type'),
                       'type'  =>'text',
                   ),

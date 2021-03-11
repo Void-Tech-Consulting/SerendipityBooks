@@ -46,40 +46,6 @@
       <div class="book-sectionheader option-mobile"><?php echo $product->get_price();?></div>
       <hr>
 
-      <!-- Options -->
-      <!-- <div class="book-sectionheader option-mobile"><?php if (get_theme_mod($option_header)) {
-            echo get_theme_mod($option_header);
-          } else {
-            echo "Options";
-          }
-          ?>
-      </div>
-      <label class="book-options options-container"> 
-          <span class="options-text">
-            <?php if (get_theme_mod($pickup_label)) {
-                echo get_theme_mod($pickup_label);
-              } else {
-                echo "Store Pickup";
-              }
-              ?>
-          </span>
-        <input type="radio" name="choice" value="Pickup"> 
-        <span class="options-check"></span>
-      </label>
-      <label class="book-options options-container"> 
-          <span class="options-text">
-            <?php if (get_theme_mod($shipping_label)) {
-                echo get_theme_mod($shipping_label);
-              } else {
-                echo "Shipping";
-              }
-              ?>
-          </span>
-        <input type="radio" name="choice" value="Shipping">
-        <span class="options-check"></span>
-      </label>
-      <hr class="option-mobile"> -->
-
       <!-- Quantity -->
       <div class="book-sectionheader">
         <?php if (get_theme_mod($book_quantity_label)) {
