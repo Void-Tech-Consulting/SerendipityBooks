@@ -62,7 +62,7 @@ require get_template_directory() . '/inc/section_vars.php';
                                         $listF = explode("\n", $futureBooks);
                                         $listFSize = sizeof($listF);
                                         for ($i = 0; $i < $listFSize; ++$i) {
-                                            $bookFInfo = explode(",", $listF[$i]); ?>
+                                            $bookFInfo = explode(";", $listF[$i]); ?>
                                             <li><span class="bookName"> <?php echo $bookFInfo[0] ?> </span><span class="bookAuthor">
                                                     by <?php echo $bookFInfo[1] ?> </span><br><span class="bookDate"> <?php echo $bookFInfo[2] ?> </span></li>
                                         <?php } ?>
@@ -73,7 +73,7 @@ require get_template_directory() . '/inc/section_vars.php';
                                         $listP = explode("\n", $pastBooks);
                                         $listPSize = sizeof($listP);
                                         for ($i = 0; $i < $listPSize; ++$i) {
-                                            $bookPInfo = explode(",", $listP[$i]); ?>
+                                            $bookPInfo = explode(";", $listP[$i]); ?>
                                             <li><span class="bookName"> <?php echo $bookPInfo[0] ?> </span><span class="bookAuthor">
                                                     by <?php echo $bookPInfo[1] ?> </span><br><span class="bookDate"> <?php echo $bookPInfo[2] ?> </span></li>
                                         <?php } ?>
