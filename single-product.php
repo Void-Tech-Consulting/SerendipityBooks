@@ -2,6 +2,7 @@
   get_header(); 
   wp_enqueue_style('book');
   require get_template_directory() . '/inc/section_vars.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -12,38 +13,36 @@
   <title>Shop Book Page</title>
 </head>
 <body>
-<?php 
-  echo do_shortcode('[shop_messages]');
-  the_post();
-  $product = wc_get_product(get_the_ID());
-?>
-  <div id="shop-book-path">
-    <!-- <?php 
-      $cats = get_the_terms(get_the_ID(), 'product_cat');
-      foreach ($cats as $cat) {
-        echo $cat->name . " ";
-      }
-    ?> -->
-    <?php echo $product->get_categories();?>
-  </div>
+
+<?php echo do_shortcode('[product_page id="31"]'); ?>
+  <div id="shop-book-path"><?php echo $product->get_categories();?></div>
+  
+</section>
   <div id="shop-book-flex">
     <div id="shop-bookcover">
-
-    <img src=<?php 
-      $key = "ISBN";
-      $value = "9781564026668";
-      $size = "L";
-      $ean = $product->get_attribute('ean');
-      echo "http://covers.openlibrary.org/b/isbn/$ean-L.jpg"; ?> 
-      
-      alt=<?php echo $product->get_title(); ?>
-    >
-    </div>
     
+      <?php 
+        $ean = $product->get_attribute('ean');
+        echo 
+          "<section id='bookcover' data-isbn=$ean>
+          <img src='' alt='' id='thumbnail' /> "
+      ?>
+      <!-- <img src=<?php 
+      $ean = $product->get_attribute('ean');
+      $url1 = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+      echo $url1 ?> alt=""> -->
+
+    </div>
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
       <div class="book-sectionheader option-mobile">
-      <?php echo $product->get_name();?>
+      <?php 
+        $ean = $product->get_attribute('ean');
+        echo 
+          "<span id='bookauthorlast'></span>
+          <span id='bookauthorfirst'></span>"
+      ?>
+      <?php echo $product->get_name(); ?>
       </div>
       <div class="book-sectionheader option-mobile">
         <?php 
@@ -53,40 +52,6 @@
         ?>
       </div>
       <hr>
-
-      <!-- Options -->
-      <div class="book-sectionheader option-mobile"><?php if (get_theme_mod($option_header)) {
-            echo get_theme_mod($option_header);
-          } else {
-            echo "Options";
-          }
-          ?>
-      </div>
-      <label class="book-options options-container"> 
-          <span class="options-text">
-            <?php if (get_theme_mod($pickup_label)) {
-                echo get_theme_mod($pickup_label);
-              } else {
-                echo "Store Pickup";
-              }
-              ?>
-          </span>
-        <input type="radio" name="choice" value="Pickup"> 
-        <span class="options-check"></span>
-      </label>
-      <label class="book-options options-container"> 
-          <span class="options-text">
-            <?php if (get_theme_mod($shipping_label)) {
-                echo get_theme_mod($shipping_label);
-              } else {
-                echo "Shipping";
-              }
-              ?>
-          </span>
-        <input type="radio" name="choice" value="Shipping">
-        <span class="options-check"></span>
-      </label>
-      <hr class="option-mobile">
 
       <!-- Quantity -->
       <div class="book-sectionheader">
@@ -101,7 +66,7 @@
         <form class="cart" method="post" enctype="multipart/form-data">
           <div class="quantity">
             <div id="minus" class="quantity-operator">–</div>
-            <input type="number" step="1" min="1" max="<?php echo $product->get_stock_quantity();?>" name="quantity" id="book-quantity" value="1" title="Quantity" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric" readonly>
+            <input type="number" step="1" min="1" max="<?php echo $product->get_stock_quantity();?>" name="quantity" id="book-quantity" value="1" title="Quantity" class="input-text qty text" size="4" inputmode="numeric" readonly>
             <div id="plus" class="quantity-operator">+</div>
           </div>
 
@@ -125,7 +90,14 @@
       <!-- Description -->
       <div class="book-sectionheader">Description</div>
       <div class="book-desc-content">
-        <?php echo $product->get_description();?>
+
+      <?php echo $product->get_description();?>
+      <?php 
+        $ean = $product->get_attribute('ean');
+        echo 
+          "<span id='descrip'></span>"
+      ?>
+
       </div>
     </div>
   </div>
