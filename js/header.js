@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("mobile-search-icon").addEventListener("click", showMobileSearchBar);
     document.getElementById("mobile-cancel").addEventListener("click", hideMobileSearchBar);
-    document.getElementById('mobile-icon').addEventListener("click", showMenuPopover)
+    // document.getElementById('mobile-icon').addEventListener("click", showMenuPopover)
 
     function showMobileSearchBar() {
         document.getElementById('top-images').style.display = 'none';
@@ -27,6 +27,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('mobile-search-bar-container').style.display = 'none';
         document.getElementById('top-images').style.display = 'flex';
         document.getElementById('mobile-header').style.paddingRight = '10px';
+    }
+
+    function showMenuPopover() {
+        document.getElementById('mobile-icon').style.display = 'none';
+        document.getElementById('mobile-menu-cancel').style.display = 'block';
+        document.getElementById('menu-popover').style.display = 'flex';
     }
 });
 

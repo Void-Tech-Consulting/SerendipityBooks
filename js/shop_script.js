@@ -1,8 +1,23 @@
 (function($) {
     $(document).ready(function(){
 
+        non_fiction_cats = Array(
+            'art', 'cooking', 'crafts', 'current-events-politics', 'death', 'essays', 'family', 'games', 
+            'garden', 'health', 'history', 'mindfulness', 'home', 'humor', 'local-history', 'math', 'memoir', 
+            'music', 'nature', 'philosophy', 'religion', 'science', 'social-sciences', 'spiritual', 'sports', 
+            'travel', 'womens-studies', 'writing'
+        );
+        fiction_cats = Array('lit-fict', 'mystery', 'romance', 'sf-fant', 'plays', 'drama', 'poetry');
+        childrens_cats = Array('kids', 'pop-ups');
+        young_adult_cats = Array('comics', 'ya');
+        gifts_cats = Array('coloring', 'journals', 'misc');
+
+        all_cats = Array(
+            'uncategorized', ...non_fiction_cats, ...fiction_cats, ...childrens_cats, ...young_adult_cats, ...gifts_cats
+        );
+
         posts_per_page = 30;
-        cat_name = '0';
+        cat_name = all_cats;
         condition = Array('new', 'used');
         order_by = 'meta_value_num';
         page = 1;
@@ -87,22 +102,22 @@
                 page = 1;
              switch(category) {
                  case "All":
-                     cat_name = '0';
+                     cat_name = all_cats;
                      break;
                 case "Nonfiction":
-                    cat_name = 'mystery';
+                    cat_name = non_fiction_cats;
                     break;
                 case "Fiction":
-                    cat_name = '0';
+                    cat_name = fiction_cats;
                     break;
                 case "Childrens":
-                    cat_name = 'kids';
+                    cat_name = childrens_cats;
                     break;
                 case "Young Adult":
-                    cat_name = '0';
+                    cat_name = young_adult_cats;
                     break;
                 case "Gifts":
-                    cat_name = '0';
+                    cat_name = gifts_cats;
                     break;  
              }
              update_shop();
@@ -123,7 +138,7 @@
                     condition = Array('new', 'used');
                        break;
                   case "New":
-                    condition = Array('new');
+                    condition = Array('mew');
                       break;
                   case "Used":
                     condition = Array('used');
@@ -138,8 +153,14 @@
                     change_order_by(e.srcElement.innerHTML);
                } else if (e.srcElement.parentElement.parentElement.id == 'display-num') {
                     change_display_num(e.srcElement.innerHTML);
-               }
-           }
+               } else if (e.srcElement.parentElement.parentElement.id == 'select-categories') {
+
+                change_category(e.srcElement.innerHTML);
+                } else if (e.srcElement.parentElement.parentElement.id == 'select-conditions') {
+                        change_condition(e.srcElement.innerHTML);
+                }
+            }
+
 
            function change_order_by(innerHTML) {
             page = 1;

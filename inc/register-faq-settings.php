@@ -16,7 +16,7 @@ function faq_customizer($wp_customize) {
   ));
 
   $wp_customize->selective_refresh->add_partial($faq_tradepolicy, array(
-    'selector' => 'span#edit-tradepolicy'
+    'selector' => '.edit-faq'
   ));
 
   $wp_customize->add_setting($faq_tradepolicy_content);
@@ -25,27 +25,6 @@ function faq_customizer($wp_customize) {
     'section' => $faq_section,
     'type' => 'textarea'
   ));
-  
-   // Gift Cards
-  $wp_customize->add_setting($faq_giftcards, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_giftcards, array(
-    'label' => 'Gift Cards',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_giftcards, array(
-    'selector' => 'span#edit-giftcards'
-  ));
-
-  $wp_customize->add_setting($faq_giftcards_content);
-  $wp_customize->add_control($faq_giftcards_content, array(
-    'label' => 'Gift Cards Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-  
 
    // Local Authors
    $wp_customize->add_setting($faq_authors, array(
@@ -63,66 +42,6 @@ function faq_customizer($wp_customize) {
   $wp_customize->add_setting($faq_authors_content);
   $wp_customize->add_control($faq_authors_content, array(
     'label' => 'Local Authors Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
-   // Contactless Pickup
-   $wp_customize->add_setting($faq_pickup, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_pickup, array(
-    'label' => 'Contactless Pickup',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_pickup, array(
-    'selector' => 'span#edit-pickup'
-  ));
-
-  $wp_customize->add_setting($faq_pickup_content);
-  $wp_customize->add_control($faq_pickup_content, array(
-    'label' => 'Contactless Pickup',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
- // Delivery Service
-  $wp_customize->add_setting($faq_delivery, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_delivery, array(
-    'label' => 'Delivery Service',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_delivery, array(
-    'selector' => 'span#edit-delivery'
-  ));
-
-  $wp_customize->add_setting($faq_delivery_content);
-  $wp_customize->add_control($faq_delivery_content, array(
-    'label' => 'Delivery Service Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
-   // Private Appointments
-   $wp_customize->add_setting($faq_appoint, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_appoint, array(
-    'label' => 'Private Appointments',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_appoint, array(
-    'selector' => 'span#edit-appoint'
-  ));
-
-  $wp_customize->add_setting($faq_appoint_content);
-  $wp_customize->add_control($faq_appoint_content, array(
-    'label' => 'Private Appointments Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));
@@ -163,3 +82,47 @@ function faq_customizer($wp_customize) {
   ));
 }
 add_action( 'customize_register', 'faq_customizer' );
+
+/* FAQ Repeater */
+function faq_repeater_customizer($wp_customize) {
+  require 'section_vars.php';  
+  require_once 'controller.php';  
+  
+  $wp_customize->add_section($faq_rsection, array(
+    'title' => 'FAQ Repeaters',
+  ));
+  
+  $wp_customize->add_setting(
+    $faq_repeater,
+    array(
+        'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+        'transport' => 'refresh',
+    ) );
+
+  $wp_customize->add_control(
+      new Onepress_Customize_Repeatable_Control(
+          $wp_customize,
+          $faq_repeater,
+          array(
+              'label' 		=> esc_html__('FAQ Repeater'),
+              'description'   => '',
+              'section'       => $faq_rsection,
+              'live_title_id' => 'faq_questype',
+              'title_format'  => esc_html__('[live_title]'), // [live_title]
+              'max_item'      => 10, // Maximum item can add
+              'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),
+              'fields'    => array(
+                  'faq_questype'  => array(
+                      'title' => esc_html__('Question Type'),
+                      'type'  =>'text',
+                  ),
+                  'faq_quescontent'  => array(
+                      'title' => esc_html__('Answer'),
+                      'type'  =>'editor',
+                  )
+              ),
+          )
+      )
+  );
+}
+add_action( 'customize_register', 'faq_repeater_customizer' );

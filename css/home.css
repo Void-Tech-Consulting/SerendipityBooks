@@ -29,7 +29,7 @@ html {
     margin: max(0.75rem, 0.75vw) 0;
 }
 
-.home-section, #contactless-content {
+.home-section {
     max-width: calc(60% + 50px);
 }
 
@@ -130,7 +130,9 @@ html {
 .carousel {
     display: grid;
     gap: max(4.75vw, 2.75rem);
-    grid-auto-flow: column;
+    grid-auto-flow: column dense;
+    justify-items: start;
+    justify-content: start;
     overflow-x: hidden;
 }
 
@@ -200,6 +202,8 @@ html {
         calc(var(--book-width) * 1.3), 
         calc(var(--max-book-width) * 1.3)
         );
+        color: #000;
+        font-size: clamp(15px, 2vw, 28px);
 }
 
 .book-title {
@@ -218,70 +222,20 @@ html {
     font-size: clamp(1rem, 1.2vw, 2.4rem);
 }
 
-/* Contactless section CSS */
-#contactless {
-    background-color: #E5E2DB;
-    max-width: initial;
-    height: max-content;
-    padding: 5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contactless-part {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-#contactless-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-#contactless-buttons {
-    display: flex;
-}
-
-#contactless-buttons .flat-button {
-    margin-right: max(2rem, 2vw);
-    white-space: nowrap;
-}
-
-#contactless-text {
-    width: max(17.5rem, 35vw);
-    font-family: 'Lora', serif;
-    font-weight: 500;
-    min-height: 0vw;
-    font-size: clamp(1.3rem, 2.2vw, 3.55rem);
-    margin-bottom: max(2rem, 2vw);
-}
-
-#contactless-left {
-    flex: 1 1 50%;
-}
-
-#contactless-right {
-    flex: 2 2 50%;
-}
-
+/* Event styling */
 .event-container {
-    display: flex;
-    justify-content: flex-start;
+    column-count: 2;
+    column-gap: 2rem;
 }
 
-#left-event {
-    margin-right: min(6.5rem, 5vw);
+.event-wrapper {
+    padding-bottom: 2rem;
+    break-inside: avoid;
 }
 
-#right-event {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.event-link {
+    width: min-content;
+    height: min-content;
 }
 
 .event {
@@ -297,7 +251,7 @@ html {
         font-size: 16px;
     }
 
-    .home-section, #contactless-content {
+    .home-section {
         max-width: calc(55% + 50px);
     }
 }
@@ -307,7 +261,7 @@ html {
         font-size: 20px;
     }
 
-    .home-section, #contactless-content {
+    .home-section {
         max-width: calc(50% + 50px);
     }
 }
@@ -319,7 +273,7 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-    .home-section, #contactless-content {
+    .home-section {
         max-width: calc(70% + 50px);
     }
 
@@ -334,7 +288,7 @@ html {
 
 @media screen and (max-width: 488px) {
 
-    .home-section, #contactless-content {
+    .home-section {
         max-width: calc(80% + 50px);
     }
 
@@ -369,16 +323,6 @@ html {
         display: block;
     }
 
-    /* Move the contactless section below the events section */
-    #contactless {
-        order: 1;
-    }
-
-    #contactless-text {
-        min-height: 0vw;
-        font-size: clamp(1.25rem, 2.5vw, 4rem);
-    }
-
     .flat-button {
         padding: 0.5rem 1rem;
         min-height: 0vw;
@@ -406,15 +350,6 @@ html {
     }
 
     .event-container {
-        flex-direction: column;
-    }
-
-    .event-container img {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    #left-event {
-        margin-right: 0;
+        columns: 1;
     }
 }

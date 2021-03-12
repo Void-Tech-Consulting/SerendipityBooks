@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use function PHPSTORM_META\type;
 
 add_action("wp_ajax_shop_by_category", "shop_by_category");
 
@@ -8,18 +10,25 @@ function shop_by_category() {
     $paged = $_REQUEST["paged"];
     $condition = $_REQUEST["condition"];
     $order_by = $_REQUEST["order_by"];
+
     $args = array(
         'post_type' => 'product',
-        'product_cat' => $cat_name,
         'meta_key' => 'total_sales',
         'orderby' => $order_by,
         'order'   => 'DESC',
         'suppress_filters' => true,
-        'meta_query'     => array( array(
-          'key' => 'condition',
-          'value' => $condition,
-          'compare' => 'IN',
-      ) ),
+        'tax_query' => array( 
+          array(
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => $cat_name
+          )
+        ),
+        // 'meta_query'     => array(array(
+        //   'key' => 'condition',
+        //   'value' => $condition,
+        //   'compare' => 'IN',
+        // )),
         'posts_per_page' => $posts_per_page,
         'paged' => $paged
       );
@@ -47,20 +56,22 @@ function display_product($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
     $ean = $product->get_attribute('ean');
-  
+    $url = get_post_permalink($product->id);
     $price = number_format($price, 2);
   
     $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
   
     return "
-    <div class='book-content'>
-      <div class='book-cover'>
-          <img src=$imgsrc alt='Book Cover'>
+    <a href='$url'>
+      <div class='book-content'>
+        <div class='book-cover'>
+            <img src=$imgsrc alt='Book Cover'>
+        </div>
+        <span id='edit-bi'></span>
+        <div  class='book-info'>
+          <span class='book-title'>$name</span>
+          <span class='book-price'>$price</span>
+        </div>
       </div>
-      <span id='edit-bi'></span>
-      <div class='book-info'>
-        <span class='book-title'>$name</span>
-        <span class='book-price'>$price</span>
-      </div>
-    </div>";
+    </a>";
   }

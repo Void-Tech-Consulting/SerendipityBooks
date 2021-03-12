@@ -20,8 +20,6 @@
   $home_description = 'home_description';
   $home_bestsellers_title = 'home_bestsellers_title';
   $home_favorites_title = 'home_favorites_title';
-  $home_contactless_description = 'home_contactless_description';
-  $home_contactless_img = 'home_contactless_img';
   $home_events_title = 'home_events_title';
 
   // Header Vars
@@ -49,19 +47,13 @@
   $faq_quescontent = 'faq_quescontent';
   $faq_tradepolicy = 'faq_tradepolicy';
   $faq_tradepolicy_content = 'faq_tradepolicy_content';
-  $faq_giftcards = 'faq_giftcards';
-  $faq_giftcards_content = 'faq_giftcards_content';
   $faq_authors = 'faq_authors';
   $faq_authors_content = 'faq_authors_content';
-  $faq_pickup = 'faq_pickup';
-  $faq_pickup_content = 'faq_pickup_content';
-  $faq_delivery = 'faq_delivery';
-  $faq_delivery_content = 'faq_delivery_content';
-  $faq_appoint = 'faq_appoint';
-  $faq_appoint_content = 'faq_appoint_content';
   $faq_info = 'faq_info';
   $faq_info_content = 'faq_info_content';
   $faq_img = 'faq_img';
+  $faq_repeater = 'faq_repeater';
+  $faq_rsection = 'faq_rsection';
 
   // Shop Vars
   $shop_section = 'shop_section';
@@ -75,8 +67,6 @@
   $shop_moreimg = 'shop_moreimg';
   $shop_display = 'shop_display';
   
-
-
   // Book Vars
   $book_section = 'book_section';
   $option_header = 'option_header';
@@ -85,11 +75,14 @@
   $book_quantity_label = 'book_quantity_label';
   $add_to_cart_label = 'add_to_cart_label';
 
-  // Example
+  // Favorites
+  $favorite_repeater = 'favorite_repeater';
+  $favorite_section = 'favorite_section';
 
-  $example_repeater = 'example_repeater';
-  $example_section = 'example_section';
-
+  // Bestsellers
+  $bestseller_repeater = 'bestseller_repeater';
+  $bestseller_section = 'bestseller_section';
+  
   $event_repeater = 'event_repeater';
   $events_section2 = 'events_section2';
 
