@@ -55,15 +55,13 @@
       </div>
     </a>
     <div class="event-dropdown">
-      <a href="<?php echo get_page_link( get_page_by_title('Events')->ID ); ?>">
-        <div class="link">
-          <?php if (get_theme_mod($header_events_title)) { 
-            echo get_theme_mod($header_events_title);
-            } else {?>
-            EVENTS
-          <?php }?>
-        </div>
-      </a>
+      <div class="link">
+        <?php if (get_theme_mod($header_events_title)) { 
+          echo get_theme_mod($header_events_title);
+          } else {?>
+          EVENTS
+        <?php }?>
+      </div>
       <div class="event-dropdown-content">
             <?php $data  = get_example_data($event_repeater);
             if (!empty($data)) {
@@ -141,15 +139,13 @@
         </div>
       </a>
       <div class="event-dropdown">
-        <a href="<?php echo get_page_link( get_page_by_title('Events')->ID ); ?>">
-          <div class="menu-link">
-            <?php if (get_theme_mod($header_events_title)) { 
-              echo get_theme_mod($header_events_title);
-              } else {?>
-              EVENTS
-            <?php }?>
-          </div>
-        </a>
+        <div class="menu-link">
+          <?php if (get_theme_mod($header_events_title)) { 
+            echo get_theme_mod($header_events_title);
+            } else {?>
+            EVENTS
+          <?php }?>
+        </div>
         <div class="event-dropdown-content">
         <?php $data  = get_example_data($event_repeater);
             if (!empty($data)) {

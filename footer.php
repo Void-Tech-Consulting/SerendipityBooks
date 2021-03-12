@@ -1,7 +1,9 @@
 <!-- If you have html on the footer of each page put it here -->
-<?php wp_footer(); 
- require get_template_directory() . '/inc/section_vars.php';
- ?>
+<?php 
+    wp_enqueue_style('footer');
+    wp_footer(); 
+    require get_template_directory() . '/inc/section_vars.php';
+?>
 
 </body>
     <div class="top-footer">

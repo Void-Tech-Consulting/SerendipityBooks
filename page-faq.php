@@ -2,6 +2,22 @@
   get_header(); 
   wp_enqueue_style('faq');
   require get_template_directory() . '/inc/section_vars.php';
+
+  function show_faq($type, $content) {
+    echo "
+    <div>
+      <div class='quescontainer'>
+        <button type='button' class='questype'>
+        <span class='edit-faq'>
+          <span class='questitle'>$type</span>
+        </span>
+          <i class='fas fa-angle-down'></i>
+        </button>
+      <div class='quescontent'>$content</div>
+    </div>
+    ";
+  }
+  $faq = get_example_data($faq_repeater);
 ?>
 
 <!DOCTYPE html>
@@ -26,77 +42,16 @@
   <div id="faq_layout">
     <!-- Section: Questions -->
     <section class="faq-sec" id="questions">
-      <!-- Trade Policy -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-tradepolicy">
-            <?php if (get_theme_mod($faq_tradepolicy)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_tradepolicy) ?></span>
-            <?php } else { ?>
-              <span class="questitle">trade policy</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        
-        <?php if (get_theme_mod($faq_tradepolicy_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_tradepolicy_content) ?></div>
-        <?php } ?>
-        <div class="quescontent">
-          <p>We do take books in for trade but do not give cash. Instead:</p>
-          <p>- for any books we take, we offer 20% of the new value of the book in store credit<br>
-            - store credit can be used for up to 50% of a purchase<br>
-            - store credit can accumulate on your account and will not expire<br>
-            - we do not guarantee a return on any books previously purchased
-          </p>
-
-          <p>The kind of books we look for are:</p>
-
-          <p>- book club choices and recent award winners in paperback<br>
-            - classics in paperback or hardback<br>
-            - popular children’s books in great condition (think Wimpy Kids, Harry Potter, Magic Tree House)<br>
-            - unusual and eclectic vintage treasures<br>
-            - popular current reads (think Grisham, Patterson, Lee Child, Nora Roberts)
-          </p>
-
-          <p>No appointment is necessary; books can be dropped off at any time. We’ll call you with the total to be 
-          credited to your account. Unwanted books will be donated or you can pick them up.</p>
-
-          <p>Store credit can be applied towards used books already in the store. It cannot be applied against special 
-          orders, new books or other items (such as journals, soaps, pins etc).</p>
-        </div>
-      </div>
-
-
-      <!-- Gift Cards -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-giftcards">
-            <?php if (get_theme_mod($faq_giftcards)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_giftcards) ?></span>
-            <?php } else { ?>
-              <span class="questitle">gift cards</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-      
-
-        <?php if (get_theme_mod($faq_giftcards_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_giftcards_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>Electronic gift cards for shopping at the brick and mortar are available 
-          <a href="#" class="faqlinks">here.</a></p>
-
-          <p>Please note: our gift cards only work for items purchased through Serendipity Books brick and mortar. 
-          They do not play nicely with our affiliate.</p>
-        </div>
-      </div>
-
-
+      <?php 
+        if (!empty($faq)) { 
+           $size = sizeof($faq);
+           for($i = 0; $i < $size; $i++) {
+              $type = $faq[$i]['faq_questype'];
+              $content = $faq[$i]['faq_quescontent'];
+              show_faq($type, $content);
+            }  
+        }
+        ?>
       <!-- Local Authors -->
       <div class="quescontainer">
         <button type="button" class="questype">
@@ -127,130 +82,9 @@
           massive achievement,</p>
           <p>Michelle.</p>
 
-          <form>
-            <label for="name">Name</label>
-            <input type="text">
-            <label for="email">Email</label>
-            <input type="text">
-            <label for="authorsite">Author Website (if available)</label>
-            <input type="text">
-            <label for="booktitle">Book Title</label>
-            <input type="text">
-            <label for="genre">Genre</label>
-            <input type="text">
-            <label for="coverprice">Cover Price</label>
-            <input type="text">
-            <label for="availability">Is this book available on Ingram?</label>
-            <input type="text">
-            <label for="synopsis">Synopsis of Book</label>
-            <input type="text">
-
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-      </div>
-
-
-      <!-- Contactless Pickup -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-pickup">
-            <?php if (get_theme_mod($faq_pickup)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_pickup) ?></span>
-            <?php } else { ?>
-              <span class="questitle">contactless pickup</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        <?php if (get_theme_mod($faq_pickup_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_pickup_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>Click <a href="#" class="faqlinks">here</a> to schedule a pickup.</p>
-        </div>
-      </div>
-
-
-      <!-- Delivery Service -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-delivery">
-            <?php if (get_theme_mod($faq_delivery)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_delivery) ?></span>
-            <?php } else { ?>
-              <span class="questitle">delivery service</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        <?php if (get_theme_mod($faq_delivery_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_delivery_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>For free deliveries visit <a href="#" class="faqlinks">here</a> or call us at (734) 475-7148. If you need title 
-          suggestions, Michelle can help. If you don’t see the book you want on our website, shop our 
-          extended inventory <a href="#" class="faqlinks">here.</a></p>
-        </div>
-      </div>
-
-
-      <!-- Private Appointments -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-appoint">
-            <?php if (get_theme_mod($faq_appoint)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_appoint) ?></span>
-            <?php } else { ?>
-              <span class="questitle">private appointments</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-          
-        </button>
-
-        <?php if (get_theme_mod($faq_appoint_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_appoint_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>If you would like to schedule a private appointment click <a href="#" class="faqlinks">here.</a></p>
-        </div>
-      </div>
-
-      <!-- Shop Info -->
-      <div class="quescontainer">
-        <button type="button" class="questype">
-          <span id="edit-info">
-            <?php if (get_theme_mod($faq_info)) { ?>
-              <span class="questitle"><?php echo get_theme_mod($faq_info) ?></span>
-            <?php } else { ?>
-              <span class="questitle">shop info</span>
-            <?php } ?>
-          </span>
-          <i class="fas fa-angle-down"></i>
-        </button>
-
-        <?php if (get_theme_mod($faq_info_content)) { ?>
-            <div class="quescontent"><?php echo get_theme_mod($faq_info_content) ?></div>
-        <?php } ?>
-
-        <div class="quescontent">
-          <p>Hours:<br>
-            Tues - Sat: 11 -5<br>
-            Sun: 12 - 4
-          </p>
-          <p>Address:<br>
-            113 W Middle St<br>
-            Chelseas, MI 48118
-          </p>
-          <p>Phone:<br>
-            (734) 475-7148
-          </p>
+          <div class="authorsform"> 
+            <?php echo do_shortcode ( '[wpforms id="8812"]' ) ?>
+          </div>
         </div>
       </div>
     </section>
