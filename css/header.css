@@ -52,7 +52,7 @@ a:link {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 2.25rem);
     line-height: 2rem;
 
     color: #000000;
@@ -214,7 +214,7 @@ a:link {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 1.5vw, 2.25rem);
     line-height: 3.5rem;
     text-align: center;
 
@@ -224,6 +224,9 @@ a:link {
 @media screen and (max-width: 800px) {
     .links {
         display: none;
+    }
+    .menu-link {
+        padding: 1rem;
     }
     #mobile-header {
         display: flex;
@@ -243,6 +246,7 @@ a:link {
         display: flex;
     }
     #mobile-header {
+        font-size: clamp(1rem, 1.5vw, 2.25rem);
         display: none;
     }
 }
