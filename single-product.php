@@ -13,6 +13,7 @@
   <title>Shop Book Page</title>
 </head>
 <body>
+
 <?php echo do_shortcode('[product_page id="31"]'); ?>
   <div id="shop-book-path"><?php echo $product->get_categories();?></div>
   
@@ -30,7 +31,7 @@
       $ean = $product->get_attribute('ean');
       $url1 = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
       echo $url1 ?> alt=""> -->
-     
+
     </div>
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
@@ -43,7 +44,13 @@
       ?>
       <?php echo $product->get_name(); ?>
       </div>
-      <div class="book-sectionheader option-mobile"><?php echo $product->get_price();?></div>
+      <div class="book-sectionheader option-mobile">
+        <?php 
+          $price = $product->get_price();
+          $price = number_format($price, 2);
+          echo '$' . $price;
+        ?>
+      </div>
       <hr>
 
       <!-- Quantity -->
@@ -83,12 +90,14 @@
       <!-- Description -->
       <div class="book-sectionheader">Description</div>
       <div class="book-desc-content">
+
       <?php echo $product->get_description();?>
       <?php 
         $ean = $product->get_attribute('ean');
         echo 
           "<span id='descrip'></span>"
       ?>
+
       </div>
     </div>
   </div>

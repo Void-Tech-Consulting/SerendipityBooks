@@ -2,12 +2,20 @@
 get_header();
 require get_template_directory() . '/inc/section_vars.php';
 
+$base_uri = get_template_directory_uri();
+
+$favorites  = get_example_data($favorite_repeater);
+$bestsellers  = get_example_data($bestseller_repeater);
+$events = get_example_data($event_repeater);
+
 function display_book(&$product) {
   $name = $product->get_name();
   $price = (float) $product->get_price();
   $ean = $product->get_attribute('ean');
   $url = get_post_permalink($product->id);
   $price = number_format($price, 2);
+
+  // echo wc_display_product_attributes( $product );
 
   $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
 
@@ -27,6 +35,14 @@ function display_book(&$product) {
   </a>";
 }
 
+function display_theme_var($var, $default) {
+  if (get_theme_mod($var)) {
+    echo get_theme_mod($var);
+  } else {
+    echo $default;
+  }
+}
+
 function carousel_loop(&$books, $key) {
   $len = min(count($books), 10);
   for ($i = 0; $i < $len; $i++) {
@@ -39,25 +55,13 @@ function carousel_loop(&$books, $key) {
   }
 }
 
-$favorites  = get_example_data($favorite_repeater);
-$bestsellers  = get_example_data($bestseller_repeater);
-$events = get_example_data($event_repeater);
-$base_uri = get_template_directory_uri();
-
-function display_theme_var($var, $default) {
-  if (get_theme_mod($var)) {
-    echo get_theme_mod($var);
-  } else {
-    echo $default;
-  }
-}
 ?>
 
 <main id="home-main">
 
   <!-- Description section -->
   <section class="home-section" id="description-container">
-    <img class="bracket" style="transform: rotate(180deg);" src=<?php echo "$base_uri/img/bracket.svg" ?>>
+    <img class="bracket" alt="bracket" style="transform: rotate(180deg);" src=<?php echo "$base_uri/img/bracket.svg" ?>>
     <span id="description-text">
       <span id="edit-description"></span>
       <?php display_theme_var(
@@ -66,7 +70,7 @@ function display_theme_var($var, $default) {
       );
       ?>
     </span>
-    <img class="bracket" src=<?php echo "$base_uri/img/bracket.svg" ?>>
+    <img class="bracket" alt="bracket" src=<?php echo "$base_uri/img/bracket.svg" ?>>
   </section>
 
   <!-- Mobile header -->
@@ -167,6 +171,7 @@ function display_theme_var($var, $default) {
         </div>
       </header>
 
+      <!-- Upcoming events container -->
       <div class="event-container">
         <?php
         $num_events = count($events);
@@ -174,7 +179,10 @@ function display_theme_var($var, $default) {
         ?>
           <div class="event-wrapper">
             <a class="event-link" href=<?php echo get_site_url() . "/events?id=$i" ?>>
-              <img class="event" src=<?php echo esc_url(get_media_url($events[$i]['poster_image'])) ?>>
+              <img 
+                class="event"
+                src=<?php echo esc_url(get_media_url($events[$i]['poster_image'])) ?>
+                alt=<?php echo $events[$i]['event_title']?>>
             </a>
           </div>
         <?php } ?>
