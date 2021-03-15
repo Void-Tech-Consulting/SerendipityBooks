@@ -21,16 +21,39 @@
   <div id="shop-book-flex">
     <div id="shop-bookcover">
     
-      <?php 
+      <!-- from google api -->
+      <!-- <?php 
         $ean = $product->get_attribute('ean');
         echo 
           "<section id='bookcover' data-isbn=$ean>
           <img src='' alt='' id='thumbnail' /> "
-      ?>
+      ?> -->
+
+      <!-- from openlibrary -->
       <!-- <img src=<?php 
       $ean = $product->get_attribute('ean');
-      $url1 = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
-      echo $url1 ?> alt=""> -->
+      $url = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+      echo $url ?> alt=""> -->
+
+      <!-- check for error with retrieved cover and replace -->
+      <?php 
+        $ean = $product->get_attribute('ean');
+        $url = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+        if ($url) {
+          echo $url;
+          echo "<img src=$url />";
+        }
+        else {
+          echo $product->get_image();
+        }
+      ?>
+      
+      
+    <!-- get uploaded image -->
+    <?php 
+      echo $product->get_image(); // includes image in search bar
+      // echo $product->get_short_description(); // put image in short-description
+    ?>
 
     </div>
     <div id="shop-bookdesc">
@@ -90,8 +113,6 @@
       <!-- Description -->
       <div class="book-sectionheader">Description</div>
       <div class="book-desc-content">
-
-      <?php echo $product->get_description();?>
       <?php 
         $ean = $product->get_attribute('ean');
         echo 
