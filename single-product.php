@@ -39,15 +39,13 @@
       <?php 
         $ean = $product->get_attribute('ean');
         $url = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
-        if ($url) {
-          echo $url;
+        if ($url != "http://covers.openlibrary.org/b/isbn/$ean-L.jpg?default=false") {  
           echo "<img src=$url />";
         }
         else {
           echo $product->get_image();
         }
       ?>
-      
       
     <!-- get uploaded image -->
     <?php 
