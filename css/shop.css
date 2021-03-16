@@ -265,21 +265,33 @@
 
 .shop-more-text {
   font-family: 'Lora', sans-serif;
-  font-size: clamp(12px, 2vw, 32px);
+  font-size: clamp(10px, 2vw, 32px);
   text-align: center;
   margin: 0 30px;
 }
 
-.shop-more-text button {
+.shop-more-button button {
   font-family: 'Lato', sans-serif;
   width: clamp(66px, 15vw, 225px);
-  height: clamp(24px, 4vw, 70px);
-  border: none;
+  height: clamp(24px, 10vw, 90px);
+  border: 3px solid #CBD9C4;
   font-size: clamp(8px, 1.8vw, 25px);
+  margin: 10px;
   margin-top: clamp(8px, 2.1vw, 40px);
   background-color: #CBD9C4;
   box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;  
+  cursor: pointer;
+}
+ 
+.shop-more-button {
+  color: #000;
+  text-decoration: none;
+}
+
+.shop-more-button button:hover, .shop-more-button button:active {
+  border: 3px solid #000;
+  color: #000;
 }
 
 #shop-more img {
@@ -364,5 +376,10 @@
   #shop-more img {
     display: none;
   }
-
+  
+  .shop-more-button button:hover, .shop-more-button button:active {
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+  }
 }
