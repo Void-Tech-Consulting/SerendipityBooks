@@ -1,19 +1,14 @@
 (function($) {
     $(document).ready(function(){
 
-        non_fiction_cats = Array(
-            'art', 'cooking', 'crafts', 'current-events-politics', 'death', 'essays', 'family', 'games', 
-            'garden', 'health', 'history', 'mindfulness', 'home', 'humor', 'local-history', 'math', 'memoir', 
-            'music', 'nature', 'philosophy', 'religion', 'science', 'social-sciences', 'spiritual', 'sports', 
-            'travel', 'womens-studies', 'writing'
-        );
-        fiction_cats = Array('lit-fict', 'mystery', 'romance', 'sf-fant', 'plays', 'drama', 'poetry');
-        childrens_cats = Array('kids', 'pop-ups');
-        young_adult_cats = Array('comics', 'ya');
-        gifts_cats = Array('coloring', 'journals', 'misc');
+        nonfiction = 'nonfiction';
+        fiction = 'fiction'
+        childrens = 'childrens';
+        young_adult = 'young-adult';
+        gifts = 'gifts';
 
         all_cats = Array(
-            'uncategorized', ...non_fiction_cats, ...fiction_cats, ...childrens_cats, ...young_adult_cats, ...gifts_cats
+            'uncategorized', gifts, fiction, childrens, young_adult, nonfiction
         );
 
         posts_per_page = 30;
@@ -105,19 +100,19 @@
                      cat_name = all_cats;
                      break;
                 case "Nonfiction":
-                    cat_name = non_fiction_cats;
+                    cat_name = nonfiction;
                     break;
                 case "Fiction":
-                    cat_name = fiction_cats;
+                    cat_name = fiction;
                     break;
                 case "Childrens":
-                    cat_name = childrens_cats;
+                    cat_name = childrens;
                     break;
                 case "Young Adult":
-                    cat_name = young_adult_cats;
+                    cat_name = young_adult;
                     break;
                 case "Gifts":
-                    cat_name = gifts_cats;
+                    cat_name = gifts;
                     break;  
              }
              update_shop();
@@ -138,7 +133,7 @@
                     condition = Array('new', 'used');
                        break;
                   case "New":
-                    condition = Array('mew');
+                    condition = Array('new');
                       break;
                   case "Used":
                     condition = Array('used');
