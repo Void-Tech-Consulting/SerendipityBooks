@@ -24,11 +24,11 @@ function shop_by_category() {
             'terms' => $cat_name
           )
         ),
-        // 'meta_query'     => array(array(
+        'meta_query'     => array(array(
         //   'key' => 'condition',
-        //   'value' => $condition,
-        //   'compare' => 'IN',
-        // )),
+          'value' => $condition,
+          'compare' => 'like',
+        )),
         'posts_per_page' => $posts_per_page,
         'paged' => $paged
       );
