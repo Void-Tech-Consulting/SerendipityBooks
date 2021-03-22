@@ -21,25 +21,13 @@
   <div id="shop-book-flex">
     <div id="shop-bookcover">
     
-      <!-- from google api -->
-      <!-- <?php 
-        $ean = $product->get_attribute('ean');
-        echo 
-          "<section id='bookcover' data-isbn=$ean>
-          <img src='' alt='' id='thumbnail' /> "
-      ?> -->
-
-      <!-- from openlibrary -->
-      <!-- <img src=<?php 
-      $ean = $product->get_attribute('ean');
-      $url = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
-      echo $url ?> alt=""> -->
-
-      <!-- check for error with retrieved cover and replace -->
+      <!-- check if uploaded image exists -->
       <?php 
         $ean = $product->get_attribute('ean');
         $url = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
-        if ($url != "http://covers.openlibrary.org/b/isbn/$ean-L.jpg?default=false") {  
+        $image_id  = $product->get_image_id();
+        $image_url = wp_get_attachment_image_url( $image_id, 'full' );
+        if ($image_url == "") {
           echo "<img src=$url />";
         }
         else {
@@ -49,7 +37,7 @@
       
     <!-- get uploaded image -->
     <?php 
-      echo $product->get_image(); // includes image in search bar
+      // echo $product->get_image(); // includes image in search bar
       // echo $product->get_short_description(); // put image in short-description
     ?>
 
@@ -57,13 +45,11 @@
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
       <div class="book-sectionheader option-mobile">
+  
       <?php 
-        $ean = $product->get_attribute('ean');
-        echo 
-          "<span id='bookauthorlast'></span>
-          <span id='bookauthorfirst'></span>"
-      ?>
-      <?php echo $product->get_name(); ?>
+        // author name is in description
+        echo $product->get_description();
+        echo $product->get_name(); ?>
       </div>
       <div class="book-sectionheader option-mobile">
         <?php 
@@ -112,9 +98,12 @@
       <div class="book-sectionheader">Description</div>
       <div class="book-desc-content">
       <?php 
+        // description from Google API
         $ean = $product->get_attribute('ean');
         echo 
-          "<span id='descrip'></span>"
+         "<section id='bookcover' data-isbn=$ean>
+            <span id='descrip'></span>
+          </section>"
       ?>
 
       </div>
