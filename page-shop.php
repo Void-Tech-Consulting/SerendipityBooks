@@ -64,8 +64,6 @@
         <div>Used</div>
       </div>
       <?php } ?>
-
-      
     </section>
 
     <!-- Right: Bookshop -->
@@ -96,8 +94,6 @@
             </select>
           </div>
         </div>
-        
-      
 
         <div id="phone-categories">
            <div class="display-content" id="select-categories">
@@ -153,7 +149,7 @@
         </div>
       </div>
 
-      <div id="display-bookstore"> </div>
+      <div id="display-bookstore"></div>
 
       <div id="page-bar">
         <div class="page-bar-arrow page-bar-left" id="page-bar-left-arrow">
@@ -164,7 +160,6 @@
           <img src=<?php echo get_template_directory_uri() . "/img/arrow-point-to-right.svg" ?> alt="Right Arrow">
         </div>
       </div>
-
     </section>
   </div>
   
@@ -180,7 +175,12 @@
     <div class="shop-more-text">
       <p>Haven’t found what you’re looking for?</p>
       <p>Check out more books from Michelle below!</p>
-      <button>SHOP MORE</button>
+      <a class="shop-more-button" href="https://bookshop.org/shop/serendipitybooks">
+        <button>Shop More for Home Delivery</button>
+      </a>
+      <a class="shop-more-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd4BJ7A1TviezYOXWrA9SLyBcxcSJsrm1oym1xeU4-r2zjzTA/viewform">
+        <button>Shop More for Chelsea Pickup</button>
+      </a>
     </div>
     <span id="edit-moreimg"></span>
     <?php if (get_theme_mod($shop_moreimg)) { ?>

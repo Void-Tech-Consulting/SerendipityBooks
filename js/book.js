@@ -33,7 +33,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             
         var alen = author.length, name;
         for (var i = alen - 1; i > 0; i--) {
-          console.log(author[i]);
           if (author[i] == ' ') {
             name = i;
             break;
