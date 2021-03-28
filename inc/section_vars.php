@@ -64,6 +64,8 @@
   $shop_bc = 'shop_bc';
   $shop_bi = 'shop_bi';
   $shop_moretext = 'shop_moretext';
+  $shop_delivery = 'shop_delivery';
+  $shop_pickup = 'shop_pickup';
   $shop_moreimg = 'shop_moreimg';
   $shop_display = 'shop_display';
   

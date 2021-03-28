@@ -129,7 +129,6 @@
 div.wpforms-container-full .wpforms-form .wpforms-field-label {
     font-family: 'Lato', sans-serif !important;
     font-weight: 500 !important;
-    font-size: 18px !important;
 }
 
 div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea {
@@ -153,7 +152,6 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
 
 .wpforms-form button[type=submit]:hover, .wpforms-form button[type=submit]:active {
     border: 3px solid #000000 !important;
-    font-size: 18px;
     color: #000000;
     font-weight: 700;
     padding: 0 !important;
@@ -253,7 +251,11 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     }
 
     .quescontent {
-        font-size: 12px;
+        font-size: 12px !important;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-field-label, div.wpforms-container-full .wpforms-form .wpforms-field-label, div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea { 
+        font-size: 12px !important;
     }
 
     .fa-angle-down, .fa-angle-up {
