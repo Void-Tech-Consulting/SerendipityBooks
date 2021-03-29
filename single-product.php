@@ -14,8 +14,8 @@
 </head>
 <body>
 
-<?php echo do_shortcode('[product_page id="31"]'); ?>
-  <div id="shop-book-path"><?php echo $product->get_categories();?></div>
+ <!-- <?php echo do_shortcode('[product_page id="31"]'); ?>
+  <div id="shop-book-path"><?php echo $product->get_categories();?></div>  -->
   
 </section>
   <div id="shop-book-flex">
