@@ -6,26 +6,6 @@ function faq_customizer($wp_customize) {
     'title' => 'FAQ Page',
   ));
 
-  // Trade Policy 
-  $wp_customize->add_setting($faq_tradepolicy, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_tradepolicy, array(
-    'label' => 'Trade Policy',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_tradepolicy, array(
-    'selector' => '.edit-faq'
-  ));
-
-  $wp_customize->add_setting($faq_tradepolicy_content);
-  $wp_customize->add_control($faq_tradepolicy_content, array(
-    'label' => 'Trade Policy Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
    // Local Authors
    $wp_customize->add_setting($faq_authors, array(
     'transport' => 'postMessage',
@@ -42,26 +22,6 @@ function faq_customizer($wp_customize) {
   $wp_customize->add_setting($faq_authors_content);
   $wp_customize->add_control($faq_authors_content, array(
     'label' => 'Local Authors Content',
-    'section' => $faq_section,
-    'type' => 'textarea'
-  ));
-
-  // Shop Info
-  $wp_customize->add_setting($faq_info, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($faq_info, array(
-    'label' => 'Shop Info',
-    'section' => $faq_section,
-  ));
-
-  $wp_customize->selective_refresh->add_partial($faq_info, array(
-    'selector' => 'span#edit-info'
-  ));
-
-  $wp_customize->add_setting($faq_info_content);
-  $wp_customize->add_control($faq_info_content, array(
-    'label' => 'Shop Info Content',
     'section' => $faq_section,
     'type' => 'textarea'
   ));

@@ -45,12 +45,8 @@
   $faq_section = 'faq_section';
   $faq_questype = 'faq_questype';
   $faq_quescontent = 'faq_quescontent';
-  $faq_tradepolicy = 'faq_tradepolicy';
-  $faq_tradepolicy_content = 'faq_tradepolicy_content';
   $faq_authors = 'faq_authors';
   $faq_authors_content = 'faq_authors_content';
-  $faq_info = 'faq_info';
-  $faq_info_content = 'faq_info_content';
   $faq_img = 'faq_img';
   $faq_repeater = 'faq_repeater';
   $faq_rsection = 'faq_rsection';
