@@ -6,23 +6,26 @@ function display_book($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
     $ean = $product->get_attribute('ean');
+    $url = get_post_permalink($product->id);
 
     $price = number_format($price, 2);
 
     $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
 
     echo "
-      <div class='book'>
-        <div class='book-card'>
-          <img 
-            alt='$name Book Cover' 
-            src=$imgsrc>
+    <a href='$url'>
+        <div class='book'>
+            <div class='book-card'>
+            <img 
+                alt='$name Book Cover' 
+                src=$imgsrc>
+            </div>
+            <div class='book-desc'>
+            <div class='book-title'>$name</div>
+            <div class='book-price'>$$price</div>
+            </div>
         </div>
-        <div class='book-desc'>
-          <div class='book-title'>$name</div>
-          <div class='book-price'>$$price</div>
-        </div>
-      </div>";
+    </a>";
 }
 
 if (have_posts()) :

@@ -8,7 +8,7 @@
     background-color: #CBD9C4;;
     align-items: center;
     justify-content: center;
-    height: 247px;
+    height: 24.7rem;
 }
 
 .faq-sec {
@@ -20,15 +20,15 @@
     font-family: 'Lora', sans-serif;
     color: rgba(0, 0, 0, 1);
     text-transform: uppercase;
-    font-size: clamp(24px, 3.2vw, 48px);
+    font-size: clamp(2.4rem, 3.2vw, 4.8rem);
     font-weight: 700;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .brackets {
     font-family: 'Lato', sans-serif;
-    font-size: clamp(96px, 10vw, 170px);
+    font-size: clamp(9.6rem, 10vw, 17rem);
     font-weight: 200;
     line-height: 100%;
 }
@@ -36,7 +36,7 @@
 #faq_layout {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 83px;
+    margin-top: 8.3rem;
 }
 
 .faqlinks {
@@ -50,28 +50,28 @@
 /* Questions */
 #questions {
     display: inline-block;
-    width: 705px;
+    width: 70.5rem;
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .quescontainer {
     display: contents;
-    border: 3px solid #748F67;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+    border: .3rem solid #748F67;
+    box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
     background-color: #F8F8F8;
-    margin-bottom: 42px;
+    margin-bottom: 4rem;
 }
 
 .questype {
     outline: none;
-    border: 0.5px solid rgba(0, 0, 0, 1);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: .05rem solid rgba(0, 0, 0, 1);
+    box-shadow: 0rem .4rem .4rem rgba(0, 0, 0, 0.25);
     width: 100%;
-    height: 48px;
-    border-radius: 15px;
-    margin-bottom: 42px;
+    height: 4.8rem;
+    border-radius: 1.5rem;
+    margin-bottom: 4.2rem;
     background-color: rgba(239, 239, 239, 1);
     text-align: left;
 }
@@ -89,40 +89,39 @@
 
 .questitle {
     text-transform: uppercase;
-    margin-left: 27px;
+    margin-left: 2.7rem;
 }
 
 .titleactive {
     color: #748F67;
-    margin-left: 14px;
-    /* font-weight: 600; */
+    margin-left: 1.4rem;
     text-decoration-line: underline;
 }
 
 .quescontent {
     display: none;
     font-weight: 400;
-    margin: auto 14px 40px;
+    margin: auto 1.4rem 4rem;
 }
 
 .quescontent p {
-    padding: 10px;
+    padding: 1rem;
 }
 
 .fa-angle-down, .fa-angle-up {
     color: #748F67;
     float: right;
-    margin-right: 20px;
+    margin-right: 2rem;
 }
 
 .fa-angle-up {
-    margin-right: 30px;
+    margin-right: 3rem;
 }
 
 
 /* Local Authors Form */
 .authorsform {
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 
 div.wpforms-container-full .wpforms-form .wpforms-field-label {
@@ -133,24 +132,24 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label {
 div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea {
     border: none !important;
     display: block !important;
-    height: 44px !important;
+    height: 4.4rem !important;
     background-color: #DAE9D2 !important;
-    border-radius: 15px !important;
-    margin-bottom: 20px !important;
+    border-radius: 1.5rem !important;
+    margin-bottom: 2rem !important;
     max-width: 94% !important;
 }
 
 .wpforms-submit {
     border: none !important;
     text-transform: uppercase !important;
-    width: 102px !important;
-    height: 44px !important;
-    border-radius: 15px !important;
+    width: 10rem !important;
+    height: 4.4rem !important;
+    border-radius: 1.5rem !important;
     background-color: #CBD9C4 !important;
 }
 
 .wpforms-form button[type=submit]:hover, .wpforms-form button[type=submit]:active {
-    border: 3px solid #000000 !important;
+    border: .3rem solid #000000 !important;
     color: #000000;
     font-weight: 700;
     padding: 0 !important;
@@ -166,83 +165,83 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
 /* Image */
 #images {
     display: inline;
-    width: 282px;
+    width: 28.2rem;
 }
 
 @media only screen and (max-width: 1050px) {
     #faq-h1 {
-        font-size: 35px;
+        font-size: 3.5rem;
     }
 
     .brackets {
-        font-size: 140px;
+        font-size: 14rem;
     }
 
     #questions {
-        width: 520px;
+        width: 52rem;
     }
 
     #images {
-        width: 220px;
+        width: 22rem;
     }
 }
 
 @media only screen and (max-width: 800px) {
     #faq-h1 {
-        font-size: 30px;
+        font-size: 3rem;
     }
 
     #questions {
-        width: 380px;
+        width: 30rem;
     }
 
     #images {
-        width: 170px;
+        width: 17rem;
     }
 }
 
 @media only screen and (max-width: 600px) {
     #faq-h1 {
-        width: 320px;
+        width: 32rem;
     }
 
     #questions {
-        width: 315px;
+        width: 31.5rem;
     }
 
     #images {
-        width: 120px;
+        width: 12rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
     #faq-header {
-        height: 184px;
+        height: 18.4rem;
     }
 
     .brackets {
-        font-size: 96px;
+        font-size: 9.6rem;
     }
 
     #faq-h1 {
-        font-size: 24px;
-        width: 250px;
+        font-size: 2.4rem;
+        width: 25rem;
     }
 
     #faq_layout {
-        margin-top: 40px;
+        margin-top: 4rem;
     }
 
     #questions {
-        width: 305px;
+        width: 30.5rem;
     }
 
     .quescontainer, .questype{
-        border-radius: 10px;
+        border-radius: 1rem;
     }
 
     .quescontent {
-        margin-left: 14px;
+        margin-left: 1.4rem;
     }
 
     .questype {
@@ -250,23 +249,23 @@ div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container
     }
 
     .quescontent {
-        font-size: 12px !important;
+        font-size: 1.2rem !important;
     }
 
     div.wpforms-container-full .wpforms-form .wpforms-field-label, div.wpforms-container-full .wpforms-form .wpforms-field-label, div.wpforms-container-full .wpforms-form input[type=date], div.wpforms-container-full .wpforms-form input[type=datetime], div.wpforms-container-full .wpforms-form input[type=datetime-local], div.wpforms-container-full .wpforms-form input[type=email], div.wpforms-container-full .wpforms-form input[type=month], div.wpforms-container-full .wpforms-form input[type=number], div.wpforms-container-full .wpforms-form input[type=password], div.wpforms-container-full .wpforms-form input[type=range], div.wpforms-container-full .wpforms-form input[type=search], div.wpforms-container-full .wpforms-form input[type=tel], div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=time], div.wpforms-container-full .wpforms-form input[type=url], div.wpforms-container-full .wpforms-form input[type=week], div.wpforms-container-full .wpforms-form select, div.wpforms-container-full .wpforms-form textarea { 
-        font-size: 12px !important;
+        font-size: 1.2rem !important;
     }
 
     .fa-angle-down, .fa-angle-up {
-        margin-right: 10px;
+        margin-right: 1rem;
     }
 
     .fa-angle-up {
-        margin-right: 15px;
+        margin-right: 1.5rem;
     }
 
     #images {
         display: none;
-        width: 400px;
+        width: 40rem;
     }
 }
