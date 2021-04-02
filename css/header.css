@@ -52,7 +52,7 @@ a:link {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: clamp(1rem, 1.5vw, 2.25rem);
+    font-size: clamp(1rem, 2vh, 2.25rem);
     line-height: 2rem;
 
     color: #000000;
