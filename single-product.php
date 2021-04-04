@@ -31,15 +31,15 @@
 
       <!-- from openlibrary -->
       <!-- <img src=<?php 
-      $ean = $product->get_attribute('ean');
-      $url = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+      $isbn = $product->get_attribute('ISBN');
+      $url = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
       echo $url ?> alt=""> -->
 
       <!-- check for error with retrieved cover and replace -->
       <?php 
-        $ean = $product->get_attribute('ean');
-        $url = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
-        if ($url != "http://covers.openlibrary.org/b/isbn/$ean-L.jpg?default=false") {  
+        $isbn = $product->get_attribute('ISBN');
+        $url = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
+        if ($url != "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg?default=false") {  
           echo "<img src=$url />";
         }
         else {
@@ -58,7 +58,7 @@
       <!-- Title, Author, Price -->
       <div class="book-sectionheader option-mobile">
       <?php 
-        $ean = $product->get_attribute('ean');
+        $isbn = $product->get_attribute('ISBN');
         echo 
           "<span id='bookauthorlast'></span>
           <span id='bookauthorfirst'></span>"

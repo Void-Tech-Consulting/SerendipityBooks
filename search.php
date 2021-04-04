@@ -5,11 +5,11 @@ wp_enqueue_style('search');
 function display_book($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
-    $ean = $product->get_attribute('ean');
+    $isbn = $product->get_attribute('ISBN');
 
     $price = number_format($price, 2);
 
-    $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+    $imgsrc = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
 
     echo "
       <div class='book'>
