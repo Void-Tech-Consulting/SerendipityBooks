@@ -20,14 +20,6 @@
 </section>
   <div id="shop-book-flex">
     <div id="shop-bookcover">
-    
-      <!-- from google api -->
-      <!-- <?php 
-        $ean = $product->get_attribute('ean');
-        echo 
-          "<section id='bookcover' data-isbn=$ean>
-          <img src='' alt='' id='thumbnail' /> "
-      ?> -->
 
       <!-- from openlibrary -->
       <!-- <img src=<?php 
@@ -49,7 +41,7 @@
       
     <!-- get uploaded image -->
     <?php 
-      echo $product->get_image(); // includes image in search bar
+      // echo $product->get_image(); // includes image in search bar
       // echo $product->get_short_description(); // put image in short-description
     ?>
 
@@ -57,7 +49,9 @@
     <div id="shop-bookdesc">
       <!-- Title, Author, Price -->
       <div class="book-sectionheader option-mobile">
+  
       <?php 
+
         $isbn = $product->get_attribute('ISBN');
         echo 
           "<span id='bookauthorlast'></span>
@@ -112,9 +106,12 @@
       <div class="book-sectionheader">Description</div>
       <div class="book-desc-content">
       <?php 
+        // description from Google API
         $ean = $product->get_attribute('ean');
         echo 
-          "<span id='descrip'></span>"
+         "<section id='bookcover' data-isbn=$ean>
+            <span id='descrip'></span>
+          </section>"
       ?>
 
       </div>

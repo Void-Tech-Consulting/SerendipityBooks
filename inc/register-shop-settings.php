@@ -98,6 +98,28 @@ function shop_customizer($wp_customize) {
     'selector' => 'span#edit-shopmoretext'
   ));
 
+  $wp_customize->add_setting($shop_delivery, array(
+    'transport' => 'postMessage',
+  ));
+  $wp_customize->add_control($shop_delivery, array(
+    'label' => 'Shop More for Home Delivery Link',
+    'section' => $shop_section,
+  ));
+  $wp_customize->selective_refresh->add_partial($shop_delivery, array(
+    'selector' => 'span#edit-shopdelivery'
+  ));
+
+  $wp_customize->add_setting($shop_pickup, array(
+    'transport' => 'postMessage',
+  ));
+  $wp_customize->add_control($shop_pickup, array(
+    'label' => 'Shop More for Chelsea Pickup Link',
+    'section' => $shop_section,
+  ));
+  $wp_customize->selective_refresh->add_partial($shop_pickup, array(
+    'selector' => 'span#edit-shoppickup'
+  ));
+
   $wp_customize->add_setting($shop_moreimg);
   $wp_customize->add_control( new WP_Customize_Image_Control( 
       $wp_customize, 

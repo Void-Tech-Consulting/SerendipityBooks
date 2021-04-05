@@ -5,6 +5,7 @@ wp_enqueue_style('search');
 function display_book($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
+
     $isbn = $product->get_attribute('ISBN');
 
     $price = number_format($price, 2);
@@ -12,17 +13,19 @@ function display_book($product) {
     $imgsrc = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
 
     echo "
-      <div class='book'>
-        <div class='book-card'>
-          <img 
-            alt='$name Book Cover' 
-            src=$imgsrc>
+    <a href='$url'>
+        <div class='book'>
+            <div class='book-card'>
+            <img 
+                alt='$name Book Cover' 
+                src=$imgsrc>
+            </div>
+            <div class='book-desc'>
+            <div class='book-title'>$name</div>
+            <div class='book-price'>$$price</div>
+            </div>
         </div>
-        <div class='book-desc'>
-          <div class='book-title'>$name</div>
-          <div class='book-price'>$$price</div>
-        </div>
-      </div>";
+    </a>";
 }
 
 if (have_posts()) :

@@ -150,12 +150,27 @@
     <div class="shop-more-text">
       <p>Haven’t found what you’re looking for?</p>
       <p>Check out more books from Michelle below!</p>
-      <a class="shop-more-button" href="https://bookshop.org/shop/serendipitybooks">
-        <button>Shop More for Home Delivery</button>
-      </a>
-      <a class="shop-more-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd4BJ7A1TviezYOXWrA9SLyBcxcSJsrm1oym1xeU4-r2zjzTA/viewform">
-        <button>Shop More for Chelsea Pickup</button>
-      </a>
+      <span id="edit-shopdelivery"></span>
+      <?php if (get_theme_mod($shop_delivery)) { ?>
+        <a class="shop-more-button" href=<?php echo get_theme_mod($shop_delivery)?>>
+          <button>Shop More for Home Delivery</button>
+        </a>
+      <?php } else { ?>
+        <a class="shop-more-button" href="https://bookshop.org/shop/serendipitybooks">
+          <button>Shop More for Home Delivery</button>
+        </a>
+      <?php } ?>
+
+      <span id="edit-shoppickup"></span>
+      <?php if (get_theme_mod($shop_pickup)) { ?>
+        <a class="shop-more-button" href=<?php echo get_theme_mod($shop_pickup)?>>
+          <button>Shop More for Chelsea Pickup</button>
+        </a>
+      <?php } else { ?>
+        <a class="shop-more-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd4BJ7A1TviezYOXWrA9SLyBcxcSJsrm1oym1xeU4-r2zjzTA/viewform">
+          <button>Shop More for Chelsea Pickup</button>
+        </a>
+      <?php } ?>
     </div>
     <span id="edit-moreimg"></span>
     <?php if (get_theme_mod($shop_moreimg)) { ?>
