@@ -11,13 +11,13 @@ $events = get_example_data($event_repeater);
 function display_book(&$product) {
   $name = $product->get_name();
   $price = (float) $product->get_price();
-  $ean = $product->get_attribute('ean');
+  $isbn = $product->get_attribute('ISBN');
   $url = get_post_permalink($product->id);
   $price = number_format($price, 2);
 
   // echo wc_display_product_attributes( $product );
 
-  $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+  $imgsrc = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
 
   echo "
   <a href='$url'>

@@ -24,11 +24,11 @@ function shop_by_category() {
             'terms' => $cat_name
           )
         ),
-        // 'meta_query'     => array(array(
+        'meta_query'     => array(array(
         //   'key' => 'condition',
-        //   'value' => $condition,
-        //   'compare' => 'IN',
-        // )),
+          'value' => $condition,
+          'compare' => 'like',
+        )),
         'posts_per_page' => $posts_per_page,
         'paged' => $paged
       );
@@ -55,11 +55,11 @@ function shop_by_category() {
 function display_product($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
-    $ean = $product->get_attribute('ean');
+    $isbn = $product->get_attribute('ISBN');
     $url = get_post_permalink($product->id);
     $price = number_format($price, 2);
   
-    $imgsrc = "http://covers.openlibrary.org/b/isbn/$ean-L.jpg";
+    $imgsrc = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
   
     return "
     <a href='$url'>
