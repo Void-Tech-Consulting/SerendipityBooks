@@ -310,3 +310,76 @@ a:link {
 .woocommerce button.button.alt {
     background-color: #748F67;
 }
+
+@media only screen and (max-width: 1000px) {
+    /* Responsive Cart Page */
+    .woocommerce {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .woocommerce-cart-wrapper .woocommerce .woocommerce-cart-form {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .woocommerce-cart-wrapper .woocommerce .woocommerce-cart-form .actions .button {
+        width: 100%;
+    }
+
+    .woocommerce table.cart td.actions .coupon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+
+    .coupon #coupon_code {
+        width: 70%;
+    }
+
+    .woocommerce table.cart td.actions .coupon .input-text+.button {
+        width: 25%;
+    }
+
+    .wc-proceed-to-checkout {
+        margin-bottom: 5rem;
+    }
+
+    .woocommerce .cart-collaterals .cart_totals {
+        float: none;
+        margin: 0 auto;
+    }
+
+    /* Responsive Checkout Page */
+    .woocommerce .col2-set {
+        width: 80%;
+        margin: auto;
+    }
+
+    .woocommerce #order_review_heading {
+        margin-left: 8rem;
+        margin-bottom: 2rem;
+    }
+
+    .woocommerce table.shop_table.woocommerce-checkout-review-order-table {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .woocommerce #payment ul.payment_methods {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .woocommerce-checkout #payment div.form-row {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .woocommerce #payment #place_order {
+        margin: 1rem 0;
+    }
+
+}
