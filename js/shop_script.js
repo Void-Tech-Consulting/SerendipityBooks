@@ -13,7 +13,8 @@
 
         posts_per_page = 30;
         cat_name = all_cats;
-        condition = Array('new', 'used');
+        // condition = Array('New', 'Used');
+        condition = '';
         order_by = 'meta_value_num';
         page = 1;
         total_pages = 0;
@@ -131,13 +132,16 @@
                 page = 1;
                switch(conditions) {
                    case "All":
-                    condition = Array('new', 'used');
+                    // condition = Array('New', 'Used');
+                    condition = '';
                        break;
                   case "New":
-                    condition = Array('new');
+                    // condition = Array('New');
+                    condition = 'New';
                       break;
                   case "Used":
-                    condition = Array('used');
+                    // condition = Array('Used');
+                    condition = 'Used';
                       break; 
                }
                update_shop();
