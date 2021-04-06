@@ -13,8 +13,8 @@
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.6rem;
+    line-height: 2rem;
 }
 
 #outer {
@@ -24,31 +24,31 @@
 
 #eventHeaderSection {
     display: flex;
-    height: 180px;
-    top: 170px;
-    margin-bottom: 100px;
+    height: 18rem;
+    top: 17rem;
+    margin-bottom: 10rem;
     background-color: #CBD9C4;
     align-items: center;
     justify-content: center;
 }
 
 .bracket {
-    height: 120px;
-    width: 20px;
+    height: 12rem;
+    width: 2rem;
 }
 
 #eventTitle {
     font-family: Lora;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 61px;
+    font-size: 4.8rem;
+    line-height: 6.1rem;
     text-align: center;
-    padding: 0px 60px;
+    padding: 0 6rem;
 }
 
 #posterImage {
-    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0.8rem 0.8rem 0.4rem rgba(0, 0, 0, 0.25));
 }
 
 #poster{
@@ -65,15 +65,15 @@
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 2rem;
+    line-height: 2.5rem;
 
 }
 
 .heading-icon {
-    width: 23px;
-    height: 22px;
-    margin-right: 5px;
+    width: 2.3rem;
+    height: 2.2rem;
+    margin-right: 0.5rem;
 }
 
 .icon-heading-div{
@@ -102,9 +102,9 @@
 }
 
 .dropButton {
-    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 1);
     width: 100%;
-    margin: 40px 0;
+    margin: 4rem 0;
     background-color: white;
     text-align: left;
 }
@@ -119,8 +119,8 @@
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 2rem;
+    line-height: 2.5rem;
 }
 
 .titleactive {
@@ -128,8 +128,8 @@
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 2rem;
+    line-height: 2.5rem;
 }
 
 .drop-heading {
@@ -140,30 +140,30 @@
     display: none;
     text-align: left;
     vertical-align: text-top;
-    padding: 10px 0;
-    margin-bottom: 100px;
+    padding: 1rem 0;
+    margin-bottom: 10rem;
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
     list-style-type: none;
 }
 
 .dropdownContent li {
-    padding: 10px 0;
+    padding: 1rem 0;
     vertical-align: baseline;
 }
 
 .fa-angle-down, .fa-angle-up {
     color: black;
-    font-size: 30px;
+    font-size: 3rem;
     float: right;
-    margin-right: 20px;
+    margin-right: 2rem;
 }
 
 .fa-angle-up {
-    margin-right: 20px;
+    margin-right: 2rem;
     color: #748F67;
 }
 
@@ -171,8 +171,8 @@
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
     color: #748F67;
 }
 
@@ -180,17 +180,17 @@
     font-family: Lato;
     font-style: italic;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
 }
 
 .bookDate {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 13px;
-    letter-spacing: 0.1em;
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -199,21 +199,21 @@
     } */
 
     #eventHeaderSection {
-        height: 120px;
-        top: 96px;
-        margin-bottom: 50px;
+        height: 12rem;
+        top: 9.6rem;
+        margin-bottom: 5rem;
     }
 
     .bracket{
-        width: 10px;
-        height: 60px;
+        width: 1rem;
+        height: 6rem;
     }
     
     #eventTitle{
-        font-size: 24px;
-        line-height: 30px;
-        padding: 0 4px;
-        width: 230px;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        padding: 0 0.4rem;
+        width: 23rem;
     }
 
     #outer{
@@ -231,19 +231,19 @@
     }
 
     .headings{
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
     
     }
     
     .body-text{
-        line-height: 22px;
-        margin-left: 26px;
+        line-height: 2.2rem;
+        margin-left: 2.6rem;
     }
 
     #posterImage {
-        margin-top: 40px;
-        margin-bottom: 20px;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
     }
 
   }

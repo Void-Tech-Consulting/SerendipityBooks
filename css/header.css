@@ -256,8 +256,8 @@ a:link {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.6rem;
+    line-height: 2rem;
 }
 
 
@@ -295,8 +295,8 @@ a:link {
 }
 
 .coupon #coupon_code {
-    width: 250px;
-    height: 35px;
+    width: 25rem;
+    height: 3.5rem;
 }
 
 #order_review_heading {
@@ -304,7 +304,7 @@ a:link {
 }
 
 .woocommerce-form-coupon-toggle {
-    margin: 2em;
+    margin: 2rem;
 }
 
 .woocommerce button.button.alt {
@@ -320,7 +320,7 @@ a:link {
 
     .woocommerce-cart-wrapper .woocommerce .woocommerce-cart-form {
         width: 90%;
-        margin-right: 0;
+        margin: auto;
     }
 
     .woocommerce-cart-wrapper .woocommerce .woocommerce-cart-form .actions .button {
