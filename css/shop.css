@@ -259,7 +259,7 @@
   padding: clamp(20px, 7.5vw, 79px);
   background-color: #E5E2DB;
   max-width: initial;
-  height: clamp(100px, 25vw, 336px);
+  min-height: 0vh;
   margin: 0;
 }
 
@@ -272,8 +272,8 @@
 
 .shop-more-button button {
   font-family: 'Lato', sans-serif;
+  min-height: 0vh;
   width: clamp(66px, 15vw, 225px);
-  height: clamp(24px, 10vw, 90px);
   border: 3px solid #CBD9C4;
   font-size: clamp(8px, 1.8vw, 25px);
   margin: 10px;

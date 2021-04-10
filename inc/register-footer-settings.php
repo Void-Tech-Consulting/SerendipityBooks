@@ -58,5 +58,17 @@ function footer_customizer($wp_customize) {
         'section' => $footer_section
     ));
 
+    // Email
+    $wp_customize->add_setting($footer_email, array(
+        'transport' => 'postMessage'
+    ));
+    $wp_customize->add_control($footer_email, array(
+        'label' => 'Email',
+        'section' => $footer_section
+    ));
+    $wp_customize->selective_refresh->add_partial($footer_email, array(
+        'selector' => 'span#edit-email'
+    ));
+
 }
 add_action( 'customize_register', 'footer_customizer' );
