@@ -1,7 +1,5 @@
 <?php
 
-use function PHPSTORM_META\type;
-
 add_action("wp_ajax_shop_by_category", "shop_by_category");
 
 function shop_by_category() {
@@ -25,7 +23,6 @@ function shop_by_category() {
           )
         ),
         'meta_query'     => array(array(
-        //   'key' => 'condition',
           'value' => $condition,
           'compare' => 'like',
         )),
