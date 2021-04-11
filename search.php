@@ -1,10 +1,12 @@
 <?php
 get_header();
 wp_enqueue_style('search');
+require get_template_directory() . '/inc/section_vars.php';
 
 function display_book($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
+    $url = get_post_permalink($product->id);
 
     $isbn = $product->get_attribute('ISBN');
 
@@ -50,11 +52,51 @@ else :
 
             <div class="search-part" id="search-left">
                 <div id="search-text-main">
-                    “<?php echo get_search_query() ?>” was not found in our store. Check the extended inventory <span class="highlight">here.</span>
+                    “<?php echo get_search_query() ?>” was not found in our store. Check the extended inventory 
+                    <span id="edit-shopdelivery"></span>
+                    <a 
+                        class="highlight" 
+                        href=
+                        <?php if (get_theme_mod($shop_delivery)) {
+                            echo get_theme_mod($shop_delivery);
+                        } else {
+                            echo "https://bookshop.org/shop/serendipitybooks";
+                        }?>
+                    >
+                        here.
+                    </a>
                 </div>
                 <div id="search-text-sub">
-                    If you still haven't found what you wanted, please contact us at enteremail@gmail.com. We'd love to work with you and help us find each other on <span class="highlight">the same page.</span>
+                    If you still haven't found what you wanted, please contact us at 
+                    <span id="edit-email"></span>
+                    <a style="color: black"
+                        href=
+                        <?php if (get_theme_mod($footer_email)) {
+                            echo "mailto:" . get_theme_mod($footer_email);
+                        } else {
+                            echo "mailto:entergmail@gmail.com";
+                        }?>
+                    >
+                        <?php if (get_theme_mod($footer_email)) {
+                            echo get_theme_mod($footer_email) . ".";
+                        } else {
+                            echo "entergmail@gmail.com" . ".";
+                        }?>
+                    </a>
+                    We'd love to work with you and help us find each other on 
+                    <a 
+                        class="highlight" 
+                        href=
+                        <?php if (get_theme_mod($shop_pickup)) {
+                            echo get_theme_mod($shop_pickup);
+                        } else {
+                            echo "https://docs.google.com/forms/d/e/1FAIpQLSd4BJ7A1TviezYOXWrA9SLyBcxcSJsrm1oym1xeU4-r2zjzTA/viewform";
+                        }?>
+                    >
+                        the same page.
+                    </a>
                 </div>
+                <span id="edit-shoppickup"></span>
             </div>
 
             <div class="search-part" id="search-right">

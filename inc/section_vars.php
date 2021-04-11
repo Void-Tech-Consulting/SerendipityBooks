@@ -40,6 +40,7 @@
   $footer_instagram_link = 'footer_instagram_link';
   $footer_twitter_link = 'footer_twitter_link';
   $footer_facebook_link = 'footer_facebook_link';
+  $footer_email = 'footer_email';
 
   // FAQ Vars
   $faq_section = 'faq_section';

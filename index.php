@@ -55,6 +55,7 @@ function carousel_loop(&$books, $key) {
   }
 }
 
+$shop_url = get_page_link(get_page_by_title('Shop')->ID); 
 ?>
 
 <main id="home-main">
@@ -110,7 +111,7 @@ function carousel_loop(&$books, $key) {
             <span id="edit-bestsellers"></span>
             <?php display_theme_var($home_bestsellers_title, "Bestsellers"); ?>
           </div>
-          <a href="" class="flat-button"><span>SHOP ALL</span></a>
+          <a href="<?php echo $shop_url ?>" class="flat-button"><span>SHOP ALL</span></a>
         </div>
         <div class="header-part">
           <div class="carousel-button left">
@@ -139,7 +140,7 @@ function carousel_loop(&$books, $key) {
             <span id="edit-favorites"></span>
             <?php display_theme_var($home_favorites_title, "Michelle's Favorites"); ?>
           </div>
-          <a href="" class="flat-button"><span>SHOP ALL</span></a>
+          <a href="<?php echo $shop_url ?>" class="flat-button"><span>SHOP ALL</span></a>
         </div>
         <div class="header-part">
           <div class="carousel-button left">
