@@ -117,7 +117,7 @@
 .select-selected:after {
   position: absolute;
   content: "";
-  top: clamp(10px, 1.1vw, 20px);
+  top: clamp(10px, 1.2vw, 20px);
   right: clamp(8px, 1.8vw, 20px);
   border: clamp(3px, 0.4vw, 6px) solid transparent;
   border-color: #000 transparent transparent transparent;
@@ -126,7 +126,7 @@
 /* point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #000 transparent ;
-  top: clamp(2.5px, 0.75vw, 15px);
+  top: clamp(6px, 0.75vw, 15px);
 }
 
 /* style the items (options), including the selected item: */
