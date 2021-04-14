@@ -53,10 +53,11 @@ a:link {
     font-style: normal;
     font-weight: normal;
     font-size: clamp(1rem, 2vh, 2.25rem);
+    min-height: 0vw;
     line-height: 2rem;
-
     color: #000000;
 }
+
 .shop {
     color: #748F67;
 }
@@ -215,9 +216,9 @@ a:link {
     font-style: normal;
     font-weight: normal;
     font-size: clamp(1.5rem, 1.5vw, 2.25rem);
+    min-height: 0vw;
     line-height: 3.5rem;
     text-align: center;
-
     color: #000000;
 }
 
@@ -247,6 +248,7 @@ a:link {
     }
     #mobile-header {
         font-size: clamp(1rem, 1.5vw, 2.25rem);
+        min-height: 0vw;
         display: none;
     }
 }

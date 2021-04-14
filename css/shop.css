@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   height: clamp(110px, 8vw, 145px);
+  min-height: 0vw;
   margin-bottom: 25px;
 }
 
@@ -17,6 +18,7 @@
   color: rgba(0, 0, 0, 1);
   text-transform: uppercase;
   font-size: clamp(24px, 3vw, 48px);
+  min-height: 0vw;
   font-weight: 700;
   margin-top: 10px;
 }
@@ -24,6 +26,7 @@
 .brackets {
   font-family: 'Lato', sans-serif;
   font-size: clamp(80px, 9.1vw, 170px);
+  min-height: 0vw;
   font-weight: 200;
   line-height: 100%;
   margin: 0 10px;
@@ -47,6 +50,7 @@
 .selection-title {
   font-family: 'Lora', sans-serif;
   font-size: clamp(20px, 2.5vw, 35px);
+  min-height: 0vw;
   margin-bottom: 30px;
   margin-left: 10px;
 }
@@ -55,6 +59,7 @@
   background-color: #E5E2DB;
   border-radius: 30px;
   width: clamp(120px, 15vw, 230px);
+  min-height: 0vw;
   padding: 35px 30px;
 
   font-family: 'Lato', sans-serif;
@@ -75,6 +80,7 @@
 #bookstore {
   width: clamp(400px, 55vw, 800px);
   padding-left: clamp(20px, 6vw, 100px);
+  min-height: 0vw;
   /* margin: 6px 60px auto 10px; */
 }
 
@@ -82,6 +88,7 @@
   display: flex;
   font-family: 'Lato', sans-serif;
   font-size: clamp(9px, 1.3vw, 22px);
+  min-height: 0vw;
   justify-content: flex-end;
   margin-bottom: 20px;
 }
@@ -90,6 +97,7 @@
 #phone-categories, #phone-condition, #display-num, #display-by {
   display: inline-block;
   width: clamp(68px, 15vw, 200px);
+  min-height: 0vw;
   background-color: #E5E2DB;
   box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 47.5px;
@@ -120,6 +128,7 @@
   top: clamp(10px, 1.2vw, 20px);
   right: clamp(8px, 1.8vw, 20px);
   border: clamp(3px, 0.4vw, 6px) solid transparent;
+  min-height: 0vw;
   border-color: #000 transparent transparent transparent;
 }
 
@@ -127,6 +136,7 @@
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #000 transparent ;
   top: clamp(6px, 0.75vw, 15px);
+  min-height: 0vw;
 }
 
 /* style the items (options), including the selected item: */
@@ -163,15 +173,15 @@
 
 .book-content {
   width: clamp(80px, 14vw, 160px);
+  min-height: 0vw;
   margin-bottom: 12px;
   margin-right: 0;
-  /* margin-left: 40px; */
-  /* flex-basis: 31%; */
 }
 
 .book-cover {
   width: 100%;
   height: clamp(150px, 20vw, 200px);
+  min-height: 0vw;
   border-radius: 10px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -188,6 +198,7 @@
   color: #000;
   font-family: 'Lato', sans-serif;
   font-size: clamp(15px, 2vw, 28px);
+  min-height: 0vw;
 }
 
 .book-title {
@@ -206,6 +217,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: clamp(10px, 6vw, 90px);
+  min-height: 0vw;
 } 
 
 .page-bar-arrow {
@@ -216,11 +228,13 @@
   box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: clamp(12px, 2vw, 24px);
   margin-right: clamp(12px, 1.8vw, 30px);
+  min-height: 0vw;
   cursor: pointer;
 }
 
 .page-bar-arrow img {
   width: clamp(8px, 1.1vw, 30px);
+  min-height: 0vw;
 }
 
 .page-bar-left img {
@@ -235,11 +249,13 @@
   background-color: #CBD9C4;
   margin-right: 0;
   margin-left: clamp(12px, 1.8vw, 30px);
+  min-height: 0vw;
 }
 
 .page-bar-nums {
   font-family: 'Lato', sans-serif;
   font-size: clamp(10px, 1.8vw, 26px);
+  min-height: 0vw;
 }
 
 .page-bar-nums div {
@@ -250,6 +266,7 @@
 .page-bar-active {
   color: #5B764E;
   font-size: clamp(15px, 2vw, 30px);
+  min-height: 0vw;
 }
 
 /* Shop More */
@@ -257,6 +274,7 @@
   display: flex;
   justify-content: center;
   padding: clamp(20px, 7.5vw, 79px);
+  min-height: 0vw;
   background-color: #E5E2DB;
   max-width: initial;
   min-height: 0vh;
@@ -266,6 +284,7 @@
 .shop-more-text {
   font-family: 'Lora', sans-serif;
   font-size: clamp(1rem, 1.5vw, 4rem);
+  min-height: 0vw;
   text-align: center;
   margin: 0 30px;
 }
@@ -274,6 +293,7 @@
   font-family: 'Lato', sans-serif;
   min-height: 0vh;
   width: clamp(66px, 15vw, 225px);
+  min-height: 0vw;
   border: 3px solid #CBD9C4;
   font-size: clamp(8px, 1.8vw, 25px);
   margin: 10px;
@@ -298,6 +318,7 @@
   object-fit: cover;
   width: clamp(66px, 15vw, 232px);
   height: clamp(55px, 12vw, 176px);
+  min-height: 0vw;
   opacity: 30%;
 }
 

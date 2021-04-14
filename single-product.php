@@ -14,8 +14,11 @@
 </head>
 <body>
 
- <!-- <?php echo do_shortcode('[product_page id="31"]'); ?>
-  <div id="shop-book-path"><?php echo $product->get_categories();?></div>  -->
+ <?php 
+  echo do_shortcode('[shop_messages]');
+  the_post();
+  $product = wc_get_product(get_the_ID());
+  ?>
   
 </section>
   <div id="shop-book-flex">
