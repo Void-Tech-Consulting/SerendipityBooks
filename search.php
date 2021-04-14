@@ -8,11 +8,9 @@ function display_book($product) {
     $price = (float) $product->get_price();
     $url = get_post_permalink($product->id);
 
-    $isbn = $product->get_attribute('ISBN');
-
     $price = number_format($price, 2);
 
-    $imgsrc = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
+    $imgsrc = get_the_post_thumbnail_url($product->id);
 
     echo "
     <a href='$url'>

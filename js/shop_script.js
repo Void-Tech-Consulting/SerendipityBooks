@@ -21,7 +21,6 @@
         update_shop();
 
         function update_shop() {
-            console.log("Update Shop Called")
             $.ajax({
                 type : "post",
                 dataType : "json",

@@ -55,11 +55,9 @@ function shop_by_category() {
 function display_product($product) {
     $name = $product->get_name();
     $price = (float) $product->get_price();
-    $isbn = $product->get_attribute('ISBN');
     $url = get_post_permalink($product->id);
     $price = number_format($price, 2);
-  
-    $imgsrc = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
+    $imgsrc = get_the_post_thumbnail_url($product->id);
   
     return "
     <a href='$url'>

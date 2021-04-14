@@ -21,22 +21,10 @@
   <div id="shop-book-flex">
     <div id="shop-bookcover">
 
-      <!-- from openlibrary -->
-      <!-- <img src=<?php 
-      $isbn = $product->get_attribute('ISBN');
-      $url = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
-      echo $url ?> alt=""> -->
-
       <!-- check for error with retrieved cover and replace -->
       <?php 
-        $isbn = $product->get_attribute('ISBN');
-        $url = "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg";
-        if ($url != "http://covers.openlibrary.org/b/isbn/$isbn-L.jpg?default=false") {  
-          echo "<img src=$url />";
-        }
-        else {
-          echo $product->get_image();
-        }
+        $url = $imgsrc = get_the_post_thumbnail_url($product->id);;
+        echo "<img src=$url />";
       ?>
       
     <!-- get uploaded image -->
