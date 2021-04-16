@@ -18,15 +18,6 @@ function shop_customizer($wp_customize) {
     'selector' => 'span#edit-categories'
   ));
 
-  $wp_customize->add_setting($shop_categories_content, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($shop_categories_content, array(
-    'label' => 'Categories Content',
-    'section' => $shop_section,
-    'type' => 'textarea'
-  ));
-
   // Condition
   $wp_customize->add_setting($shop_condition, array(
     'transport' => 'postMessage',
@@ -37,53 +28,6 @@ function shop_customizer($wp_customize) {
   ));
   $wp_customize->selective_refresh->add_partial($shop_condition, array(
     'selector' => 'span#edit-condition'
-  ));
-
-  $wp_customize->add_setting($shop_condition_content);
-  $wp_customize->add_control($shop_condition_content, array(
-    'label' => 'Condition Content',
-    'section' => $shop_section,
-    'type' => 'textarea'
-  ));
-
-
-  // Display
-  $wp_customize->add_setting($shop_display, array(
-    'transport' => 'postMessage',
-  ));
-  $wp_customize->add_control($shop_display, array(
-    'label' => 'Display',
-    'section' => $shop_section,
-  ));
-  $wp_customize->selective_refresh->add_partial($shop_display, array(
-    'selector' => 'span#edit-display'
-  ));
-
-  // $wp_customize->add_setting($shop_display_content);
-  // $wp_customize->add_control($shop_display_content, array(
-  //   'label' => 'Display Content',
-  //   'section' => $shop_section,
-  //   'type' => 'textarea'
-  // ));
-
-  // Book Cover
-  $wp_customize->add_setting($shop_bc);
-  $wp_customize->add_control( new WP_Customize_Image_Control( 
-      $wp_customize, 
-      $shop_bc, 
-      array(
-          'label' => 'Book Cover',
-          'section' => $shop_section
-      )
-  ));
-
-  $wp_customize->add_setting($shop_bi);
-  $wp_customize->add_control($shop_bi, array(
-    'label' => 'Book Info',
-    'section' => $shop_section,
-  ));
-  $wp_customize->selective_refresh->add_partial($shop_bi, array(
-    'selector' => 'span#edit-bi'
   ));
 
   // Shop More
