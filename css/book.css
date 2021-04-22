@@ -30,6 +30,7 @@ hr {
 
 #shop-bookcover img {
   width: 100%;
+  height: clamp(600px, 1vw, 800px)
 }
 
 #shop-bookdesc {
