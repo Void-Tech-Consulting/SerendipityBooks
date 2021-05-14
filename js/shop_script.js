@@ -1,18 +1,7 @@
 (function($) {
     $(document).ready(function(){
-
-        nonfiction = 'nonfiction';
-        fiction = 'fiction'
-        childrens = 'childrens';
-        young_adult = 'young-adult';
-        gifts = 'gifts';
-
-        all_cats = Array(
-            'uncategorized', gifts, fiction, childrens, young_adult, nonfiction
-        );
-
         posts_per_page = 30;
-        cat_name = all_cats;
+        cat_name = "All";
         // condition = Array('New', 'Used');
         condition = '';
         order_by = 'meta_value_num';
@@ -21,15 +10,22 @@
         update_shop();
 
         function update_shop() {
+            $('.loading-container').each(function( _ ) {
+                $( this ).removeClass('hide-load')
+            });
             $.ajax({
                 type : "post",
                 dataType : "json",
                 url : myAjax.ajaxurl,
                 data : {action: "shop_by_category", cat_name : cat_name, posts_per_page: posts_per_page, paged: page, condition: condition, order_by: order_by},
                 success: function(response) {
-                  $('body').find('#display-bookstore').html(response.html.substring(1));
-                  total_pages = response.pages;
-                  update_pages(page);
+                    $('.loading-container').each(function( _ ) {
+                        $( this ).addClass('hide-load')
+                    });
+                    $('body').find('#display-bookstore').html(response.html.substring(1));
+                    total_pages = response.pages;
+                    update_pages(page);
+                    displayHeight();
                 }
              });
         }
@@ -94,30 +90,11 @@
              });
          }
 
-         function change_category(category) {
-                page = 1;
-             switch(category) {
-                 case "All":
-                     cat_name = all_cats;
-                     break;
-                case "Nonfiction":
-                    cat_name = nonfiction;
-                    break;
-                case "Fiction":
-                    cat_name = fiction;
-                    break;
-                case "Childrens":
-                    cat_name = childrens;
-                    break;
-                case "Young Adult":
-                    cat_name = young_adult;
-                    break;
-                case "Gifts":
-                    cat_name = gifts;
-                    break;  
-             }
-             update_shop();
-         }
+        function change_category(category) {
+            page = 1;
+            cat_name = category;
+            update_shop();
+        }
 
            /* Change active condition on click */
            var conditions = document.getElementById("select-conditions").children;
@@ -184,6 +161,12 @@
            }
        
    });
+    function displayHeight(){
+        let divHeight = $('#display-bookstore').height();
+        $('#book-container').css({'height' : divHeight});
+    }
+    displayHeight();
+    $(window).resize(displayHeight());
   }(jQuery));
 
   

@@ -11,24 +11,36 @@ function shop_by_category() {
 
     $args = array(
         'post_type' => 'product',
-        'meta_key' => 'total_sales',
         'orderby' => $order_by,
         'order'   => 'DESC',
         'suppress_filters' => true,
-        'tax_query' => array( 
+        'posts_per_page' => $posts_per_page,
+        'paged' => $paged,
+        'meta_query' => array(
+          array(
+            'key' => '_stock_status',
+            'value' => 'instock',
+            'compare' => '=',
+        ))
+      );
+      if ($cat_name != 'All') {
+        $args['tax_query'] = array( 
           array(
             'taxonomy' => 'product_cat',
             'field' => 'slug',
             'terms' => $cat_name
           )
-        ),
-        'meta_query'     => array(array(
+        );
+      }
+
+      if ($condition != "") {
+        array_push($args['meta_query'], array(
+          'key' => 'condition',
           'value' => $condition,
           'compare' => 'like',
-        )),
-        'posts_per_page' => $posts_per_page,
-        'paged' => $paged
-      );
+        ));
+      }
+
       $shop_query = new WP_Query($args);
       $html['html'] = '';
       $html['pages'] = $shop_query->max_num_pages;
@@ -55,12 +67,13 @@ function display_product($product) {
     $url = get_post_permalink($product->id);
     $price = number_format($price, 2);
     $imgsrc = get_the_post_thumbnail_url($product->id);
-  
+    $img = $imgsrc ? "<img src='$imgsrc' alt='Book Cover'>" : file_get_contents(get_template_directory_uri() . "/img/book.svg");
+    $book_color = $imgsrc ? "" : "no-shadow green-svg";
     return "
     <a href='$url'>
       <div class='book-content'>
-        <div class='book-cover'>
-            <img src=$imgsrc alt='Book Cover'>
+        <div class='book-cover $book_color'>
+            $img
         </div>
         <span id='edit-bi'></span>
         <div  class='book-info'>

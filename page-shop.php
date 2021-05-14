@@ -34,18 +34,22 @@
         <span class="selection-title">Categories</span>
       <?php } ?>
 
-      <?php if (get_theme_mod($shop_categories_content)) { ?>
-        <div class="selection-container" id="select-categories"><?php echo get_theme_mod($shop_categories_content) ?></div>
-      <?php } else { ?>
       <div class="selection-container" id="select-categories">
-        <div class="selection-active" >All</div>
-        <div>Nonfiction</div>
-        <div>Fiction</div>
-        <div>Childrens</div>
-        <div>Young Adult</div>
-        <div>Gifts</div>
+            <div class="selection-active" value="1">All</div>
+            <?php 
+              $args = array(
+                  'taxonomy'   => "product_cat",
+                  'number'     => $number,
+                  'orderby'    => $orderby,
+                  'order'      => $order,
+                  'hide_empty' => $hide_empty,
+                  'include'    => $ids
+              );
+              $product_categories = get_terms($args);
+              foreach ($product_categories as $cat) { ?>
+                  <div value="1"><?php echo $cat->name ?></div>
+              <?php } ?>
       </div>
-      <?php } ?>
 
       <!-- Conditions -->
       <span id="edit-condition"></span>
@@ -68,18 +72,30 @@
 
     <!-- Right: Bookshop -->
     <section class="shop-sec" id="bookstore">
+      <div class="loading-container hide-load loading-background"></div>
+      <div class="loading-container hide-load">
+          <img class="books-loading" src=<?php echo get_template_directory_uri() . "/img/Hourglass.gif" ?> alt="Loading...">
+      </div>
       <!-- Display Type -->
       <div id="sort-bookstore">
         <div id="phone-categories">
           <div class="display-content" id="select-categories">
             <select>
-              <option value="1">All</option>
-              <option value="1">All</option>
-              <option value="1">Nonfiction</option>
-              <option value="1">Fiction</option>
-              <option value="1">Childrens</option>
-              <option value="1">Young Adult</option>
-              <option value="1">Gifts</option>
+            <option value="1">All</option>
+            <option value="1">All</option>
+            <?php 
+              $args = array(
+                  'taxonomy'   => "product_cat",
+                  'number'     => $number,
+                  'orderby'    => $orderby,
+                  'order'      => $order,
+                  'hide_empty' => $hide_empty,
+                  'include'    => $ids
+              );
+              $product_categories = get_terms($args);
+              foreach ($product_categories as $cat) { ?>
+                  <option value="1"><?php echo $cat->name ?></option>
+              <?php } ?>
             </select>
           </div>
         </div>
@@ -123,8 +139,8 @@
           </select>
         </div>
       </div>
-
-      <div id="display-bookstore"></div>
+      <div id="display-bookstore">
+      </div>
 
       <div id="page-bar">
         <div class="page-bar-arrow page-bar-left" id="page-bar-left-arrow">
