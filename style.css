@@ -66,6 +66,9 @@ html {
 /* 
   Put styles here 
 */
+.green-svg svg {
+  fill: #c7d8c6;
+}
 /*
 Theme Name: Serendipity Books
 Author: VOID Tech Consulting

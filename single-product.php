@@ -22,12 +22,17 @@
   
 </section>
   <div id="shop-book-flex">
-    <div id="shop-bookcover">
+    <div id="shop-bookcover" class="green-svg">
 
       <!-- check for error with retrieved cover and replace -->
       <?php 
-        $url = $imgsrc = get_the_post_thumbnail_url($product->id);;
-        echo "<img src=$url />";
+        $url = get_the_post_thumbnail_url($product->id);
+        if ($url) {
+          echo "<img src=$url />";
+        } else {
+          echo file_get_contents(get_template_directory_uri() . "/img/book.svg");
+        }
+
       ?>
       
     <!-- get uploaded image -->

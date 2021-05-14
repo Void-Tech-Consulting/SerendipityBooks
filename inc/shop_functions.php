@@ -21,7 +21,8 @@ function shop_by_category() {
             'key' => '_stock_status',
             'value' => 'instock',
             'compare' => '=',
-        ))
+          )),
+        'tax_query' => array()
       );
       if ($cat_name != 'All') {
         $args['tax_query'] = array( 
@@ -34,10 +35,10 @@ function shop_by_category() {
       }
 
       if ($condition != "") {
-        array_push($args['meta_query'], array(
-          'key' => 'condition',
-          'value' => $condition,
-          'compare' => 'like',
+        array_push($args['tax_query'], array(
+          'taxonomy' => 'pa_condition',
+          'terms' => $condition,
+          'field' => 'slug',
         ));
       }
 

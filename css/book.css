@@ -28,7 +28,7 @@ hr {
   height: auto;
 }
 
-#shop-bookcover img {
+#shop-bookcover img, #shop-bookcover svg {
   width: 100%;
   height: clamp(600px, 1vw, 800px)
 }
@@ -191,6 +191,7 @@ input[type=number]::-webkit-inner-spin-button {
   box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
+
 
 #shop-bookdesc > div.book-quantity > form > button img {
   width: 45px;

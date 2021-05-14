@@ -298,18 +298,6 @@
 .no-shadow {
   box-shadow: none !important;
 }
-.red-svg svg {
-  fill: #af5b47;
-}
-.green-svg svg {
-  fill: #c7d8c6;
-}
-.blue-svg svg {
-  fill: #a1a0af;
-}
-.grey-svg svg {
-  fill: #4a5861;
-}
 
 /* Shop More */
 #shop-more {
